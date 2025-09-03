@@ -1,0 +1,45 @@
+table Bridge_Distinct
+	lineageTag: c1681768-c16e-4add-948c-1d3bc330c8ad
+
+	measure 'Filas Bridge' = COUNTROWS('vaope_etl eventosOrganizador_Detalle')
+		formatString: 0
+		lineageTag: 2e06dbf5-ff8b-4fb3-8fa6-69c2bf8adfcb
+
+	measure 'Filas Distintas' = COUNTROWS('Bridge_Distinct')
+		formatString: 0
+		lineageTag: b9c3c228-6de7-4ae3-a86c-a17467cefb06
+
+	measure Duplicados = [Filas Bridge] - [Filas Distintas]
+		formatString: 0
+		lineageTag: 0a5ec9a6-c951-407a-9f9d-6b9400a6e616
+
+	column EventoID
+		formatString: 0
+		lineageTag: f696ff89-e19f-4be2-ba37-b3748b0242b4
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: vaope_etl eventosOrganizador_Detalle[EventoID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizadorID
+		formatString: 0
+		lineageTag: 6f8f13c7-ab46-4d94-af6f-0fe426cdb105
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: vaope_etl eventosOrganizador_Detalle[OrganizadorID]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Bridge_Distinct = calculated
+		mode: import
+		source =
+				
+				SUMMARIZE (
+				    'vaope_etl eventosOrganizador_Detalle',
+				    'vaope_etl eventosOrganizador_Detalle'[EventoID],
+				    'vaope_etl eventosOrganizador_Detalle'[OrganizadorID]
+				)
+
+	annotation PBI_Id = 35ac377fb22c4ebb97bcee473e00747f
+

@@ -1,0 +1,76 @@
+table 'vaope_etl DimFecha'
+	lineageTag: cc0564b3-4ea7-4cf5-acd8-5d7513b186f1
+
+	column FechaID
+		dataType: int64
+		formatString: 0
+		lineageTag: c9f8beba-b81b-4bfe-863b-404044fdfd01
+		summarizeBy: none
+		sourceColumn: FechaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cd886787-1c34-4ada-b87b-1c2dbf41e38d
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: 558febb4-a78f-45b0-a572-a15d03bb68b5
+			defaultHierarchy: LocalDateTable_5be2a474-ae95-4180-b3ec-918f8433396a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c621ef6-7b1a-4c00-9c52-4da6170b6132
+		summarizeBy: sum
+		sourceColumn: Anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a8a6669-f1f5-497a-b333-9b8595c2c128
+		summarizeBy: sum
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: e1797b41-ca8f-4973-9ba0-ac30b12c3caa
+		summarizeBy: sum
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemana
+		dataType: string
+		lineageTag: e190eee4-baa7-4c37-b38f-a986dd1bd159
+		summarizeBy: none
+		sourceColumn: DiaSemana
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimFecha' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimFecha = Origen{[Schema="vaope_etl",Item="DimFecha"]}[Data]
+				in
+				    vaope_etl_DimFecha
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

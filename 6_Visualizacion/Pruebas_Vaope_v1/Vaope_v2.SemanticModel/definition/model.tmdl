@@ -1,0 +1,43 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-PE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["vaope_etl DimEstadoFactura","vaope_etl DimEventos","vaope_etl DimFecha","vaope_etl DimLocalEvento","vaope_etl DimOrganizadores","vaope_etl DimProducto","vaope_etl DimProveedor","vaope_etl DimTiposGasto","vaope_etl DimUbicacion","vaope_etl DimVendedor","vaope_etl FactEgresosDetalle","vaope_etl FactVentasDetalle","vaope_etl eventosOrganizador_Detalle","vaope_etl DimCuenta","vaope_etl DimCuentaAnalitica","vaope_etl DimDistribucionAnalitica","vaope_etl distribucion_Cuentaan_Detalle"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'vaope_etl DimEstadoFactura'
+ref table 'vaope_etl DimEventos'
+ref table DateTableTemplate_1fcec072-d515-436c-a41b-3fda60697ce2
+ref table LocalDateTable_c4de6ab8-c363-4a4d-8df8-f90a33b0e51f
+ref table LocalDateTable_1b0491ae-a01c-4a5c-9d95-609ac866d332
+ref table 'vaope_etl DimFecha'
+ref table LocalDateTable_5be2a474-ae95-4180-b3ec-918f8433396a
+ref table 'vaope_etl DimLocalEvento'
+ref table 'vaope_etl DimOrganizadores'
+ref table 'vaope_etl DimProducto'
+ref table 'vaope_etl DimProveedor'
+ref table 'vaope_etl DimTiposGasto'
+ref table 'vaope_etl DimUbicacion'
+ref table 'vaope_etl DimVendedor'
+ref table 'vaope_etl FactEgresosDetalle'
+ref table LocalDateTable_e42ce3ad-0f2c-4210-98b6-7c0ab0183995
+ref table 'vaope_etl FactVentasDetalle'
+ref table LocalDateTable_ceba83c5-1b1d-4433-9d5d-5912f7798b6d
+ref table 'vaope_etl eventosOrganizador_Detalle'
+ref table 'vaope_etl DimCuenta'
+ref table 'vaope_etl DimCuentaAnalitica'
+ref table 'vaope_etl DimDistribucionAnalitica'
+ref table 'vaope_etl distribucion_Cuentaan_Detalle'
+ref table Bridge_Distinct
+
+ref cultureInfo es-ES
+

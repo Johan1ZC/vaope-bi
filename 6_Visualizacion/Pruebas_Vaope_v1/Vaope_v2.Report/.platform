@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Vaope_v2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "21b169f4-f8b5-4b63-8966-53aaa09f05c8"
+  }
+}

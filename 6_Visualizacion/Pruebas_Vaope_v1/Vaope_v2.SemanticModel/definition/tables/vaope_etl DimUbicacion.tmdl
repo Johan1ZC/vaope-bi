@@ -1,0 +1,53 @@
+table 'vaope_etl DimUbicacion'
+	lineageTag: f3497bb9-6268-46ab-966c-4d74d5083585
+
+	column UbicacionID
+		dataType: int64
+		formatString: 0
+		lineageTag: f7d240e9-1941-4259-ae67-da1da1a2b63b
+		summarizeBy: none
+		sourceColumn: UbicacionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 4f36a08c-9a33-4eea-a6d0-b9e353a1c0e3
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Departamento
+		dataType: string
+		lineageTag: a9d6f1d0-9fde-45ac-b653-e2ffa0fad54d
+		summarizeBy: none
+		sourceColumn: Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: a2e9ca92-933b-4933-9bc3-972f97530720
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distrito
+		dataType: string
+		lineageTag: 3ae699f3-3ef1-4b7a-90cb-f774b34ed77f
+		summarizeBy: none
+		sourceColumn: Distrito
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimUbicacion' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimUbicacion = Origen{[Schema="vaope_etl",Item="DimUbicacion"]}[Data]
+				in
+				    vaope_etl_DimUbicacion
+

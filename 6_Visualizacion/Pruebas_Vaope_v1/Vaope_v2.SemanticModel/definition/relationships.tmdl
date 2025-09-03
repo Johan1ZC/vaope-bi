@@ -1,0 +1,139 @@
+relationship 02fb63df-ff4d-4144-8ad6-23bfe477452e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'vaope_etl DimEventos'.FechaInicio
+	toColumn: LocalDateTable_c4de6ab8-c363-4a4d-8df8-f90a33b0e51f.Date
+
+relationship b2f39ef3-8ed8-4bb1-a7d7-de5ba86d336b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'vaope_etl DimEventos'.FechaFin
+	toColumn: LocalDateTable_1b0491ae-a01c-4a5c-9d95-609ac866d332.Date
+
+relationship 558febb4-a78f-45b0-a572-a15d03bb68b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'vaope_etl DimFecha'.Fecha
+	toColumn: LocalDateTable_5be2a474-ae95-4180-b3ec-918f8433396a.Date
+
+relationship 28029d49-d62a-4a03-b97e-11ca2d0ddb9e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'vaope_etl FactEgresosDetalle'.FechaCarga
+	toColumn: LocalDateTable_e42ce3ad-0f2c-4210-98b6-7c0ab0183995.Date
+
+relationship 7abd69f3-5cac-44fb-b828-df7f118a5de0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'vaope_etl FactVentasDetalle'.FechaCarga
+	toColumn: LocalDateTable_ceba83c5-1b1d-4433-9d5d-5912f7798b6d.Date
+
+relationship 5bc39c99-b17e-4727-b051-4b50fb038a84
+	fromColumn: 'vaope_etl DimEventos'.LocalEventoID
+	toColumn: 'vaope_etl DimLocalEvento'.LocalEventoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3c0fd0de-00ff-4a68-a6d8-36b255aa55f0
+	fromColumn: 'vaope_etl DimLocalEvento'.UbicacionID
+	toColumn: 'vaope_etl DimUbicacion'.UbicacionID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5c3f3c21-b4e1-4afc-bfee-ed97f34fade0
+	fromColumn: 'vaope_etl FactEgresosDetalle'.EstadoFacturaID
+	toColumn: 'vaope_etl DimEstadoFactura'.EstadoFacturaID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7f2bb7e5-1ace-426f-a23c-9e748c8b446f
+	fromColumn: 'vaope_etl FactEgresosDetalle'.EventoID
+	toColumn: 'vaope_etl DimEventos'.EventoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship d540c27b-a573-4b5a-983f-86063ecf2c66
+	fromColumn: 'vaope_etl FactEgresosDetalle'.FechaFacturaID
+	toColumn: 'vaope_etl DimFecha'.FechaID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9083bec8-131a-4755-9889-38bb78ff6a0b
+	fromColumn: 'vaope_etl FactEgresosDetalle'.ProductoID
+	toColumn: 'vaope_etl DimProducto'.ProductoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7a03aa81-e1ee-4f0a-b9d7-4a6e33dcfc24
+	fromColumn: 'vaope_etl FactEgresosDetalle'.ProveedorID
+	toColumn: 'vaope_etl DimProveedor'.ProveedorID
+
+	annotation PBI_IsFromSource = FS
+
+relationship d377712f-220e-4ebb-b447-c64646d367d9
+	fromColumn: 'vaope_etl FactEgresosDetalle'.TipoGastoID
+	toColumn: 'vaope_etl DimTiposGasto'.TipoGastoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship bf38b161-3f1c-49f8-9a5d-b39914769e91
+	fromColumn: 'vaope_etl FactVentasDetalle'.EstadoFacturaID
+	toColumn: 'vaope_etl DimEstadoFactura'.EstadoFacturaID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5ea184b0-ddec-43bf-a810-6e8c107d7d64
+	fromColumn: 'vaope_etl FactVentasDetalle'.EventoID
+	toColumn: 'vaope_etl DimEventos'.EventoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship b1a2c55f-b9e6-46c8-86d8-ce689f9f649f
+	fromColumn: 'vaope_etl FactVentasDetalle'.FechaFacturaID
+	toColumn: 'vaope_etl DimFecha'.FechaID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2c28a811-25ce-4513-87b3-b37f89423274
+	fromColumn: 'vaope_etl FactVentasDetalle'.ProductoID
+	toColumn: 'vaope_etl DimProducto'.ProductoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship e2450c55-4760-4268-8f40-bcc3d773302e
+	fromColumn: 'vaope_etl FactVentasDetalle'.VendedorID
+	toColumn: 'vaope_etl DimVendedor'.VendedorID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 02661d53-ce26-400b-a985-f287fcced64a
+	fromColumn: 'vaope_etl eventosOrganizador_Detalle'.EventoID
+	toColumn: 'vaope_etl DimEventos'.EventoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9d8ba46a-c521-4040-8448-3bff28102730
+	fromColumn: 'vaope_etl eventosOrganizador_Detalle'.OrganizadorID
+	toColumn: 'vaope_etl DimOrganizadores'.OrganizadorID
+
+	annotation PBI_IsFromSource = FS
+
+relationship c56980df-79e9-4469-8ea6-e1b2e78b7cc8
+	fromColumn: 'vaope_etl distribucion_Cuentaan_Detalle'.CuentaAnaliticaID
+	toColumn: 'vaope_etl DimCuentaAnalitica'.CuentaAnaliticaID
+
+	annotation PBI_IsFromSource = FS
+
+relationship a28bf05b-eba3-4d25-a619-6adf72d9af6f
+	fromColumn: 'vaope_etl distribucion_Cuentaan_Detalle'.DistribucionID
+	toColumn: 'vaope_etl DimDistribucionAnalitica'.DistribucionID
+
+	annotation PBI_IsFromSource = FS
+
+relationship ed21af83-70c6-cf70-27ca-83643cc1e3a5
+	fromColumn: 'vaope_etl FactEgresosDetalle'.CuentaID
+	toColumn: 'vaope_etl DimCuenta'.CuentaID
+
+relationship 99017d28-d63d-7f3a-36f7-0fc92b9e1700
+	fromColumn: 'vaope_etl FactEgresosDetalle'.DistribucionID
+	toColumn: 'vaope_etl DimDistribucionAnalitica'.DistribucionID
+
+relationship eb93e649-5d5c-b82b-ced3-694ba2c742fe
+	fromColumn: 'vaope_etl FactVentasDetalle'.DistribucionID
+	toColumn: 'vaope_etl DimDistribucionAnalitica'.DistribucionID
+

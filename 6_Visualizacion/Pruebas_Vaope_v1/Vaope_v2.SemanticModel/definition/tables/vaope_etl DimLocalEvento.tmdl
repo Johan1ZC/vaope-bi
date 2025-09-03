@@ -1,0 +1,42 @@
+table 'vaope_etl DimLocalEvento'
+	lineageTag: b6c83c56-685a-4c42-bbaf-fc20e3bf1165
+
+	column LocalEventoID
+		dataType: int64
+		formatString: 0
+		lineageTag: cd1aaf98-4600-43ed-8580-76e57fdcddf1
+		summarizeBy: none
+		sourceColumn: LocalEventoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UbicacionID
+		dataType: int64
+		formatString: 0
+		lineageTag: a915efaa-7f27-42d3-9de6-43ce9e29ab30
+		summarizeBy: none
+		sourceColumn: UbicacionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomLocal
+		dataType: string
+		lineageTag: 71c226ef-e2be-4e9a-add5-5f1e5309231c
+		summarizeBy: none
+		sourceColumn: NomLocal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimLocalEvento' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimLocalEvento = Origen{[Schema="vaope_etl",Item="DimLocalEvento"]}[Data]
+				in
+				    vaope_etl_DimLocalEvento
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

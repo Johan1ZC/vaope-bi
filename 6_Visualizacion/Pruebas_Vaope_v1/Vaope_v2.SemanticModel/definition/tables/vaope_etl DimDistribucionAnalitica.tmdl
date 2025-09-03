@@ -1,0 +1,33 @@
+table 'vaope_etl DimDistribucionAnalitica'
+	lineageTag: 0499cad9-5c0c-46d4-b3b6-2742de86537d
+
+	column DistribucionID
+		dataType: int64
+		formatString: 0
+		lineageTag: cb5f8635-0316-47d0-9047-a2dd8ebfb994
+		summarizeBy: none
+		sourceColumn: DistribucionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: eae0b853-821c-47ab-a787-1abeb78fa1d3
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimDistribucionAnalitica' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimDistribucionAnalitica = Origen{[Schema="vaope_etl",Item="DimDistribucionAnalitica"]}[Data]
+				in
+				    vaope_etl_DimDistribucionAnalitica
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

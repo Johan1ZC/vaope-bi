@@ -1,0 +1,33 @@
+table 'vaope_etl DimCuentaAnalitica'
+	lineageTag: d128c89d-8db4-486b-9896-61c2cddbe053
+
+	column CuentaAnaliticaID
+		dataType: int64
+		formatString: 0
+		lineageTag: cebe2bbb-53b0-4846-9a78-85992b0b805b
+		summarizeBy: none
+		sourceColumn: CuentaAnaliticaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: abe7b0e0-1b28-476d-aac4-791327612393
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimCuentaAnalitica' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimCuentaAnalitica = Origen{[Schema="vaope_etl",Item="DimCuentaAnalitica"]}[Data]
+				in
+				    vaope_etl_DimCuentaAnalitica
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

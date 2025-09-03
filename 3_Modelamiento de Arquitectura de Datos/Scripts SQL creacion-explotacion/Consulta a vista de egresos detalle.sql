@@ -1,0 +1,1 @@
+SELECT * FROM odoo_erp_fake.v_src_fact_egresos_detalle;

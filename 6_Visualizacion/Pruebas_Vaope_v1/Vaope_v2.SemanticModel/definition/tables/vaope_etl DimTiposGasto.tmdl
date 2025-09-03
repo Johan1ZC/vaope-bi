@@ -1,0 +1,29 @@
+table 'vaope_etl DimTiposGasto'
+	lineageTag: b6cd5c18-202a-4e35-a9ef-28b6e2b4448a
+
+	column TipoGastoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e769ff5-40f2-4b97-b01d-6e35d8e6ecd7
+		summarizeBy: none
+		sourceColumn: TipoGastoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreGasto
+		dataType: string
+		lineageTag: f407601f-31e4-45c6-90f8-5fec667d2670
+		summarizeBy: none
+		sourceColumn: NombreGasto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimTiposGasto' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimTiposGasto = Origen{[Schema="vaope_etl",Item="DimTiposGasto"]}[Data]
+				in
+				    vaope_etl_DimTiposGasto
+

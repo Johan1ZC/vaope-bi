@@ -1,0 +1,227 @@
+table 'vaope_etl FactEgresosDetalle'
+	lineageTag: ef42ff4b-620f-45c9-9576-01e0cabd70cf
+
+	measure 'Egresos sin impuesto' = CALCULATE(sum('vaope_etl FactEgresosDetalle'[SinImpuesto]),'vaope_etl DimEstadoFactura'[EstadoFactura] = "pagada")
+		lineageTag: 1ba38138-aa0d-4326-927b-5ace73509b6e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cantidad de Egresos' = COUNT('vaope_etl FactEgresosDetalle'[FacturaDetalleID])
+		formatString: 0
+		lineageTag: 8a7fb8d6-99d1-4d4e-a453-9f9d67427130
+
+	measure 'Egresos sin impuesto(por Organizador)' =
+			
+			VAR EventosDelOrganizador =
+			    CALCULATETABLE (
+			        DISTINCT ( 'vaope_etl eventosOrganizador_Detalle'[EventoID]),
+			        KEEPFILTERS ( VALUES ('vaope_etl DimOrganizadores'[OrganizadorID]) )
+			    )
+			RETURN
+			CALCULATE (
+			    [Egresos sin impuesto],
+			    TREATAS ( EventosDelOrganizador, 'vaope_etl DimEventos'[EventoID])
+			)
+		lineageTag: 3f26fa83-81b1-4379-8c88-69f111a3e700
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Egreso sin impuesto (Todos los estados)' = sum('vaope_etl FactEgresosDetalle'[SinImpuesto])
+		lineageTag: 0ae782fa-c857-4a09-a109-71b69e06ab75
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EgresoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f6a9af0-e258-4bc9-b43f-142db8ca9895
+		summarizeBy: count
+		sourceColumn: EgresoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaFacturaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 42d03dc3-7c6c-4643-bcee-4fffc6a2ddce
+		summarizeBy: none
+		sourceColumn: FechaFacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EventoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 518c34fa-b8ec-4dcc-bd89-8100d28dafe8
+		summarizeBy: none
+		sourceColumn: EventoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoGastoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ba7a486-2291-4bf6-a150-574f5138666b
+		summarizeBy: none
+		sourceColumn: TipoGastoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SinImpuesto
+		dataType: double
+		formatString: "S/"\ #,0.00;#,0.00\ -"S/";"S/"\ #,0.00
+		lineageTag: eca983e3-ef42-4bce-bc70-536a0d60ba7d
+		summarizeBy: sum
+		sourceColumn: SinImpuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"quz-PE"}
+
+	column Impuesto
+		dataType: double
+		formatString: "S/"\ #,0.00;#,0.00\ -"S/";"S/"\ #,0.00
+		lineageTag: 7961ac9b-563d-45f6-bcca-9010a05a8abf
+		summarizeBy: sum
+		sourceColumn: Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"quz-PE"}
+
+	column Total
+		dataType: double
+		formatString: "S/"\ #,0.00;#,0.00\ -"S/";"S/"\ #,0.00
+		lineageTag: 0c40d0c4-b899-469e-8b7e-42141c680d1f
+		summarizeBy: sum
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"quz-PE"}
+
+	column FacturaDetalleID
+		dataType: string
+		lineageTag: 57a0cc44-aaae-42d3-9dcc-c12cf70566bb
+		summarizeBy: none
+		sourceColumn: FacturaDetalleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstadoFacturaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 821070ca-6644-47e7-a044-ede9ea2220c2
+		summarizeBy: none
+		sourceColumn: EstadoFacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FacturaID
+		dataType: string
+		lineageTag: 30b90ef5-dd8e-4628-9dc2-7fcc61dc695e
+		summarizeBy: none
+		sourceColumn: FacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadProd
+		dataType: int64
+		formatString: 0
+		lineageTag: a515d65e-6647-42ba-8f1c-9aede84162f9
+		summarizeBy: sum
+		sourceColumn: CantidadProd
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProveedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: bb4f197d-98a6-4ae6-a455-d38a0db33a0e
+		summarizeBy: none
+		sourceColumn: ProveedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductoID
+		dataType: int64
+		formatString: 0
+		lineageTag: d141194a-3885-4c80-8087-867f30aa3846
+		summarizeBy: none
+		sourceColumn: ProductoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fuente
+		dataType: string
+		lineageTag: 3c8e6ea4-4a3e-4551-8698-282258101cbc
+		summarizeBy: none
+		sourceColumn: Fuente
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCarga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5b4d84e9-f49e-4124-bb75-2ac3727ed5e6
+		summarizeBy: none
+		sourceColumn: FechaCarga
+
+		variation Variación
+			isDefault
+			relationship: 28029d49-d62a-4a03-b97e-11ca2d0ddb9e
+			defaultHierarchy: LocalDateTable_e42ce3ad-0f2c-4210-98b6-7c0ab0183995.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad = 1
+		formatString: 0
+		lineageTag: cab4649c-d0b6-459f-925e-479fc50c0eaf
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column PercentDist
+		dataType: double
+		lineageTag: 8ebcf7df-81cf-40fa-9b4e-258568222c46
+		summarizeBy: sum
+		sourceColumn: PercentDist
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DistribucionID
+		dataType: int64
+		formatString: 0
+		lineageTag: fa73de1f-02fb-4e5f-9d2f-9bdd7c1c9fad
+		summarizeBy: none
+		sourceColumn: DistribucionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CuentaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d48d3df-3fcd-4e52-8212-6eea40237383
+		summarizeBy: none
+		sourceColumn: CuentaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoriaProducto = CALCULATE(1*1,'vaope_etl DimProducto'[NomProducto] = "Marketing")
+		formatString: 0
+		lineageTag: 1c9b323b-f74f-469a-abf4-738477ab2922
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl FactEgresosDetalle' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_FactEgresosDetalle = Origen{[Schema="vaope_etl",Item="FactEgresosDetalle"]}[Data]
+				in
+				    vaope_etl_FactEgresosDetalle
+

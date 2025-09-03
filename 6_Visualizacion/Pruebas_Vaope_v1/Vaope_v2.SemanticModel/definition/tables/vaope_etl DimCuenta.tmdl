@@ -1,0 +1,37 @@
+table 'vaope_etl DimCuenta'
+	lineageTag: 161a6923-f1b5-46bf-9b13-046b6079e7ff
+
+	column CuentaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 03b8c8c9-260e-4f7a-981a-119f77fffe6e
+		summarizeBy: none
+		sourceColumn: CuentaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreCuenta
+		dataType: string
+		lineageTag: 87105f9b-ebc0-4da8-86c3-89fa69bd8234
+		summarizeBy: none
+		sourceColumn: NombreCuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Detalle
+		dataType: string
+		lineageTag: 974569f1-8a3d-4110-93f2-279c210fde67
+		summarizeBy: none
+		sourceColumn: Detalle
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimCuenta' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimCuenta = Origen{[Schema="vaope_etl",Item="DimCuenta"]}[Data]
+				in
+				    vaope_etl_DimCuenta
+

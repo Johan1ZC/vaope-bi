@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Vaope_v2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4ed26950-551e-4dce-a37f-8cd2dbed3151"
+  }
+}

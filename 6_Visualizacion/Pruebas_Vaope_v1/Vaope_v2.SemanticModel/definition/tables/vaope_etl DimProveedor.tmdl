@@ -1,0 +1,37 @@
+table 'vaope_etl DimProveedor'
+	lineageTag: 7ff0d919-c743-4656-85e7-ffe948605fe4
+
+	column ProveedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ed087f0-7486-42a6-9414-b4deb1b4e553
+		summarizeBy: none
+		sourceColumn: ProveedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomProveedor
+		dataType: string
+		lineageTag: 960b3a97-8441-4154-aee7-73266f1dd2ed
+		summarizeBy: none
+		sourceColumn: NomProveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: fab2784e-60aa-4099-bd56-5ec715eb8ddc
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimProveedor' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimProveedor = Origen{[Schema="vaope_etl",Item="DimProveedor"]}[Data]
+				in
+				    vaope_etl_DimProveedor
+

@@ -1,0 +1,265 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "LOGO_VAOPE16262073045770642.png",
+            "path": "LOGO_VAOPE16262073045770642.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Ventas y egresos ODDO",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "3df78d9730071519b953",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0b33ee0802b6b190a04a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.9090909090909091,\"y\":190.9090909090909,\"z\":12000,\"width\":289.09090909090907,\"height\":257.27272727272725,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vaope_etl DimEstadoFactura.EstadoFactura\",\"active\":true}],\"Y\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Venta sin impuesto(Todos los estados)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v1\",\"Entity\":\"vaope_etl DimEstadoFactura\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"EstadoFactura\"},\"Name\":\"vaope_etl DimEstadoFactura.EstadoFactura\",\"NativeReferenceName\":\"EstadoFactura\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Venta sin impuesto(Todos los estados)\"},\"Name\":\"vaope_etl FactVentasDetalle.Venta sin impuesto(Todos los estados)\",\"NativeReferenceName\":\"Venta sin impuesto(Todos los estados)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Venta sin impuesto(Todos los estados)\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.Ventas sin impuesto\":{\"displayName\":\"Ventas Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 257.27,
+          "width": 289.09,
+          "x": 0.91,
+          "y": 190.91,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"14ce4b043098bcc64b40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":585.4545454545454,\"y\":189.99999999999997,\"z\":9000,\"width\":694.5454545454545,\"height\":258.1818181818182,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vaope_etl DimFecha.Mes\",\"active\":true}],\"Y\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto\"},{\"queryRef\":\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"vaope_etl DimFecha\",\"Type\":0},{\"Name\":\"v2\",\"Entity\":\"vaope_etl FactEgresosDetalle\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Mes\"},\"Name\":\"vaope_etl DimFecha.Mes\",\"NativeReferenceName\":\"Suma de Mes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Ventas sin impuesto\"},\"Name\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto\",\"NativeReferenceName\":\"Ventas Totales sin IGV\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v2\"}},\"Property\":\"Egresos sin impuesto\"},\"Name\":\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\",\"NativeReferenceName\":\"Egresos Totales sin IGV\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Ventas sin impuesto\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.Ventas sin impuesto\":{\"displayName\":\"Ventas Totales sin IGV\"},\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\":{\"displayName\":\"Egresos Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "height": 258.18,
+          "width": 694.55,
+          "x": 585.45,
+          "y": 190.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"29cc9ba660cec50ae847\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1152.7272727272725,\"y\":0,\"z\":20000,\"width\":127.27272727272727,\"height\":44.54545454545454,\"tabOrder\":20000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"LOGO_VAOPE16262073045770642.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 44.55,
+          "width": 127.27,
+          "x": 1152.73,
+          "y": 0.00,
+          "z": 20000.00
+        },
+        {
+          "config": "{\"name\":\"3a53b80b91ce025c00e3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":585.4545454545454,\"y\":448.18181818181813,\"z\":11000,\"width\":296.3636363636363,\"height\":271.8181818181818,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto\"}],\"Category\":[{\"queryRef\":\"vaope_etl DimUbicacion.Departamento\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"vaope_etl DimUbicacion\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Ventas sin impuesto\"},\"Name\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto\",\"NativeReferenceName\":\"Ventas Totales sin IGV\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Departamento\"},\"Name\":\"vaope_etl DimUbicacion.Departamento\",\"NativeReferenceName\":\"Departamento\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Ventas sin impuesto\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.Ventas sin impuesto\":{\"displayName\":\"Ventas Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.82,
+          "width": 296.36,
+          "x": 585.45,
+          "y": 448.18,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"3e8f2152824ac69c0942\",\"layouts\":[{\"id\":0,\"position\":{\"x\":889.9999999999999,\"y\":448.18181818181813,\"z\":15000,\"width\":344.5454545454545,\"height\":271.8181818181818,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vaope_etl DimOrganizadores.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto(por Organizador)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl DimOrganizadores\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Nombre\"},\"Name\":\"vaope_etl DimOrganizadores.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Ventas sin impuesto(por Organizador)\"},\"Name\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto(por Organizador)\",\"NativeReferenceName\":\"Ventas sin impuesto(por Organizador)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Ventas sin impuesto(por Organizador)\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.Ventas sin impuesto\":{\"displayName\":\"Ventas Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.82,
+          "width": 344.55,
+          "x": 890.00,
+          "y": 448.18,
+          "z": 15000.00
+        },
+        {
+          "config": "{\"name\":\"475d7579c1d204d4c018\",\"layouts\":[{\"id\":0,\"position\":{\"x\":394.02985074626866,\"y\":112.83582089552239,\"z\":3000,\"width\":185.3731343283582,\"height\":77.91044776119402,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactEgresosDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Egresos sin impuesto\"},\"Name\":\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\",\"NativeReferenceName\":\"Egresos Totales sin IGV\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Egresos sin impuesto\"}}}]},\"columnProperties\":{\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\":{\"formatString\":\"\\\"S/\\\" #,0.00;-\\\"S/\\\" #,0.00;\\\"S/\\\" #,0.00\",\"displayName\":\"Egresos Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 77.91,
+          "width": 185.37,
+          "x": 394.03,
+          "y": 112.84,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"50c4f400e3082a080306\",\"layouts\":[{\"id\":0,\"position\":{\"x\":935.9393939393935,\"y\":113.40909090909086,\"z\":14000,\"width\":184,\"height\":77.5,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.EBITDA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"EBITDA\"},\"Name\":\"vaope_etl FactVentasDetalle.EBITDA\",\"NativeReferenceName\":\"% EBITDA\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"EBITDA\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.EBITDA\":{\"displayName\":\"% EBITDA\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 77.50,
+          "width": 184.00,
+          "x": 935.94,
+          "y": 113.41,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"5f4d92c91bc800ce5e47\",\"layouts\":[{\"id\":0,\"position\":{\"x\":574.9393939393935,\"y\":39.88277511961723,\"z\":4000,\"width\":184,\"height\":78,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Margen Bruto\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Margen Bruto\"},\"Name\":\"vaope_etl FactVentasDetalle.Margen Bruto\",\"NativeReferenceName\":\"Margen Bruto\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Margen Bruto\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.Margen Bruto\":{\"formatString\":\"\\\"S/\\\" #,0.00;-\\\"S/\\\" #,0.00;\\\"S/\\\" #,0.00\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 78.00,
+          "width": 184.00,
+          "x": 574.94,
+          "y": 39.88,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"6a666e04600919cb5411\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1120,\"y\":44.54545454545454,\"z\":1000,\"width\":160,\"height\":145.45454545454544,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"vaope_etl DimFecha.Fecha\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl DimFecha\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Fecha\"},\"Name\":\"vaope_etl DimFecha.Fecha\",\"NativeReferenceName\":\"Fecha\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Fecha\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2012-01-01T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2025-06-30T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl DimFecha\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Fecha\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2012-01-01T00:00:00'\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Fecha\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2025-07-01T00:00:00'\"}}}}}}}]}}}}],\"date\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"slider\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 145.45,
+          "width": 160.00,
+          "x": 1120.00,
+          "y": 44.55,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7100e5ca3b44e74306cc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":214.43939393939385,\"y\":39.88277511961723,\"z\":0,\"width\":185,\"height\":78,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Cantidad de Ventas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Cantidad de Ventas\"},\"Name\":\"vaope_etl FactVentasDetalle.Cantidad de Ventas\",\"NativeReferenceName\":\"Cantidad de Ventas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Cantidad de Ventas\"}}}]},\"columnProperties\":{\"Sum(vaope_etl FactVentasDetalle.Cantidad)\":{\"displayName\":\"Cantidad de Ventas\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"textWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'middle'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 78.00,
+          "width": 185.00,
+          "x": 214.44,
+          "y": 39.88,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"789653801c36a3050893\",\"layouts\":[{\"id\":0,\"position\":{\"x\":395.4393939393941,\"y\":39.88277511961723,\"z\":2000,\"width\":184,\"height\":78.5,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Ventas sin impuesto\"},\"Name\":\"vaope_etl FactVentasDetalle.Ventas sin impuesto\",\"NativeReferenceName\":\"Ventas Totales sin IGV\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Ventas sin impuesto\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.Ventas sin impuesto\":{\"formatString\":\"\\\"S/\\\" #,0.00;-\\\"S/\\\" #,0.00;\\\"S/\\\" #,0.00\",\"displayName\":\"Ventas Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"textWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"matchValueAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignBaselines\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 78.50,
+          "width": 184.00,
+          "x": 395.44,
+          "y": 39.88,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7915b4570948ee4e0b9e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.9253731343283,\"y\":40.298507462686565,\"z\":16000,\"width\":184.47761194029852,\"height\":77.91044776119402,\"tabOrder\":16000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Margen Operativo\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Margen Operativo\"},\"Name\":\"vaope_etl FactVentasDetalle.Margen Operativo\",\"NativeReferenceName\":\"Margen Operativo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Margen Operativo\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 77.91,
+          "width": 184.48,
+          "x": 754.93,
+          "y": 40.30,
+          "z": 16000.00
+        },
+        {
+          "config": "{\"name\":\"7efe77bc7ea6936a6dc3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":289.09090909090907,\"y\":448.18181818181813,\"z\":6000,\"width\":296.3636363636363,\"height\":271.8181818181818,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"vaope_etl FactEgresosDetalle.Cantidad de Egresos\"}],\"Category\":[{\"queryRef\":\"vaope_etl DimDistribucionAnalitica.Nombre\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v1\",\"Entity\":\"vaope_etl FactEgresosDetalle\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"vaope_etl DimDistribucionAnalitica\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Cantidad de Egresos\"},\"Name\":\"vaope_etl FactEgresosDetalle.Cantidad de Egresos\",\"NativeReferenceName\":\"Cantidad de Egresos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Nombre\"},\"Name\":\"vaope_etl DimDistribucionAnalitica.Nombre\",\"NativeReferenceName\":\"Distribucion Analitica\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Cantidad de Egresos\"}}}]},\"columnProperties\":{\"Sum(vaope_etl FactEgresosDetalle.SinImpuesto)\":{\"displayName\":\"Total SinImpuesto\"},\"vaope_etl DimTiposGasto.NombreGasto\":{\"displayName\":\"Gasto\"},\"vaope_etl DimDistribucionAnalitica.Nombre\":{\"displayName\":\"Distribucion Analitica\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.82,
+          "width": 296.36,
+          "x": 289.09,
+          "y": 448.18,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"84f48180736a6ccd52d0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":574.9253731343283,\"y\":112.83582089552239,\"z\":5000,\"width\":184.47761194029852,\"height\":77.01492537313433,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.% Margen Bruto\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"% Margen Bruto\"},\"Name\":\"vaope_etl FactVentasDetalle.% Margen Bruto\",\"NativeReferenceName\":\"% Margen Bruto\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"% Margen Bruto\"}}}]},\"columnProperties\":{\"vaope_etl FactVentasDetalle.% Margen Bruto\":{\"formatString\":\"0.00 %;-0.00 %;0.00 %\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 77.01,
+          "width": 184.48,
+          "x": 574.93,
+          "y": 112.84,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a3814800234772c86538\",\"layouts\":[{\"id\":0,\"position\":{\"x\":935.820895522388,\"y\":41.19402985074627,\"z\":8000,\"width\":183.5820895522388,\"height\":77.91044776119402,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.EBITDA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"EBITDA\"},\"Name\":\"vaope_etl FactVentasDetalle.EBITDA\",\"NativeReferenceName\":\"EBITDA\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"EBITDA\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 77.91,
+          "width": 183.58,
+          "x": 935.82,
+          "y": 41.19,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"b334ee5155d011a0ad44\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.9090909090909091,\"y\":448.18181818181813,\"z\":7000,\"width\":288.18181818181813,\"height\":271.8181818181818,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"vaope_etl DimProducto.NomProducto\",\"active\":true}],\"Y\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.Cantidad de Ventas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v1\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"vaope_etl DimProducto\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NomProducto\"},\"Name\":\"vaope_etl DimProducto.NomProducto\",\"NativeReferenceName\":\"Producto\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Cantidad de Ventas\"},\"Name\":\"vaope_etl FactVentasDetalle.Cantidad de Ventas\",\"NativeReferenceName\":\"Cantidad de Ventas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Cantidad de Ventas\"}}}]},\"columnProperties\":{\"Sum(vaope_etl FactVentasDetalle.SinImpuesto)\":{\"displayName\":\"Total SinImpuesto\"},\"vaope_etl DimProducto.NomProducto\":{\"displayName\":\"Producto\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 271.82,
+          "width": 288.18,
+          "x": 0.91,
+          "y": 448.18,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"b441fb3905d6c8421450\",\"layouts\":[{\"id\":0,\"position\":{\"x\":214.02985074626866,\"y\":112.83582089552239,\"z\":18000,\"width\":185.3731343283582,\"height\":77.91044776119402,\"tabOrder\":18000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactEgresosDetalle.Cantidad de Egresos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactEgresosDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Cantidad de Egresos\"},\"Name\":\"vaope_etl FactEgresosDetalle.Cantidad de Egresos\",\"NativeReferenceName\":\"Cantidad de Egresos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Cantidad de Egresos\"}}}]},\"columnProperties\":{\"Sum(vaope_etl FactVentasDetalle.Cantidad)\":{\"displayName\":\"Cantidad de Ventas\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"textWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'middle'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 77.91,
+          "width": 185.37,
+          "x": 214.03,
+          "y": 112.84,
+          "z": 18000.00
+        },
+        {
+          "config": "{\"name\":\"c3152b71624dcb150705\",\"layouts\":[{\"id\":0,\"position\":{\"x\":289.09090909090907,\"y\":190.9090909090909,\"z\":13000,\"width\":296.3636363636363,\"height\":257.27272727272725,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"vaope_etl FactEgresosDetalle.Egreso sin impuesto (Todos los estados)\"}],\"Category\":[{\"queryRef\":\"vaope_etl DimEstadoFactura.EstadoFactura\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v1\",\"Entity\":\"vaope_etl DimEstadoFactura\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"vaope_etl FactEgresosDetalle\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"EstadoFactura\"},\"Name\":\"vaope_etl DimEstadoFactura.EstadoFactura\",\"NativeReferenceName\":\"EstadoFactura\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Egreso sin impuesto (Todos los estados)\"},\"Name\":\"vaope_etl FactEgresosDetalle.Egreso sin impuesto (Todos los estados)\",\"NativeReferenceName\":\"Egreso sin impuesto (Todos los estados)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Egreso sin impuesto (Todos los estados)\"}}}]},\"columnProperties\":{\"vaope_etl FactEgresosDetalle.Egresos sin impuesto\":{\"displayName\":\"Egresos Totales sin IGV\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 257.27,
+          "width": 296.36,
+          "x": 289.09,
+          "y": 190.91,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"e2315f0620c8e4887e3b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.9393939393935,\"y\":112.90909090909086,\"z\":17000,\"width\":184,\"height\":77.5,\"tabOrder\":17000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"vaope_etl FactVentasDetalle.% Margen Operativo\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"% Margen Operativo\"},\"Name\":\"vaope_etl FactVentasDetalle.% Margen Operativo\",\"NativeReferenceName\":\"% Margen Operativo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"% Margen Operativo\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'belowValue'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}},\"selector\":{\"id\":\"default\"}}]}}}",
+          "filters": "[]",
+          "height": 77.50,
+          "width": 184.00,
+          "x": 754.94,
+          "y": 112.91,
+          "z": 17000.00
+        },
+        {
+          "config": "{\"name\":\"ee02e4e080a6a05d500e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":44.54545454545454,\"z\":10000,\"width\":217.27272727272725,\"height\":139.0909090909091,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"vaope_etl DimFecha.Anio\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl DimFecha\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Anio\"},\"Name\":\"vaope_etl DimFecha.Anio\",\"NativeReferenceName\":\"Anio\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"responsive\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"outlineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"numericInputStyle\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"slider\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"size\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualHeader\":[{\"properties\":{\"showTooltipButton\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lockAspect\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 139.09,
+          "width": 217.27,
+          "x": 0.00,
+          "y": 44.55,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"ef0732713374953962d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.9090909090909091,\"y\":0,\"z\":19000,\"width\":1279.090909090909,\"height\":44.54545454545454,\"tabOrder\":19000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#171477'\"}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dashboard de Ventas y Costos'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"28D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#171477'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 44.55,
+          "width": 1279.09,
+          "x": 0.91,
+          "y": 0.00,
+          "z": 19000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Validaciones",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "b98823c7a362790451da",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"229e5dc040a64376d7a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":82.38805970149254,\"y\":311.6417910447761,\"z\":0,\"width\":977.910447761194,\"height\":362.6865671641791,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(vaope_etl DimFecha.Mes)\"},{\"queryRef\":\"vaope_etl DimProducto.NomProducto\"},{\"queryRef\":\"Sum(vaope_etl FactVentasDetalle.SinImpuesto)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"vaope_etl DimFecha\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"vaope_etl DimProducto\",\"Type\":0},{\"Name\":\"v2\",\"Entity\":\"vaope_etl FactVentasDetalle\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Mes\"}},\"Function\":0},\"Name\":\"Sum(vaope_etl DimFecha.Mes)\",\"NativeReferenceName\":\"Suma de Mes\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"NomProducto\"},\"Name\":\"vaope_etl DimProducto.NomProducto\",\"NativeReferenceName\":\"NomProducto\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v2\"}},\"Property\":\"SinImpuesto\"}},\"Function\":0},\"Name\":\"Sum(vaope_etl FactVentasDetalle.SinImpuesto)\",\"NativeReferenceName\":\"Suma de SinImpuesto\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v2\"}},\"Property\":\"SinImpuesto\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 362.69,
+          "width": 977.91,
+          "x": 82.39,
+          "y": 311.64,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"75e7020a93ce1196ebca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":21.492537313432834,\"y\":21.492537313432834,\"z\":1000,\"width\":285.67164179104475,\"height\":124.4776119402985,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Bridge_Distinct.Duplicados\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bridge_Distinct\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Duplicados\"},\"Name\":\"Bridge_Distinct.Duplicados\",\"NativeReferenceName\":\"Duplicados Bridge Organizadores\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Duplicados\"}}}]},\"columnProperties\":{\"Bridge_Distinct.Duplicados\":{\"displayName\":\"Duplicados Bridge Organizadores\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 124.48,
+          "width": 285.67,
+          "x": 21.49,
+          "y": 21.49,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

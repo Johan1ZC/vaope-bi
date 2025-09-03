@@ -1,0 +1,226 @@
+table 'vaope_etl FactVentasDetalle'
+	lineageTag: e2ed18c0-1d09-4496-aec1-9667704ba2d0
+
+	measure 'Ventas sin impuesto' = CALCULATE(SUM('vaope_etl FactVentasDetalle'[SinImpuesto]),'vaope_etl DimEstadoFactura'[EstadoFactura] = "pagada")
+		lineageTag: 4338cdf5-e168-4a8f-b738-47565446f452
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Margen Bruto' = [Ventas sin impuesto] - [Egresos sin impuesto]
+		lineageTag: 5d74844e-4ff2-4376-9412-7dc735a719d0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Margen Bruto' = DIVIDE([Margen Bruto],[Ventas sin impuesto])
+		lineageTag: 58dd6c7d-52ce-4ff8-9f53-eb7df3e0d1e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Margen Operativo' = [Ventas sin impuesto] - [Egresos sin impuesto]
+		lineageTag: 5b109b94-29c0-4d9c-a801-c0d08f8d157a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Margen Operativo' = DIVIDE([Margen Operativo],[Ventas sin impuesto])
+		lineageTag: 85532e1f-c60f-4b20-8dce-a11f5f1ed96f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure EBITDA = [Margen Operativo] + 0.18 + 0.15 + 0.25 + 0.23
+		lineageTag: e39d2094-d7c3-4d8b-a525-28e94665ac4e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cantidad de Ventas' = COUNT('vaope_etl FactVentasDetalle'[FacturaDetalleID])
+		formatString: 0
+		lineageTag: cde9af40-a468-4bd9-8144-b183c53aa1d4
+
+	measure 'Ventas sin impuesto(por Organizador)' =
+			
+			VAR EventosDelOrganizador =
+			    CALCULATETABLE (
+			        DISTINCT ( 'vaope_etl eventosOrganizador_Detalle'[EventoID]),
+			        KEEPFILTERS ( VALUES ( 'vaope_etl DimOrganizadores'[OrganizadorID]) )
+			    )
+			RETURN
+			CALCULATE (
+			    [Ventas sin impuesto],
+			    TREATAS ( EventosDelOrganizador, 'vaope_etl DimEventos'[EventoID])
+			)
+		lineageTag: 05e58f02-66d8-49cf-b5ec-26e4c3f174e3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Venta sin impuesto(Todos los estados)' = SUM('vaope_etl FactVentasDetalle'[SinImpuesto])
+		lineageTag: 764f1db4-7ad4-4f66-8030-0256e8d72263
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VentaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 15fd9646-8513-4cfc-9585-348d968f817a
+		summarizeBy: count
+		sourceColumn: VentaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaFacturaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 94685885-bc14-46e3-93b6-eb6856a0f3b3
+		summarizeBy: none
+		sourceColumn: FechaFacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EventoID
+		dataType: int64
+		formatString: 0
+		lineageTag: af165ac6-aefc-426f-8a1b-f495c876e54b
+		summarizeBy: none
+		sourceColumn: EventoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6276331d-4110-43fc-8ff7-05e48dac01e0
+		summarizeBy: none
+		sourceColumn: ProductoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadProd
+		dataType: int64
+		formatString: 0
+		lineageTag: 51464a32-a920-4b8f-a635-6f403997470f
+		summarizeBy: sum
+		sourceColumn: CantidadProd
+
+		annotation SummarizationSetBy = Automatic
+
+	column SinImpuesto
+		dataType: double
+		lineageTag: e2fcf00e-f301-4d0d-a5d0-425d01bd5d27
+		summarizeBy: sum
+		sourceColumn: SinImpuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total
+		dataType: double
+		lineageTag: 4e288c08-1931-40af-bef7-eb2814d2dd2b
+		summarizeBy: sum
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VendedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: c52ba4ab-df5a-4d63-8b70-04ae7619d235
+		summarizeBy: none
+		sourceColumn: VendedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FacturaDetalleID
+		dataType: string
+		lineageTag: 07bb2996-4b33-40e3-8d37-0c50baabedba
+		summarizeBy: none
+		sourceColumn: FacturaDetalleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Impuesto
+		dataType: double
+		lineageTag: 4a9627cf-9f2a-4a7d-bfc1-2df85fd1f22f
+		summarizeBy: sum
+		sourceColumn: Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstadoFacturaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c685b1f-6a9f-45d1-b99c-77bba34b4012
+		summarizeBy: none
+		sourceColumn: EstadoFacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FacturaID
+		dataType: string
+		lineageTag: 08c72385-1eb1-4f61-b3c8-4322f00772d9
+		summarizeBy: none
+		sourceColumn: FacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fuente
+		dataType: string
+		lineageTag: 889d3dbc-87ab-4ded-b256-d7aa1d2a4328
+		summarizeBy: none
+		sourceColumn: Fuente
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCarga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 54265174-c70d-413f-a71e-17a26189884a
+		summarizeBy: none
+		sourceColumn: FechaCarga
+
+		variation Variación
+			isDefault
+			relationship: 7abd69f3-5cac-44fb-b828-df7f118a5de0
+			defaultHierarchy: LocalDateTable_ceba83c5-1b1d-4433-9d5d-5912f7798b6d.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad = 1
+		formatString: 0
+		lineageTag: c2013e11-c755-4971-b1b4-f48ceb9ab2f1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column PercentDist
+		dataType: double
+		lineageTag: 24b12663-d2d4-452c-8a08-e06b0e457b9d
+		summarizeBy: sum
+		sourceColumn: PercentDist
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DistribucionID
+		dataType: int64
+		formatString: 0
+		lineageTag: acc31b5a-4378-4482-9068-d00c5cc80519
+		summarizeBy: none
+		sourceColumn: DistribucionID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl FactVentasDetalle' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_FactVentasDetalle = Origen{[Schema="vaope_etl",Item="FactVentasDetalle"]}[Data]
+				in
+				    vaope_etl_FactVentasDetalle
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,70 @@
+table 'vaope_etl DimEventos'
+	lineageTag: 9044de5b-7922-45bd-b445-29e15f376f3e
+
+	column EventoID
+		dataType: int64
+		formatString: 0
+		lineageTag: ae723a6c-559a-4572-8ac1-16921b539f50
+		summarizeBy: none
+		sourceColumn: EventoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreEvento
+		dataType: string
+		lineageTag: a9776874-d749-4259-8db2-e5a07c0a9aab
+		summarizeBy: none
+		sourceColumn: NombreEvento
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d01e7418-858c-44ae-ae0d-b5aaadc0b97d
+		summarizeBy: none
+		sourceColumn: FechaInicio
+
+		variation Variación
+			isDefault
+			relationship: 02fb63df-ff4d-4144-8ad6-23bfe477452e
+			defaultHierarchy: LocalDateTable_c4de6ab8-c363-4a4d-8df8-f90a33b0e51f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaFin
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d8f62516-6042-4da9-9f11-c34d37b9bff5
+		summarizeBy: none
+		sourceColumn: FechaFin
+
+		variation Variación
+			isDefault
+			relationship: b2f39ef3-8ed8-4bb1-a7d7-de5ba86d336b
+			defaultHierarchy: LocalDateTable_1b0491ae-a01c-4a5c-9d95-609ac866d332.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocalEventoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a5fd06b-ba9e-4aa1-9947-b238f8e24bb5
+		summarizeBy: none
+		sourceColumn: LocalEventoID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'vaope_etl DimEventos' = m
+		mode: import
+		source =
+				let
+				    Origen = MySQL.Database("192.168.0.67", "vaope_etl", [ReturnSingleDatabase=true]),
+				    vaope_etl_DimEventos = Origen{[Schema="vaope_etl",Item="DimEventos"]}[Data]
+				in
+				    vaope_etl_DimEventos
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
