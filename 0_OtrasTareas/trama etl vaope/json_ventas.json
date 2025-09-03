@@ -1,0 +1,74 @@
+{
+    "serie_correlativo": "FB01", /*Nro de factura padre*/
+    "numero": "00000024", /*Nro de factura padre*/
+    "fecha_de_emision": "29-08-2025", /*Fecha de factura detalle*/
+    "Hora_de_emision": "00:00:00", /*Hora de factura detalle*/
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.", /*Nombre cliente/proveedor*/
+    "cat_proveedor": "", /*Categoria cliente/proveedor*/
+    "tipo_documento": "", /*identificador documento*/
+    "doc_proveedor": "", /*nro documento*/
+    "items": [
+        {
+            "id_producto": "", /*Nro_de_factura_detalle por producto*/
+            "codigo_producto": "03", /*Identificador del producto*/
+            "nom_producto": "", /* Nombre producto*/
+            "categoria_producto": "", /*Product Type*/
+            "cantidad": "1", /*Cantidad de productos*/
+            "valor_unitario": 1016.95,
+            "precio_unitario": 1200,
+            "descuento": null,
+            "subtotal": 1016.95, /*Sin impuesto*/
+            "porcentaje_de_igv": "18.00",
+            "igv": 183.05, /*Impuesto*/
+            "total": 1200, /*Total*/
+            "moneda": "1", /*Soles o dolares*/
+            "tipo_de_cambio": "", /*aplica para dolares*/
+            "Id_estado": "", /*Identificador estado factura detalle*/
+            "Nombre_estado": "", /*Estado de factura detalle*/
+            "Evento": {
+                /*agregar variable de evento*/
+                "id_evento": "", /*Identificador del evento*/
+                "nom_evento": "", /* Nombre del evento*/
+                "Fecha_hora_ini_event": "", /*Fecha y hora de inicio*/
+                "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
+                "id_organizador": "", /*Identificador organizador*/
+                "nom_organizador": "CORPORACION MUKANRANKO S.A.C.", /*Nombre del organizador*/
+                "tipo_organizador": "", /*Tipo de organizador*/
+            },
+            "id_vendedor": "", /*Identificador del vendedor*/
+            "nom_vendedor": "", /* Nombre del vendedor*/
+            "id_cuenta_analitica": "", /*Identificador Cuenta*/
+            "nom_cuenta_analitica": "7012100 mercaderias-venta local-terceros", /*Nombre de Cuenta*/
+            "distribucion_analitica": [
+                [
+                    {
+                        "código": 4654, /*Identificador Distribucion analitica*/
+                        "nom_distribucion": "administrativo", /*Nombre Distribucion Analitica*/
+                        "sub_categoria": "proyectos", /*Nombre Cuenta analitica*/
+                        "porcentaje": "50.00" /* % Distribucion analitica*/
+                    },
+                    {
+                        "código": 6555, /*Identificador Distribucion analitica*/
+                        "nom_distribucion": "TI", /*Nombre Distribucion Analitica*/
+                        "sub_categoria": "IME", /*Nombre Cuenta analitica*/
+                        "porcentaje": "50.00" /* % Distribucion analitica*/
+                    }
+                ],
+                [
+                    {
+                        "código": 4654, /*Identificador Distribucion analitica*/
+                        "nom_distribucion": "administrativo", /*Nombre Distribucion Analitica*/
+                        "sub_categoria": "proyectos", /*Nombre Cuenta analitica*/
+                        "porcentaje": "50.00" /* % Distribucion analitica*/
+                    },
+                    {
+                        "código": 6555, /*Identificador Distribucion analitica*/
+                        "nom_distribucion": "TI", /*Nombre Distribucion Analitica*/
+                        "sub_categoria": "IME", /*Nombre Cuenta analitica*/
+                        "porcentaje": "50.00" /* % Distribucion analitica*/
+                    }
+                ]
+            ]
+        }
+    ]
+}
