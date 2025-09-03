@@ -73,7 +73,7 @@ ALTER TABLE DimEventos ADD PRIMARY KEY (EventoID);
 
 CREATE TABLE DimFecha
 (
-	FechaID              INT NOT NULL,
+	FechaID              INT NOT NULL,  -- 20250401
 	Fecha                DATE NOT NULL,
 	Anio                 INT NULL,
 	Mes                  INT NULL,
@@ -101,7 +101,8 @@ CREATE TABLE DimProducto
 (
 	ProductoID           INT NOT NULL,
 	NomProducto          VARCHAR(100) NULL,
-	CategoriaProducto    VARCHAR(100) NULL
+	CategoriaProducto    VARCHAR(100) NULL,
+    TipoOrigen           VARCHAR(50) NULL     -- Define si es producto de Venta o de Egreso
 );
 
 ALTER TABLE DimProducto ADD PRIMARY KEY (ProductoID);
