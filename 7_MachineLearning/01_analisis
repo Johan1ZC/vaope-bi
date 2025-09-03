@@ -1,0 +1,11 @@
+# Helpers
+import pandas as pd
+from sqlalchemy import text
+
+def q(sql, params=None):
+    """Ejecuta SQL y devuelve DataFrame."""
+    return pd.read_sql(text(sql), engine, params=params or {})
+
+def to_csv(df, path):
+    df.to_csv(path, index=False)
+    print(f"Guardado: {path}")
