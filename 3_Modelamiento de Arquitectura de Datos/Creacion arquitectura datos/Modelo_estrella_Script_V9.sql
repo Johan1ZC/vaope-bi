@@ -170,6 +170,7 @@ CREATE TABLE FactEgresosDetalle
 (
 	EgresoID             BIGINT NOT NULL primary key AUTO_INCREMENT,
 	FechaFacturaID       INT NOT NULL,
+    FechaID              INT NOT NULL,  -- PRIORIZAE FECHA INICIO EVENTO , 2DO FECHA FACTURA
 	EventoID             INT NULL,
 	TipoGastoID          INT NULL,
 	SinImpuesto          DECIMAL(12,2) NOT NULL,
@@ -197,7 +198,8 @@ CREATE TABLE FactEgresosDetalle
 CREATE UNIQUE INDEX uq_factegresos_linea ON FactEgresosDetalle (FacturaID, FacturaDetalleID); #add
   
 #CREATE INDEX ix_fe_fecha     ON FactEgresosDetalle (FechaFacturaID, TiempoFacturaID); #add
-CREATE INDEX ix_fe_fecha       ON FactEgresosDetalle (FechaFacturaID);
+CREATE INDEX ix_fe_fechafact       ON FactEgresosDetalle (FechaFacturaID);
+CREATE INDEX ix_fe_fecha       ON FactEgresosDetalle (FechaID); #Agregado
 CREATE INDEX ix_fe_tipogasto ON FactEgresosDetalle (TipoGastoID); #add
 CREATE INDEX ix_fe_proveedor ON FactEgresosDetalle (ProveedorID); #add
 CREATE INDEX ix_fe_evento    ON FactEgresosDetalle (EventoID); #add
@@ -214,6 +216,7 @@ CREATE TABLE FactVentasDetalle
 (
 	VentaID              BIGINT NOT NULL primary key AUTO_INCREMENT,
 	FechaFacturaID       INT NOT NULL,
+    FechaID              INT NOT NULL,  -- PRIORIZAE FECHA INICIO EVENTO , 2DO FECHA FACTURA
 	EventoID             INT NULL,
 	ProductoID           INT NOT NULL,
 	CantidadProd         INT NOT NULL,
@@ -239,7 +242,8 @@ CREATE TABLE FactVentasDetalle
 CREATE UNIQUE INDEX uq_factventas_linea ON FactVentasDetalle (FacturaID, FacturaDetalleID); #add
   
 #CREATE INDEX ix_fv_fecha     ON FactVentasDetalle (FechaFacturaID, TiempoFacturaID); #add
-CREATE INDEX ix_fv_fecha     ON FactVentasDetalle (FechaFacturaID);
+CREATE INDEX ix_fv_fechafact     ON FactVentasDetalle (FechaFacturaID);
+CREATE INDEX ix_fv_fecha       ON FactVentasDetalle (FechaID); #Agregado
 CREATE INDEX ix_fv_producto  ON FactVentasDetalle (ProductoID); #add
 CREATE INDEX ix_fv_vendedor  ON FactVentasDetalle (VendedorID); #add
 CREATE INDEX ix_fv_evento    ON FactVentasDetalle (EventoID); #add
@@ -272,7 +276,7 @@ ALTER TABLE distribucion_Cuentaan_Detalle ADD FOREIGN KEY fk_analitia_dist (Cuen
 ALTER TABLE distribucion_Cuentaan_Detalle ADD FOREIGN KEY fk_dist_analitica (DistribucionID) REFERENCES DimDistribucionAnalitica (DistribucionID);
 
 ALTER TABLE FactEgresosDetalle
-ADD FOREIGN KEY fk_factegre_fecha (FechaFacturaID) REFERENCES DimFecha (FechaID);
+ADD FOREIGN KEY fk_factegre_fecha (FechaID) REFERENCES DimFecha (FechaID);  #Agregado
 
 ALTER TABLE FactEgresosDetalle
 ADD FOREIGN KEY fk_factegre_event (EventoID) REFERENCES DimEventos (EventoID);
@@ -296,7 +300,7 @@ ALTER TABLE FactEgresosDetalle
 ADD FOREIGN KEY fk_factegre_produc (ProductoID) REFERENCES DimProducto (ProductoID);
 
 ALTER TABLE FactVentasDetalle
-ADD FOREIGN KEY fk_factvent_fechafactura (FechaFacturaID) REFERENCES DimFecha (FechaID);
+ADD FOREIGN KEY fk_factvent_fechafactura (FechaID) REFERENCES DimFecha (FechaID); #Agregado
 
 ALTER TABLE FactVentasDetalle
 ADD FOREIGN KEY fk_factvent_event (EventoID) REFERENCES DimEventos (EventoID);
