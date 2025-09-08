@@ -1,4 +1,4 @@
-use vaope_etl;
+use dwh_dev;
 
 -- Duplicados en la granularidad (FacturaID, FacturaDetalleID)
 SELECT FacturaID, FacturaDetalleID, COUNT(*) c
@@ -28,7 +28,7 @@ SELECT
 -- * ,
 sum(SinImpuesto) TotalSinimpuesto
 -- *
-FROM vaope_etl.FactVentasDetalle;
+FROM FactVentasDetalle;
 
 
 -- Validaciones de total sin impuesto egreso
@@ -36,6 +36,6 @@ SELECT
 -- * ,
 sum(SinImpuesto) TotalSinimpuesto
 -- *
-FROM vaope_etl.FactEgresosDetalle;
+FROM FactEgresosDetalle;
 
 
