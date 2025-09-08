@@ -1,6 +1,7 @@
 {
   "serie_correlativo": "FXG", /*Nro de factura padre*/
   "numero": "00008", /*Nro de factura padre*/
+  "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa*/
   "fecha_de_emision": "23/06/2025", /*Fecha de factura detalle*/
   "Hora_de_emision": "12:32:56", /*Hora de factura detalle*/
   "nom_proveedor": "A & Q AYLLU S.A.C.", /*Nombre cliente/proveedor*/

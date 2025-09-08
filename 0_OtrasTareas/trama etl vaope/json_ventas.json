@@ -1,6 +1,7 @@
 {
     "serie_correlativo": "FB01", /*Nro de factura padre*/
     "numero": "00000024", /*Nro de factura padre*/
+    "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa*/
     "fecha_de_emision": "29-08-2025", /*Fecha de factura detalle*/
     "Hora_de_emision": "00:00:00", /*Hora de factura detalle*/
     "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.", /*Nombre cliente/proveedor*/
