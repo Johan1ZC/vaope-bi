@@ -2,9 +2,22 @@
    RRHH – Modelo DW (MySQL 8.0, InnoDB, utf8mb4)
    ================================================================= */
 
+/* ================================================================
+   RRHH – Modelo DW (MySQL 8.0, InnoDB, utf8mb4)
+   ================================================================= */
+
 USE dwh_dev;
 
 /* --------------------------- DIMENSIONES --------------------------- */
+
+CREATE TABLE IF NOT EXISTS DimEstructura (
+  EstructuraID INT           NOT NULL AUTO_INCREMENT,
+  Area         VARCHAR(150)  NOT NULL,
+  SubArea      VARCHAR(150)  NULL,
+  Equipo       VARCHAR(150)  NULL,
+  PRIMARY KEY (EstructuraID),
+  UNIQUE KEY uq_estructura (Area, SubArea, Equipo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS DimEmpleado (
   EmpleadoID     INT            NOT NULL AUTO_INCREMENT,
@@ -17,9 +30,12 @@ CREATE TABLE IF NOT EXISTS DimEmpleado (
   FecCese        DATE           NULL,
   TipoContrato   VARCHAR(150)   NULL,
   Puesto         VARCHAR(150)   NULL,
+  EstructuraID   INT            NULL,   -- FK hacia DimEstructura (nuevo campo)
   FechaCarga     DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (EmpleadoID),
-  UNIQUE KEY uq_empleado_empid_dni (DNI)  
+  UNIQUE KEY uq_empleado_empid_dni (DNI),
+  KEY ix_empl_estructura (EstructuraID),
+  CONSTRAINT fk_dimestr_dimempleado FOREIGN KEY (EstructuraID) REFERENCES DimEstructura(EstructuraID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS DimEstadosRRHH (
@@ -28,15 +44,6 @@ CREATE TABLE IF NOT EXISTS DimEstadosRRHH (
   Motivo       VARCHAR(150)  NULL,
   PRIMARY KEY (EstadoID),
   UNIQUE KEY uq_estado_tipo_motivo (TipoEstado, Motivo)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE IF NOT EXISTS DimEstructura (
-  EstructuraID INT           NOT NULL AUTO_INCREMENT,
-  Area         VARCHAR(150)  NOT NULL,
-  SubArea      VARCHAR(150)  NULL,
-  Equipo       VARCHAR(150)  NULL,
-  PRIMARY KEY (EstructuraID),
-  UNIQUE KEY uq_estructura (Area, SubArea, Equipo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS DimTurno (
@@ -68,7 +75,7 @@ CREATE TABLE IF NOT EXISTS FactAsistencia (
   Fuente           VARCHAR(100)   NULL,
   FechaCarga       DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (AsistenciaID),
-  UNIQUE KEY uq_asistencia_dia_emp (FechaID, EmpleadoID),  -- evita duplicados día-empleado
+  UNIQUE KEY uq_asistencia_dia_emp (FechaID, EmpleadoID),
   KEY ix_asist_emp (EmpleadoID),
   KEY ix_asist_fecha (FechaID),
   KEY ix_asist_turno (TurnoID),
@@ -92,12 +99,13 @@ CREATE TABLE IF NOT EXISTS FactEventosRRHH (
   PRIMARY KEY (EventoRrhhID),
   KEY ix_evt_fecha_emp (FechaID, EmpleadoID),
   KEY ix_evt_estado (EstadoID),
-  CONSTRAINT fk_dimfecha_facteventrrhh   FOREIGN KEY (FechaID)           REFERENCES DimFecha(FechaID),
-  CONSTRAINT fk_dimempl_facteventrrhh    FOREIGN KEY (EmpleadoID)        REFERENCES DimEmpleado(EmpleadoID),
-  CONSTRAINT fk_dimesta_facteventrrhh    FOREIGN KEY (EstadoID)          REFERENCES DimEstadosRRHH(EstadoID),
-  CONSTRAINT fk_dimestrdes_facteventrrhh FOREIGN KEY (EstructuraDesdeID) REFERENCES DimEstructura(EstructuraID),
-  CONSTRAINT fk_dimestrhast_facteventrrhh FOREIGN KEY (EstructuraHastaID)REFERENCES DimEstructura(EstructuraID)
+  CONSTRAINT fk_dimfecha_facteventrrhh    FOREIGN KEY (FechaID)           REFERENCES DimFecha(FechaID),
+  CONSTRAINT fk_dimempl_facteventrrhh     FOREIGN KEY (EmpleadoID)        REFERENCES DimEmpleado(EmpleadoID),
+  CONSTRAINT fk_dimesta_facteventrrhh     FOREIGN KEY (EstadoID)          REFERENCES DimEstadosRRHH(EstadoID),
+  CONSTRAINT fk_dimestrdes_facteventrrhh  FOREIGN KEY (EstructuraDesdeID) REFERENCES DimEstructura(EstructuraID),
+  CONSTRAINT fk_dimestrhast_facteventrrhh FOREIGN KEY (EstructuraHastaID) REFERENCES DimEstructura(EstructuraID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 /*
 CREATE TABLE IF NOT EXISTS FactSnapShot (

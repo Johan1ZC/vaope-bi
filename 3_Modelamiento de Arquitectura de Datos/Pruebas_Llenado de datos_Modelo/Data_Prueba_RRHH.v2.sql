@@ -43,7 +43,7 @@ ON DUPLICATE KEY UPDATE HoraSalidaPlan = VALUES(HoraSalidaPlan);
 -- 2) EMPLEADOS (120 filas)
 -- =========================
 INSERT INTO DimEmpleado
-  (DNI, Nombre, Apellidos, Genero, FecNacimiento, FecIngreso, FecCese, TipoContrato, Puesto)
+  (DNI, Nombre, Apellidos, Genero, FecNacimiento, FecIngreso, FecCese, TipoContrato, Puesto, EstructuraID)
 WITH RECURSIVE seq AS (
   SELECT 1 AS n
   UNION ALL
@@ -71,7 +71,8 @@ SELECT
     WHEN n % 5 = 2 THEN 'Asistente'
     WHEN n % 5 = 3 THEN 'Jefe'
     ELSE 'Coordinador'
-  END                                                          AS Puesto
+  END                                                          AS Puesto,
+  ((n-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1           AS EstructuraID
 FROM seq;
 
 

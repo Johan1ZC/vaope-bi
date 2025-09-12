@@ -32,6 +32,7 @@
       "evento": {
         "id_evento": "", /*Identificador del evento*/
         "nom_evento": "", /* Nombre del evento*/
+        "categoria": "", /* categoria*/
         "Fecha_hora_ini_event": "", /*Fecha y hora de inicio*/
         "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
         "id_organizador": "", /*Identificador organizador*/
