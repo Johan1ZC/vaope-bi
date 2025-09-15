@@ -31,35 +31,29 @@ VALUES
 ('RRHH','Administración','Equipo A'),('RRHH','Administración','Equipo B')
 ON DUPLICATE KEY UPDATE Equipo = VALUES(Equipo);
 
--- Turnos
-INSERT INTO DimTurno (NombreTurno, HoraEntradaPlan, HoraSalidaPlan, ToleranciaMin)
-VALUES ('Administrativo','08:30:00','17:30:00',10),
-       ('Mañana','09:00:00','18:00:00',10),
-       ('Tarde','13:00:00','22:00:00',10),
-       ('Noche','22:00:00','07:00:00',10)
-ON DUPLICATE KEY UPDATE HoraSalidaPlan = VALUES(HoraSalidaPlan);
+-- ================================================================
+-- 2) EMPLEADOS (300 filas, con EstructuraID asignado)
+-- ================================================================
 
--- =========================
--- 2) EMPLEADOS (120 filas)
--- =========================
 INSERT INTO DimEmpleado
-  (DNI, Nombre, Apellidos, Genero, FecNacimiento, FecIngreso, FecCese, TipoContrato, Puesto, EstructuraID)
-WITH RECURSIVE seq AS (
+  (DNI, Nombre, Apellidos, Genero, FecNacimiento, FecIngreso, FecCese,
+   TipoContrato, Puesto, EstructuraID)
+   WITH RECURSIVE seq AS (
   SELECT 1 AS n
   UNION ALL
-  SELECT n+1 FROM seq WHERE n < 120
+  SELECT n+1 FROM seq WHERE n < 300
 )
 SELECT
   CONCAT('DNI', LPAD(n,8,'0'))                                 AS DNI,
   CONCAT('Empleado ', LPAD(n,3,'0'))                           AS Nombre,
   CONCAT('Apellido ', LPAD(n,3,'0'))                           AS Apellidos,
   CASE WHEN n % 2 = 0 THEN 'M' ELSE 'F' END                    AS Genero,
-  DATE_ADD('1980-01-01', INTERVAL MOD(n*97, 9000) DAY)         AS FecNacimiento,  -- 1980..2004
+  DATE_ADD('1985-01-01', INTERVAL MOD(n*79, 12000) DAY)        AS FecNacimiento,  -- 1985..2018 aprox
   DATE_ADD('2023-01-01', INTERVAL MOD(n*37, 650) DAY)          AS FecIngreso,     -- 2023..2024
   CASE WHEN n % 7 = 0
        THEN DATE_ADD(DATE_ADD('2023-01-01', INTERVAL MOD(n*37, 650) DAY),
-                     INTERVAL (100 + MOD(n*11, 400)) DAY)
-       ELSE NULL END                                           AS FecCese,        -- ~15% con cese
+                     INTERVAL (120 + MOD(n*11, 420)) DAY)
+       ELSE NULL END                                           AS FecCese,        -- ~14-15% con cese
   CASE
     WHEN n % 10 < 6 THEN 'Indefinido'
     WHEN n % 10 < 9 THEN 'Temporal'
@@ -73,117 +67,155 @@ SELECT
     ELSE 'Coordinador'
   END                                                          AS Puesto,
   ((n-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1           AS EstructuraID
-FROM seq;
+FROM seq
+ON DUPLICATE KEY UPDATE
+  Nombre = VALUES(Nombre),
+  Apellidos = VALUES(Apellidos),
+  Genero = VALUES(Genero),
+  FecNacimiento = VALUES(FecNacimiento),
+  FecIngreso = VALUES(FecIngreso),
+  FecCese = VALUES(FecCese),
+  TipoContrato = VALUES(TipoContrato),
+  Puesto = VALUES(Puesto),
+  EstructuraID = VALUES(EstructuraID);
 
 
--- =========================
--- 3) EVENTOS RRHH
--- =========================
+-- ================================================================
+-- 3) EVENTOS RRHH (ALTAS, CAMBIOS, BAJAS)
+-- ================================================================
+-- Cache de IDs de estado
+SET @id_alta   := (SELECT EstadoID FROM DimEstadosRRHH WHERE TipoEstado='Alta' LIMIT 1);
+SET @id_baja   := (SELECT EstadoID FROM DimEstadosRRHH WHERE TipoEstado='Baja' AND Motivo='Renuncia' LIMIT 1);
+SET @id_cambio := (SELECT EstadoID FROM DimEstadosRRHH WHERE TipoEstado='CambioEstructura' LIMIT 1);
 
--- IDs de estados útiles (cacheados en variables)
-SET @id_alta  := (SELECT EstadoID FROM DimEstadosRRHH WHERE TipoEstado='Alta' LIMIT 1);
-SET @id_baja1 := (SELECT EstadoID FROM DimEstadosRRHH WHERE TipoEstado='Baja' AND Motivo='Renuncia' LIMIT 1);
-SET @id_cambio:= (SELECT EstadoID FROM DimEstadosRRHH WHERE TipoEstado='CambioEstructura' LIMIT 1);
-
--- Alta para todos los empleados (estructura inicial según EmpleadoID)
+-- 3.1 Alta para todos (en su fecha de ingreso)
 INSERT INTO FactEventosRRHH (FechaID, EmpleadoID, EstadoID, EstructuraDesdeID, EstructuraHastaID, Fuente)
 SELECT
-  f.FechaID,
+  df.FechaID,
   e.EmpleadoID,
   @id_alta AS EstadoID,
   NULL     AS EstructuraDesdeID,
-  ((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1 AS EstructuraHastaID,
+  e.EstructuraID AS EstructuraHastaID,
   'SEED'
 FROM DimEmpleado e
-JOIN DimFecha f ON f.Fecha = e.FecIngreso
+JOIN DimFecha df ON df.Fecha = e.FecIngreso
 LEFT JOIN FactEventosRRHH x
-  ON x.EmpleadoID = e.EmpleadoID AND x.EstadoID=@id_alta AND x.FechaID=f.FechaID
+  ON x.EmpleadoID = e.EmpleadoID AND x.EstadoID = @id_alta AND x.FechaID = df.FechaID
 WHERE x.EventoRrhhID IS NULL;
 
--- Cambios de estructura (~20% de empleados) a los 90 días
+-- 3.2 Cambio de estructura (~20% a los 90 días de ingreso)
 INSERT INTO FactEventosRRHH (FechaID, EmpleadoID, EstadoID, EstructuraDesdeID, EstructuraHastaID, Fuente)
 SELECT
-  fc.FechaID,
+  dfc.FechaID,
   e.EmpleadoID,
   @id_cambio,
-  ((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1 AS EstrDesde,
-  (((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1) % (SELECT COUNT(*) FROM DimEstructura) + 1 AS EstrHasta,
+  e.EstructuraID AS EstructuraDesdeID,
+  (
+    ((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimEstructura)) + 2
+  ) % (SELECT COUNT(*) FROM DimEstructura) + 1 AS EstructuraHastaID,
   'SEED'
 FROM DimEmpleado e
-JOIN DimFecha fc
-  ON fc.Fecha = DATE_ADD(e.FecIngreso, INTERVAL 90 DAY)
+JOIN DimFecha dfc
+  ON dfc.Fecha = DATE_ADD(e.FecIngreso, INTERVAL 90 DAY)
 WHERE e.EmpleadoID % 5 = 0;  -- ~20%
 
--- Bajas para quienes tienen FecCese
+-- 3.3 Bajas (para quienes tienen FecCese)
 INSERT INTO FactEventosRRHH (FechaID, EmpleadoID, EstadoID, EstructuraDesdeID, EstructuraHastaID, Fuente)
 SELECT
-  fb.FechaID,
+  dfb.FechaID,
   e.EmpleadoID,
-  @id_baja1,
-  ((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1,
+  @id_baja,
+  e.EstructuraID,
   NULL,
   'SEED'
 FROM DimEmpleado e
-JOIN DimFecha fb ON fb.Fecha = e.FecCese
+JOIN DimFecha dfb ON dfb.Fecha = e.FecCese
 WHERE e.FecCese IS NOT NULL;
 
--- =========================
--- 4) ASISTENCIAS (últimos 5 días hábiles x 120 empleados)
--- =========================
+
+-- ================================================================
+-- 4) ASISTENCIAS (10 días hábiles recientes × 300 empleados)
+--    Incluye NombreTurno y horarios planeados en la propia Fact
+-- ================================================================
 INSERT IGNORE INTO FactAsistencia
-(FechaID, EmpleadoID, TurnoID, EstructuraID, Asistio, MinTardanza, MinExtras,
- HorasTrabajadas, MinAusencia, HoraIngReal, HoraSalReal, TipoAsistencia, Fuente)
-WITH base AS (
+(FechaID, EmpleadoID, EstructuraID, Asistio, MinTardanza, MinExtras,
+ HorasTrabajadas, MinAusencia, HoraIngReal, HoraSalReal, TipoAsistencia,
+ NombreTurno, HoraEntradaPlan, HoraSalidaPlan, Fuente)
+WITH ultimos_dias AS (
+  SELECT FechaID, Fecha
+  FROM DimFecha
+  WHERE Fecha <= CURDATE()
+    AND DAYOFWEEK(Fecha) BETWEEN 2 AND 6  -- Lunes..Viernes
+  ORDER BY Fecha DESC
+  LIMIT 10
+),
+base AS (
   SELECT
     d.FechaID,
+    d.Fecha,
     e.EmpleadoID,
-    ((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimTurno)) + 1  AS TurnoID,
-    ((e.EmpleadoID-1) % (SELECT COUNT(*) FROM DimEstructura)) + 1 AS EstructuraID,
+    e.EstructuraID,
+    ((e.EmpleadoID - 1) % 4) + 1 AS TurnoIdx,
     CASE WHEN MOD(CRC32(CONCAT(e.EmpleadoID,'-',d.FechaID)),10)=0 THEN 0 ELSE 1 END AS Asistio,
     CASE WHEN MOD(CRC32(CONCAT(e.EmpleadoID,'-',d.FechaID)),10)=0
          THEN 0 ELSE MOD(CRC32(CONCAT('T',e.EmpleadoID,'-',d.FechaID)),21) END AS MinTardanza,
     CASE WHEN MOD(CRC32(CONCAT(e.EmpleadoID,'-',d.FechaID,'X')),5)=0
          THEN MOD(CRC32(CONCAT('E',e.EmpleadoID,'-',d.FechaID)),61) ELSE 0 END AS MinExtras,
     CASE WHEN MOD(CRC32(CONCAT(e.EmpleadoID,'-',d.FechaID)),10)=0 THEN 480 ELSE 0 END AS MinAusencia
-  FROM (
-    SELECT FechaID, Fecha
-    FROM DimFecha
-    WHERE Fecha <= CURDATE()
-      AND DAYOFWEEK(Fecha) BETWEEN 2 AND 6
-    ORDER BY Fecha DESC
-    LIMIT 5
-  ) d
+  FROM ultimos_dias d
   CROSS JOIN (
-    SELECT EmpleadoID
+    SELECT EmpleadoID, EstructuraID
     FROM DimEmpleado
     ORDER BY EmpleadoID
-    LIMIT 120
+    LIMIT 300
   ) e
+),
+turnos AS (
+  SELECT
+    b.*,
+    CASE b.TurnoIdx
+      WHEN 1 THEN 'Administrativo'
+      WHEN 2 THEN 'Mañana'
+      WHEN 3 THEN 'Tarde'
+      ELSE 'Noche'
+    END AS NombreTurno,
+    CASE b.TurnoIdx
+      WHEN 1 THEN '08:30:00'
+      WHEN 2 THEN '09:00:00'
+      WHEN 3 THEN '13:00:00'
+      ELSE '22:00:00'
+    END AS HoraEntradaPlan,
+    CASE b.TurnoIdx
+      WHEN 1 THEN '17:30:00'
+      WHEN 2 THEN '18:00:00'
+      WHEN 3 THEN '22:00:00'
+      ELSE '07:00:00'
+    END AS HoraSalidaPlan
+  FROM base b
 ),
 calc AS (
   SELECT
-    b.*,
-    CASE WHEN b.Asistio=1
-         THEN ADDTIME(t.HoraEntradaPlan, SEC_TO_TIME(b.MinTardanza*60))
+    t.*,
+    CASE WHEN t.Asistio=1
+         THEN ADDTIME(t.HoraEntradaPlan, SEC_TO_TIME(t.MinTardanza*60))
          ELSE NULL END AS HoraIngReal,
-    CASE WHEN b.Asistio=1
-         THEN SUBTIME(ADDTIME(t.HoraSalidaPlan, SEC_TO_TIME(b.MinExtras*60)),
-                      SEC_TO_TIME(b.MinAusencia*60))
+    CASE WHEN t.Asistio=1
+         THEN SUBTIME(ADDTIME(t.HoraSalidaPlan, SEC_TO_TIME(t.MinExtras*60)),
+                      SEC_TO_TIME(t.MinAusencia*60))
          ELSE NULL END AS HoraSalReal
-  FROM base b
-  JOIN DimTurno t ON t.TurnoID = b.TurnoID
+  FROM turnos t
 )
 SELECT
   c.FechaID,
   c.EmpleadoID,
-  c.TurnoID,
   c.EstructuraID,
   c.Asistio,
   c.MinTardanza,
   c.MinExtras,
   CASE
     WHEN c.Asistio=1 AND c.HoraIngReal IS NOT NULL AND c.HoraSalReal IS NOT NULL
-    THEN ROUND(TIMESTAMPDIFF(MINUTE, c.HoraIngReal, c.HoraSalReal)/60, 2)
+    THEN ROUND( GREATEST(0,
+              TIME_TO_SEC(SUBTIME(c.HoraSalReal, c.HoraIngReal)) / 3600 ), 2)
     ELSE 0
   END AS HorasTrabajadas,
   c.MinAusencia,
@@ -196,21 +228,35 @@ SELECT
     WHEN c.MinTardanza>0 AND c.MinExtras>0 THEN 'TAR+EXT'
     ELSE 'NORMAL'
   END AS TipoAsistencia,
+  c.NombreTurno,
+  c.HoraEntradaPlan,
+  c.HoraSalidaPlan,
   'SEED' AS Fuente
 FROM calc c;
 
+-- ================================================================
+-- 5) CHEQUEOS RÁPIDOS
+-- ================================================================
+SELECT 'DimEstructura' AS tabla, COUNT(*) AS filas FROM DimEstructura
+UNION ALL SELECT 'DimEmpleado', COUNT(*) FROM DimEmpleado
+UNION ALL SELECT 'DimEstadosRRHH', COUNT(*) FROM DimEstadosRRHH
+UNION ALL SELECT 'FactEventosRRHH', COUNT(*) FROM FactEventosRRHH
+UNION ALL SELECT 'FactAsistencia', COUNT(*) FROM FactAsistencia;
 
+-- Un par de sanity checks:
+-- ¿Asistencias únicas por FechaID–EmpleadoID?
+SELECT 'duplicados_asistencia' AS test, COUNT(*) AS duplicados
+FROM (
+  SELECT FechaID, EmpleadoID, COUNT(*) c
+  FROM FactAsistencia
+  GROUP BY FechaID, EmpleadoID
+  HAVING c > 1
+) t;
 
-
--- =========================
--- 6) COMPROBACIONES RÁPIDAS
--- =========================
--- Al menos 300 filas totales? (sólo FactAsistencia ya supera)
-SELECT 'DimEmpleado' AS tabla, COUNT(*) AS filas FROM DimEmpleado
-UNION ALL
-SELECT 'FactAsistencia', COUNT(*) FROM FactAsistencia
-UNION ALL
-SELECT 'FactEventosRRHH', COUNT(*) FROM FactEventosRRHH
+-- ¿Hay empleados con Alta registrada?
+SELECT COUNT(*) AS altas
+FROM FactEventosRRHH fe
+JOIN DimEstadosRRHH de ON de.EstadoID = fe.EstadoID AND de.TipoEstado='Alta';
 
 
 

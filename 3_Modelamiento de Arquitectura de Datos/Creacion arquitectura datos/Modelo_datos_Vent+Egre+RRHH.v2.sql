@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS DimEstadosRRHH (
   UNIQUE KEY uq_estado_tipo_motivo (TipoEstado, Motivo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/*
 CREATE TABLE IF NOT EXISTS DimTurno (
   TurnoID         INT           NOT NULL AUTO_INCREMENT,
   NombreTurno     VARCHAR(150)  NOT NULL,
@@ -56,13 +57,15 @@ CREATE TABLE IF NOT EXISTS DimTurno (
   UNIQUE KEY uq_turno_nombre (NombreTurno)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+*/
+
 /* ----------------------------- FACTS ------------------------------ */
 
 CREATE TABLE IF NOT EXISTS FactAsistencia (
   AsistenciaID     BIGINT         NOT NULL AUTO_INCREMENT,
   FechaID          INT            NOT NULL,     -- FK DimFecha
   EmpleadoID       INT            NOT NULL,     -- FK DimEmpleado
-  TurnoID          INT            NULL,         -- FK DimTurno
+  -- TurnoID          INT            NULL,         -- FK DimTurno
   EstructuraID     INT            NULL,         -- FK DimEstructura
   Asistio          TINYINT(1)     NOT NULL DEFAULT 0,
   MinTardanza      INT            NOT NULL DEFAULT 0,
@@ -72,17 +75,20 @@ CREATE TABLE IF NOT EXISTS FactAsistencia (
   HoraIngReal      TIME           NULL,
   HoraSalReal      TIME           NULL,
   TipoAsistencia   VARCHAR(150)   NULL,
+  NombreTurno     VARCHAR(150)  NOT NULL,
+  HoraEntradaPlan TIME          NOT NULL,
+  HoraSalidaPlan  TIME          NOT NULL,
   Fuente           VARCHAR(100)   NULL,
   FechaCarga       DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (AsistenciaID),
   UNIQUE KEY uq_asistencia_dia_emp (FechaID, EmpleadoID),
   KEY ix_asist_emp (EmpleadoID),
   KEY ix_asist_fecha (FechaID),
-  KEY ix_asist_turno (TurnoID),
+  -- KEY ix_asist_turno (TurnoID),
   KEY ix_asist_estr (EstructuraID),
   CONSTRAINT fk_dimfecha_factasist   FOREIGN KEY (FechaID)      REFERENCES DimFecha(FechaID),
   CONSTRAINT fk_dimempl_factasist    FOREIGN KEY (EmpleadoID)   REFERENCES DimEmpleado(EmpleadoID),
-  CONSTRAINT fk_dimturn_factasist    FOREIGN KEY (TurnoID)      REFERENCES DimTurno(TurnoID),
+  -- CONSTRAINT fk_dimturn_factasist    FOREIGN KEY (TurnoID)      REFERENCES DimTurno(TurnoID),
   CONSTRAINT fk_dimestr_factasist    FOREIGN KEY (EstructuraID) REFERENCES DimEstructura(EstructuraID),
   CONSTRAINT ck_asist_no_negativos CHECK (MinTardanza>=0 AND MinExtras>=0 AND MinAusencia>=0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

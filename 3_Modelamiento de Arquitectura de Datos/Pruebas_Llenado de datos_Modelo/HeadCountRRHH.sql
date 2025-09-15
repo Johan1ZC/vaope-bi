@@ -30,3 +30,5 @@ SELECT FechaID,
        COUNT(*) AS Registros
 FROM FactAsistencia
 GROUP BY FechaID;
+
+select * from DimEmpleado
