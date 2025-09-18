@@ -134,19 +134,22 @@ CREATE TABLE DimUbicacion
 	Pais                 VARCHAR(50) NOT NULL,
 	Departamento         VARCHAR(100) NOT NULL,
 	Provincia            VARCHAR(100) NOT NULL,
-	Distrito             VARCHAR(100) NOT NULL
+	Distrito             VARCHAR(100) NOT NULL,
+    Ubigeo6              CHAR(6)
 );
 
 ALTER TABLE DimUbicacion ADD PRIMARY KEY (UbicacionID);
 
-CREATE UNIQUE INDEX XAK1DimUbicacion ON DimUbicacion
+ALTER TABLE dwh_dev.DimUbicacion ADD UNIQUE KEY UX_Ubigeo6 (Ubigeo6);
+
+CREATE UNIQUE INDEX XAK1DimUbicacion ON dwh_dev.DimUbicacion
 (
-	Pais,
 	Departamento,
 	Provincia,
 	Distrito
 );
 
+  
 CREATE TABLE DimVendedor
 (
 	VendedorID           INT NOT NULL,
