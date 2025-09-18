@@ -160,3 +160,9 @@ where entidad_financiera is null and procesador_wallet is null and red_tarjeta i
 select entidad_financiera, procesador_wallet,red_tarjeta,producto,count(1) Q from vaope.tmp_payments_parse
 group by entidad_financiera, procesador_wallet,red_tarjeta,producto
 
+
+
+
+-- 	AGREGAR LA DIFERENCIACION DE YAPE QUE VIENE DE NUBIZ ONLINE - YAPE
+
+
