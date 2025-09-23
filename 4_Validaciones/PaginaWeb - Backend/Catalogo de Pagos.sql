@@ -145,12 +145,13 @@ left join vaope2.payment_methods b on a.payment_method_id = b.id
 
 -- Red_tarjeta = Yape y procesador_wallet = Yape -- NIUBIZ - ON LINE = yape
 
+use vaope;
 -- Agrupacion limpia
 use vaope;
-select b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto,count(1) Q
+select b.id,b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto,count(1) Q
 from vaope.tmp_payments_parse  a
 left join vaope2.payment_methods b on a.payment_method_id = b.id
-group by b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto
+group by b.id,b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto
 order by 6 desc
 
 use vaope;

@@ -25,6 +25,16 @@ CREATE TABLE IF NOT EXISTS Dimhora (
 -- SELECT * FROM Dimhora
 
 -- ==================================================================
+-- DIM: Usuario
+-- ==================================================================
+CREATE TABLE IF NOT EXISTS Dimusuario (
+  usuarioID           INT NOT NULL,
+  esActivo            TINYINT(1) NULL DEFAULT 0 CHECK (esActivo IN (0,1)),
+  PRIMARY KEY (usuarioID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- SELECT * FROM Dimhora
+
+-- ==================================================================
 -- FACT: Ventas Web
 --  - Unicidad lógica por (web_VentaID, web_EntradaID)
 --  - FK a DimFecha.FechaID, DimEventos.EventoID, Dimhora.HoraID
@@ -40,18 +50,13 @@ CREATE TABLE IF NOT EXISTS FactVentasWeb (
   cantidadProd          INT NULL CHECK (cantidadProd IS NULL OR cantidadProd >= 0),
   precio_unitario       DECIMAL(12,2) NULL CHECK (precio_unitario IS NULL OR precio_unitario >= 0),
   descuento             DECIMAL(12,2) NULL CHECK (descuento    IS NULL OR descuento    >= 0),
-  sinImpuesto           DECIMAL(12,2) NULL CHECK (sinImpuesto  IS NULL OR sinImpuesto  >= 0),
-  porcentaje_igv        DECIMAL(12,2) NULL CHECK (porcentaje_igv IS NULL OR porcentaje_igv >= 0),
-  impuesto              DECIMAL(12,2) NULL CHECK (impuesto     IS NULL OR impuesto     >= 0),
   total                 DECIMAL(12,2) NULL CHECK (total        IS NULL OR total        >= 0),
-  moneda                VARCHAR(20) NULL,
-  tipo_cambio           VARCHAR(25) NULL,
   esCortesia            TINYINT(1) NULL DEFAULT 0 CHECK (esCortesia IN (0,1)),
   utm_source            VARCHAR(100) NULL,
   utm_campaign          VARCHAR(100) NULL,
   utm_medium            VARCHAR(100) NULL,
   usuarioID             INT NULL,
-  mp_NomMetodo          CHAR(18) NULL,
+  mp_NomMetodo          VARCHAR(150) NULL,
   mp_EntidadFinanciera  VARCHAR(150) NULL,
   mp_Procesador_Wallet  VARCHAR(150) NULL,
   mp_Red_Tarjeta        VARCHAR(150) NULL,
@@ -78,6 +83,11 @@ CREATE TABLE IF NOT EXISTS FactVentasWeb (
   CONSTRAINT fk_factventasweb_dimhora
     FOREIGN KEY (horaID)
     REFERENCES Dimhora (HoraID),
+    -- ON UPDATE RESTRICT ON DELETE RESTRICT,
+    
+  CONSTRAINT fk_dimusuario_factventasweb
+    FOREIGN KEY (usuarioID)
+    REFERENCES Dimusuario (usuarioID),
     -- ON UPDATE RESTRICT ON DELETE RESTRICT,
 
   -- Índices para rendimiento
