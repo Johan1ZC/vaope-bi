@@ -40,7 +40,32 @@ from vaope2.sale_payments a
 left join vaope2.payment_methods b on a.payment_method_id = b.id
 group by b.name,a.validation_comments
 
-select * from vaope2.sale_payments a
+
+-- Conclusiones: LOS PAGOS SON POR VENTA GENERAL, puede haber mas de un metodo de pago por venta
+select * from vaope2.sales 
+where id = 494083 limit 1000 ;
+select * from  vaope2.sale_products
+where sale_id = 494083  limit 1000;
+select * from vaope2.sale_payments a 
+where sale_id = 494083 limit 10;
+
+select sale_id,count(1) Q from vaope2.sale_payments
+where sale_id in (select distinct id from vaope.lead_paginaweb_muestra)
+group by sale_id
+order by 2 desc
+
+-- Mas de un metodo de pago 
+-- 507668 -- Se subieron manual
+-- 519079 -- Se inserto nuevo registro por incidencia
+-- 518975 -- Cambio de zona
+
+select * from vaope2.sales 
+where id = 519079 limit 1000 ;
+select * from  vaope2.sale_products
+where sale_id = 519079  limit 1000;  -- 
+select * from vaope2.sale_payments a 
+where sale_id = 519079 limit 10; -- Cambio de zona
+
 
 
 
@@ -104,7 +129,6 @@ payment_method_id,
 SELECT
 id,
 payment_method_id,
-
   validation_comments,
 
   /* normalización ENTIDAD */

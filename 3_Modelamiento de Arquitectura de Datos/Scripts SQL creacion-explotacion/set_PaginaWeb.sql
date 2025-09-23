@@ -46,7 +46,7 @@ select count(*)
 from sales a
 left join sale_products b on a.id = b.sale_id and b.status = 1 
 left join products c on b.product_id = c.id
-where a.status = 1 and a.quantity_products < 1000 
+where a.quantity_products < 1000 
 
 -- drop table sale_qp
 create temporary table sale_qp
@@ -55,10 +55,11 @@ select
 id,
 quantity_products
 from sales
-where status = 1
+-- where status = 1
 -- select * from sale_qp
--- 275052 
+-- 516553
 
+-- drop table sale_products_qp
 create temporary table sale_products_qp
 select 
 -- *
@@ -68,12 +69,13 @@ count(1) conteo,
 sum(quantity)  - count(1) Diferencia
 -- select *
 from sale_products
-where status = 1
+-- where status = 1
 group by  sale_id
-order by 4 asc
--- select * from sale_products_qp
--- 24651
+order by 4 desc
+-- select * from sale_products_qp order by 4 desc
+-- 26017
 
+-- drop table vaope.lead_paginaweb_muestra
 create table vaope.lead_paginaweb_muestra
 select
 a.id,
@@ -82,6 +84,8 @@ b.quantity
 from sale_qp a
 inner join sale_products_qp b on a.id = b.sale_id and a.quantity_products = b.quantity
 -- select * from vaope.lead_paginaweb_muestra
+-- 23746
+
 
 use vaope2;
 
@@ -91,7 +95,7 @@ a.id as web_ventaID,
 b.id as web_entradaID,
 b.created_at as fecha,
 b.product_id as eventoID,
-slug as Evento, -- pendiente
+title_small as Evento, -- pendiente
 a.client_id as usuarioID,
 a.utm_source,
 a.utm_campaign,
@@ -110,7 +114,7 @@ from sales a
 inner join vaope.lead_paginaweb_muestra d on a.id = d.id
 left join sale_products b on a.id = b.sale_id and b.status = 1 
 left join products c on b.product_id = c.id
-where a.status = 1 -- and a.quantity_products < 1000 
+-- where a.status = 1 -- and a.quantity_products < 1000 
 group by a.id,
 b.id,
 b.created_at,
@@ -130,11 +134,10 @@ a.payment_method_id,
 b.persons
 order by 1,2 desc
 -- and a.id <> 493091
+-- 218420
 
 
 select * from vaope2.products
-
-
 
 select * from vaope2.sales
 
@@ -150,3 +153,4 @@ select * from sale_orders
 select * from sale_order_details
 
 select * from sale_payments -- datos de todos los pagos
+
