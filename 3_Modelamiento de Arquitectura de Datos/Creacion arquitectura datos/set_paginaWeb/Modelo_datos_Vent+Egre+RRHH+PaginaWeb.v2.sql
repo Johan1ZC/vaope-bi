@@ -29,7 +29,11 @@ CREATE TABLE IF NOT EXISTS Dimhora (
 -- ==================================================================
 CREATE TABLE IF NOT EXISTS Dimusuario (
   usuarioID           INT NOT NULL,
+  genero              VARCHAR(15),
+  created_at          DATETIME NULL,
+  updated_at          DATETIME NULL,
   esActivo            TINYINT(1) NULL DEFAULT 0 CHECK (esActivo IN (0,1)),
+  origen              VARCHAR(150),
   PRIMARY KEY (usuarioID),
   INDEX idx_dimusuario_esActivo (esActivo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,7 +41,6 @@ CREATE TABLE IF NOT EXISTS Dimusuario (
 
 -- ==================================================================
 -- FACT: Ventas Web
---  - Unicidad lógica por (web_VentaID, web_EntradaID)
 --  - FK a DimFecha.FechaID, DimEventos.EventoID, Dimhora.HoraID
 -- ==================================================================
 CREATE TABLE IF NOT EXISTS FactVentasWeb (
@@ -49,20 +52,24 @@ CREATE TABLE IF NOT EXISTS FactVentasWeb (
   nom_evento 		    VARCHAR(150) NULL,
   status_general        VARCHAR(150) NULL,
   usuarioID             INT NULL,
-  utm_source            VARCHAR(100) NULL,
-  utm_campaign          VARCHAR(100) NULL,
-  utm_medium            VARCHAR(100) NULL,
-  cantidadProd          INT NULL CHECK (cantidadProd IS NULL OR cantidadProd >= 0),
-  sub_total             DECIMAL(12,2) NULL CHECK (sub_total IS NULL OR sub_total >= 0),
-  discount              DECIMAL(12,2) NULL CHECK (discount    IS NULL OR discount    >= 0),
-  delivery              DECIMAL(12,2) NULL CHECK (delivery        IS NULL OR delivery        >= 0),
-  total_price           DECIMAL(12,2) NULL CHECK (total_price        IS NULL OR total_price        >= 0),
-  esCortesia            TINYINT(1) NULL DEFAULT 0 CHECK (esCortesia IN (0,1)),
+  utm_source            VARCHAR(250) NULL,
+  utm_campaign          VARCHAR(250) NULL,
+  utm_medium            VARCHAR(250) NULL,
+  cantidadProd          INT NULL, -- CHECK (cantidadProd IS NULL OR cantidadProd >= 0),
+  sub_total             DECIMAL(12,2) NULL, -- CHECK (sub_total IS NULL OR sub_total >= 0),
+  discount              DECIMAL(12,2) NULL, -- CHECK (discount  IS NULL),
+  delivery              DECIMAL(12,2) NULL, -- CHECK (delivery        IS NULL OR delivery        >= 0),
+  total_price           DECIMAL(12,2) NULL, -- CHECK (total_price        IS NULL OR total_price        >= 0),
+  esCortesia            TINYINT(1) NULL, -- DEFAULT 0 CHECK (esCortesia IN (0,1)),
+  persons               INT NULL,
+  payment_method_id     INT NULL,
   mp_NomMetodo          VARCHAR(150) NULL,
   mp_EntidadFinanciera  VARCHAR(150) NULL,
   mp_Procesador_Wallet  VARCHAR(150) NULL,
   mp_Red_Tarjeta        VARCHAR(150) NULL,
   mp_Producto           VARCHAR(150) NULL,  
+  pagos_count           INT NULL,
+  metodos_distintos     INT NULL,
 
   -- Claves
   PRIMARY KEY (factVentaID),

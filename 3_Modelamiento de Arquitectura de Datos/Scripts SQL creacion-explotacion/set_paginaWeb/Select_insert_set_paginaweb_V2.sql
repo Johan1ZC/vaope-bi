@@ -1,0 +1,248 @@
+use vaope2;
+
+-- construccion de tabla FACVENTASWEB
+
+DROP TABLE IF EXISTS vaope.factventasweb;
+CREATE TABLE vaope.factventasweb
+select 
+DATE_FORMAT(a.created_at,'%Y%m%d') as fechaID,
+HOUR(a.created_at) as horaID,
+a.id as web_VentaID,
+a.product_id as eventoID,
+title_small as nom_evento, -- pendiente
+case when a.status = 0 then "Pendiente de pago" when a.status = 1 then "Pago Confirmado" when a.status = 2 then "En Evento"
+when a.status = 3 then "" when a.status = 4 then "Finalizado" when a.status = 5 then "Anulado" 
+when a.status = 6 then "Pendiente Devolución" when a.status = 7 then "Devuelto" when a.status = 9 then "Observado"  else "otros" end status_general,
+sum(a.quantity_products) cantidadProd, -- Verificar que pasa con un producto que tiene 10 entradas tipo BOX
+sum(a.sub_total) sub_total,
+sum(a.discount) discount,
+sum(a.delivery) delivery, 
+sum(a.total_price) total_price,
+case when a.payment_method_id = 12 then 1 else 0 end esCortesia,
+a.utm_source,
+a.utm_campaign,
+a.utm_medium,
+a.client_id as usuarioID,
+sum(a.persons) persons,
+a.payment_method_id
+from sales a
+inner join vaope.lead_paginaweb_muestra d on a.id = d.id  -- DESACTIVAR EN PRODUCCION
+left join products c on a.product_id = c.id
+group by 
+DATE_FORMAT(a.created_at,'%Y%m%d'),
+HOUR(a.created_at),
+a.id,
+a.product_id,
+title_small, -- pendiente
+case when a.status = 0 then "Pendiente de pago" when a.status = 1 then "Pago Confirmado" when a.status = 2 then "En Evento"
+when a.status = 3 then "" when a.status = 4 then "Finalizado" when a.status = 5 then "Anulado" 
+when a.status = 6 then "Pendiente Devolución" when a.status = 7 then "Devuelto" when a.status = 9 then "Observado"  else "otros" end,
+case when a.payment_method_id = 12 then 1 else 0 end, -- pendiente obtene desde paymenth method
+a.utm_source,
+a.utm_campaign,
+a.utm_medium,
+a.client_id,
+a.payment_method_id;
+-- 23746
+
+-- select web_ventaID,count(*) q from vaope.factventasweb group by web_ventaID order by 2 desc
+-- select * from vaope.factventasweb
+
+-- AGREGAR CAMPOS DE METODOS DE PAGO EN BLANCO
+alter table vaope.factventasweb add column mp_NomMetodo varchar(150);
+alter table vaope.factventasweb add column mp_EntidadFinanciera varchar(150);
+alter table vaope.factventasweb add column mp_Procesador_Wallet varchar(150);
+alter table vaope.factventasweb add column mp_Red_Tarjeta varchar(150); 
+alter table vaope.factventasweb add column mp_Producto varchar(150);
+alter table vaope.factventasweb add column pagos_count INT;
+alter table vaope.factventasweb add column metodos_distintos INT;
+
+-- ACTUALIZACION METODOS DE PAGO
+SET SQL_SAFE_UPDATES = 0;
+UPDATE vaope.factventasweb A 
+LEFT JOIN vaope2.payment_methods b
+  ON a.payment_method_id = b.id
+SET
+  a.mp_NomMetodo = NULLIF(b.name,'')
+  WHERE b.id IS NOT NULL; 
+  SET SQL_SAFE_UPDATES = 1;  -- vuelve a activarlo
+
+
+
+-- TRANFORMACION DE CAMPOS DE METODOS DE PAGO PARA CLIENTES DE FACTVENTASWEB 
+USE vaope2;
+
+DROP TABLE IF EXISTS vaope.tmp_payments_parse;
+
+CREATE temporary table vaope.tmp_payments_parse AS
+WITH b AS (
+  SELECT sp.id,sp.sale_id,sp.payment_method_id,sp.validation_comments,
+         /* posición de la marca si aparece en texto */
+         REGEXP_INSTR(
+           sp.validation_comments COLLATE utf8mb4_0900_ai_ci,
+           '(visa|master[[:space:]]*card|american[[:space:]]*express|\\bamex\\b|diners[[:space:]]*club|dinersclub|\\bdiners\\b|discover|jcb|union[[:space:]]*pay|maestro)',
+           1,1,0,'i'
+         ) AS pos_brand
+  FROM vaope2.sale_payments sp
+  -- select * from vaope2.sale_payments sp
+  where sale_id in (select web_ventaid from vaope.factventasweb)
+),
+s AS (
+  SELECT
+  id,
+  sale_id,
+payment_method_id,
+    validation_comments,
+
+    /* ENTIDAD: incluye abreviatura CAJAAQP */
+    UPPER(REGEXP_SUBSTR(
+      validation_comments COLLATE utf8mb4_0900_ai_ci,
+      '(BANCO DE CREDITO DEL PERU|\\bBCP\\b|BBVA|SCOTIABANK|INTER[[:space:]]*BANK|BANBIF|MIBANCO|BANCO DE LA NACION|BANCO PICHINCHA|BANCO FALABELLA|BANCO RIPLEY|BANCO[[:space:]]*CENCOSUD|\\bCENCOSUD\\b|BANCO GNB|\\bGNB\\b|CITIBANK|AGROBANCO|BANCO DE COMERCIO|BANCO SANTANDER|BANCO FINANCIERO|BANCO AZTECA|CMR|OH!|FINANCIERA OH!|EFECTIVA|FINANCIERA EFECTIVA|CONFIANZA|FINANCIERA CONFIANZA|COMPARTAMOS|COMPARTAMOS FINANCIERA|CREDINKA|FINANCIERA CREDINKA|PROEMPRESA|FINANCIERA PROEMPRESA|QAPAQ|FINANCIERA QAPAQ|MITSUI|FINANCIERA MITSUI|ACCESO|ACCESO CREDITICIO|CAJA AREQUIPA|\\bCAJAAQP\\b|CAJA HUANCAYO|CAJA PIURA|CAJA TRUJILLO|CAJA SULLANA|CAJA ICA|CAJA TACNA|CAJA CUSCO|CAJA MAYNAS|CAJA PUNO|CAJA APURIMAC|CAJA DEL SANTA)'
+    )) AS entidad_raw,
+
+    /* PROCESADOR / WALLET: agrega AGORA */
+    UPPER(REGEXP_SUBSTR(
+      validation_comments COLLATE utf8mb4_0900_ai_ci,
+      '(AGORA|NIUBIZ|IZIPAY|CULQI|PAGO[[:space:]]*EFECTIVO|SAFETYPAY|PAYU|MERCADO[[:space:]]*PAGO|KUSHKI|PAYME|OPENPAY|PAYPAL|STRIPE|YAPE|PLIN|LUKITA|BIM|TUNKI|VISA[[:space:]]*NET|V[- ]?POS)'
+    )) AS procesador_raw,
+
+    /* MARCA en texto (si viene) */
+    UPPER(REGEXP_SUBSTR(
+      validation_comments COLLATE utf8mb4_0900_ai_ci,
+      '(visa|master[[:space:]]*card|american[[:space:]]*express|\\bamex\\b|diners[[:space:]]*club|dinersclub|\\bdiners\\b|discover|jcb|union[[:space:]]*pay|maestro)'
+    )) AS red_txt,
+
+    /* PRODUCTO solo desde la marca hacia adelante */
+    CASE WHEN b.pos_brand > 0 THEN UPPER(
+      REGEXP_SUBSTR(
+        SUBSTRING(validation_comments, b.pos_brand) COLLATE utf8mb4_0900_ai_ci,
+        '(cr[eé]dito|d[eé]bito)'
+      )
+    ) END AS producto,
+
+    /* BIN6: si hay marca, toma desde ahí; si no, primer grupo de 6 dígitos */
+    CASE
+      WHEN b.pos_brand > 0 THEN REGEXP_SUBSTR(SUBSTRING(validation_comments, b.pos_brand), '[0-9]{6}')
+      ELSE REGEXP_SUBSTR(validation_comments, '[0-9]{6}')
+    END AS bin6,
+
+    /* últimos 4 */
+    REGEXP_SUBSTR(validation_comments, '([0-9]{4})$') AS ult4
+  FROM b
+)
+SELECT
+id,
+sale_id,
+payment_method_id,
+  validation_comments,
+
+  /* normalización ENTIDAD */
+  CASE
+    WHEN entidad_raw REGEXP '\\bCAJAAQP\\b' THEN 'CAJA AREQUIPA'
+    ELSE entidad_raw
+  END AS entidad_financiera,
+
+  /* normalización PROCESADOR/WALLET */
+  CASE
+    WHEN procesador_raw REGEXP '\\bAGORA\\b' THEN 'AGORA'
+    ELSE procesador_raw
+  END AS procesador_wallet,
+
+  /* MARCA: si no hay texto, inferir por BIN */
+  CASE
+    WHEN red_txt IS NOT NULL AND red_txt <> '' THEN red_txt
+    WHEN bin6 REGEXP '^4' THEN 'VISA'
+    WHEN bin6 REGEXP '^(5|22|23|24|25|26|27)' THEN 'MASTERCARD'  -- incluye rangos 2-series de MC
+    WHEN bin6 REGEXP '^(34|37)' THEN 'AMEX'
+    WHEN bin6 REGEXP '^(36|38|30[0-5])' THEN 'DINERS'
+    WHEN bin6 REGEXP '^35' THEN 'JCB'
+    WHEN bin6 REGEXP '^62' THEN 'UNIONPAY'
+    WHEN bin6 REGEXP '^(6011|64|65)' THEN 'DISCOVER'
+    ELSE NULL
+  END AS red_tarjeta,
+
+  producto,
+  bin6,
+  ult4
+FROM s;
+-- SELECT * FROM vaope.tmp_payments_parse
+
+ALTER TABLE vaope.tmp_payments_parse ADD INDEX idx_sp_saleid (sale_id);
+
+/* CLIENTES CON MAS DE 1 METODO DE PAGO
+-- select sale_id,count(*) from vaope.tmp_payments_parse group by sale_id order by 2 desc
+select * from vaope.tmp_payments_parse
+where sale_id = '507668';
+select * from vaope.tmp_payments_parse
+where sale_id = '519079';
+select * from vaope.tmp_payments_parse
+where sale_id = '518975';
+*/
+
+
+-- Por si los textos pueden ser largos
+SET SESSION group_concat_max_len = 1000000;
+
+DROP TABLE IF EXISTS vaope.tmp_payments_unificado;
+
+CREATE temporary table vaope.tmp_payments_unificado AS
+SELECT
+  p.sale_id,
+
+  -- Concatenados, deduplicados y en minúsculas (ajusta UPPER/LOWER a tu gusto)
+  GROUP_CONCAT(DISTINCT LOWER(p.entidad_financiera)
+               ORDER BY p.id SEPARATOR ' | ')         AS entidad_financiera,
+  GROUP_CONCAT(DISTINCT LOWER(p.procesador_wallet)
+               ORDER BY p.id SEPARATOR ' | ')         AS procesador_wallet,
+  GROUP_CONCAT(DISTINCT LOWER(p.red_tarjeta)
+               ORDER BY p.id SEPARATOR ' | ')         AS red_tarjeta,
+  GROUP_CONCAT(DISTINCT LOWER(p.producto)
+               ORDER BY p.id SEPARATOR ' | ')         AS producto,
+
+  -- Extras útiles
+  COUNT(*)                                           AS pagos_count,
+  COUNT(DISTINCT p.payment_method_id)               AS metodos_distintos
+  -- ,SUM(p.monto)                                   AS monto_total  -- si tienes el importe por pago
+FROM vaope.tmp_payments_parse p
+GROUP BY p.sale_id;
+-- SELECT * FROM vaope.tmp_payments_unificado WHERE sale_id = 519079;
+
+ALTER TABLE vaope.tmp_payments_unificado ADD INDEX idx_spu_saleid (sale_id);
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE vaope.factventasweb A 
+LEFT JOIN vaope.tmp_payments_unificado b
+  ON a.web_VentaID = b.sale_id
+SET
+  a.mp_EntidadFinanciera = NULLIF(b.entidad_financiera,''),
+  a.mp_Procesador_Wallet = NULLIF(b.procesador_wallet,''),
+  a.mp_Red_Tarjeta       = NULLIF(b.red_tarjeta,''),
+  a.mp_Producto          = NULLIF(b.producto,''),
+  a.pagos_count          = b.pagos_count,
+  a.metodos_distintos    = b.metodos_distintos
+  WHERE b.sale_id IS NOT NULL; 
+  SET SQL_SAFE_UPDATES = 1;  -- vuelve a activarlo
+
+-- select count(1) Q from vaope.factventasweb -- 23746
+-- select  * from vaope.factventasweb
+
+
+
+/*
+use vaope;
+select b.id,b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto,count(1) Q
+from vaope.tmp_payments_parse  a
+left join vaope2.payment_methods b on a.payment_method_id = b.id
+group by b.id,b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto
+order by 6 desc
+
+use vaope;
+select b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto,count(1) Q
+from vaope.tmp_payments_parse  a
+left join vaope2.payment_methods b on a.payment_method_id = b.id
+group by b.name,a.entidad_financiera, procesador_wallet,red_tarjeta,producto
+order by 6 desc
+
+select * from cart_transactions
+
+*/

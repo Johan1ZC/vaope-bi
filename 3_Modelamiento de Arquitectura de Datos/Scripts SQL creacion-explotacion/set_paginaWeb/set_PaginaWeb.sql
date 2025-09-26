@@ -53,7 +53,8 @@ create temporary table sale_qp
 select 
 -- *
 id,
-quantity_products
+quantity_products,
+total_price
 from sales
 -- where status = 1
 -- select * from sale_qp
@@ -66,7 +67,8 @@ select
 sale_id,
 sum(quantity)  quantity,
 count(1) conteo,
-sum(quantity)  - count(1) Diferencia
+sum(quantity)  - count(1) Diferencia,
+sum(total_price) total_price
 -- select *
 from sale_products
 -- where status = 1
@@ -80,7 +82,9 @@ create table vaope.lead_paginaweb_muestra
 select
 a.id,
 a.quantity_products,
-b.quantity
+b.quantity,
+a.total_price,
+b.total_price as total_price_products
 from sale_qp a
 inner join sale_products_qp b on a.id = b.sale_id and a.quantity_products = b.quantity
 -- select * from vaope.lead_paginaweb_muestra

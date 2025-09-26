@@ -58,13 +58,25 @@ order by 2 desc
 -- 507668 -- Se subieron manual
 -- 519079 -- Se inserto nuevo registro por incidencia
 -- 518975 -- Cambio de zona
+-- 498315 -- aumena el delivery
+-- 518497 -- 
 
 select * from vaope2.sales 
-where id = 519079 limit 1000 ;
+where id = 498315 limit 1000 ;
 select * from  vaope2.sale_products
-where sale_id = 519079  limit 1000;  -- 
+where sale_id = 498315  limit 1000;  -- 
 select * from vaope2.sale_payments a 
-where sale_id = 519079 limit 10; -- Cambio de zona
+where sale_id = 498315 limit 10; -- Cambio de zona
+select * from vaope2.cart_transactions;
+-- where sale_id = 507668 limit 10; -- Cambio de zona
+select * from vaope2.carts
+
+select * from vaope2.sales 
+where purchase_number = 158;
+select * from vaope2.cart_transactions
+where transaction_id = 158;
+
+purchaser_number = transaction_id
 
 
 
