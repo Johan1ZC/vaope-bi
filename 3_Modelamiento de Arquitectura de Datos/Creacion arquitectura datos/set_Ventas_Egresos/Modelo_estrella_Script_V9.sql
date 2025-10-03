@@ -2,7 +2,7 @@
 #16 foreing  keys
 #14 Entidades
 
-USE dw_dev;
+USE dwh_dev;
 
 -- Agregado Nuevo
 CREATE TABLE DimCuenta    

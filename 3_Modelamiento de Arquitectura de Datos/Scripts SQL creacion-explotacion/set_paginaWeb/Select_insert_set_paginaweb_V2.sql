@@ -2,6 +2,8 @@ use vaope2;
 
 -- construccion de tabla FACVENTASWEB
 
+select 
+
 DROP TABLE IF EXISTS vaope.factventasweb;
 CREATE TABLE vaope.factventasweb
 select 
@@ -28,6 +30,8 @@ a.payment_method_id
 from sales a
 inner join vaope.lead_paginaweb_muestra d on a.id = d.id  -- DESACTIVAR EN PRODUCCION
 left join products c on a.product_id = c.id
+left join (select a.* from vaope2.product_liquidation_detail a
+inner join (select sale_id,max(id) max_id,count(1) Q from vaope2.product_liquidation_detail group by sale_id) b on a.sale_id = b.sale_id and a.id = b.max_id) e on a.id = e.sale_id and a.payment_method_id = e.payment_method_id
 group by 
 DATE_FORMAT(a.created_at,'%Y%m%d'),
 HOUR(a.created_at),
@@ -56,6 +60,7 @@ alter table vaope.factventasweb add column mp_Red_Tarjeta varchar(150);
 alter table vaope.factventasweb add column mp_Producto varchar(150);
 alter table vaope.factventasweb add column pagos_count INT;
 alter table vaope.factventasweb add column metodos_distintos INT;
+alter table vaope.factventasweb add column mp_MetodoGrupo varchar(150);
 
 -- ACTUALIZACION METODOS DE PAGO
 SET SQL_SAFE_UPDATES = 0;
@@ -225,6 +230,126 @@ SET
 
 -- select count(1) Q from vaope.factventasweb -- 23746
 -- select  * from vaope.factventasweb
+
+
+/* Actualizar metodo Grupo
+*/
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE vaope.factventasweb f
+SET f.mp_MetodoGrupo =
+CASE
+  /* ==================== Casos específicos ==================== */
+
+  -- Gmoney en cualquier campo
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_EntidadFinanciera, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_Producto)) LIKE '%GMONEY%'
+    THEN 'Gmoney'
+
+  -- Niubiz - online - yape / plin
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'NIUBIZ'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'ON[ -]?LINE|ONLINE'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) LIKE '%YAPE%'
+    THEN 'niubiz - online - yape'
+
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'NIUBIZ'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'ON[ -]?LINE|ONLINE'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) LIKE '%PLIN%'
+    THEN 'niubiz - online - plin'
+
+  -- Niubiz - online - Redes (Visa/Mastercard/Amex/Diners)
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'NIUBIZ'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'ON[ -]?LINE|ONLINE'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'VISA|MASTERCARD|\\bMC\\b|AMEX|DINERS'
+    THEN CONCAT('niubiz - online - ',
+                CASE
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'MASTERCARD|\\bMC\\b' THEN 'Mastercard'
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'AMEX|AMERICAN EXPRESS' THEN 'Amex'
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'DINERS' THEN 'Diners'
+                  ELSE 'Visa'
+                END)
+
+  -- Niubiz - online - otros
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'NIUBIZ'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'ON[ -]?LINE|ONLINE'
+    THEN 'niubiz - online - otros'
+
+  -- NiubizQR (Yape / Plin)
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) REGEXP 'NIUBIZ'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) LIKE '%YAPE%'
+    THEN 'NiubizQR - Yape'
+
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) REGEXP 'NIUBIZ'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) LIKE '%PLIN%'
+    THEN 'NiubizQR - Plin'
+
+  -- Niubiz (Tarjeta) - por red o por producto wallet
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_Producto)) LIKE '%NIUBIZ%'
+       AND UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Red_Tarjeta)) REGEXP 'VISA|MASTERCARD|\\bMC\\b|AMEX|DINERS'
+    THEN CONCAT('Niubiz (Tarjeta) - ',
+                CASE
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Red_Tarjeta)) REGEXP 'MASTERCARD|\\bMC\\b' THEN 'MASTERCARD'
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Red_Tarjeta)) REGEXP 'AMEX|AMERICAN EXPRESS' THEN 'AMEX'
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Red_Tarjeta)) REGEXP 'DINERS' THEN 'DINERS'
+                  ELSE 'VISA'
+                END)
+
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) LIKE '%NIUBIZ%'
+       AND UPPER(f.mp_Producto) REGEXP 'YAPE|PLIN|BIM|LUKITA|TUNKI'
+    THEN CONCAT('Niubiz (Tarjeta) - ',
+                CASE
+                  WHEN UPPER(f.mp_Producto) LIKE '%YAPE%'   THEN 'Yape'
+                  WHEN UPPER(f.mp_Producto) LIKE '%PLIN%'   THEN 'Plin'
+                  WHEN UPPER(f.mp_Producto) LIKE '%BIM%'    THEN 'Bim'
+                  WHEN UPPER(f.mp_Producto) LIKE '%LUKITA%' THEN 'Lukita'
+                  WHEN UPPER(f.mp_Producto) LIKE '%TUNKI%'  THEN 'Tunki'
+                END)
+
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Red_Tarjeta, f.mp_Producto)) LIKE '%NIUBIZ%'
+    THEN 'Niubiz (Tarjeta)'
+
+  /* ==================== Otros procesadores / métodos ==================== */
+
+  -- Izipay
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) LIKE '%IZIPAY%'
+    THEN 'Izipay'
+
+  -- Transferencia
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'TRANSFER|TRANSFERENCIA'
+    THEN 'Transferencia'
+
+  -- Wallets directas
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Producto, f.mp_Procesador_Wallet)) LIKE '%YAPE%'
+    THEN 'Yape'
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Producto, f.mp_Procesador_Wallet)) LIKE '%PLIN%'
+    THEN 'Plin'
+
+  -- POS / Efectivo
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Procesador_Wallet, f.mp_Producto)) REGEXP '\\bPOS\\b|POINT OF SALE'
+    THEN 'POS'
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_EntidadFinanciera, f.mp_Producto)) REGEXP 'EFECTIVO|AGENTE|CAJA|CASH'
+    THEN 'Efectivo/Agente'
+
+  -- Tarjeta (Red) sin Niubiz
+  WHEN UPPER(CONCAT_WS(' ', f.mp_Red_Tarjeta, f.mp_NomMetodo)) REGEXP 'VISA|MASTERCARD|\\bMC\\b|AMEX|DINERS'
+    THEN CONCAT('Tarjeta (Red) - ',
+                CASE
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_Red_Tarjeta, f.mp_NomMetodo)) REGEXP 'MASTERCARD|\\bMC\\b' THEN 'MASTERCARD'
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_Red_Tarjeta, f.mp_NomMetodo)) REGEXP 'AMEX|AMERICAN EXPRESS' THEN 'AMEX'
+                  WHEN UPPER(CONCAT_WS(' ', f.mp_Red_Tarjeta, f.mp_NomMetodo)) REGEXP 'DINERS' THEN 'DINERS'
+                  ELSE 'VISA'
+                END)
+
+  -- Cortesía (si llegara etiquetado)
+  WHEN UPPER(CONCAT_WS(' ', f.mp_NomMetodo, f.mp_Producto)) LIKE '%CORTESIA%'
+    THEN 'Cortesia'
+
+  -- Fallback
+  ELSE 'Otros'
+END;
+
+SET SQL_SAFE_UPDATES = 1;
+
 
 
 

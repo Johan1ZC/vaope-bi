@@ -1,0 +1,13 @@
+{
+  "name": "VAOPE Logo Match (Light)",
+  "dataColors": [
+    "#5BB5CA", "#F73E9E", "#EFAE2D", "#1E2342",
+    "#9FD6E2", "#FF96C9", "#FFD880"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#202040",
+  "tableAccent": "#5BB5CA",
+  "good": "#2BB673",
+  "neutral": "#EFAE2D",
+  "bad": "#F73E9E"
+}

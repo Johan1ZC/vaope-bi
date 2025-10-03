@@ -1,0 +1,14 @@
+{
+  "name": "VAOPE Dark",
+  "dataColors": [
+    "#33D6CF", "#FF4FA3", "#FFC145", "#6B4EFF",
+    "#9ECFFF", "#7EDBD6", "#C79BFF", "#7EE2A8",
+    "#FFD37A", "#FF8F7A"
+  ],
+  "background": "#1E2342",
+  "foreground": "#FFFFFF",
+  "tableAccent": "#FF4FA3",
+  "good": "#27AE60",
+  "neutral": "#FFC145",
+  "bad": "#FF6B6B"
+}

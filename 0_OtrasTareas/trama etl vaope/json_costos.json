@@ -1,7 +1,7 @@
 {
   "serie_correlativo": "FXG", /*Nro de factura padre*/
   "numero": "00008", /*Nro de factura padre*/
-  "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa*/
+  "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa* -----AGREGAR*/
   "fecha_de_emision": "23/06/2025", /*Fecha de factura detalle*/
   "Hora_de_emision": "12:32:56", /*Hora de factura detalle*/
   "nom_proveedor": "A & Q AYLLU S.A.C.", /*Nombre cliente/proveedor*/
@@ -32,7 +32,7 @@
       "evento": {
         "id_evento": "", /*Identificador del evento*/
         "nom_evento": "", /* Nombre del evento*/
-        "categoria": "", /* categoria*/
+        "categoria": "", /* categoria*  -----AGREGAR*/   
         "Fecha_hora_ini_event": "", /*Fecha y hora de inicio*/
         "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
         "id_organizador": "", /*Identificador organizador*/

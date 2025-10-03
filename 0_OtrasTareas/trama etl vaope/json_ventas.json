@@ -1,7 +1,7 @@
 {
     "serie_correlativo": "FB01", /*Nro de factura padre*/
     "numero": "00000024", /*Nro de factura padre*/
-    "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa*/
+    "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa* ----Agregar*/
     "fecha_de_emision": "29-08-2025", /*Fecha de factura detalle*/
     "Hora_de_emision": "00:00:00", /*Hora de factura detalle*/
     "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.", /*Nombre cliente/proveedor*/
@@ -25,12 +25,12 @@
             "moneda": "1", /*Soles o dolares*/
             "tipo_de_cambio": "", /*aplica para dolares*/
             "Id_estado": "", /*Identificador estado factura detalle*/
-            "Nombre_estado": "", /*Estado de factura detalle*/
+            "Nombre_estado": "", /*Estado de factura detalle*/   /*Estado de pago*/
             "Evento": {
                 /*agregar variable de evento*/
                 "id_evento": "", /*Identificador del evento*/
                 "nom_evento": "", /* Nombre del evento*/
-                "categoria": "", /* categoria*/
+                "categoria": "", /* categoria* -----Agregar*/
                 "Fecha_hora_ini_event": "", /*Fecha y hora de inicio*/
                 "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
                 "id_organizador": "", /*Identificador organizador*/

@@ -69,7 +69,8 @@ WHERE s.usuarioID IS NOT NULL
 
 -- SELECT * FROM factventasweb
 INSERT INTO factventasweb
-	(fechaID,horaID,web_ventaID,eventoid,nom_evento,status_general,cantidadprod,sub_total,discount,delivery,total_price,escortesia,utm_source,utm_campaign,utm_medium,usuarioID,persons,
-    payment_method_id,mp_nommetodo,mp_entidadfinanciera,mp_procesador_wallet,mp_red_tarjeta,mp_producto,pagos_count,metodos_distintos)
+	(fechaID,horaID,web_ventaID,eventoid,nom_evento,status_general,cantidadprod,sub_total,discount,delivery,total_price,
+    payment_commission,vaope_commission,sale_commission,total_deposit,total_deposit_new,escortesia,utm_source,utm_campaign,utm_medium,usuarioID,persons,
+    payment_method_id,mp_nommetodo,mp_entidadfinanciera,mp_procesador_wallet,mp_red_tarjeta,mp_producto,pagos_count,metodos_distintos,mp_MetodoGrupo)
 select * from vaope.factventasweb
 -- 23746

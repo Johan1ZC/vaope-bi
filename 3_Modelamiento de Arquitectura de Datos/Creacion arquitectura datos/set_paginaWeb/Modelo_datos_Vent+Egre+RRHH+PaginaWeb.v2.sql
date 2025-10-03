@@ -60,6 +60,11 @@ CREATE TABLE IF NOT EXISTS FactVentasWeb (
   discount              DECIMAL(12,2) NULL, -- CHECK (discount  IS NULL),
   delivery              DECIMAL(12,2) NULL, -- CHECK (delivery        IS NULL OR delivery        >= 0),
   total_price           DECIMAL(12,2) NULL, -- CHECK (total_price        IS NULL OR total_price        >= 0),
+  payment_commission    DECIMAL(12,2) NULL,
+  vaope_commission      DECIMAL(12,2) NULL,
+  sale_commission       DECIMAL(12,2) NULL,
+  total_deposit         DECIMAL(12,2) NULL,
+  total_deposit_new     DECIMAL(12,2) NULL,
   esCortesia            TINYINT(1) NULL, -- DEFAULT 0 CHECK (esCortesia IN (0,1)),
   persons               INT NULL,
   payment_method_id     INT NULL,
@@ -70,6 +75,7 @@ CREATE TABLE IF NOT EXISTS FactVentasWeb (
   mp_Producto           VARCHAR(150) NULL,  
   pagos_count           INT NULL,
   metodos_distintos     INT NULL,
+  mp_MetodoGrupo        VARCHAR(150) NULL,  
 
   -- Claves
   PRIMARY KEY (factVentaID),
@@ -106,7 +112,8 @@ CREATE TABLE IF NOT EXISTS FactVentasWeb (
   INDEX idx_factventasweb_hora (horaID),
   INDEX idx_factventasweb_usuario (usuarioID),
   INDEX idx_factventasweb_utms (utm_source, utm_medium, utm_campaign),
-  INDEX idx_factventasweb_fecha_evento (fechaID, eventoID)
+  INDEX idx_factventasweb_fecha_evento (fechaID, eventoID),
+  INDEX idx_metodogrupo (mp_MetodoGrupo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- SELECT * FROM FactVentasWeb

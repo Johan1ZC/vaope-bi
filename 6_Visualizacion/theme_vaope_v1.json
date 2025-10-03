@@ -1,0 +1,14 @@
+{
+  "name": "VAOPE Light",
+  "dataColors": [
+    "#33D6CF", "#FF4FA3", "#FFC145", "#6B4EFF",
+    "#2E8BFF", "#00A7B5", "#9B59B6", "#27AE60",
+    "#F39C12", "#E74C3C"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#2B2B2B",
+  "tableAccent": "#33D6CF",
+  "good": "#27AE60",
+  "neutral": "#FFC145",
+  "bad": "#E74C3C"
+}

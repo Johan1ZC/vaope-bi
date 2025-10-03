@@ -60,16 +60,42 @@ order by 2 desc
 -- 518975 -- Cambio de zona
 -- 498315 -- aumena el delivery
 -- 518497 -- 
+-- 518063
+-- 518061
+-- 502622  ok, figura como debe ser el total_deposit
+-- 519064  no figura monto depositado, solo comision vaope
+-- 519101  2 registros product_liquidation_detail
+-- 519100 2 registros product_liquidation_detail
 
 select * from vaope2.sales 
-where id = 498315 limit 1000 ;
+where id = 502622 limit 1000 ;
 select * from  vaope2.sale_products
-where sale_id = 498315  limit 1000;  -- 
+where sale_id = 502622  limit 1000;  -- 
 select * from vaope2.sale_payments a 
-where sale_id = 498315 limit 10; -- Cambio de zona
-select * from vaope2.cart_transactions;
--- where sale_id = 507668 limit 10; -- Cambio de zona
+where sale_id = 502622 limit 10; -- Cambio de zona
+SELECT * FROM vaope2.product_liquidation_detail
+where sale_id = 502622 limit 10; -- Cambio de zona
+
+comision 3.65% - comision de la pasarela de pago
+sale_comission  - Vaope comision de venta
+sale_comission 3% - adcionales de pago efectivo montos menores a s/100 
+total_deposit - monto deposito organizador por la venta
+
+total_price - comsiones = total_deposit  -->  Indicacion de Samuel
+
+-- Analisis pagos con comision vaope, payments y evento
+-- 498315 Cuadran los costos
+-- 507668 Cuadran los costos
+-- 519079 Cuadran los costos
+-- 518975 Cuadran los costos
+-- 498315 Cuadran los costos
+-- 502622
+
+
+select * from vaope2.cart_transactions
+
 select * from vaope2.carts
+
 
 select * from vaope2.sales 
 where purchase_number = 158;
@@ -78,6 +104,54 @@ where transaction_id = 158;
 
 purchaser_number = transaction_id
 
+create temporary table vaope.product_liquidation_detail_analisis
+-- select * from vaope.lead_paginaweb_muestra
+SELECT 
+a.id,
+a.payment_method_id,
+a.sale_id,
+a.saler_id,
+a.payment_commission,
+vaope_commission,
+sale_commission,
+total_deposit,
+created_at,
+updated_at,
+d.id as sale_id_sales,
+quantity_products,
+quantity,
+total_price,
+total_price_products,
+(a.payment_commission+vaope_commission+sale_commission+total_deposit) total_liquidation,
+total_price - (a.payment_commission+vaope_commission+sale_commission+total_deposit) dif_liquidation
+FROM vaope2.product_liquidation_detail a
+inner join vaope.lead_paginaweb_muestra d on a.sale_id = d.id
+order by dif_liquidation desc
+
+select * from vaope.product_liquidation_detail_analisis
+where dif_liquidation <= 0
+order by created_at asc;
+
+select distinct payment_method_id,count(*) Q from vaope.product_liquidation_detail_analisis
+where dif_liquidation > 0
+group by payment_method_id;
+
+select distinct payment_method_id,count(*) Q from vaope.product_liquidation_detail_analisis
+where dif_liquidation <= 0
+group by payment_method_id;
+
+select * from vaope2.payment_methods
+
+select distinct sale_id,count(1) Q from vaope2.product_liquidation_detail group by sale_id order by 2 desc
+
+use vaope2;
+create temporary table product_liquidation_detail_agrupacion
+select a.* from vaope2.product_liquidation_detail a
+inner join (select sale_id,max(id) max_id,count(1) Q from vaope2.product_liquidation_detail group by sale_id) b on a.sale_id = b.sale_id and a.id = b.max_id
+
+select sale_id,count(1) Q from product_liquidation_detail_agrupacion group by sale_id order by 2 desc
+
+select sale_id,max(id),count(1) Q from vaope2.product_liquidation_detail group by sale_id order by 3 desc
 
 
 
@@ -172,6 +246,7 @@ payment_method_id,
   bin6,
   ult4
 FROM s;
+-- select * FROM vaope.tmp_payments_parse
 
 
 use vaope;
@@ -202,4 +277,12 @@ group by entidad_financiera, procesador_wallet,red_tarjeta,producto
 
 -- 	AGREGAR LA DIFERENCIACION DE YAPE QUE VIENE DE NUBIZ ONLINE - YAPE
 
+
+
+select * from vaope.factventasweb
+where total_deposit <> total_deposit_new -- and payment_commission <> 0.00 and vaope_commission <> 0.00 and sale_commission <> 0.00
+order by payment_method_id desc
+
+select * from vaope.factventasweb
+where web_ventaid = 502622
 

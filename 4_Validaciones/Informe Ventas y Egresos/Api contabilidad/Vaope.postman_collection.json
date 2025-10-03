@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "363272f4-de56-43e9-93b0-edbd9e552dac",
+		"name": "Vaope",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "907083"
+	},
+	"item": [
+		{
+			"name": "Consulta Facturas de Cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "pR4GfvD1keR1oafsk06vUdavoagX5ODelYOfIp6HPa6wX_k=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://odoo-stage.colaborativa.pe/api/customer_invoices",
+					"protocol": "https",
+					"host": [
+						"odoo-stage",
+						"colaborativa",
+						"pe"
+					],
+					"path": [
+						"api",
+						"customer_invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Facturas de Proveedores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "pR4GfvD1keR1oafsk06vUdavoagX5ODelYOfIp6HPa6wX_k=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date_from\": \"2025-01-01\",\n    \"date_to\": \"2025-12-31\",\n    \"company_id\": 1,\n    \"state\": [\n        \"posted\"\n    ],\n    \"limit\": 30,\n    \"offset\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://odoo-stage.colaborativa.pe/api/vendor_bills",
+					"protocol": "https",
+					"host": [
+						"odoo-stage",
+						"colaborativa",
+						"pe"
+					],
+					"path": [
+						"api",
+						"vendor_bills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Factura",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "pR4GmPS580KnGQuMGaCtPkcaQmKDliEYAoKRq8si0dsMT5k=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operacion\": \"generar_comprobante\",\r\n  \"tipo_de_comprobante\": 1,\r\n  \"serie\": \"FB01\",\r\n  \"numero\": 1752,\r\n  \"sunat_transaction\": \"1\",\r\n  \"cliente_tipo_de_documento\": 6,\r\n  \"cliente_numero_de_documento\": \"20608361074\",\r\n  \"cliente_denominacion\": \"JP Producciones Generales EIRL\",\r\n  \"cliente_direccion\": \"Jr. El Escorial 306 of. 403\",\r\n  \"cliente_email\": \"\",\r\n  \"cliente_email_1\": \"\",\r\n  \"cliente_email_2\": \"\",\r\n  \"fecha_de_emision\": \"27-03-2025\",\r\n  \"fecha_de_vencimiento\": \"\",\r\n  \"moneda\": \"1\",\r\n  \"tipo_de_cambio\": \"\",\r\n  \"porcentaje_de_igv\": \"18.00\",\r\n  \"descuento_global\": \"\",\r\n  \"total_descuento\": \"\",\r\n  \"total_anticipo\": \"\",\r\n  \"total_gravada\": 322,\r\n  \"total_inafecta\": \"\",\r\n  \"total_exonerada\": \"\",\r\n  \"total_igv\": 57.96,\r\n  \"total_gratuita\": \"\",\r\n  \"total_otros_cargos\": \"\",\r\n  \"total\": 379.96,\r\n  \"percepcion_tipo\": \"\",\r\n  \"percepcion_base_imponible\": \"\",\r\n  \"total_percepcion\": \"\",\r\n  \"total_incluido_percepcion\": \"\",\r\n  \"detraccion\": \"false\",\r\n  \"observaciones\": \"\",\r\n  \"documento_que_se_modifica_tipo\": \"\",\r\n  \"documento_que_se_modifica_serie\": \"\",\r\n  \"documento_que_se_modifica_numero\": \"\",\r\n  \"tipo_de_nota_de_credito\": \"\",\r\n  \"tipo_de_nota_de_debito\": \"\",\r\n  \"enviar_automaticamente_a_la_sunat\": \"true\",\r\n  \"enviar_automaticamente_al_cliente\": \"false\",\r\n  \"codigo_unico\": \"20608361074-FB01-1746\",\r\n  \"condiciones_de_pago\": \"\",\r\n  \"medio_de_pago\": \"\",\r\n  \"placa_vehiculo\": \"\",\r\n  \"orden_compra_servicio\": \"\",\r\n  \"detraccion_tipo\": \"\",\r\n  \"detraccion_total\": \"\",\r\n  \"detraccion_porcentaje\": \"\",\r\n  \"medio_de_pago_detraccion\": \"\",\r\n  \"formato_de_pdf\": \"A4\",\r\n  \"items\": [\r\n    {\r\n      \"unidad_de_medida\": \"NIU\",\r\n      \"codigo\": \"07\",\r\n      \"descripcion\": \"ENTRADAS IMPRESAS - ORDEN DE VENTA N663\\r\\n* Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP\",\r\n      \"cantidad\": \"1\",\r\n      \"valor_unitario\": 322,\r\n      \"precio_unitario\": 379.96,\r\n      \"descuento\": null,\r\n      \"subtotal\": 322,\r\n      \"tipo_de_igv\": \"1\",\r\n      \"igv\": 57.96,\r\n      \"total\": 379.96,\r\n      \"anticipo_regularizacion\": \"false\",\r\n      \"anticipo_documento_serie\": null,\r\n      \"anticipo_documento_numero\": null\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vaopesatge.pragmatic.com.pe/api/invoice",
+					"protocol": "https",
+					"host": [
+						"vaopesatge",
+						"pragmatic",
+						"com",
+						"pe"
+					],
+					"path": [
+						"api",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Factura Detraccion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "pR4GmPS580KnGQuMGaCtPkcaQmKDliEYAoKRq8si0dsMT5k=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"params\": {\r\n        \"name\":\"KELVIN\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vaopesatge.pragmatic.com.pe/api/invoice",
+					"protocol": "https",
+					"host": [
+						"vaopesatge",
+						"pragmatic",
+						"com",
+						"pe"
+					],
+					"path": [
+						"api",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

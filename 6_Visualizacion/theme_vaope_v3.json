@@ -1,0 +1,14 @@
+{
+  "name": "VAOPE Header",
+  "dataColors": [
+    "#33D6CF", "#FF4FA3", "#FFC145", "#1E2342",
+    "#7EDBD6", "#FFA3CF", "#FFE08A"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#1E2342",
+  "tableAccent": "#33D6CF",
+  "good": "#33D6CF",
+  "neutral": "#FFC145",
+  "bad": "#FF4FA3"
+}
+
