@@ -1,7 +1,10 @@
 use vaope2;
 
 select * from sales -- datos de vetas
+where transaction_id = 31
 where id = 499585;
+
+select * from cart_transactions
 
 select distinct status,count(1) q from sales group by  status -- datos de vetas
 -- status
@@ -157,4 +160,16 @@ select * from sale_orders
 select * from sale_order_details
 
 select * from sale_payments -- datos de todos los pagos
+
+
+-- IDENTIFICACION DE YAPE EN TRANSACTION_JSON
+use vaope2;
+
+select * from sales -- datos de vetas
+where id = 519105;
+
+
+select a.id,a.purchase_number,b.transaction_id,b.transaction_json 
+from sales a
+inner join cart_transactions b on a.purchase_number = b.transaction_id
 

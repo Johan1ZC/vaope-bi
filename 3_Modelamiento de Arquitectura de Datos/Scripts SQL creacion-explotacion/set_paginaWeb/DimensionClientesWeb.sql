@@ -21,11 +21,12 @@ when (id_google is not null and id_tiktok is not null and id_facebook is not nul
 else "Otros" end Origen
 -- select *
 FROM vaope2.clients
-where id in (select distinct usuarioID from vaope.factventasweb);
+where id in (select distinct usuarioID from vaope.factventasweb);  -- DESACTIVAR EN PRODUCCION, AQUI SE SELEECCIONA SOLO LA MUESTRA OK DEL BACKUP DEL BACKEND
 -- 18551
 -- select * from vaope.dimUsuarioweb where active = 0
 ALTER TABLE vaope.dimUsuarioweb ADD INDEX idx_dimusuarioweb_user (usuarioID);
 
+/*
 -- select distinct origen,id_facebook,
 id_Google,
 id_Tiktok from vaope.dimUsuarioweb order by 1
@@ -42,4 +43,4 @@ Facebook
 Google
 Tiktok
 
-select * from vaope.factventasweb
+select * from vaope.factventasweb*/
