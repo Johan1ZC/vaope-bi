@@ -1,6 +1,33 @@
-#28 primary keys
-#16 foreing  keys
-#14 Entidades
+/* =======================================================================
+   Huella: JZ-VAOPE-DW-SET_VENTA_EGRESOS-002
+   Proyecto: VAOPE – Data Warehouse (Ventas/Egresos/Eventos)
+   Artefacto: Modelo Estrella – V2 (DDL)
+   Autor: Johan Zuñiga Cordova  |
+   Email: johan@vaope.com | johan.zcor.upc@gmail.com
+   Licencia: MIT
+   Versión: v2.1
+   Fecha: 2025-10-14
+   Entorno: MySQL 8.0  |  Schema: dwh_dev
+   Dependencias: Privilegios CREATE/ALTER/INDEX.
+   Descripción:
+     - Crea dimensiones y hechos clave (DimCuenta, DimDistribucionAnalitica,
+       DimEstadoFactura, DimEventos, DimFecha, DimOrganizadores, DimProducto,
+       DimProveedor, DimTiposGasto, DimUbicacion, DimVendedor, DimLocalEvento,
+       DimTicketera, factevntasdetalle, factegresosdetalle) y tablas puente (eventosOrganizador_Detalle, eventosTicketera_detalle).
+     - Define PK/UK/Índices y FKs para integridad y performance.
+   Métricas rápidas del DDL:
+     - Entidades: 14+
+     - Primary keys: 28
+     - Foreign keys: 16
+   ADR relacionado:
+     - ADR-003: Relaciones de fecha activa (FechaInicio) e inactiva (FechaFin) para eventos.
+     - ADR-005: Índices compuestos en DimUbicacion y unicidad de Ubigeo6.
+   Convención de nombres:
+     - Dim* (dimensiones), Fact* (hechos), *_Detalle (puentes), fk_* (FK), uq_* (UK), ix_* (index).
+   Propósito:
+     - Estandarizar el modelo estrella para ventas y gastos vinculados a eventos, proveedores,
+       cuentas y distribución analítica con claves de negocio y surrogate keys.
+   ======================================================================= */
 
 USE dwh_dev;
 
@@ -16,6 +43,7 @@ ALTER TABLE DimCuenta ADD PRIMARY KEY (CuentaID);
 ALTER TABLE DimCuenta ADD UNIQUE KEY uq_dimcta_nombre (NombreCuenta);
 -- 
 
+/*
 CREATE TABLE DimCuentaAnalitica
 (
 	CuentaAnaliticaID    INT NOT NULL,
@@ -24,18 +52,20 @@ CREATE TABLE DimCuentaAnalitica
 
 ALTER TABLE DimCuentaAnalitica ADD PRIMARY KEY (CuentaAnaliticaID);
 ALTER TABLE DimCuentaAnalitica ADD UNIQUE KEY uq_dimctanalitica_nombre (Nombre);
+*/
 
 
 CREATE TABLE DimDistribucionAnalitica
 (
 	DistribucionID    INT NOT NULL,
-	Nombre               VARCHAR(100) NULL
+	Nombre               VARCHAR(100) NULL,
+    Subcategoria         VARCHAR(100) NULL
 );
 
 ALTER TABLE DimDistribucionAnalitica ADD PRIMARY KEY (DistribucionID);
 ALTER TABLE DimDistribucionAnalitica ADD UNIQUE KEY uq_dist_nombre (Nombre);
 
-
+/*
 CREATE TABLE distribucion_Cuentaan_Detalle
 (
 	CuentaAnaliticaID        INT NOT NULL,
@@ -45,6 +75,7 @@ CREATE TABLE distribucion_Cuentaan_Detalle
 ALTER TABLE distribucion_Cuentaan_Detalle ADD CONSTRAINT pk_dist_cuen PRIMARY KEY (CuentaAnaliticaID, DistribucionID);
 
 CREATE INDEX ix_dist_cuent ON distribucion_Cuentaan_Detalle (CuentaAnaliticaID);
+*/
 
 
 CREATE TABLE DimEstadoFactura
@@ -64,7 +95,8 @@ CREATE TABLE DimEventos
 	NombreEvento         VARCHAR(250) NULL,
 	FechaInicio          DATETIME NOT NULL,
 	FechaFin             DATETIME NULL,
-	LocalEventoID        INT NULL
+	LocalEventoID        INT NULL,
+    NroClics		     INT NULL 
 );
 
 
@@ -292,8 +324,6 @@ ALTER TABLE eventosTicketera_detalle ADD CONSTRAINT pk_ev_ticket PRIMARY KEY (Ev
 CREATE INDEX ix_evtick_ticke ON eventosTicketera_detalle (TicketeraID);
 
 
-
-
 -- Relaciones:
 
 ALTER TABLE DimEventos ADD FOREIGN KEY fk_event_local (LocalEventoID) REFERENCES DimLocalEvento (LocalEventoID);
@@ -306,9 +336,9 @@ ALTER TABLE eventosTicketera_detalle ADD FOREIGN KEY fk_ticket_event (TicketeraI
 
 ALTER TABLE eventosTicketera_detalle ADD FOREIGN KEY fk_eventos_ticket (EventoID) REFERENCES DimEventos (EventoID);  -- NUEVO
 
-ALTER TABLE distribucion_Cuentaan_Detalle ADD FOREIGN KEY fk_analitia_dist (CuentaAnaliticaID) REFERENCES DimCuentaAnalitica (CuentaAnaliticaID);
+/*ALTER TABLE distribucion_Cuentaan_Detalle ADD FOREIGN KEY fk_analitia_dist (CuentaAnaliticaID) REFERENCES DimCuentaAnalitica (CuentaAnaliticaID);
 
-ALTER TABLE distribucion_Cuentaan_Detalle ADD FOREIGN KEY fk_dist_analitica (DistribucionID) REFERENCES DimDistribucionAnalitica (DistribucionID);
+ALTER TABLE distribucion_Cuentaan_Detalle ADD FOREIGN KEY fk_dist_analitica (DistribucionID) REFERENCES DimDistribucionAnalitica (DistribucionID);*/
 
 ALTER TABLE FactEgresosDetalle
 ADD FOREIGN KEY fk_factegre_fecha (FechaID) REFERENCES DimFecha (FechaID);  #Agregado
@@ -357,5 +387,6 @@ ADD FOREIGN KEY fk_factventa_cuenta (CuentaID) REFERENCES DimCuenta (CuentaID);
 
 ALTER TABLE DimLocalEvento
 ADD FOREIGN KEY fk_ubica_local (UbicacionID) REFERENCES DimUbicacion (UbicacionID);
+
 
 

@@ -1,7 +1,7 @@
 {
-    "serie_correlativo": "FB01", /*Nro de factura padre*/
-    "numero": "00000024", /*Nro de factura padre*/
-    "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa* ----Agregar*/
+    "serie_correlativo": "FB01", /*Nro de factura padre*/  /*<--`FechaFacturaID` */
+    "numero": "00000024", /*Nro de factura padre*/   /*<--`FechaFacturaID` */
+    "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa*/
     "fecha_de_emision": "29-08-2025", /*Fecha de factura detalle*/
     "Hora_de_emision": "00:00:00", /*Hora de factura detalle*/
     "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.", /*Nombre cliente/proveedor*/
@@ -35,7 +35,7 @@
                 "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
                 "id_organizador": "", /*Identificador organizador*/
                 "nom_organizador": "CORPORACION MUKANRANKO S.A.C.", /*Nombre del organizador*/
-                "tipo_organizador": "", /*Tipo de organizador*/
+                "tipo_organizador": "" /*Tipo de organizador*/
             },
             "id_vendedor": "", /*Identificador del vendedor*/
             "nom_vendedor": "", /* Nombre del vendedor*/

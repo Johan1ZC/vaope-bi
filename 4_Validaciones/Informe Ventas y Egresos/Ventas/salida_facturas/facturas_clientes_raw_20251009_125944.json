@@ -1,0 +1,4469 @@
+[
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000077",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "06-10-2025",
+    "hora_de_emision": "09:43:31",
+    "nom_proveedor": "CORPORACION LA CHOZA S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20553193169",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGÚN CONTRATO",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 177.29,
+        "precio_unitario": 209.2,
+        "descuento": null,
+        "subtotal": 177.29,
+        "porcentaje_de_igv": "18.00",
+        "igv": 31.91,
+        "total": 209.2,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "2461",
+          "nom_evento": "Test 2,461",
+          "Fecha_hora_ini_event": "2025-10-31",
+          "Fecha_hora_fin_event": "2025-10-31",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION LA CHOZA S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000076",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "04-10-2025",
+    "hora_de_emision": "18:21:31",
+    "nom_proveedor": "PRODUCCIONES Y PROMOTORA DE EVENTOS AAA S.A.C.",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20600299060",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGÚN CONTRATO",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 425.93,
+        "precio_unitario": 502.6,
+        "descuento": null,
+        "subtotal": 425.93,
+        "porcentaje_de_igv": "18.00",
+        "igv": 76.67,
+        "total": 502.6,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "PRODUCCIONES Y PROMOTORA DE EVENTOS AAA S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000075",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "19-09-2025",
+    "hora_de_emision": "11:20:26",
+    "nom_proveedor": "CORPORACION LA CHOZA S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20553193169",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 1355.93,
+        "precio_unitario": 1600.0,
+        "descuento": null,
+        "subtotal": 1355.93,
+        "porcentaje_de_igv": "18.00",
+        "igv": 244.07,
+        "total": 1600.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "2461",
+          "nom_evento": "Test 2,461",
+          "Fecha_hora_ini_event": "2025-10-31",
+          "Fecha_hora_fin_event": "2025-10-31",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION LA CHOZA S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000074",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "19-09-2025",
+    "hora_de_emision": "11:02:12",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 50.85,
+        "precio_unitario": 60.0,
+        "descuento": null,
+        "subtotal": 50.85,
+        "porcentaje_de_igv": "17.99",
+        "igv": 9.15,
+        "total": 60.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000104",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "19-09-2025",
+    "hora_de_emision": "10:46:13",
+    "nom_proveedor": "A & Q AYLLU S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609168961",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "232",
+        "nom_producto": "DESARROLLO DE CONTENIDO",
+        "categoria_producto": "service",
+        "cantidad": "2.0",
+        "valor_unitario": 1000.0,
+        "precio_unitario": 1180.0,
+        "descuento": null,
+        "subtotal": 2000.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 360.0,
+        "total": 2360.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "2",
+          "nom_evento": "Corazón Serrano - Almuerzo de camaradería",
+          "Fecha_hora_ini_event": "2021-08-01",
+          "Fecha_hora_fin_event": "2021-08-01",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 102,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "IME",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      },
+      {
+        "id_producto": "2",
+        "codigo_producto": "228",
+        "nom_producto": "COMBO ANCLADOS",
+        "categoria_producto": "service",
+        "cantidad": "2.0",
+        "valor_unitario": 1000.0,
+        "precio_unitario": 1180.0,
+        "descuento": null,
+        "subtotal": 2000.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 360.0,
+        "total": 2360.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "2",
+          "nom_evento": "Corazón Serrano - Almuerzo de camaradería",
+          "Fecha_hora_ini_event": "2021-08-01",
+          "Fecha_hora_fin_event": "2021-08-01",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 102,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "IME",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000103",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "19-09-2025",
+    "hora_de_emision": "10:41:24",
+    "nom_proveedor": "A & Q AYLLU S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609168961",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "232",
+        "nom_producto": "DESARROLLO DE CONTENIDO",
+        "categoria_producto": "service",
+        "cantidad": "2.0",
+        "valor_unitario": 1000.0,
+        "precio_unitario": 1180.0,
+        "descuento": null,
+        "subtotal": 2000.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 360.0,
+        "total": 2360.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "2",
+          "nom_evento": "Corazón Serrano - Almuerzo de camaradería",
+          "Fecha_hora_ini_event": "2021-08-01",
+          "Fecha_hora_fin_event": "2021-08-01",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 102,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "IME",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000102",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "19-09-2025",
+    "hora_de_emision": "10:35:57",
+    "nom_proveedor": "A & Q AYLLU S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609168961",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "232",
+        "nom_producto": "DESARROLLO DE CONTENIDO",
+        "categoria_producto": "service",
+        "cantidad": "2.0",
+        "valor_unitario": 1000.0,
+        "precio_unitario": 1180.0,
+        "descuento": null,
+        "subtotal": 2000.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 360.0,
+        "total": 2360.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "2",
+          "nom_evento": "Corazón Serrano - Almuerzo de camaradería",
+          "Fecha_hora_ini_event": "2021-08-01",
+          "Fecha_hora_fin_event": "2021-08-01",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 102,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "IME",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000101",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "19-09-2025",
+    "hora_de_emision": "10:05:28",
+    "nom_proveedor": "A & Q AYLLU S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609168961",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "232",
+        "nom_producto": "DESARROLLO DE CONTENIDO",
+        "categoria_producto": "service",
+        "cantidad": "2.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "2",
+          "nom_evento": "Corazón Serrano - Almuerzo de camaradería",
+          "Fecha_hora_ini_event": "2021-08-01",
+          "Fecha_hora_fin_event": "2021-08-01",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 102,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "IME",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(03) Boleta B001",
+    "numero": "00000001",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "06-10-2025",
+    "hora_de_emision": "12:48:00",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000073",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "15:44:09",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 47.46,
+        "precio_unitario": 56.0,
+        "descuento": null,
+        "subtotal": 47.46,
+        "porcentaje_de_igv": "17.99",
+        "igv": 8.54,
+        "total": 56.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000072",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "15:32:37",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 67.8,
+        "precio_unitario": 80.0,
+        "descuento": null,
+        "subtotal": 67.8,
+        "porcentaje_de_igv": "17.99",
+        "igv": 12.2,
+        "total": 80.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000071",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "15:21:18",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 55.93,
+        "precio_unitario": 66.0,
+        "descuento": null,
+        "subtotal": 55.93,
+        "porcentaje_de_igv": "18.00",
+        "igv": 10.07,
+        "total": 66.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000070",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "15:15:13",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 76.27,
+        "precio_unitario": 90.0,
+        "descuento": null,
+        "subtotal": 76.27,
+        "porcentaje_de_igv": "18.00",
+        "igv": 13.73,
+        "total": 90.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000069",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "14:53:14",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 67.8,
+        "precio_unitario": 80.0,
+        "descuento": null,
+        "subtotal": 67.8,
+        "porcentaje_de_igv": "17.99",
+        "igv": 12.2,
+        "total": 80.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000068",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "14:32:30",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 50.85,
+        "precio_unitario": 60.0,
+        "descuento": null,
+        "subtotal": 50.85,
+        "porcentaje_de_igv": "17.99",
+        "igv": 9.15,
+        "total": 60.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000067",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "12:51:12",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN VAOPE SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 33.9,
+        "precio_unitario": 40.0,
+        "descuento": null,
+        "subtotal": 33.9,
+        "porcentaje_de_igv": "17.99",
+        "igv": 6.1,
+        "total": 40.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000066",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "12:28:49",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 74.58,
+        "precio_unitario": 88.0,
+        "descuento": null,
+        "subtotal": 74.58,
+        "porcentaje_de_igv": "17.99",
+        "igv": 13.42,
+        "total": 88.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000065",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "12:09:33",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 169.49,
+        "precio_unitario": 200.0,
+        "descuento": null,
+        "subtotal": 169.49,
+        "porcentaje_de_igv": "18.00",
+        "igv": 30.51,
+        "total": 200.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000064",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "12:08:30",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 127.12,
+        "precio_unitario": 150.0,
+        "descuento": null,
+        "subtotal": 127.12,
+        "porcentaje_de_igv": "18.00",
+        "igv": 22.88,
+        "total": 150.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000063",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "10:46:52",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "PERSONAL -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 101.69,
+        "precio_unitario": 119.99,
+        "descuento": null,
+        "subtotal": 101.69,
+        "porcentaje_de_igv": "18.00",
+        "igv": 18.3,
+        "total": 119.99,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000062",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "10:20:51",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 33.9,
+        "precio_unitario": 40.0,
+        "descuento": null,
+        "subtotal": 33.9,
+        "porcentaje_de_igv": "17.99",
+        "igv": 6.1,
+        "total": 40.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000061",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "10:17:23",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 16.95,
+        "precio_unitario": 20.0,
+        "descuento": null,
+        "subtotal": 16.95,
+        "porcentaje_de_igv": "17.99",
+        "igv": 3.05,
+        "total": 20.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000060",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "10:03:56",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 84.75,
+        "precio_unitario": 100.01,
+        "descuento": null,
+        "subtotal": 84.75,
+        "porcentaje_de_igv": "18.01",
+        "igv": 15.26,
+        "total": 100.01,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000059",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "09:57:22",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 55.93,
+        "precio_unitario": 66.0,
+        "descuento": null,
+        "subtotal": 55.93,
+        "porcentaje_de_igv": "18.00",
+        "igv": 10.07,
+        "total": 66.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000058",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "17-09-2025",
+    "hora_de_emision": "09:52:10",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 74.58,
+        "precio_unitario": 88.0,
+        "descuento": null,
+        "subtotal": 74.58,
+        "porcentaje_de_igv": "17.99",
+        "igv": 13.42,
+        "total": 88.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000100",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "16-09-2025",
+    "hora_de_emision": "11:05:29",
+    "nom_proveedor": "A & Q AYLLU S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609168961",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "232",
+        "nom_producto": "DESARROLLO DE CONTENIDO",
+        "categoria_producto": "service",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "2",
+          "nom_evento": "Corazón Serrano - Almuerzo de camaradería",
+          "Fecha_hora_ini_event": "2021-08-01",
+          "Fecha_hora_fin_event": "2021-08-01",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 102,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "IME",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000057",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "12-09-2025",
+    "hora_de_emision": "13:12:09",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 33.9,
+        "precio_unitario": 40.0,
+        "descuento": null,
+        "subtotal": 33.9,
+        "porcentaje_de_igv": "17.99",
+        "igv": 6.1,
+        "total": 40.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000056",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "12-09-2025",
+    "hora_de_emision": "13:08:42",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000055",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "18:07:30",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 118.64,
+        "precio_unitario": 140.0,
+        "descuento": null,
+        "subtotal": 118.64,
+        "porcentaje_de_igv": "18.00",
+        "igv": 21.36,
+        "total": 140.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000054",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "18:02:19",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 110.17,
+        "precio_unitario": 130.0,
+        "descuento": null,
+        "subtotal": 110.17,
+        "porcentaje_de_igv": "18.00",
+        "igv": 19.83,
+        "total": 130.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000053",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "17:46:13",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 135.59,
+        "precio_unitario": 160.0,
+        "descuento": null,
+        "subtotal": 135.59,
+        "porcentaje_de_igv": "18.00",
+        "igv": 24.41,
+        "total": 160.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000052",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "16:15:56",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 93.22,
+        "precio_unitario": 110.0,
+        "descuento": null,
+        "subtotal": 93.22,
+        "porcentaje_de_igv": "18.00",
+        "igv": 16.78,
+        "total": 110.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000051",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "14:37:02",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 127.12,
+        "precio_unitario": 150.0,
+        "descuento": null,
+        "subtotal": 127.12,
+        "porcentaje_de_igv": "18.00",
+        "igv": 22.88,
+        "total": 150.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000050",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "14:31:46",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 110.17,
+        "precio_unitario": 130.0,
+        "descuento": null,
+        "subtotal": 110.17,
+        "porcentaje_de_igv": "18.00",
+        "igv": 19.83,
+        "total": 130.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000049",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "13:31:32",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 84.75,
+        "precio_unitario": 100.01,
+        "descuento": null,
+        "subtotal": 84.75,
+        "porcentaje_de_igv": "18.01",
+        "igv": 15.26,
+        "total": 100.01,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000048",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "13:08:55",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 104.24,
+        "precio_unitario": 123.0,
+        "descuento": null,
+        "subtotal": 104.24,
+        "porcentaje_de_igv": "18.00",
+        "igv": 18.76,
+        "total": 123.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000047",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "12:54:57",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000046",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "12:53:49",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000045",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "12:43:32",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000044",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "12:37:55",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000043",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "10:48:26",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 65.25,
+        "precio_unitario": 77.0,
+        "descuento": null,
+        "subtotal": 65.25,
+        "porcentaje_de_igv": "18.01",
+        "igv": 11.75,
+        "total": 77.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000042",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "09:06:59",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000041",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "09:06:28",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 104,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "VIAJE",
+              "porcentaje": "20.00"
+            },
+            {
+              "código": 132,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "VIÁTICOS",
+              "porcentaje": "30.00"
+            },
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "50.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000040",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "09:03:36",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 76.27,
+        "precio_unitario": 90.0,
+        "descuento": null,
+        "subtotal": 76.27,
+        "porcentaje_de_igv": "18.00",
+        "igv": 13.73,
+        "total": 90.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000039",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "09:00:00",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 78.81,
+        "precio_unitario": 93.0,
+        "descuento": null,
+        "subtotal": 78.81,
+        "porcentaje_de_igv": "18.01",
+        "igv": 14.19,
+        "total": 93.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000038",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "08-09-2025",
+    "hora_de_emision": "08:56:30",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 104,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "VIAJE",
+              "porcentaje": "20.00"
+            },
+            {
+              "código": 132,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "VIÁTICOS",
+              "porcentaje": "30.00"
+            },
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "50.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000036",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "15:27:25",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 104,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "VIAJE",
+              "porcentaje": "20.00"
+            },
+            {
+              "código": 132,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "VIÁTICOS",
+              "porcentaje": "30.00"
+            },
+            {
+              "código": 137,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "TI",
+              "porcentaje": "50.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000035",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "15:20:25",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000033",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "12:57:55",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000032",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "12:49:58",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000030",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "12:13:13",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 54.15,
+        "precio_unitario": 63.9,
+        "descuento": null,
+        "subtotal": 54.15,
+        "porcentaje_de_igv": "18.01",
+        "igv": 9.75,
+        "total": 63.9,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000029",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "29-08-2025",
+    "hora_de_emision": "11:14:46",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 54.15,
+        "precio_unitario": 63.9,
+        "descuento": null,
+        "subtotal": 54.15,
+        "porcentaje_de_igv": "18.01",
+        "igv": 9.75,
+        "total": 63.9,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000028",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "15:24:46",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "231",
+        "nom_producto": "DIFUSION MAILING",
+        "categoria_producto": "service",
+        "cantidad": "1.0",
+        "valor_unitario": 900.0,
+        "precio_unitario": 1062.0,
+        "descuento": null,
+        "subtotal": 900.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 162.0,
+        "total": 1062.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000027",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "15:12:52",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 53.9,
+        "precio_unitario": 63.6,
+        "descuento": null,
+        "subtotal": 53.9,
+        "porcentaje_de_igv": "18.00",
+        "igv": 9.7,
+        "total": 63.6,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000026",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "15:09:12",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 53.81,
+        "precio_unitario": 63.5,
+        "descuento": null,
+        "subtotal": 53.81,
+        "porcentaje_de_igv": "18.01",
+        "igv": 9.69,
+        "total": 63.5,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000025",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "14:49:59",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "PERSONAL -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 1016.95,
+        "precio_unitario": 1200.0,
+        "descuento": null,
+        "subtotal": 1016.95,
+        "porcentaje_de_igv": "18.00",
+        "igv": 183.05,
+        "total": 1200.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000024",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "14:38:20",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "PERSONAL -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 1016.95,
+        "precio_unitario": 1200.0,
+        "descuento": null,
+        "subtotal": 1016.95,
+        "porcentaje_de_igv": "18.00",
+        "igv": 183.05,
+        "total": 1200.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000023",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "14:34:28",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "PERSONAL -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 805.08,
+        "precio_unitario": 949.99,
+        "descuento": null,
+        "subtotal": 805.08,
+        "porcentaje_de_igv": "18.00",
+        "igv": 144.91,
+        "total": 949.99,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000022",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "12:25:43",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "PERSONAL -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 677.97,
+        "precio_unitario": 800.0,
+        "descuento": null,
+        "subtotal": 677.97,
+        "porcentaje_de_igv": "18.00",
+        "igv": 122.03,
+        "total": 800.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000021",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "27-08-2025",
+    "hora_de_emision": "12:07:18",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 51.99,
+        "precio_unitario": 61.35,
+        "descuento": null,
+        "subtotal": 51.99,
+        "porcentaje_de_igv": "18.00",
+        "igv": 9.36,
+        "total": 61.35,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000014",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "25-08-2025",
+    "hora_de_emision": "10:38:25",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 55.34,
+        "precio_unitario": 65.3,
+        "descuento": null,
+        "subtotal": 55.34,
+        "porcentaje_de_igv": "18.00",
+        "igv": 9.96,
+        "total": 65.3,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000013",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "25-08-2025",
+    "hora_de_emision": "09:04:28",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGUN CONTRATO -",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 51.86,
+        "precio_unitario": 61.19,
+        "descuento": null,
+        "subtotal": 51.86,
+        "porcentaje_de_igv": "17.99",
+        "igv": 9.33,
+        "total": 61.19,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000011",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "25-08-2025",
+    "hora_de_emision": "08:54:19",
+    "nom_proveedor": "CORPORACION MUKANRANKO S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609593076",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISIÓN PAGOS DIGITALES SEGÚN CONTRATO",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 51.86,
+        "precio_unitario": 61.19,
+        "descuento": null,
+        "subtotal": 51.86,
+        "porcentaje_de_igv": "17.99",
+        "igv": 9.33,
+        "total": 61.19,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "CORPORACION MUKANRANKO S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000015",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "25-08-2025",
+    "hora_de_emision": "12:52:03",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000012",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "25-08-2025",
+    "hora_de_emision": "09:01:27",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000010",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "17:24:31",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000009",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "17:13:36",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000008",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "17:10:18",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000007",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "16:16:30",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000006",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "16:15:11",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000004",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "16:08:44",
+    "nom_proveedor": "RF PROMOTORA DE ESPECTACULOS E.I.R.L",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20612433489",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISION CORTESIA - emision cortesia",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "RF PROMOTORA DE ESPECTACULOS E.I.R.L",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000003",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "15:50:29",
+    "nom_proveedor": "RF PROMOTORA DE ESPECTACULOS E.I.R.L",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20612433489",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISION CORTESIA - Cortesía",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "RF PROMOTORA DE ESPECTACULOS E.I.R.L",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000002",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "15:23:33",
+    "nom_proveedor": "RF PROMOTORA DE ESPECTACULOS E.I.R.L",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20612433489",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "COMISION CORTESIA - emision cortesia",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "RF PROMOTORA DE ESPECTACULOS E.I.R.L",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000034",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "15:18:47",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000031",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "02-09-2025",
+    "hora_de_emision": "12:48:40",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000020",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "26-08-2025",
+    "hora_de_emision": "14:44:48",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000019",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "26-08-2025",
+    "hora_de_emision": "14:41:23",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000018",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "26-08-2025",
+    "hora_de_emision": "14:40:06",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000017",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "26-08-2025",
+    "hora_de_emision": "14:26:56",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura FB01",
+    "numero": "00000016",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "26-08-2025",
+    "hora_de_emision": "14:07:17",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 322.0,
+        "precio_unitario": 379.96,
+        "descuento": null,
+        "subtotal": 322.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 57.96,
+        "total": 379.96,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000005",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "22-08-2025",
+    "hora_de_emision": "16:13:49",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "(01) Factura F001",
+    "numero": "00000001",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "21-08-2025",
+    "hora_de_emision": "09:43:03",
+    "nom_proveedor": "JP Producciones Generales EIRL",
+    "cat_proveedor": "Cliente",
+    "tipo_documento": "6",
+    "doc_proveedor": "20608361074",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "",
+        "nom_producto": "ENTRADAS IMPRESAS - ORDEN DE VENTA N663  Corazn Serrano en el Centro de Convenciones Scencia de la Molina /  FULL COLOR GENERAL /  BRAZALETES PLATINUM / BRAZALETES VIP",
+        "categoria_producto": "",
+        "cantidad": "1.0",
+        "valor_unitario": 0.0,
+        "precio_unitario": 0.0,
+        "descuento": null,
+        "subtotal": 0.0,
+        "porcentaje_de_igv": "0.00",
+        "igv": 0.0,
+        "total": 0.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "paid",
+        "nombre_estado": "Pagado",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "JP Producciones Generales EIRL",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": []
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "F FFI",
+    "numero": "00000001",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "23-03-2025",
+    "hora_de_emision": "00:00:00",
+    "nom_proveedor": "A & Q AYLLU S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20609168961",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "232",
+        "nom_producto": "DESARROLLO DE CONTENIDO",
+        "categoria_producto": "service",
+        "cantidad": "1.0",
+        "valor_unitario": 104.24,
+        "precio_unitario": 123.0,
+        "descuento": null,
+        "subtotal": 104.24,
+        "porcentaje_de_igv": "18.00",
+        "igv": 18.76,
+        "total": 123.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            },
+            {
+              "código": 103,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "PERSONAL",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      },
+      {
+        "id_producto": "2",
+        "codigo_producto": "227",
+        "nom_producto": "DIFUSION DE EVENTO NIV 1",
+        "categoria_producto": "service",
+        "cantidad": "1.0",
+        "valor_unitario": 103.39,
+        "precio_unitario": 122.0,
+        "descuento": null,
+        "subtotal": 103.39,
+        "porcentaje_de_igv": "18.00",
+        "igv": 18.61,
+        "total": 122.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 103,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "PERSONAL",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      },
+      {
+        "id_producto": "3",
+        "codigo_producto": "220",
+        "nom_producto": "full color ",
+        "categoria_producto": "consu",
+        "cantidad": "1.0",
+        "valor_unitario": 102.54,
+        "precio_unitario": 121.0,
+        "descuento": null,
+        "subtotal": 102.54,
+        "porcentaje_de_igv": "18.00",
+        "igv": 18.46,
+        "total": 121.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "A & Q AYLLU S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 101,
+              "nom_distribucion": "Validadores",
+              "sub_categoria": "DELIVERY",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "FFF1",
+    "numero": "220",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "10-02-2025",
+    "hora_de_emision": "00:00:00",
+    "nom_proveedor": "G & N MUSIC S.A.C.",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "20611018925",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "984",
+        "nom_producto": "ENTRADAS IMPRESAS FULL COLOR GENERAL, BRAZALETES VIP -CORAZÓN SERRANO BARRANCA - 09/02 Y PERSONAL DELIVERY",
+        "categoria_producto": "consu",
+        "cantidad": "1.0",
+        "valor_unitario": 1241.0,
+        "precio_unitario": 1464.38,
+        "descuento": null,
+        "subtotal": 1241.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 223.38,
+        "total": 1464.38,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "G & N MUSIC S.A.C.",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 83,
+              "nom_distribucion": "Impresos",
+              "sub_categoria": "INSUMO",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "FFF1",
+    "numero": "219",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "10-02-2025",
+    "hora_de_emision": "00:00:00",
+    "nom_proveedor": "MACHA MUNIVE JULIO",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "10198893710",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "983",
+        "nom_producto": "ENTRADAS IMPRESAS * FULL COLOR GENERAL ",
+        "categoria_producto": "consu",
+        "cantidad": "1.0",
+        "valor_unitario": 400.0,
+        "precio_unitario": 472.0,
+        "descuento": null,
+        "subtotal": 400.0,
+        "porcentaje_de_igv": "18.00",
+        "igv": 72.0,
+        "total": 472.0,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "MACHA MUNIVE JULIO",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 83,
+              "nom_distribucion": "Impresos",
+              "sub_categoria": "INSUMO",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "serie_correlativo": "FB01",
+    "numero": "1420",
+    "nombre_empresa": "COLABORATIVA S.A.C.",
+    "fecha_de_emision": "07-02-2025",
+    "hora_de_emision": "00:00:00",
+    "nom_proveedor": "REYNOSO BENDEZU CARLOS ARTURO",
+    "cat_proveedor": "",
+    "tipo_documento": "6",
+    "doc_proveedor": "10755725086",
+    "items": [
+      {
+        "id_producto": "1",
+        "codigo_producto": "982",
+        "nom_producto": "COMISION CORTESIA - ACTUALIZACION GRAFICA",
+        "categoria_producto": "consu",
+        "cantidad": "1.0",
+        "valor_unitario": 107.37,
+        "precio_unitario": 126.7,
+        "descuento": null,
+        "subtotal": 107.37,
+        "porcentaje_de_igv": "18.00",
+        "igv": 19.33,
+        "total": 126.7,
+        "moneda": "1",
+        "tipo_de_cambio": "",
+        "id_estado": "not_paid",
+        "nombre_estado": "Sin pagar",
+        "evento": {
+          "id_evento": "",
+          "nom_evento": "",
+          "Fecha_hora_ini_event": "",
+          "Fecha_hora_fin_event": "",
+          "id_organizador": "",
+          "nom_organizador": "REYNOSO BENDEZU CARLOS ARTURO",
+          "tipo_organizador": ""
+        },
+        "id_vendedor": 2,
+        "nom_vendedor": "SAMUEL CHUQUISTA",
+        "id_cuenta_analitica": 1106,
+        "nom_cuenta_analitica": "7012100 Mercaderías-Venta Local-Terceros",
+        "distribucion_analitica": [
+          [
+            {
+              "código": 105,
+              "nom_distribucion": "Administrativo",
+              "sub_categoria": "COMISIÓN",
+              "porcentaje": "100.00"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
