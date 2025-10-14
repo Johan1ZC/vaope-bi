@@ -1,3 +1,10 @@
+/* =======================================================================
+   Huella: JZ-VAOPE-RPT-set_paginaWeb.consultas-001
+   Artefacto: (Metodos de conversion)
+   Autora: Johan Zuñiga Cordova  |  v3.0  |  2025-10-14
+   Propósito: Consultas variadas para validar datos de ventas y usuarios pagina web (para export/BI)
+   =======================================================================
+
 use vaope2;
 
 select * from sales -- datos de vetas

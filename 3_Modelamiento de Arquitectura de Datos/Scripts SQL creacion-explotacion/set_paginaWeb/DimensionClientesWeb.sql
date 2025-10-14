@@ -1,3 +1,9 @@
+/* =======================================================================
+   Huella: JZ-VAOPE-RPT-set_paginaWeb.Usuarios-003
+   Artefacto: (Metodos de conversion)
+   Autora: Johan Zuñiga Cordova  |  v3.0  |  2025-10-14
+   Propósito: Usuarios registrados en la pagina y sus caracteristicas (para export/BI)
+   ======================================================================= */
 
 drop table if exists  vaope.dimUsuarioweb;
 create table vaope.dimUsuarioweb

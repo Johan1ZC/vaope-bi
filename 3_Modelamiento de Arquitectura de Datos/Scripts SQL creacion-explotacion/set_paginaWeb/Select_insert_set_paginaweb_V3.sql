@@ -1,3 +1,11 @@
+/* =======================================================================
+   Huella: JZ-VAOPE-RPT-set_paginaWeb.Ventas-003
+   Artefacto: (Metodos de conversion)
+   Autora: Johan Zuñiga Cordova  |  v3.0  |  2025-10-14
+   Propósito: Ventas realizadas en la pagina web de Vaope,
+   detalles de productos, ingresos y metodos de pago (para export/BI)
+   ======================================================================= */
+
 use vaope2;
 
 -- construccion de tabla FACVENTASWEB
