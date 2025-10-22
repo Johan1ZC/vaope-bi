@@ -37,7 +37,7 @@
         "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
         "id_organizador": "", /*Identificador organizador*/
         "nom_organizador": "", /*Nombre del organizador*/
-        "tipo_organizador": "" /*Tipo de organizador*/
+        "tipo_organizador": "" /*Tipo de organizador Persona o Empresa*/
       },
       "id_cuenta": "", /*Identificador Cuenta*/
       "nom_cuenta": "6314100 alimentacion", /*Nombre de Cuenta*/

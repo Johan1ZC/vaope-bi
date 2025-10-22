@@ -10,8 +10,6 @@ use vaope2;
 
 -- construccion de tabla FACVENTASWEB
 
-select 
-
 DROP TABLE IF EXISTS vaope.factventasweb;
 CREATE TABLE vaope.factventasweb
 select 
@@ -19,7 +17,7 @@ DATE_FORMAT(a.created_at,'%Y%m%d') as fechaID,
 HOUR(a.created_at) as horaID,
 a.id as web_VentaID,
 a.product_id as eventoID,
-title_small as nom_evento, -- pendiente
+c.title_small as nom_evento,
 case when a.status = 0 then "Pendiente de pago" when a.status = 1 then "Pago Confirmado" when a.status = 2 then "En Evento"
 when a.status = 3 then "" when a.status = 4 then "Finalizado" when a.status = 5 then "Anulado" 
 when a.status = 6 then "Pendiente Devolución" when a.status = 7 then "Devuelto" when a.status = 9 then "Observado"  else "otros" end status_general,

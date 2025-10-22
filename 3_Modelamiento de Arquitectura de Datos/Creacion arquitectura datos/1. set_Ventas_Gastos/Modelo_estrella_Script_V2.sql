@@ -63,7 +63,7 @@ CREATE TABLE DimDistribucionAnalitica
 );
 
 ALTER TABLE DimDistribucionAnalitica ADD PRIMARY KEY (DistribucionID);
-ALTER TABLE DimDistribucionAnalitica ADD UNIQUE KEY uq_dist_nombre (Nombre);
+-- ALTER TABLE DimDistribucionAnalitica ADD UNIQUE KEY uq_dist_nombre (Nombre);
 
 /*
 CREATE TABLE distribucion_Cuentaan_Detalle
@@ -226,6 +226,7 @@ CREATE TABLE FactEgresosDetalle
 	porcentaje_igv       DECIMAL(12,2) NOT NULL,
 	moneda               VARCHAR(25) NULL,
 	tipo_cambio          VARCHAR(25) NULL,
+    nombreEmpresa        VARCHAR(150) NULL,
     Fuente               VARCHAR(100)   NULL,
 	FechaCarga           DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -272,7 +273,8 @@ CREATE TABLE FactVentasDetalle
 	descuento            DECIMAL(12,2) NOT NULL,
 	porcentaje_igv       DECIMAL(12,2) NOT NULL,
 	moneda               VARCHAR(25) NULL,
-	tipo_cambio          VARCHAR(25) NULL,    
+	tipo_cambio          VARCHAR(25) NULL,  
+    nombreEmpresa        VARCHAR(150) NULL,
     Fuente               VARCHAR(100)   NULL,
     FechaCarga           DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

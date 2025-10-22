@@ -35,7 +35,7 @@
                 "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
                 "id_organizador": "", /*Identificador organizador*/
                 "nom_organizador": "CORPORACION MUKANRANKO S.A.C.", /*Nombre del organizador*/
-                "tipo_organizador": "" /*Tipo de organizador*/
+                "tipo_organizador": "" /*Tipo de organizador Persona o Empresa*/
             },
             "id_vendedor": "", /*Identificador del vendedor*/
             "nom_vendedor": "", /* Nombre del vendedor*/

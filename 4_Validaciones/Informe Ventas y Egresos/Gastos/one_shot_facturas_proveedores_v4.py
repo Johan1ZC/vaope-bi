@@ -21,7 +21,7 @@ TOKEN = "pR4GrXuwLIuXA7edBpwy9mJE78HdcJtf2wqbslQe5cWi8zE="
 
 DATE_FROM  = "2025-01-01"
 DATE_TO    = "2025-12-31"
-LIMIT      = 1000          # tamaño de página deseado (el backend puede capear)
+LIMIT      = 200            # tamaño de página deseado (el backend puede capear)
 OFFSET     = 0
 
 COMPANY_ID = 1

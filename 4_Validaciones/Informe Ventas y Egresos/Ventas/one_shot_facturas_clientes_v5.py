@@ -17,17 +17,17 @@ import pandas as pd
 
 # =========== CONFIGURA AQUÍ ===========
 URL = "https://odoo-stage.colaborativa.pe/api/customer_invoices"
-TOKEN = "pR4GfvD1keR1oafsk06vUdavoagX5ODelYOfIp6HPa6wX_k="
+TOKEN = "pR4GrXuwLIuXA7edBpwy9mJE78HdcJtf2wqbslQe5cWi8zE="
 
 DATE_FROM  = "2025-01-01"
 DATE_TO    = "2025-12-31"
-LIMIT      = 200            # tamaño de página deseado (el backend puede capear)
+LIMIT      = 200           
 OFFSET     = 0
 
 COMPANY_ID = 1
-STATE_LIST = ["posted"]     # el endpoint espera lista
+STATE_LIST = ["posted"]     
 
-METHOD = "GET"              # así lo usas en Postman (GET con body JSON)
+METHOD = "GET"            
 
 # Tope de seguridad para el bucle de paginado
 MAX_PAGES = 1000
@@ -86,7 +86,7 @@ def build_body(offset: int = 0):
         "date_from": DATE_FROM,
         "date_to": DATE_TO,
         "company_id": COMPANY_ID,
-        "state": STATE_LIST,  # lista
+        "state": STATE_LIST, 
         "limit": LIMIT,
         "offset": offset
     }
