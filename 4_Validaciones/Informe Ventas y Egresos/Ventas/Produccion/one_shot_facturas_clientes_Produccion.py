@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Proyecto: VAOPE | Módulo: <gastos/consultafacturasproveedores>
-Autor: Johan Zuñiga Cordova | Huella: JZ-VAOPE-CONSULTA-FACTURAS_PROVEEDORES | v1.3 | Fecha: 2025-10-14
+Proyecto: VAOPE | Módulo: <ventas/consultafacturasclientes>
+Autor: Johan Zuñiga Cordova | Huella: JZ-VAOPE-CONSULTA-FACTURAS_CLIENTES | v1.5 | Fecha: 2025-10-14
 Propósito: one_shot_facturas_clientes_all.py
 - Extrae TODAS las facturas con filtros en BODY JSON (igual que Postman).
 - Paginación robusta: offset → fallback a page/page_size si es necesario.
@@ -17,27 +16,32 @@ import requests
 import pandas as pd
 
 # =========== CONFIGURA AQUÍ ===========
-URL = "https://odoo-stage.colaborativa.pe/api/vendor_bills"
-TOKEN = "pR4GrXuwLIuXA7edBpwy9mJE78HdcJtf2wqbslQe5cWi8zE="
+URL = "https://odoo.colaborativa.pe/api/customer_invoices"
+TOKEN = "pR4Gci8KCzLGwJ_2Mha-JFhS_95byMysqkPJ0u80t16SteQ="
 
 DATE_FROM  = "2025-01-01"
 DATE_TO    = "2025-12-31"
-LIMIT      = 200            # tamaño de página deseado (el backend puede capear)
+LIMIT      = 200           
 OFFSET     = 0
 
 COMPANY_ID = 1
-STATE_LIST = ["posted"]     # el endpoint espera lista
+STATE_LIST = ["posted"]     
 
-METHOD = "GET"              # así lo usas en Postman (GET con body JSON)
+METHOD = "GET"            
+
+# Tope de seguridad para el bucle de paginado
 MAX_PAGES = 1000
 
-OUTDIR = r"C:/Users/SOPORTE/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Gastos/salida_facturas_proveedores"
+# Carpeta de salida
+OUTDIR = r"C:/Users/SOPORTE/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Ventas/salida_facturas"
 # ======================================
+
 
 # ------------------------ HTTP helpers ------------------------
 def prepare_request(url, method, headers, params=None, body_json=None):
     req = requests.Request(method, url, headers=headers, params=params, json=body_json)
     prepped = req.prepare()
+    # Logs útiles (recorta body para no saturar consola)
     print("[HTTP] URL:", prepped.url)
     if body_json is not None:
         print("[HTTP] BODY:", json.dumps(body_json, ensure_ascii=False)[:800])
@@ -50,6 +54,7 @@ def call_api(url: str, method: str, token: str, params: dict, body_json):
         resp = s.send(prepped, timeout=120)
     resp.raise_for_status()
     return resp.json()
+
 
 # ------------------------ Payload parsing ------------------------
 def extract_list(payload):
@@ -73,6 +78,7 @@ def extract_list(payload):
     else:
         return []
 
+
 # ------------------------ Body builders ------------------------
 def build_body(offset: int = 0):
     """Body JSON exactamente como en Postman."""
@@ -80,7 +86,7 @@ def build_body(offset: int = 0):
         "date_from": DATE_FROM,
         "date_to": DATE_TO,
         "company_id": COMPANY_ID,
-        "state": STATE_LIST,  # lista
+        "state": STATE_LIST, 
         "limit": LIMIT,
         "offset": offset
     }
@@ -97,12 +103,18 @@ def build_body_page(page: int = 1):
         "page": page
     }
 
-# ------------------------ Dedupe key compuesta (solo para paging) ------------------------
+
+# ------------------------ Dedupe key compuesta ------------------------
 def make_key(row: dict) -> str:
+    """
+    Clave única estable por factura.
+    Incluye company_id por seguridad (si no viene en el payload, usa el de los filtros).
+    """
     company = str(row.get("company_id") if row.get("company_id") is not None else COMPANY_ID)
     serie   = (row.get("serie_correlativo") or "").strip()
     numero  = (row.get("numero") or "").strip()
     return f"{company}::{serie}::{numero}"
+
 
 # ------------------------ Paging ------------------------
 def fetch_all_pages():
@@ -115,7 +127,11 @@ def fetch_all_pages():
     mode, page, offset = "offset", 1, OFFSET
 
     while True:
-        params, body = (None, build_body(offset)) if mode == "offset" else (None, build_body_page(page))
+        if mode == "offset":
+            params, body = None, build_body(offset=offset)
+        else:
+            params, body = None, build_body_page(page=page)
+
         payload = call_api(URL, METHOD, TOKEN, params, body)
         chunk = extract_list(payload)
         n = len(chunk)
@@ -131,15 +147,12 @@ def fetch_all_pages():
             mode, page = "page", 1
             continue
 
-        # Añadir solo nuevas claves (para evitar loop de paging)
+        # Añadir solo nuevos (evita pérdidas por mismos 'numero' en otra serie/empresa)
         nuevos = []
         for r in chunk:
             k = make_key(r)
             if k not in seen_keys:
                 seen_keys.add(k)
-                nuevos.append(r)
-            else:
-                # si llega otra ocurrencia con misma clave dentro de la MISMA página, la dejamos pasar
                 nuevos.append(r)
 
         if not nuevos:
@@ -154,15 +167,17 @@ def fetch_all_pages():
         else:
             page += 1
 
+        # Tope de seguridad
         if (page if mode == "page" else (offset // max(n, 1))) > MAX_PAGES:
             print(f"[STOP] MAX_PAGES={MAX_PAGES}.")
             break
 
     return all_rows
 
+
 # ------------------------ Normalización ------------------------
 def normalize_facturas_items(facturas_list):
-    # Cabecera
+    # Cabecera (aplana 1 nivel)
     df_fact = pd.json_normalize(facturas_list, max_level=1)
 
     # Items (si existen)
@@ -171,7 +186,6 @@ def normalize_facturas_items(facturas_list):
         its = f.get("items", [])
         if isinstance(its, list) and its:
             meta = {
-                "factura.nom_proveedor": f.get("nom_proveedor"),         # <-- agregado para el join
                 "factura.serie_correlativo": f.get("serie_correlativo"),
                 "factura.numero": f.get("numero"),
                 "factura.fecha_emision": f.get("fecha_emision") or f.get("fecha_de_emision"),
@@ -189,8 +203,10 @@ def normalize_facturas_items(facturas_list):
     df_items = pd.concat(items_frames, ignore_index=True) if items_frames else pd.DataFrame()
     return df_fact, df_items
 
+
 def coerce_types(df: pd.DataFrame) -> pd.DataFrame:
     res = df.copy()
+    # Fechas (muchos backends devuelven dd-mm-YYYY)
     date_hints = ("fecha", "emision", "vencimiento", "date")
     for c in res.columns:
         lc = c.lower()
@@ -199,6 +215,7 @@ def coerce_types(df: pd.DataFrame) -> pd.DataFrame:
                 res[c] = pd.to_datetime(res[c], errors="coerce", dayfirst=True)
             except Exception:
                 pass
+    # Números
     num_hints = ("total", "subtotal", "igv", "iva", "impuesto", "descuento",
                  "delivery", "valor", "precio", "monto", "cantidad", "unitario")
     for c in res.columns:
@@ -208,6 +225,7 @@ def coerce_types(df: pd.DataFrame) -> pd.DataFrame:
             except Exception:
                 pass
     return res
+
 
 # ------------------------ Main ------------------------
 def main():
@@ -219,8 +237,8 @@ def main():
     facturas_list = fetch_all_pages()
 
     # 2) Guardar RAW
-    raw_json_path  = outdir / f"facturas_proveedores_raw_{ts}.json"
-    raw_jsonl_path = outdir / f"facturas_proveedores_raw_{ts}.jsonl"
+    raw_json_path  = outdir / f"facturas_clientes_raw_{ts}.json"
+    raw_jsonl_path = outdir / f"facturas_clientes_raw_{ts}.jsonl"
     with open(raw_json_path, "w", encoding="utf-8") as f:
         json.dump(facturas_list, f, ensure_ascii=False, indent=2)
     with open(raw_jsonl_path, "w", encoding="utf-8") as f:
@@ -245,20 +263,14 @@ def main():
         item_cols = [c for c in items_for_merge.columns if not c.startswith("factura.")]
         items_for_merge = items_for_merge.rename(columns={c: f"item.{c}" for c in item_cols})
 
-        # JOIN por nom_proveedor + serie_correlativo + numero  (como pediste)
         df_fact_items_full = df_fact.merge(
             items_for_merge,
             how="left",
-            left_on=["nom_proveedor", "serie_correlativo", "numero"],
-            right_on=["factura.nom_proveedor", "factura.serie_correlativo", "factura.numero"]
+            left_on=["numero", "serie_correlativo"],
+            right_on=["factura.numero", "factura.serie_correlativo"]
         )
-
-        # Limpia claves duplicadas del lado derecho
-        df_fact_items_full.drop(
-            columns=["factura.nom_proveedor", "factura.serie_correlativo", "factura.numero"],
-            inplace=True,
-            errors="ignore"
-        )
+        # Limpia claves duplicadas
+        df_fact_items_full.drop(columns=["factura.numero", "factura.serie_correlativo"], inplace=True, errors="ignore")
 
         # Ordena: primero columnas de factura, luego otras, luego item.*
         fact_cols = list(df_fact.columns)
@@ -274,7 +286,6 @@ def main():
     # 6) Logs finales
     print(f"Total facturas Odoo: {len(df_fact)}")
     print(f"Total ítems detalle: {len(df_items)}")
-    print(f"Check filas facturas_con_items = {len(df_fact_items_full)} (≈ ítems)")
     print("RAW JSON:", raw_json_path)
     print("RAW JSONL:", raw_jsonl_path)
     print("Facturas CSV:", fact_csv)

@@ -17,8 +17,8 @@ import requests
 import pandas as pd
 
 # =========== CONFIGURA AQUÍ ===========
-URL = "https://odoo-stage.colaborativa.pe/api/vendor_bills"
-TOKEN = "pR4GrXuwLIuXA7edBpwy9mJE78HdcJtf2wqbslQe5cWi8zE="
+URL = "https://odoo.colaborativa.pe/api/vendor_bills"
+TOKEN = "pR4Gci8KCzLGwJ_2Mha-JFhS_95byMysqkPJ0u80t16SteQ="
 
 DATE_FROM  = "2025-01-01"
 DATE_TO    = "2025-12-31"
