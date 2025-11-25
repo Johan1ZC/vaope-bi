@@ -1,0 +1,68 @@
+# HU3.1 manifest — reglas de descubrimiento para Teleticket
+source:
+  name: "Teleticket"
+  base_url: "https://www.teleticket.com.pe/"
+
+seeds:
+  - "https://www.teleticket.com.pe/conciertos"
+  - "https://www.teleticket.com.pe/teatro"
+  - "https://www.teleticket.com.pe/deportes"
+  - "https://teleticket.com.pe/entretenimiento"
+  - "https://teleticket.com.pe/otros"
+  - "https://teleticket.com.pe/todos"
+
+discovery:
+ 
+  allowed_path_prefix:
+    - "/"
+    - "/evento"
+    - "/conciertos"
+    - "/teatro"
+    - "/deportes"
+  
+  detail_regex: "/evento/|/event/|/comprar/"
+
+  # NUEVO: se espera antes de empezar a recolectar links
+wait_selectors:
+  - "a[href*='/evento/']"
+  - ".event-card a"
+  - ".card a"
+
+# NUEVO: botones posibles de cookies/consent
+cookie_selectors:
+  - "#onetrust-accept-btn-handler"
+  - "button[aria-label*='Accept']"
+  - "button:contains('Aceptar')"
+
+pagination:
+  
+  next_selector: "a[rel='next']"          # si existe paginación por enlaces
+  load_more_selector: "button.load-more"  # si hay botón "Cargar más" (ajustar)
+  # tope de páginas por seed (seguridad)
+  max_pages: 1
+
+compliance:
+  user_agent: "HABLA/1.0 (jzc@gmail.com)"
+  rate_limit_seconds: 1.0
+  jitter_seconds_min: 0.2
+  jitter_seconds_max: 0.9
+
+api:
+  eventos_busqueda:
+    url: "https://teleticket.com.pe/Landing/GetEventosBusqueda"   # URL REAL
+    method: "GET"                                             # "GET" o "POST" según headers
+    params: {}                                                 # si la request usa querystring
+    json:                                                      # si el payload fue JSON
+      page: 1
+      q: ""
+      category: ""
+    # data: "page=1&q=&category="                              # si fue x-www-form-urlencoded
+    headers:
+      x-requested-with: "XMLHttpRequest"
+      referer: "https://teleticket.com.pe/"
+      accept: "application/json, text/plain, */*"
+      content-type: "application/json; charset=utf-8"           # cURL
+    page_param: "page"       # si hay paginado por parámetro
+    start_page: 1
+    max_pages: 1
+

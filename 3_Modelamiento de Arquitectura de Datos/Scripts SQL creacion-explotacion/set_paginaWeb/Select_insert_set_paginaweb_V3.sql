@@ -26,10 +26,10 @@ a.sub_total,
 a.discount,
 a.delivery, 
 a.total_price,
-ifnull(e.payment_commission,0) payment_commission,
-ifnull(e.vaope_commission,0) vaope_commission,
-ifnull(e.sale_commission,0) sale_commission,
-ifnull(e.total_deposit,0) total_deposit,
+ifnull(e.payment_commission,0) payment_commission,  -- Comison VISA
+ifnull(e.vaope_commission,0) vaope_commission, -- Comision Vaope
+ifnull(e.sale_commission,0) sale_commission, -- Cobros adicionales ejemplo s/2
+ifnull(e.total_deposit,0) total_deposit, -- Deposito organizador
 abs(((ifnull(e.payment_commission,0)+ifnull(e.vaope_commission,0)+ifnull(e.sale_commission,0))-a.total_price)) as total_deposit_new,
 case when a.payment_method_id = 12 then 1 else 0 end esCortesia,
 a.utm_source,

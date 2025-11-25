@@ -21,7 +21,7 @@ TOKEN = "pR4GDXFkdjERUZuUsp5NtaXXDkrfUWPApeYpL4aEF9pPyVc="
 
 DATE_FROM  = "2025-01-01"
 DATE_TO    = "2025-12-31"
-#LIMIT      = 200           
+LIMIT      = 200           
 OFFSET     = 0
 
 COMPANY_ID = 1
@@ -87,7 +87,7 @@ def build_body(offset: int = 0):
         "date_to": DATE_TO,
         "company_id": COMPANY_ID,
         "state": STATE_LIST, 
-        #"limit": LIMIT,
+        "limit": LIMIT,
         "offset": offset
     }
 
@@ -98,7 +98,7 @@ def build_body_page(page: int = 1):
         "date_to": DATE_TO,
         "company_id": COMPANY_ID,
         "state": STATE_LIST,
-        #"limit": LIMIT,
+        "limit": LIMIT,
         "page_size": LIMIT,
         "page": page
     }

@@ -1,0 +1,969 @@
+﻿id;district_id;place_name;street_address;address_locality;created_at;updated_at;deleted_at
+1;150137;Complejo Santa Rosa;frente al mall de Santa Anita;frente al mall de Santa Anita - SANTA ANITA - LIMA;12/11/2022 11:04;26/09/2024 16:09;NULL
+2;150132;Estadio Huanca de Campoy;NULL;SAN JUAN DE LURIGANCHO - LIMA;12/11/2022 11:04;14/11/2022 10:39;NULL
+3;150125;EL AGUAJE;Km. 29.5 Panamericana Norte (Boulevard de Puente Piedra);Km. 29.5 Panamericana Norte (Boulevard de Puente Piedra) - PUENTE PIEDRA - LIMA;12/11/2022 11:04;18/11/2022 16:38;NULL
+4;150106;Complejo San Juan;A 700 m. del Ã“valo de Pte. Piedra Cost. de Revisiones TÃ©cnicas;A 700 m. del Ã“valo de Pte. Piedra Cost. de Revisiones TÃ©cnicas - CARABAYLLO - LIMA;12/11/2022 11:04;14/11/2022 10:41;NULL
+5;150133;Mercado Familias Unidas (Espalda Colegio Centro Base);JoaquÃ­n Bernal 947-905;JoaquÃ­n Bernal 947-905 - SAN JUAN DE MIRAFLORES - LIMA;12/11/2022 11:04;15/06/2024 02:07;NULL
+6;200101;Casino Militar de Piura;Barrio sur av. Bolognesi #1001;Barrio sur av. Bolognesi #1001 - PIURA;12/11/2022 11:04;25/09/2023 14:08;NULL
+7;150110;El Remanso;Av. Trapiche Km 4.5;Av. Trapiche Km 4.5 - COMAS - LIMA;12/11/2022 11:04;2/03/2024 03:28;NULL
+8;150104;Centro de Convenciones Bianca;Av. Almte. Miguel Grau 135;Av. Almte. Miguel Grau 135 - BARRANCO - LIMA;12/11/2022 11:04;15/11/2022 11:48;NULL
+9;150801;Coliseo Luis Fabio Xammar;NULL;HUACHO - LIMA;12/11/2022 11:04;23/01/2024 13:10;NULL
+10;150137;Vacilandia Park;Av. Las Gaviotas con Av. El Rosal de Santa Anita;Av. Las Gaviotas con Av. El Rosal de Santa Anita - SANTA ANITA - LIMA;12/11/2022 11:04;14/11/2022 10:42;NULL
+11;120101;Antonella's CafÃ© Show;Jr. 2 de Mayo 1198;Jr. 2 de Mayo 1198 - HUANCAYO - JUNÍN;12/11/2022 11:04;16/10/2023 06:41;NULL
+12;0;Av. La Molina 1131;Lima;Av. La Molina 1131, Lima;12/11/2022 11:04;12/11/2022 11:04;NULL
+13;150110;Av. Trapiche Km 4.5;El Remanso - Comas;El Remanso - Comas - COMAS - LIMA;12/11/2022 11:04;17/07/2025 17:29;NULL
+14;0;Chimbote;;Chimbote, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+15;0;El Paisa;- Av. Panamericana Norte Km. 777 Chosica del Norte - Chiclayo;El Paisa, - Av. Panamericana Norte Km. 777 Chosica del Norte - Chiclayo;12/11/2022 11:04;12/11/2022 11:04;NULL
+16;0;Coliseo Unicachi;1era de Pro - Lima;Coliseo Unicachi, 1era de Pro - Lima;12/11/2022 11:04;12/11/2022 11:04;NULL
+17;0;Coliseo Nicrupampa;Huaraz.;Coliseo Nicrupampa, Huaraz.;12/11/2022 11:04;12/11/2022 11:04;NULL
+18;0;Carhuaz;;Carhuaz, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+19;21201;Coliseo Municipal de Caraz;NULL;CARAZ - ÃNCASH;12/11/2022 11:04;12/11/2022 11:18;NULL
+20;200802;Estadio Municipal de San Clemente;Bajo Piura;Bajo Piura - BELLAVISTA DE LA UNIÃ“N - PIURA;12/11/2022 11:04;21/11/2023 07:12;NULL
+21;200401;Fundo San MartÃ­n;NULL;CHULUCANAS - PIURA;12/11/2022 11:04;26/10/2024 11:06;NULL
+22;0;Estadio Nacional del PerÃº;C. JosÃ© DÃ­az s/n  Lima 15046;Estadio Nacional del PerÃº, C. JosÃ© DÃ­az s/n  Lima 15046;12/11/2022 11:04;12/11/2022 11:04;NULL
+23;150114;Centro de Convenciones Scencia;Av. La Molina 1131 - Lima;Av. La Molina 1131 - Lima - LA MOLINA - LIMA;12/11/2022 11:04;17/03/2025 15:16;NULL
+24;0;Estadio Municipal de Bernal;Sechura - Piura;Estadio Municipal de Bernal, Sechura - Piura;12/11/2022 11:04;12/11/2022 11:04;NULL
+25;0;Jr. Pedro Heraud 221;Barranco;Jr. Pedro Heraud 221, Barranco;12/11/2022 11:04;12/11/2022 11:04;NULL
+26;150132;Los Ciruelos;Jr. Los Ciruelos 215 - Alt.1ra cuadra Av. Wiesse EstaciÃ³n San Carlos;Jr. Los Ciruelos 215 - Alt.1ra cuadra Av. Wiesse EstaciÃ³n San Carlos - SAN JUAN DE LURIGANCHO - LIMA;12/11/2022 11:04;25/11/2022 11:19;NULL
+27;10101;Montes Club;NULL;CHACHAPOYAS - AMAZONAS;12/11/2022 11:04;11/07/2024 07:25;NULL
+28;0;Mercado San Francisco;Av. Villa MarÃ­a Cdra. 6  Cercado;Mercado San Francisco, Av. Villa MarÃ­a Cdra. 6  Cercado;12/11/2022 11:04;12/11/2022 11:04;NULL
+29;0;Carretera Fernando Belaunde Terry km. 5.5 Sector La Planicie;Morales (Ex aqua) - Tarapoto;Carretera Fernando Belaunde Terry km. 5.5 Sector La Planicie, Morales (Ex aqua) - Tarapoto;12/11/2022 11:04;12/11/2022 11:04;NULL
+30;0;La Cascada Discoteca;Abancay;La Cascada Discoteca, Abancay;12/11/2022 11:04;12/11/2022 11:04;NULL
+31;0;La Cascada Boulevard;Abancay;La Cascada Boulevard, Abancay;12/11/2022 11:04;12/11/2022 11:04;NULL
+32;0;Taykary;Jr La Mosqueta 452 - Cajamarca;Taykary, Jr La Mosqueta 452 - Cajamarca;12/11/2022 11:04;12/11/2022 11:04;NULL
+33;150116;Discoteca Coco's;Av. Arequipa 1530;Av. Arequipa 1530 - LINCE - LIMA;12/11/2022 11:04;5/01/2024 14:07;NULL
+34;0;Teatro Municipal;jr Ica 470 pasaje la cultura - Juliaca;Teatro Municipal, jr Ica 470 pasaje la cultura - Juliaca;12/11/2022 11:04;12/11/2022 11:04;NULL
+35;210101;Cine Teatro;Jr. Arequipa 135;Jr. Arequipa 135 - PUNO;12/11/2022 11:04;15/04/2024 08:28;NULL
+36;0;Butaca Teatro;Av Emmel 211 esquina con Antiquilla - Arequipa;Butaca Teatro, Av Emmel 211 esquina con Antiquilla - Arequipa;12/11/2022 11:04;12/11/2022 11:04;NULL
+37;0;Coliseo Cerrado;Pueblo Libre - Abancay;Coliseo Cerrado, Pueblo Libre - Abancay;12/11/2022 11:04;12/11/2022 11:04;NULL
+38;0;Discoteca Belichinos;Tarapoto;Discoteca Belichinos, Tarapoto;12/11/2022 11:04;12/11/2022 11:04;NULL
+39;0;La Finca Club;urb. Las Palmeras S/N a  2 cuadras del cruce de Uchuglla;La Finca Club, urb. Las Palmeras S/N a  2 cuadras del cruce de Uchuglla;12/11/2022 11:04;12/11/2022 11:04;NULL
+40;150142;Mega Plaza 2;Av. 1ro de Mayo (frente al Mercado Unicachi);Av. 1ro de Mayo (frente al Mercado Unicachi) - VILLA EL SALVADOR - LIMA;12/11/2022 11:04;30/09/2023 15:15;NULL
+41;140101;Discoteca Aventura;Av. Chinchaysuyo 1237;Av. Chinchaysuyo 1237 - CHICLAYO - LAMBAYEQUE;12/11/2022 11:04;4/04/2024 06:36;NULL
+42;110101;Campo Ferial;NULL;ICA;12/11/2022 11:04;7/07/2025 10:05;NULL
+43;150601;Complejo Deportivo UniÃ³n Huaral;Av. Chancay S/N;Av. Chancay S/N - HUARAL - LIMA;12/11/2022 11:04;27/05/2023 11:28;NULL
+44;200501;Plaza PaiteÃ±a;Ex RamalÃº;Ex RamalÃº - PAITA - PIURA;12/11/2022 11:04;6/06/2023 15:43;NULL
+45;211101;Coliseo Cubierto;NULL;JULIACA - PUNO;12/11/2022 11:04;16/04/2024 07:23;NULL
+46;80106;Coliseo Bosque de Coripata;NULL;SANTIAGO - CUSCO;12/11/2022 11:04;9/05/2023 12:58;NULL
+47;40520;Discoteca Ibiza;Mz-M2 Lote 10 Pedregal Sur 2da etapa;Mz-M2 Lote 10 Pedregal Sur 2da etapa - MAJES - AREQUIPA;12/11/2022 11:04;10/01/2024 07:41;NULL
+48;120114;CafÃ© Lounge Roma;Jr. 2 de Mayo 512;Jr. 2 de Mayo 512 - EL TAMBO - JUNÃN;12/11/2022 11:04;16/11/2022 20:56;NULL
+49;150103;Casa Real;Carretera central 1130 (Frente al Real Plaza de Santa Clara);Carretera central 1130 (Frente al Real Plaza de Santa Clara) - ATE - LIMA;12/11/2022 11:04;18/01/2024 14:44;NULL
+50;0;Explanada  del Jockey Club;Esquina de la UniÃ³n y los Incas;Explanada  del Jockey Club, Esquina de la UniÃ³n y los Incas;12/11/2022 11:04;12/11/2022 11:04;NULL
+51;0;Estadio Huanca Campoy;San Juan de Lurigancho;Estadio Huanca Campoy, San Juan de Lurigancho;12/11/2022 11:04;12/11/2022 11:04;NULL
+52;0;Local Zafari;Av. Tomas Valle 476 Frente a Plaza Norte - San MartÃ­n de Porres;Local Zafari, Av. Tomas Valle 476 Frente a Plaza Norte - San MartÃ­n de Porres;12/11/2022 11:04;12/11/2022 11:04;NULL
+53;150104;Teatro Barranco;Av. Almte. Miguel Grau 701;Av. Almte. Miguel Grau 701 - BARRANCO - LIMA;12/11/2022 11:04;18/05/2023 19:01;NULL
+54;0;;;, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+55;0;Local Los Laureles;Nazca;Local Los Laureles, Nazca;12/11/2022 11:04;12/11/2022 11:04;NULL
+56;0;Explanada Mall Plaza;Trujillo;Explanada Mall Plaza, Trujillo;12/11/2022 11:04;12/11/2022 11:04;NULL
+57;0;"Complejo Deportivo ""Manuel Bonilla""";Av. del EjÃ©rcito 1300  Miraflores;"Complejo Deportivo ""Manuel Bonilla"", Av. del EjÃ©rcito 1300  Miraflores";12/11/2022 11:04;12/11/2022 11:04;NULL
+58;0;Santa Rosa;Chiclayo;Santa Rosa, Chiclayo;12/11/2022 11:04;12/11/2022 11:04;NULL
+59;200601;Explanada Casa Club;Carr. Panamericana Nte. 1018;Carr. Panamericana Nte. 1018 - SULLANA - PIURA;12/11/2022 11:04;25/11/2023 06:27;NULL
+60;0;Explanada Open Plaza;Cajamarca;Explanada Open Plaza, Cajamarca;12/11/2022 11:04;12/11/2022 11:04;NULL
+61;120101;Country Club los Huancas;NULL;HUANCAYO - JUNÃN;12/11/2022 11:04;9/03/2024 13:02;NULL
+62;200101;Discoteca Blum;Av. Guardia Civil S/N;Av. Guardia Civil S/N - PIURA;12/11/2022 11:04;23/05/2023 14:43;NULL
+63;130101;Club Trujillo;Av Mansiche 846 Carretera a Huanchaco;Av Mansiche 846 Carretera a Huanchaco - TRUJILLO - LA LIBERTAD;12/11/2022 11:04;9/04/2024 04:31;NULL
+64;140101;Explanada Jockey Club;av. los Incas 402  La Victoria - Chiclayo.;av. los Incas 402  La Victoria - Chiclayo. - CHICLAYO - LAMBAYEQUE;12/11/2022 11:04;7/05/2024 04:59;NULL
+65;0;LAS CATARATAS;HuÃ¡nuco;LAS CATARATAS, HuÃ¡nuco;12/11/2022 11:04;12/11/2022 11:04;NULL
+66;80105;Explanada del Instituto Tupac Amaru;NULL;SAN SEBASTIAN - CUSCO;12/11/2022 11:04;13/06/2023 02:04;NULL
+67;40104;Estadio Arturo DÃ­az Huertas;Av. Puno 903;Av. Puno 903 - CERRO COLORADO - AREQUIPA;12/11/2022 11:04;21/07/2023 10:06;NULL
+68;0;Aventura Disco;Av. Chinchaysuyo 1237- Chiclayo.;Aventura Disco, Av. Chinchaysuyo 1237- Chiclayo.;12/11/2022 11:04;12/11/2022 11:04;NULL
+69;150117;El Huaralino Internacional;Ovalo El Naranjal - Panamericana Norte 39.;Ovalo El Naranjal - Panamericana Norte 39. - LOS OLIVOS - LIMA;12/11/2022 11:04;8/08/2023 16:29;NULL
+70;0;Av. La Paz 1025;Miraflores;Av. La Paz 1025, Miraflores;12/11/2022 11:04;12/11/2022 11:04;NULL
+71;10101;Montes Country Cub;Prolongacion Dos de Mayo 1270  Chachapoyas;Prolongacion Dos de Mayo 1270  Chachapoyas - CHACHAPOYAS - AMAZONAS;12/11/2022 11:04;22/07/2024 06:53;NULL
+72;0;Ninakuro Club;JirÃ³n Leticia 450 -  JuanjuÃ­;Ninakuro Club, JirÃ³n Leticia 450 -  JuanjuÃ­;12/11/2022 11:04;12/11/2022 11:04;NULL
+73;150104;Centro de Convenciones Barranco Arena;Catalino Miranda 154;Catalino Miranda 154 - BARRANCO - LIMA;12/11/2022 11:04;31/05/2024 11:35;NULL
+74;0;Chachapoyas;;Chachapoyas, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+75;150119;Plaza Park LurÃ­n;Al costado del Mercado Virgen de las Mercedes;Al costado del Mercado Virgen de las Mercedes - LURIN - LIMA;12/11/2022 11:04;16/06/2023 23:34;NULL
+76;150125;EL AGUAJE;Km. 29.5 Panamericana Norte (Boulevard de Puente Piedra);Km. 29.5 Panamericana Norte (Boulevard de Puente Piedra) - PUENTE PIEDRA - LIMA;12/11/2022 11:04;17/07/2025 16:43;NULL
+77;110101;Estadio JosÃ© Picasso Peratta;Av. Los Maestros S/N;Av. Los Maestros S/N - ICA;12/11/2022 11:04;21/02/2024 04:26;NULL
+78;0;Recreo EcoturÃ­stico el Bosque;Soritor;Recreo EcoturÃ­stico el Bosque, Soritor;12/11/2022 11:04;12/11/2022 11:04;NULL
+79;0;Local El JardÃ­n del Alto Qosqo;frente mercado Virgen del Carmen Alto Qosco -  Cusco.;Local El JardÃ­n del Alto Qosqo, frente mercado Virgen del Carmen Alto Qosco -  Cusco.;12/11/2022 11:04;12/11/2022 11:04;NULL
+80;0;Machu Picchu Eventos & Disco- Bar;Jr. Bolivar con Av. ConfederaciÃ³n - Sicuani;Machu Picchu Eventos & Disco- Bar, Jr. Bolivar con Av. ConfederaciÃ³n - Sicuani;12/11/2022 11:04;12/11/2022 11:04;NULL
+81;0;Local La Pichanga;VÃ­a Sambaray s/n - Quillabamba;Local La Pichanga, VÃ­a Sambaray s/n - Quillabamba;12/11/2022 11:04;12/11/2022 11:04;NULL
+82;150103;Gigante Complejo Angaraes;Paradero Horacio Zevallos Km 15.5 C.C.;Paradero Horacio Zevallos Km 15.5 C.C. - ATE - LIMA;12/11/2022 11:04;15/09/2023 07:35;NULL
+83;0;Estadio Huanca;Av. Primavera 347 - San juan de Lurigancho;Estadio Huanca, Av. Primavera 347 - San juan de Lurigancho;12/11/2022 11:04;12/11/2022 11:04;NULL
+84;0;Explanada Mall Aventura Plaza;Porongoche;Explanada Mall Aventura Plaza, Porongoche;12/11/2022 11:04;12/11/2022 11:04;NULL
+85;40101;ARENA AREQUIPA;Av. de Las Convenciones S/N;Av. de Las Convenciones S/N - AREQUIPA;12/11/2022 11:04;5/07/2024 06:20;NULL
+86;120101;ParaÃ­so de Yanama;NULL;HUANCAYO - JUNÃN;12/11/2022 11:04;20/03/2024 11:38;NULL
+87;0;Al costado de la capilla de TacalÃ¡;Santa teresita de JesÃºs;Al costado de la capilla de TacalÃ¡, Santa teresita de JesÃºs;12/11/2022 11:04;12/11/2022 11:04;NULL
+88;0;Coliseo Santa Rosa;Mancora;Coliseo Santa Rosa, Mancora;12/11/2022 11:04;12/11/2022 11:04;NULL
+89;0;Local La Finca Centro Campestre;Carr. Sechura Chusis S/N Sechura;Local La Finca Centro Campestre, Carr. Sechura Chusis S/N Sechura;12/11/2022 11:04;12/11/2022 11:04;NULL
+90;0;Explanada del Estadio de la UNMSM;Puerta 6 - Av. GermÃ¡n AmÃ©zaga 375;Explanada del Estadio de la UNMSM, Puerta 6 - Av. GermÃ¡n AmÃ©zaga 375;12/11/2022 11:04;12/11/2022 11:04;NULL
+91;0;Cancha Sintetica Nueve de Noviembre;Urubamba;Cancha Sintetica Nueve de Noviembre, Urubamba;12/11/2022 11:04;12/11/2022 11:04;NULL
+92;40129;JardÃ­n de la Cerveza;Av. Francisco Mostajo;Av. Francisco Mostajo - JOSÃ‰ LUIS BUSTAMANTE Y RIVERO - AREQUIPA;12/11/2022 11:04;29/03/2023 13:54;NULL
+93;200101;Casino Militar de Piura;Barrio sur av. Bolognesi #1001;Barrio sur av. Bolognesi #1001 - PIURA;12/11/2022 11:04;14/11/2022 16:15;NULL
+94;0;Local Oasis Palace;Entrada de VES  AV. Pachacutec / Espalda del Â SEDAPAL Villa el Salvador.;Local Oasis Palace, Entrada de VES  AV. Pachacutec / Espalda del Â SEDAPAL Villa el Salvador.;12/11/2022 11:04;12/11/2022 11:04;NULL
+95;150132;Crucero del Amor;Alt. Paradero San Carlos;Alt. Paradero San Carlos - SAN JUAN DE LURIGANCHO - LIMA;12/11/2022 11:04;27/03/2023 12:07;NULL
+96;0;Ruta 36;Antigua Panamericana Sur Km. 36.5;Ruta 36, Antigua Panamericana Sur Km. 36.5;12/11/2022 11:04;12/11/2022 11:04;NULL
+97;60108;Explanada Fongal;NULL;LOS BAÃ‘OS DEL INCA - CAJAMARCA;12/11/2022 11:04;4/12/2023 12:29;NULL
+98;0;Complejo San Juan a 700m. del Ã³valo Puente Piedra;Carabayllo;Complejo San Juan a 700m. del Ã³valo Puente Piedra, Carabayllo;12/11/2022 11:04;12/11/2022 11:04;NULL
+99;40101;"Palacio Metropolitano de Bellas Artes ""Mario Vargas Llosa""";Av. Parra 204;Av. Parra 204 - AREQUIPA;12/11/2022 11:04;18/10/2023 13:52;NULL
+100;0;Estadio Liga de Futbol;Av. Mariano Pastor Sevilla con Av. TÃ¡lara - Villa el Salvador;Estadio Liga de Futbol, Av. Mariano Pastor Sevilla con Av. TÃ¡lara - Villa el Salvador;12/11/2022 11:04;12/11/2022 11:04;NULL
+101;150117;Coliseo Internacional Unicachi;primera de pro - Los olivos;primera de pro - Los olivos - LOS OLIVOS - LIMA;12/11/2022 11:04;17/07/2025 16:39;NULL
+102;0;En el local Campo Deportivo Rumiyacu;Moyobamba;En el local Campo Deportivo Rumiyacu, Moyobamba;12/11/2022 11:04;12/11/2022 11:04;NULL
+103;0;Local Villa San Gabriel;Tarapoto;Local Villa San Gabriel, Tarapoto;12/11/2022 11:04;12/11/2022 11:04;NULL
+104;0;Local Selva Amor;Nueva Cajamarca;Local Selva Amor, Nueva Cajamarca;12/11/2022 11:04;12/11/2022 11:04;NULL
+105;0;Local Selva Park;Bagua Capital;Local Selva Park, Bagua Capital;12/11/2022 11:04;12/11/2022 11:04;NULL
+106;0;Zafiro;Bagua Grande;Zafiro, Bagua Grande;12/11/2022 11:04;12/11/2022 11:04;NULL
+107;0;Discoteca Cocos;Cuadra 15 de la avenida Arequipa - Lima;Discoteca Cocos, Cuadra 15 de la avenida Arequipa - Lima;12/11/2022 11:04;12/11/2022 11:04;NULL
+108;60801;Divertifiesta;Av. HermÃ³genes MejÃ­a Solf 149;Av. HermÃ³genes MejÃ­a Solf 149 - JAÃ‰N - CAJAMARCA;12/11/2022 11:04;22/12/2022 18:29;NULL
+109;150125;EL AGUAJE;Km. 29.5 Panamericana Norte (Boulevard de Puente Piedra);Km. 29.5 Panamericana Norte (Boulevard de Puente Piedra) - PUENTE PIEDRA - LIMA;12/11/2022 11:04;17/07/2025 16:43;NULL
+110;200101;Auditorium de la Universidad Nacional de Piura;NULL;PIURA;12/11/2022 11:04;22/04/2024 06:12;NULL
+111;0;Estadio Municipal Carlos Vidaurre GarcÃ­a;Tarapoto;Estadio Municipal Carlos Vidaurre GarcÃ­a, Tarapoto;12/11/2022 11:04;12/11/2022 11:04;NULL
+112;0;Conchas y sus mares;Av. Capanique S/N Frente a Hincha Center;Conchas y sus mares, Av. Capanique S/N Frente a Hincha Center;12/11/2022 11:04;12/11/2022 11:04;NULL
+113;0;Oxapampa;;Oxapampa, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+114;0;Complejo Alto Selva Alegre;Av. EspaÃ±a 701 -  Arequipa.;Complejo Alto Selva Alegre, Av. EspaÃ±a 701 -  Arequipa.;12/11/2022 11:04;12/11/2022 11:04;NULL
+115;0;Explanada PiÃ±arreta;Morales;Explanada PiÃ±arreta, Morales;12/11/2022 11:04;12/11/2022 11:04;NULL
+116;0;Titanium Pub;Calle Berlin 231 - Miraflores;Titanium Pub, Calle Berlin 231 - Miraflores;12/11/2022 11:04;12/11/2022 11:04;NULL
+117;0;Complejo San Juan de Carabayllo;Costado de revisiones tÃ©cnicas;Complejo San Juan de Carabayllo, Costado de revisiones tÃ©cnicas;12/11/2022 11:04;12/11/2022 11:04;NULL
+118;0;EL PATIO BY CONSULADO;Jr. Parra del Riego 658 El tambo -Huancayo;EL PATIO BY CONSULADO, Jr. Parra del Riego 658 El tambo -Huancayo;12/11/2022 11:04;12/11/2022 11:04;NULL
+119;0;Explanada Plaza Plaza Norte;;Explanada Plaza Plaza Norte, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+120;0;Frontis del colegio Santa Rosa Milagrosa;Paradero 10 de canto grande.;Frontis del colegio Santa Rosa Milagrosa, Paradero 10 de canto grande.;12/11/2022 11:04;12/11/2022 11:04;NULL
+121;110201;The Green VIP;Calle Arica 529;Calle Arica 529 - CHINCHA ALTA - ICA;12/11/2022 11:04;24/05/2023 15:55;NULL
+122;0;Complejo Angaraes;Ate;Complejo Angaraes, Ate;12/11/2022 11:04;12/11/2022 11:04;NULL
+123;0;CAP;PISCO;CAP, PISCO;12/11/2022 11:04;12/11/2022 11:04;NULL
+124;110101;Embajada Latinoamericana;Av. Finlandia Sector Los Lunas;Av. Finlandia Sector Los Lunas - ICA;12/11/2022 11:04;16/10/2023 05:13;NULL
+125;0;Santa Felipa;Av. Mariscal Benavides S/N;Av. Mariscal Benavides S/N - SAN VICENTE DE CAÃ‘ETE - LIMA;12/11/2022 11:04;12/11/2022 11:04;NULL
+126;0;TOROS SOL Y SOMBRA;CARABAYLLO;TOROS SOL Y SOMBRA, CARABAYLLO;12/11/2022 11:04;12/11/2022 11:04;NULL
+127;0;Bechilinos;JirÃ³n Sgto. Lores 733 - Tarapoto;Bechilinos, JirÃ³n Sgto. Lores 733 - Tarapoto;12/11/2022 11:04;12/11/2022 11:04;NULL
+128;0;Recreo Campestre Mirador de Intiyacu;Av. Lima 22200- Bellavista;Recreo Campestre Mirador de Intiyacu, Av. Lima 22200- Bellavista;12/11/2022 11:04;12/11/2022 11:04;NULL
+129;0;ESTADIO MUNICIPAL DE PACASMAYO / La Libertad;Pacasmayo-Pacasmayo;ESTADIO MUNICIPAL DE PACASMAYO / La Libertad, Pacasmayo-Pacasmayo;12/11/2022 11:04;12/11/2022 11:04;NULL
+130;0;Av. Nueva Toledo Lt8 â€“ Cieneguilla;;Av. Nueva Toledo Lt8 â€“ Cieneguilla, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+131;0;Recreo Campestre La Chacra de mi Amigo;;Recreo Campestre La Chacra de mi Amigo, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+132;0;La Explanada Discoteca;Moyobamba;La Explanada Discoteca, Moyobamba;12/11/2022 11:04;12/11/2022 11:04;NULL
+133;140101;La Posada de las Colonias;La Victoria;La Victoria - CHICLAYO - LAMBAYEQUE;12/11/2022 11:04;27/10/2023 08:36;NULL
+134;0;IBIZA RESTOBAR;Mz M2 Lt10 Pedregal Sur 2da Etapa;IBIZA RESTOBAR, Mz M2 Lt10 Pedregal Sur 2da Etapa;12/11/2022 11:04;12/11/2022 11:04;NULL
+135;0;Club El Tumi;MonsefÃº;Club El Tumi, MonsefÃº;12/11/2022 11:04;12/11/2022 11:04;NULL
+136;0;Complejo San Luis;Av. Cusco 528;Av. Cusco 528 - AYACUCHO;12/11/2022 11:04;12/11/2022 11:04;NULL
+137;140102;Estadio Municipal de la Juventud de Chongoyape;NULL;CHONGOYAPE - LAMBAYEQUE;12/11/2022 11:04;23/04/2024 07:10;NULL
+138;150716;Club El Padrino Campestre;Av. Inca Pachacutec MZ. Z Lote 2 San Antonio de Jicamarca Anexo 22;Av. Inca Pachacutec MZ. Z Lote 2 San Antonio de Jicamarca Anexo 22 - SAN ANTONIO - LIMA;12/11/2022 11:04;30/11/2023 17:12;NULL
+139;0;Estadio Francisco Mendoza Pizarro;Olmos;Estadio Francisco Mendoza Pizarro, Olmos;12/11/2022 11:04;12/11/2022 11:04;NULL
+140;150119;Explanada Mercado Super Leo;NULL;LURIN - LIMA;12/11/2022 11:04;30/06/2023 16:54;NULL
+141;0;El Emporio / Salitral;Sullana;El Emporio / Salitral, Sullana;12/11/2022 11:04;12/11/2022 11:04;NULL
+142;200101;Aqualandia;Av Progreso;Av Progreso - PIURA;12/11/2022 11:04;9/01/2023 15:00;NULL
+143;0;Carret. Fernando Belaunde Terry (Frente al Peaje);42 - Moyobamba.;Carret. Fernando Belaunde Terry (Frente al Peaje), 42 - Moyobamba.;12/11/2022 11:04;12/11/2022 11:04;NULL
+144;150106;Explanada Mercado Qatuna;Av. Isabel Chimpu Ocllo con Av. Trapiche;Av. Isabel Chimpu Ocllo con Av. Trapiche - CARABAYLLO - LIMA;12/11/2022 11:04;26/12/2022 12:51;NULL
+145;150118;Local Rio Hablador;A una cuadra del zoolÃ³gico Huachipa;A una cuadra del zoolÃ³gico Huachipa - LURIGANCHO - LIMA;12/11/2022 11:04;20/11/2024 17:54;NULL
+146;0;Av Carlos Izaguirre 1696;Los Olivos;Av Carlos Izaguirre 1696, Los Olivos;12/11/2022 11:04;12/11/2022 11:04;NULL
+147;0;Estadio Arturo DÃ­az Huerta;Cerro Colorado - Arequipa.;Estadio Arturo DÃ­az Huerta, Cerro Colorado - Arequipa.;12/11/2022 11:04;12/11/2022 11:04;NULL
+148;150112;Fronteras Unidas;Av. Carlos Izaguirre 178;Av. Carlos Izaguirre 178 - INDEPENDENCIA - LIMA;12/11/2022 11:04;23/06/2023 09:39;NULL
+149;0;DE LUXE (Ex Aqua);Carretera Belaunde Terry Km. 5.5 - La Planicie - Morales;DE LUXE (Ex Aqua), Carretera Belaunde Terry Km. 5.5 - La Planicie - Morales;12/11/2022 11:04;12/11/2022 11:04;NULL
+150;0;Av. Huarochiri 491;Santa Anita - Explanada de Tecsup;Av. Huarochiri 491, Santa Anita - Explanada de Tecsup;12/11/2022 11:04;12/11/2022 11:04;NULL
+151;0;Huayruro;;Huayruro, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+152;0;Club Lawn Tennis;JesÃºs MarÃ­a;Club Lawn Tennis, JesÃºs MarÃ­a;12/11/2022 11:04;12/11/2022 11:04;NULL
+153;0;EX;AGUA Carretera Fernando Belaunde Terry km 5.5 - La planicie - Tarapoto;EX, AGUA Carretera Fernando Belaunde Terry km 5.5 - La planicie - Tarapoto;12/11/2022 11:04;12/11/2022 11:04;NULL
+154;150117;Huaralino Internacional;Los Olivos.;Los Olivos. - LOS OLIVOS - LIMA;12/11/2022 11:04;17/07/2025 17:33;NULL
+155;211101;Rose EspectÃ¡culos;NULL;JULIACA - PUNO;12/11/2022 11:04;17/07/2025 16:50;NULL
+156;40104;Fundo El Rosal;Av. Talara S/N;Av. Talara S/N - AREQUIPA;12/11/2022 11:04;17/10/2023 16:17;NULL
+157;0;Cochera Campestre;Chimbote;Cochera Campestre, Chimbote;12/11/2022 11:04;12/11/2022 11:04;NULL
+158;0;Campo Ferial;Ex Molino La Calera - Guadalupe;Campo Ferial, Ex Molino La Calera - Guadalupe;12/11/2022 11:04;12/11/2022 11:04;NULL
+159;0;Estadio MariÃ¡tegui;San Juan de Lurigancho;Estadio MariÃ¡tegui, San Juan de Lurigancho;12/11/2022 11:04;12/11/2022 11:04;NULL
+160;0;MontaÃ±a Real Country Club;Carretera a Huanta - Ayacucho;MontaÃ±a Real Country Club, Carretera a Huanta - Ayacucho;12/11/2022 11:04;12/11/2022 11:04;NULL
+161;0;Casa Quimuk;Av. La Marina S/N;Casa Quimuk, Av. La Marina S/N;12/11/2022 11:04;12/11/2022 11:04;NULL
+162;0;Club Huancarama;Av. PirÃ¡mide del Sol 950 Zarate;Av. PirÃ¡mide del Sol 950 Zarate - SAN JUAN DE LURIGANCHO - LIMA;12/11/2022 11:04;12/11/2022 11:04;NULL
+163;0;Jockey Club Del PerÃº;;Jockey Club Del PerÃº, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+164;150132;Huarocondo;Av. Maquinarias 369 - Metro Hacienda;Av. Maquinarias 369 - Metro Hacienda - SAN JUAN DE LURIGANCHO - LIMA;12/11/2022 11:04;18/12/2023 07:31;NULL
+165;0;Club Social el HUARALINO;Ã“valo Naranjal - Panamericana Norte - Lima;Club Social el HUARALINO, Ã“valo Naranjal - Panamericana Norte - Lima;12/11/2022 11:04;12/11/2022 11:04;NULL
+166;0;Estadio Cajonahuaylla;San JerÃ³nimo;Estadio Cajonahuaylla, San JerÃ³nimo;12/11/2022 11:04;12/11/2022 11:04;NULL
+167;0;Club Campestre PARASOL;;Club Campestre PARASOL, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+168;0;El Cajamarquino Restaurant;Lurin;El Cajamarquino Restaurant, Lurin;12/11/2022 11:04;12/11/2022 11:04;NULL
+169;0;Estadio TeÃ³filo Cubillas AÃ±o Nuevo;Comas;Estadio TeÃ³filo Cubillas AÃ±o Nuevo, Comas;12/11/2022 11:04;12/11/2022 11:04;NULL
+170;0;Explanada Fongal;NULL;LOS BAÃ‘OS DEL INCA - CAJAMARCA;12/11/2022 11:04;12/11/2022 11:04;NULL
+171;0;Agualandia;;Agualandia, ;12/11/2022 11:04;12/11/2022 11:04;NULL
+172;150101;Soho Color;A nivel nacional.;A nivel nacional. - LIMA;17/11/2022 12:54;17/11/2022 12:54;NULL
+173;150132;Boulevard de Mariscal;Paradero 4 Av. Wiese;Paradero 4 Av. Wiese - SAN JUAN DE LURIGANCHO - LIMA;19/11/2022 09:39;19/11/2022 09:39;NULL
+174;120101;Auditorio de la Municipalidad;Av. Real 861;Av. Real 861 - HUANCAYO - JUNÃN;21/11/2022 23:33;21/11/2022 23:33;NULL
+175;140101;Thabata Restobar;Av. Libertad 130 Santa Victoria;Av. Libertad 130 Santa Victoria - CHICLAYO;24/11/2022 18:45;24/11/2022 18:45;NULL
+176;21201;Coliseo Costumbres Caraz;Jr. Raymondi s/n (frente al colegio micelino sandoval);Jr. Raymondi s/n (frente al colegio micelino sandoval) - CARAZ - ÃNCASH;29/11/2022 16:17;29/11/2022 16:17;NULL
+177;150110;Estadio Musga;2da. Entrada de Pro - Trapiche;2da. Entrada de Pro - Trapiche - COMAS - LIMA;5/12/2022 11:30;5/12/2022 11:30;NULL
+178;150101;Anfiteatro del Parque de la ExposiciÃ³n;Av. 28 de Julio;Av. 28 de Julio - LIMA;6/12/2022 14:23;6/12/2022 14:23;NULL
+179;150103;Av. Las Torres 349;(Espalda de la ClÃ­nica San Juan de Dios);(Espalda de la ClÃ­nica San Juan de Dios) - ATE - LIMA;13/12/2022 16:59;6/05/2024 11:05;NULL
+180;200110;Estadio Municipal;NULL;LA UNIÃ“N - PIURA;22/12/2022 18:45;22/12/2022 19:27;NULL
+181;150106;Estadio Ricardo Palma;Av. San MartÃ­n cruce con Av. Micaela Bastidas;Av. San MartÃ­n cruce con Av. Micaela Bastidas - CARABAYLLO - LIMA;26/12/2022 12:58;26/12/2022 12:58;NULL
+182;150132;Club Social Huarocondo;Av. Los Ciruelos 451;Av. Los Ciruelos 451 - SAN JUAN DE LURIGANCHO - LIMA;31/12/2022 10:24;14/02/2023 16:54;NULL
+183;150121;Centro de Convenciones Bolivar;Calle Antonio Polo 756;Calle Antonio Polo 756 - PUEBLO LIBRE - LIMA;5/01/2023 14:04;5/01/2023 14:04;NULL
+184;150116;Centro de Convenciones Teatro LeguÃ­a;Av. Arequipa 834;Av. Arequipa 834 - LINCE - LIMA;8/01/2023 13:06;8/01/2023 13:06;NULL
+185;150103;Complejo Deportivo Acobamba;Av. HÃºsares de Junin Mz. D Lote 2 y 3, Husares de Junin;Av. HÃºsares de Junin Mz. D Lote 2 y 3, Husares de Junin - ATE - LIMA;9/01/2023 16:38;9/01/2023 16:38;NULL
+186;150118;Estadio HuaÃ±ec;Av. Las Torres (a 3 cuadras del Pte. Huachipa);Av. Las Torres (a 3 cuadras del Pte. Huachipa) - LURIGANCHO - LIMA;12/01/2023 09:09;12/01/2023 09:09;NULL
+187;150108;Playa Agua Dulce;NULL;CHORRILLOS - LIMA;20/01/2023 06:11;20/01/2023 06:11;NULL
+188;200607;Estadio Municipal 2 De Febrero;NULL;QUERECOTILLO - PIURA;21/01/2023 18:12;24/01/2023 21:05;NULL
+189;150102;Club Social Chacas;Av. Jose Carlos Mariategui - Ex Marginal;Av. Jose Carlos Mariategui - Ex Marginal - ANCÃ“N - LIMA;23/01/2023 11:30;23/01/2023 11:30;NULL
+190;150102;La Casona Restobar;Mz. F Lote 6 UrbanizaciÃ³n Polo Jimenez;Mz. F Lote 6 UrbanizaciÃ³n Polo Jimenez - ANCÃ“N - LIMA;23/01/2023 16:02;23/01/2023 16:02;NULL
+191;150131;Auditorio del Colegio San AgustÃ­n;Avenida Paseo de la RepÃºblica 2979;Avenida Paseo de la RepÃºblica 2979 - SAN ISIDRO - LIMA;25/01/2023 13:46;25/01/2023 13:46;NULL
+192;150108;Club Cultural Deportivo de Lima;Av Alameda Sur 1530;Av Alameda Sur 1530 - CHORRILLOS - LIMA;2/02/2023 10:29;2/02/2023 10:29;NULL
+193;150127;Complejo Deportivo Punta Negra;Av. Guanay Sur 270 (Frente al Mercado Municipal de Punta Negra);Av. Guanay Sur 270 (Frente al Mercado Municipal de Punta Negra) - PUNTA NEGRA - LIMA;4/02/2023 12:54;4/02/2023 12:54;NULL
+194;200101;Fundo Elio;"KM. 3 Carretera ""Los Ejidos";"KM. 3 Carretera ""Los Ejidos - PIURA";6/02/2023 18:39;7/05/2024 07:08;NULL
+195;150132;Villa de Armas;Altura 15 de Av. Gran ChimÃº, Al costado de Makro;Altura 15 de Av. Gran ChimÃº, Al costado de Makro - SAN JUAN DE LURIGANCHO - LIMA;7/02/2023 11:46;7/02/2023 11:46;NULL
+196;150132;Estadio Conchucano;Av. Principal Mz. A Lote 2 Campoy;Av. Principal Mz. A Lote 2 Campoy - SAN JUAN DE LURIGANCHO - LIMA;10/02/2023 12:16;23/05/2023 17:02;NULL
+197;150118;RÃ­o Hablador;Altura Puente Huachipa;Altura Puente Huachipa - LURIGANCHO - LIMA;10/02/2023 15:32;10/02/2023 15:32;NULL
+198;150114;Discoteca Gustavo;Av. Separadora Industrial con Los Frutales;Av. Separadora Industrial con Los Frutales - LA MOLINA - LIMA;16/02/2023 15:06;16/02/2023 15:06;NULL
+199;120101;El Portal Restaurante CafÃ©;Pasaje Los Ãngeles 161 (a 1 cdra. del Puente CarriÃ³n);Pasaje Los Ãngeles 161 (a 1 cdra. del Puente CarriÃ³n) - HUANCAYO - JUNÃN;28/02/2023 13:34;6/04/2024 12:58;NULL
+200;150119;Playa ConchÃ¡n;Panamericana Sur Km. 24.5 (Ref. Puente San Luis);Panamericana Sur Km. 24.5 (Ref. Puente San Luis) - LURIN - LIMA;28/02/2023 21:51;6/03/2023 07:36;NULL
+201;180301;Concha AcÃºstica;Av. AndrÃ©s Avelino CÃ¡ceres;Av. AndrÃ©s Avelino CÃ¡ceres - ILO - MOQUEGUA;1/03/2023 08:48;1/03/2023 08:48;NULL
+202;40701;Muelle TurÃ­stico;NULL;MOLLENDO - AREQUIPA;1/03/2023 13:06;7/11/2024 17:20;NULL
+203;220901;Centro de Convenciones Deluxe;Ctra. Fernando BelaÃºnde Terry 145;Ctra. Fernando BelaÃºnde Terry 145 - TARAPOTO - SAN MARTÃN;2/03/2023 21:21;2/03/2023 21:21;NULL
+204;50101;Ayacucho;NULL;AYACUCHO;3/03/2023 08:34;3/03/2023 08:34;NULL
+205;150135;Parque Zonal Mayta CÃ¡pac;av. AngÃ©lica Gamarra;av. AngÃ©lica Gamarra - SAN MARTÃN DE PORRES - LIMA;4/03/2023 18:22;7/05/2024 07:27;NULL
+206;230101;Posada de Marck ex Jarrones;NULL;TACNA;6/03/2023 09:42;29/03/2023 14:01;NULL
+207;40101;AREQUIPA;NULL;AREQUIPA;6/03/2023 12:18;6/03/2023 12:18;NULL
+208;80105;Estadio de San SebastiÃ¡n;NULL;SAN SEBASTIAN - CUSCO;6/03/2023 14:52;6/03/2023 14:52;NULL
+209;150103;Club Kenko;Santa Clara;Santa Clara - ATE - LIMA;6/03/2023 23:14;6/03/2023 23:14;NULL
+210;170101;El Golazo;PUERTO MALDONADO;PUERTO MALDONADO - TAMBOPATA - MADRE DE DIOS;7/03/2023 09:23;29/03/2023 13:23;NULL
+211;30101;Arenas de Azurin;NULL;ABANCAY - APURÃMAC;7/03/2023 09:34;29/03/2023 13:52;NULL
+212;110101;La Bodega;Av. Angela de Perotti S/N;Av. Angela de Perotti S/N - ICA;9/03/2023 10:41;9/03/2023 10:41;NULL
+213;50101;AYACUCHO;NULL;AYACUCHO;13/03/2023 21:35;13/03/2023 21:35;NULL
+214;100102;Club Lawn Tennis;NULL;AMARILIS - HUÃNUCO;16/03/2023 14:02;16/03/2023 14:02;NULL
+215;120101;Ritmo y Sabor de PaliÃ¡n;Calle San MartÃ­n 250;Calle San MartÃ­n 250 - HUANCAYO - JUNÃN;16/03/2023 14:20;16/03/2023 14:20;NULL
+216;110101;Discoteca Arenas;Huacachina;Huacachina - ICA;17/03/2023 10:20;17/03/2023 10:20;NULL
+217;150130;Av. De la ArqueologÃ­a;Espalda del Banco de la NaciÃ³n;Espalda del Banco de la NaciÃ³n - SAN BORJA - LIMA;17/03/2023 19:08;17/03/2023 19:08;NULL
+218;150801;Centro Recreacional Las Palmeras;Costado H. Los Ficus - Ovalo Huacho;Costado H. Los Ficus - Ovalo Huacho - HUACHO - LIMA;18/03/2023 17:07;18/03/2023 17:07;NULL
+219;80105;Estadio Diego Quispe Tito;NULL;SAN SEBASTIAN - CUSCO;22/03/2023 22:03;22/03/2023 22:03;NULL
+220;150116;Iwanna Rock;Jr. Mariscal Las Heras 219;Jr. Mariscal Las Heras 219 - LINCE - LIMA;22/03/2023 22:15;22/03/2023 22:15;NULL
+221;150114;"Casa ""Cerro Pitahaya""";Calle Las Totoritas 120-124 - Sol de la Molina;Calle Las Totoritas 120-124 - Sol de la Molina - LA MOLINA - LIMA;24/03/2023 13:09;24/03/2023 13:09;NULL
+222;250101;Explanada del Coliseo Cerrado de Manantay Pucallpa;NULL;CALLERIA - UCAYALI;24/03/2023 17:03;7/05/2023 20:10;NULL
+223;50101;Estadio Municipal Carmen Alto;AV. Mariscal Caceres S/N;AV. Mariscal Caceres S/N - AYACUCHO;27/03/2023 12:41;16/02/2024 09:42;NULL
+224;30201;Complejo Recreacional Monumental Leoncio Prado;NULL;ANDAHUAYLAS - APURÃMAC;27/03/2023 16:22;27/03/2023 16:22;NULL
+225;150135;SAN MARTÃN DE PORRES;NULL;SAN MARTÃN DE PORRES - LIMA;29/03/2023 12:59;29/03/2023 12:59;NULL
+226;120101;Campo Ferial de Yauris;NULL;HUANCAYO - JUNÃN;31/03/2023 17:32;31/03/2023 17:32;NULL
+227;140201;Centro De Convenciones Chisco Blanco;Calle SeÃ±or de la Justicia 544;Calle SeÃ±or de la Justicia 544 - FERREÃ‘AFE - LAMBAYEQUE;3/04/2023 12:59;3/04/2023 12:59;NULL
+228;40701;Restaurante La Chomba;Deportivo Egasa, 15A;Deportivo Egasa, 15A - MOLLENDO - AREQUIPA;4/04/2023 16:15;4/04/2023 16:15;NULL
+229;150101;Teatro Ricardo Roca Rey;Jr. Ica 323;Jr. Ica 323 - LIMA;5/04/2023 01:38;5/04/2023 01:38;NULL
+230;150142;El Bosque;Av. Mateo Pumacahua;Av. Mateo Pumacahua - VILLA EL SALVADOR - LIMA;5/04/2023 02:42;9/11/2023 05:58;NULL
+231;150124;Club Recreacional Borka;NULL;PUCUSANA - LIMA;5/04/2023 02:48;5/04/2023 02:48;NULL
+232;150142;Club El Rey LeÃ³n;Playa Venecia, Panamericana Sur KM 20;Playa Venecia, Panamericana Sur KM 20 - VILLA EL SALVADOR - LIMA;5/04/2023 16:39;5/04/2023 16:39;NULL
+233;40108;LA JOYA;NULL;LA JOYA - AREQUIPA;5/04/2023 23:25;5/04/2023 23:25;NULL
+234;40201;"Cancha SintÃ©tica ""Minuto 90""";NULL;CAMANÃ - AREQUIPA;5/04/2023 23:30;5/04/2023 23:30;NULL
+235;40301;Los Encantos del PerÃº;NULL;CARAVELÃ - AREQUIPA;6/04/2023 00:14;6/04/2023 00:14;NULL
+236;230101;Explanada Aju Zotac;Av. Collpa 1250;Av. Collpa 1250 - TACNA;8/04/2023 15:31;3/05/2024 05:04;NULL
+237;150135;Teatro Plaza Norte;3er piso, Centro Comercial Plaza Norte.;3er piso, Centro Comercial Plaza Norte. - SAN MARTÃN DE PORRES - LIMA;11/04/2023 20:55;23/04/2023 11:55;NULL
+238;150104;Los Maderos Restobar;JirÃ³n Pedro Heraud 221;JirÃ³n Pedro Heraud 221 - BARRANCO - LIMA;12/04/2023 19:45;2/10/2024 16:32;NULL
+239;150133;Club Zonal Huayna CÃ¡pac;Av. Pedro Miotta;Av. Pedro Miotta - SAN JUAN DE MIRAFLORES - LIMA;14/04/2023 20:37;14/04/2023 20:37;NULL
+240;150143;Estadio Chalhuanca;Avenida 27 de Diciembre;Avenida 27 de Diciembre - VILLA MARÃA DEL TRIUNFO - LIMA;18/04/2023 22:57;18/04/2023 22:57;NULL
+241;40129;Qatar Disco Club;Av. Dolores 115;Av. Dolores 115 - JOSÃ‰ LUIS BUSTAMANTE Y RIVERO - AREQUIPA;20/04/2023 20:57;20/04/2023 20:57;NULL
+242;150132;Parque Zonal Huiracocha;Av. PrÃ³ceres de la Independencia 1568, Alt. Metro PrÃ³ceres.;Av. PrÃ³ceres de la Independencia 1568, Alt. Metro PrÃ³ceres. - SAN JUAN DE LURIGANCHO - LIMA;26/04/2023 12:22;26/04/2023 12:22;NULL
+243;120601;Restaurant TurÃ­stico Boulevard La FÃ¡brica;NULL;SATIPO - JUNÃN;26/04/2023 21:28;26/10/2023 09:38;NULL
+244;120101;Teatro Nuestra SeÃ±ora del Valle;JirÃ³n Puno 450;JirÃ³n Puno 450 - HUANCAYO - JUNÃN;27/04/2023 10:14;27/04/2023 10:14;NULL
+245;190301;C.C. Fundo Cemayu;NULL;OXAPAMPA - PASCO;27/04/2023 10:46;27/04/2023 10:46;NULL
+246;120303;La Cochera 3 De Mayo;NULL;PICHANAQUI - JUNÃN;27/04/2023 10:56;27/04/2023 10:56;NULL
+247;120301;Estadio Peschiera;La Merced;La Merced - CHANCHAMAYO - JUNÃN;27/04/2023 11:48;16/09/2024 10:27;NULL
+248;120401;Court de Basket;NULL;JAUJA - JUNÃN;27/04/2023 18:37;27/04/2023 18:37;NULL
+249;100102;Coliseo 15 de Agosto;Av. Victor RaÃºl Haya de la Torre;Av. Victor RaÃºl Haya de la Torre - AMARILIS - HUÃNUCO;28/04/2023 09:42;28/04/2023 09:42;NULL
+250;120107;Coliseo Wanka;Av. Huancavelica 1216;Av. Huancavelica 1216 - CHILCA - JUNÃN;28/04/2023 12:16;28/04/2023 12:16;NULL
+251;120107;Centro de Convenciones Shullkas;Av. Real NÂ° 1894;Av. Real NÂ° 1894 - CHILCA - JUNÃN;4/05/2023 18:58;4/05/2023 18:58;NULL
+252;170101;I.E. Carlos Fermin Fitzcarrald - Puerto Maldonado;Av. Madre de Dios cdra. 4;Av. Madre de Dios cdra. 4 - TAMBOPATA - MADRE DE DIOS;8/05/2023 11:52;8/05/2023 11:52;NULL
+253;40129;Explanada del Campo Ferial Cerro Juli;Av. Francisco Mostajo;Av. Francisco Mostajo - JOSÃ‰ LUIS BUSTAMANTE Y RIVERO - AREQUIPA;9/05/2023 12:28;9/05/2023 12:28;NULL
+254;60101;Feria del Corpus Christi;NULL;CAJAMARCA;10/05/2023 03:42;10/05/2023 03:42;NULL
+255;150130;BTH Hotel Boutique Concept;Av. Guardia Civil 727;Av. Guardia Civil 727 - SAN BORJA - LIMA;16/05/2023 20:29;16/05/2023 20:29;NULL
+256;150143;Kajuna Disco Club;Av. Salvador Allende 890;Av. Salvador Allende 890 - VILLA MARÃA DEL TRIUNFO - LIMA;23/05/2023 09:00;23/05/2023 09:00;NULL
+257;250101;Campo Ferial Yarinacocha;Av. Yarinacocha 954 Pucallpa;Av. Yarinacocha 954 Pucallpa - CALLERIA - UCAYALI;24/05/2023 09:00;24/05/2023 09:07;NULL
+258;80101;Explanada del Estadio del Colegio Inca Garcilaso de la Vega;NULL;CUSCO;27/05/2023 10:59;27/05/2023 10:59;NULL
+259;150103;Estadio Pallasca Santa Clara;NULL;ATE - LIMA;27/05/2023 20:06;27/05/2023 20:06;NULL
+260;80104;Complejo Deportivo El Maracanazo;VÃ­a de evitamiento - Paradero Petro PerÃº;VÃ­a de evitamiento - Paradero Petro PerÃº - SAN JERÃ“NIMO - CUSCO;1/06/2023 02:22;1/06/2023 02:22;NULL
+261;80106;Explanada de la Zona Verde de Huancaro;NULL;SANTIAGO - CUSCO;5/06/2023 10:07;5/06/2023 10:07;NULL
+262;150132;Discoteca Banana;Av. MalecÃ³n Checa 145;Av. MalecÃ³n Checa 145 - SAN JUAN DE LURIGANCHO - LIMA;6/06/2023 15:50;6/06/2023 15:50;NULL
+263;40101;Teatro Municipal de Arequipa;NULL;AREQUIPA;7/06/2023 06:17;7/06/2023 06:17;NULL
+264;180301;Campo Deportivo 20 de Diciembre;NULL;ILO - MOQUEGUA;8/06/2023 00:02;8/06/2023 00:02;NULL
+265;180101;"Campo Deportivo ""La Bombonera""";NULL;MOQUEGUA;8/06/2023 00:22;8/06/2023 00:22;NULL
+266;230102;Centro Cultural Francisco de Paula Gonzales Vigil;ProlongaciÃ³n Pinto Nro. 1337;ProlongaciÃ³n Pinto Nro. 1337 - ALTO DE LA ALIANZA - TACNA;9/06/2023 09:51;9/06/2023 09:51;NULL
+267;150137;Arena de Santa Anita;Calle MinerÃ­a 131 (Costado del mall Aventura y frente al complejo Santa Rosa);Calle MinerÃ­a 131 (Costado del mall Aventura y frente al complejo Santa Rosa) - SANTA ANITA - LIMA;9/06/2023 12:17;17/09/2024 16:08;NULL
+268;200101;Universidad Cesar Vallejo â€“ Explanada 1;Av. Chulucanas s/n.;Av. Chulucanas s/n. - PIURA;12/06/2023 19:31;12/06/2023 19:31;NULL
+269;80401;Coliseo de Gallos;Calle Camino Real;Calle Camino Real - CALCA - CUSCO;13/06/2023 11:01;13/06/2023 11:01;NULL
+270;150801;I.E.P. Divino CorazÃ³n de JesÃºs;Av. Panamericana Nte. Km 147 (Explanada de la Villa Corazonista);Av. Panamericana Nte. Km 147 (Explanada de la Villa Corazonista) - HUACHO - LIMA;22/06/2023 12:05;22/06/2023 16:36;NULL
+271;200104;Utaja Club;CaserÃ­o Miraflores KM2;CaserÃ­o Miraflores KM2 - CASTILLA - PIURA;23/06/2023 14:14;23/06/2023 14:14;NULL
+272;150113;CÃ­rculo Militar del PerÃº;Av. Salaverry NÂ° 1650 (SalÃ³n Bolognesi);Av. Salaverry NÂ° 1650 (SalÃ³n Bolognesi) - JESÃšS MARÃA - LIMA;23/06/2023 21:24;23/06/2023 21:24;NULL
+273;60101;Estadio Municipal;NULL;CAJAMARCA;28/06/2023 09:21;28/06/2023 09:21;NULL
+274;30201;MONUMENTAL LEONCIO PRADO;Ave. Leoncio Prado 513;Ave. Leoncio Prado 513 - ANDAHUAYLAS - APURÃMAC;3/07/2023 16:34;3/07/2023 16:34;NULL
+275;150113;Club Lawn Tennis (SalÃ³n Makao);RepÃºblica de Chile 254;RepÃºblica de Chile 254 - JESÃšS MARÃA - LIMA;3/07/2023 19:39;3/07/2023 19:39;NULL
+276;200601;TAYRA LOUNGE;Av. Panamericana Norte;Av. Panamericana Norte - SULLANA - PIURA;8/07/2023 12:43;8/07/2023 12:43;NULL
+277;150132;Discoteca Mr. Big;Parad. 4 Av. Wiese;Parad. 4 Av. Wiese - SAN JUAN DE LURIGANCHO - LIMA;8/07/2023 14:06;8/07/2023 14:06;NULL
+278;70102;Bellavista;NULL;BELLAVISTA - CALLAO;11/07/2023 01:46;11/07/2023 01:46;NULL
+279;70101;CALLAO;NULL;CALLAO;11/07/2023 09:35;11/07/2023 09:35;NULL
+280;200801;Los Rosales;Av. Brasil;Av. Brasil - SECHURA - PIURA;12/07/2023 00:06;12/07/2023 00:06;NULL
+281;150101;Plataforma Zoom;-;#¿NOMBRE?;12/07/2023 08:36;12/07/2023 08:37;NULL
+282;150143;Tintay Internacional;Av. Pachacutec 5896;Av. Pachacutec 5896 - VILLA MARÃA DEL TRIUNFO - LIMA;12/07/2023 22:50;12/07/2023 22:50;NULL
+283;120101;Explanada CÃ¡mara de Comercio de Huancayo;Av. GirÃ¡ldez 634;Av. GirÃ¡ldez 634 - HUANCAYO - JUNÃN;17/07/2023 14:09;17/07/2023 14:09;NULL
+284;110501;Polideportivo Irma Cordero;Calle San Francisco 335;Calle San Francisco 335 - PISCO - ICA;18/07/2023 10:04;18/07/2023 10:04;NULL
+285;110101;COMPLEJO DEPORTIVO I.E SAN LUIS GONZAGA;Calle Chiclayo 963;Calle Chiclayo 963 - ICA;18/07/2023 18:48;18/07/2023 18:48;NULL
+286;110201;Coliseo Mauro Mina;Av. Andres Avelino Caceres;Av. Andres Avelino Caceres - CHINCHA ALTA - ICA;20/07/2023 17:03;20/07/2023 17:03;NULL
+287;70102;Estadio Gualberto Lizarraga;NULL;BELLAVISTA - CALLAO;21/07/2023 12:13;21/07/2023 12:13;NULL
+288;150103;Complejo TurÃ­stico Diony's;Km 9.7 Carr. Central, Santa Clara;Km 9.7 Carr. Central, Santa Clara - ATE - LIMA;22/07/2023 09:15;22/07/2023 09:22;NULL
+289;150104;Estadio Luis GÃ¡lvez Chipoco;Av. San MartÃ­n;Av. San MartÃ­n - BARRANCO - LIMA;22/07/2023 14:02;22/07/2023 14:02;NULL
+290;70102;La Escuela De La Salsa Chalaca;JR. Bolognesi 711;JR. Bolognesi 711 - BELLAVISTA - CALLAO;26/07/2023 15:02;26/07/2023 15:02;NULL
+291;40307;Coliseo Municipal de Chala;NULL;CHALA - AREQUIPA;27/07/2023 11:36;27/07/2023 11:36;NULL
+292;120101;Auditorio Colegio Andino;NULL;HUANCAYO - JUNÃN;3/08/2023 14:26;3/08/2023 14:26;NULL
+293;40129;Clandestino Club;Av. Dolores 119;Av. Dolores 119 - JOSÃ‰ LUIS BUSTAMANTE Y RIVERO - AREQUIPA;4/08/2023 06:50;4/08/2023 06:50;NULL
+294;40520;Estadio Los Principes La Colina;El Pedregal;El Pedregal - MAJES - AREQUIPA;5/08/2023 15:11;5/08/2023 15:11;NULL
+295;150108;Explanada del Mercado Cooperativa Santa Rosa;Av. Guardia Civil 433 esquina con Av. Guardia Peruana;Av. Guardia Civil 433 esquina con Av. Guardia Peruana - CHORRILLOS - LIMA;7/08/2023 14:36;7/08/2023 14:38;NULL
+296;40701;Explanada Castillo Forga de la Segunda Playa;NULL;MOLLENDO - AREQUIPA;8/08/2023 07:48;9/02/2024 10:00;NULL
+297;150143;Gia Resto Bar;Av. Villa Maria 226 - Boulevard de VMT;Av. Villa Maria 226 - Boulevard de VMT - VILLA MARÃA DEL TRIUNFO - LIMA;8/08/2023 10:54;8/08/2023 10:54;NULL
+298;150103;Samay Wasi;Al costado de la Discoteca ParaÃ­so;Al costado de la Discoteca ParaÃ­so - ATE - LIMA;8/08/2023 11:14;8/08/2023 11:14;NULL
+299;21801;Coliseo Deportivo Miramar;NULL;CHIMBOTE - ÃNCASH;9/08/2023 08:40;9/08/2023 08:40;NULL
+300;140101;Coliseo Cerrado;Av. JosÃ© Balta;Av. JosÃ© Balta - CHICLAYO - LAMBAYEQUE;10/08/2023 11:36;10/08/2023 11:36;NULL
+301;160101;Mr. Pardo;Av. Mariscal Caceres 1042 - 1088;Av. Mariscal Caceres 1042 - 1088 - IQUITOS - LORETO;11/08/2023 12:52;11/08/2023 12:52;NULL
+302;70101;Mercado Santa Rosa;Av. Tomas Valle cruce con Av. JapÃ³n ex Bertelo;Av. Tomas Valle cruce con Av. JapÃ³n ex Bertelo - CALLAO;11/08/2023 14:33;21/08/2023 08:57;NULL
+303;20101;El Ringo;NULL;HUARAZ - ÃNCASH;11/08/2023 15:05;11/08/2023 15:05;NULL
+304;150129;Gran Teatro Nacional;Av. Javier Prado Este 2225;Av. Javier Prado Este 2225 - SAN BARTOLO - LIMA;13/08/2023 12:14;13/08/2023 12:14;NULL
+305;80101;Teatro Municipal;Av. Meson De La Estrella 149;Av. Meson De La Estrella 149 - CUSCO;13/08/2023 12:49;13/08/2023 12:49;NULL
+306;150131;Nina Pakary;Calle ChinchÃ³n 955;Calle ChinchÃ³n 955 - SAN ISIDRO - LIMA;14/08/2023 10:06;14/08/2023 10:06;NULL
+307;150201;Explanada Bahua - Playa Miraflores;Av. Chorrillos 509 - 513;Av. Chorrillos 509 - 513 - BARRANCA - LIMA;15/08/2023 08:15;15/08/2023 08:15;NULL
+308;21801;Polideportivo El Acero;NULL;CHIMBOTE - ÃNCASH;17/08/2023 13:57;17/08/2023 13:57;NULL
+309;40101;Teatro FÃ©nix;Gral. MÃ³ran 104;Gral. MÃ³ran 104 - AREQUIPA;19/08/2023 07:12;19/08/2023 07:12;NULL
+310;230101;Parque PerÃº;NULL;TACNA;22/08/2023 13:33;22/08/2023 13:33;NULL
+311;200501;El Encanto de la Rockola;NULL;PAITA - PIURA;29/08/2023 06:07;29/08/2023 06:07;NULL
+312;150101;Facebook TeletÃ³n;fb.com/FundacionTeletonPeru;fb.com/FundacionTeletonPeru - LIMA;31/08/2023 03:30;31/08/2023 03:30;NULL
+313;130101;Coliseo Inca;JirÃ³n Estete 410;JirÃ³n Estete 410 - TRUJILLO - LA LIBERTAD;31/08/2023 07:42;31/08/2023 07:42;NULL
+314;150117;Los Portales del Huayllabamba;Av. Globo TerrÃ¡queo 3301;Av. Globo TerrÃ¡queo 3301 - LOS OLIVOS - LIMA;1/09/2023 08:07;1/09/2023 08:07;NULL
+315;40101;Cooperativa universitaria mz E Lote 12;NULL;AREQUIPA;4/09/2023 08:58;4/09/2023 08:58;NULL
+316;150117;Imperial de Pro;NULL;LOS OLIVOS - LIMA;4/09/2023 09:44;4/09/2023 09:44;NULL
+317;150103;Esto Es Rumba Disco;Av. Metropolitana cruce con Av. Los Ãngeles;Av. Metropolitana cruce con Av. Los Ãngeles - ATE - LIMA;9/09/2023 05:15;9/09/2023 05:15;NULL
+318;80101;Chaska Blue Discoteca;Av. del EjÃ©rcito 1477;Av. del EjÃ©rcito 1477 - CUSCO;9/09/2023 12:18;22/07/2025 13:05;NULL
+319;150132;Discoteca Anubis;Av. Jardines Oeste 167 Urb. Las Flores;Av. Jardines Oeste 167 Urb. Las Flores - SAN JUAN DE LURIGANCHO - LIMA;19/09/2023 13:05;19/09/2023 13:05;NULL
+320;70104;La Isla del ParaÃ­so;NULL;LA PERLA - CALLAO;21/09/2023 17:55;17/10/2024 10:19;NULL
+321;150108;Plaza San Pedro;NULL;CHORRILLOS - LIMA;22/09/2023 10:00;22/09/2023 10:00;NULL
+322;50101;Coliseo Colegio Mariscal CÃ¡ceres;Av. Independencia 502;Av. Independencia 502 - AYACUCHO;25/09/2023 08:52;25/09/2023 08:52;NULL
+323;110201;"InstituciÃ³n Educativa EmblemÃ¡tica ""JosÃ© Pardo y Barreda""";Av. Luis GÃ¡lvez Chipoco NÂ° 271;Av. Luis GÃ¡lvez Chipoco NÂ° 271 - CHINCHA ALTA - ICA;27/09/2023 05:09;27/09/2023 05:09;NULL
+324;150117;Ex Kokus CafÃ©;Jr. Manuel Gonzales Prada 105 (Ex Boulevard de Los Olivos);Jr. Manuel Gonzales Prada 105 (Ex Boulevard de Los Olivos) - LOS OLIVOS - LIMA;27/09/2023 13:17;27/09/2023 13:17;NULL
+325;150601;Campo Ferial;Complejo Union Huaral S/N, Huaral;Complejo Union Huaral S/N, Huaral - HUARAL - LIMA;5/10/2023 11:41;5/10/2023 11:41;NULL
+326;200701;Estadio CampeonÃ­simo;de Talara;de Talara - PARIÃ‘AS - PIURA;6/10/2023 05:33;6/10/2023 05:33;NULL
+327;150128;Jr. Atahualpa 123;NULL;RÃMAC - LIMA;6/10/2023 11:22;6/10/2023 11:22;NULL
+328;150201;Campo Ferial Estadio de Barranca;NULL;BARRANCA - LIMA;8/10/2023 04:53;8/10/2023 05:20;NULL
+329;200115;26 de Octubre;NULL;VEINTISEIS DE OCTUBRE - PIURA;8/10/2023 10:31;8/10/2023 10:31;NULL
+330;200115;26 de Octubre;NULL;VEINTISEIS DE OCTUBRE - PIURA;8/10/2023 10:31;8/10/2023 10:31;NULL
+331;150509;Videma de Mala;NULL;MALA - LIMA;10/10/2023 05:13;10/10/2023 05:13;NULL
+332;150119;Rustica Hoteles Pachacamac;LT. 14 URB. RINCONADA DE PURUHUAY;LT. 14 URB. RINCONADA DE PURUHUAY - LURIN - LIMA;11/10/2023 08:54;11/10/2023 08:54;NULL
+333;200105;Estadio Manuel o Feijo;NULL;CATACAOS - PIURA;11/10/2023 13:10;11/10/2023 13:10;NULL
+334;50101;Millwa Country Club;Av. Javier Heraud NÂ°463, Ayacucho, Peru;Av. Javier Heraud NÂ°463, Ayacucho, Peru - AYACUCHO;16/10/2023 18:23;16/10/2023 18:23;NULL
+335;40701;Villa Lourdes;NULL;MOLLENDO - AREQUIPA;18/10/2023 12:44;18/10/2023 12:44;NULL
+336;200115;Frontis La Videna;NULL;VEINTISEIS DE OCTUBRE - PIURA;19/10/2023 09:32;19/10/2023 09:32;NULL
+337;20101;Centro de Convenciones HuascarÃ¡n;NULL;HUARAZ - ÃNCASH;22/10/2023 06:38;22/10/2023 06:38;NULL
+338;150135;Santo Domingo de Nava;Huertos del Naranjal M B, LT. 08 (Ovalo Canta Callao conÂ Av.Â Naranjal);Huertos del Naranjal M B, LT. 08 (Ovalo Canta Callao conÂ Av.Â Naranjal) - SAN MARTÃN DE PORRES - LIMA;23/10/2023 07:51;23/10/2023 12:13;NULL
+339;120305;Cancha SintÃ©tica Bernabeu;NULL;SAN RAMÃ“N - JUNÃN;26/10/2023 09:18;26/10/2023 09:18;NULL
+340;150103;Alamo Junior;Km. 11 Carretera Central Santa Clara;Km. 11 Carretera Central Santa Clara - ATE - LIMA;27/10/2023 06:16;27/10/2023 06:16;NULL
+341;150702;Country Club Sisicaya;Km. 47 Carretera Lima - Cieneguilla - Huarochiri;Km. 47 Carretera Lima - Cieneguilla - Huarochiri - ANTIOQUIA - LIMA;30/10/2023 13:38;30/10/2023 13:38;NULL
+342;20101;Pukaventana;Av. Centenario 393;Av. Centenario 393 - HUARAZ - ÃNCASH;2/11/2023 03:54;2/11/2023 03:54;NULL
+343;150101;Tiendas Vega;NULL;LIMA;2/11/2023 13:03;2/11/2023 13:56;NULL
+344;200104;Gaia;Fundo Lazo;Fundo Lazo - CASTILLA - PIURA;7/11/2023 15:40;7/11/2023 15:40;NULL
+345;150117;Enigma Fiestas & Eventos;Av. Las Palmeras 5265;Av. Las Palmeras 5265 - LOS OLIVOS - LIMA;13/11/2023 04:55;13/11/2023 04:55;NULL
+346;150143;Gia Boulevard;Av. Nicolas de PiÃ©rola 841 Boulevard de VMT (ExÂ local Huallhua);Av. Nicolas de PiÃ©rola 841 Boulevard de VMT (ExÂ local Huallhua) - VILLA MARÃA DEL TRIUNFO - LIMA;15/11/2023 07:50;15/11/2023 07:50;NULL
+347;150103;Coliseo Puno;Av. Las Torres 341 - 349 (Espalda de la ClÃ­nica San Juan de Dios);Av. Las Torres 341 - 349 (Espalda de la ClÃ­nica San Juan de Dios) - ATE - LIMA;15/11/2023 13:50;15/11/2023 13:50;NULL
+348;150143;Contigo PerÃº;Pista Nueva del Boulevard de VMT - Frente al Banco de La NaciÃ³n;Pista Nueva del Boulevard de VMT - Frente al Banco de La NaciÃ³n - VILLA MARÃA DEL TRIUNFO - LIMA;17/11/2023 12:53;17/11/2023 12:53;NULL
+349;150142;Arena Sur;Av. 1ro. de mayo Cdra 15;Av. 1ro. de mayo Cdra 15 - VILLA EL SALVADOR - LIMA;17/11/2023 13:34;17/11/2023 13:34;NULL
+350;211101;Rose;Lote D-11 - Zona Industrial De La URB. Taparachi;Lote D-11 - Zona Industrial De La URB. Taparachi - JULIACA - PUNO;17/11/2023 15:08;30/11/2023 05:31;NULL
+351;150101;Meson del Inca;Av. Petit Thouars 195;Av. Petit Thouars 195 - LIMA;18/11/2023 07:57;18/11/2023 07:57;NULL
+352;130101;Florida Club;La Encalada del Golf;La Encalada del Golf - TRUJILLO - LA LIBERTAD;22/11/2023 05:37;22/11/2023 05:37;NULL
+353;250402;Los Troncos;NULL;TALARA - PIURA;24/11/2023 09:16;4/12/2023 10:02;NULL
+354;150104;Centro de Convenciones Barranco - CCB;Av. RepÃºblica de PanamÃ¡ 220, Barranco;Av. RepÃºblica de PanamÃ¡ 220, Barranco - BARRANCO - LIMA;11/12/2023 11:54;11/12/2023 11:54;NULL
+355;60101;Restaurant Campestre Los Patos;NULL;CAJAMARCA;12/12/2023 17:47;12/12/2023 17:47;NULL
+356;150125;Explanada Mercado 3 Regiones;Panamerica Norte Km. 33.5;Panamerica Norte Km. 33.5 - PUENTE PIEDRA - LIMA;13/12/2023 06:16;13/12/2023 06:16;NULL
+357;150132;Piscina Vilcanota;Av. Los Ciruelos 443;Av. Los Ciruelos 443 - SAN JUAN DE LURIGANCHO - LIMA;13/12/2023 13:52;13/12/2023 13:52;NULL
+358;180301;Coliseo Jorge Basadre;NULL;ILO - MOQUEGUA;13/12/2023 15:44;13/12/2023 15:44;NULL
+359;230101;Coliseo Tupac Amaru;NULL;TACNA;14/12/2023 10:04;14/12/2023 10:04;NULL
+360;150142;Estadio Quinches;Av. 1 de Mayo frente a Tottus;Av. 1 de Mayo frente a Tottus - VILLA EL SALVADOR - LIMA;14/12/2023 11:08;14/12/2023 11:08;NULL
+361;150201;El Ruedo;Av. Lima 1331;Av. Lima 1331 - BARRANCA - LIMA;20/12/2023 06:31;20/12/2023 06:31;NULL
+362;150101;Rosa Negra Bar;JirÃ³n Rufino Torrico 1137;JirÃ³n Rufino Torrico 1137 - LIMA;20/12/2023 06:40;20/12/2023 06:40;NULL
+363;70101;El Otro Yacumama;Av. Tomas Valle NÂ° 2881;Av. Tomas Valle NÂ° 2881 - CALLAO;21/12/2023 21:09;21/12/2023 21:09;NULL
+364;220913;Xilan Harmony Afloat (Embarque en Puerto Azul);Balneario TurÃ­stico 2 de Mayo s/n;Balneario TurÃ­stico 2 de Mayo s/n - SAUCE - SAN MARTÃN;22/12/2023 16:39;22/12/2023 17:35;NULL
+365;230110;Estadio Joel Gutierrez;NULL;CORONEL GREGORIO ALBARRACÃN LANCHIPA - TACNA;3/01/2024 11:52;3/01/2024 11:52;NULL
+366;120401;Recepciones Lians;Jr. Arica 3333;Jr. Arica 3333 - JAUJA - JUNÃN;3/01/2024 16:38;3/01/2024 16:38;NULL
+367;90101;Villa San Francisco;Carretera Lircay km 3.200;Carretera Lircay km 3.200 - HUANCAVELICA;3/01/2024 17:07;3/01/2024 17:07;NULL
+368;110301;Coliseo Vista Alegre;NULL;NASCA - ICA;4/01/2024 11:49;4/01/2024 11:49;NULL
+369;150130;Coliseo Eduardo DibÃ³s;Av. Angamos Este 2681;Av. Angamos Este 2681 - SAN BORJA - LIMA;4/01/2024 15:35;4/01/2024 15:35;NULL
+370;60101;El Zarco Campestre;NULL;CAJAMARCA;9/01/2024 13:05;9/01/2024 13:05;NULL
+371;110304;Polideportivo Micaela Bastidas;NULL;MARCONA - ICA;9/01/2024 15:17;9/01/2024 15:17;NULL
+372;150130;It Club;Av. Javier Prado Este 1858 (Al lado de La Rambla);Av. Javier Prado Este 1858 (Al lado de La Rambla) - SAN BORJA - LIMA;10/01/2024 14:48;11/03/2024 07:53;NULL
+373;60801;KM 16 Food & Parking;Chamaya Km. 16;Chamaya Km. 16 - JAÃ‰N - CAJAMARCA;12/01/2024 04:40;13/03/2025 12:30;NULL
+374;110301;Coliseo Cerrado;NULL;NASCA - ICA;12/01/2024 13:21;12/01/2024 13:21;NULL
+375;150501;Coliseo Lolo Fernandez;NULL;SAN VICENTE DE CAÃ‘ETE - LIMA;12/01/2024 13:59;12/01/2024 13:59;NULL
+376;150125;Complejo TurÃ­stico El AndÃ©n;Au. Panamericana Nte. 26;Au. Panamericana Nte. 26 - PUENTE PIEDRA - LIMA;15/01/2024 07:28;15/01/2024 07:28;NULL
+377;150119;Explanada del Mercado Virgen de Las Mercedes;NULL;LURIN - LIMA;15/01/2024 15:11;15/01/2024 15:11;NULL
+378;200104;Atlantis Club Zoo Park;NULL;CASTILLA - PIURA;17/01/2024 08:43;17/01/2024 08:43;NULL
+379;200601;"Estadio Municipal ""Campeones del 36""";Trans. Ica 361;Trans. Ica 361 - SULLANA - PIURA;17/01/2024 11:04;17/01/2024 11:04;NULL
+380;70106;Estadio Municipal de Mi PerÃº;NULL;VENTANILLA - CALLAO;18/01/2024 06:16;18/01/2024 06:16;NULL
+381;10701;Centro Recreacional El Zafiro;NULL;BAGUA GRANDE - AMAZONAS;19/01/2024 08:31;19/01/2024 08:31;NULL
+382;10101;Magnus Disco;Jr. Dos de Mayo 1300;Jr. Dos de Mayo 1300 - CHACHAPOYAS - AMAZONAS;19/01/2024 08:45;19/01/2024 08:45;NULL
+383;60101;Estadio Municipal de Cajamarca;NULL;CAJAMARCA;23/01/2024 19:03;23/01/2024 19:03;NULL
+384;220901;Estadio Municipal de La Banda de Shilcayo;NULL;TARAPOTO - SAN MARTÃN;25/01/2024 12:04;25/01/2024 12:04;NULL
+385;150143;Piscina el Diamante;Av. Las Palmas Paradero El Sol JosÃ© Galvez;Av. Las Palmas Paradero El Sol JosÃ© Galvez - VILLA MARÃA DEL TRIUNFO - LIMA;25/01/2024 13:09;14/02/2024 08:03;NULL
+386;70106;Frontis Reniec Pachacutec;Av. 225 Sector B1;Av. 225 Sector B1 - VENTANILLA - CALLAO;26/01/2024 08:35;26/01/2024 08:35;NULL
+387;150143;Monumental Chalhuanquino;Frente a Senati de VMT;Frente a Senati de VMT - VILLA MARÃA DEL TRIUNFO - LIMA;26/01/2024 13:23;26/01/2024 13:23;NULL
+388;200705;Plataforma San Pedro;NULL;LOS ORGANOS - PIURA;29/01/2024 08:45;29/01/2024 08:45;NULL
+389;150119;Pachacamac Arena;UC 11264 Parcela Los Levanos - Predio Los Sauces UC 04183 (Frente a AmÃ©rica de Pachacamac);UC 11264 Parcela Los Levanos - Predio Los Sauces UC 04183 (Frente a AmÃ©rica de Pachacamac) - LURIN - LIMA;29/01/2024 20:12;29/01/2024 20:12;NULL
+390;150135;Plaza Norte;Av. Alfredo Mendiola 1400;Av. Alfredo Mendiola 1400 - SAN MARTÃN DE PORRES - LIMA;30/01/2024 06:49;30/01/2024 06:49;NULL
+391;150133;Explanada Instituto Gilda Ballivian;Av. Vargas Machuca 320;Av. Vargas Machuca 320 - SAN JUAN DE MIRAFLORES - LIMA;30/01/2024 07:11;30/01/2024 07:11;NULL
+392;130104;Ebaristo Playa Huanchaquito;NULL;HUANCHACO - LA LIBERTAD;31/01/2024 15:53;31/01/2024 15:53;NULL
+393;120101;"SalÃ³n de Recepciones ""Los Cristales""";Calle Lima 1989 (Ref. Frente al Parque de los Periodistas);Calle Lima 1989 (Ref. Frente al Parque de los Periodistas) - HUANCAYO - JUNÃN;1/02/2024 15:16;1/02/2024 15:16;NULL
+394;150104;La EstaciÃ³n de Barranco;Av. Pedro de Osma 112;Av. Pedro de Osma 112 - BARRANCO - LIMA;2/02/2024 07:52;2/02/2024 07:52;NULL
+395;20101;Club Mistura;NULL;HUARAZ - ÃNCASH;13/02/2024 07:31;13/02/2024 07:31;NULL
+396;21801;Biloba Club;Frente a Metro de Nvo. Chimbote;Frente a Metro de Nvo. Chimbote - CHIMBOTE - ÃNCASH;16/02/2024 09:03;16/02/2024 11:30;NULL
+397;150143;Estadio Mamara;NULL;VILLA MARÃA DEL TRIUNFO - LIMA;21/02/2024 13:00;21/02/2024 13:00;NULL
+398;150101;Raymi Vip;Av. Bolivia NÂ° 266;Av. Bolivia NÂ° 266 - LIMA;26/02/2024 06:20;26/02/2024 06:20;NULL
+399;150101;Parque de La ExposiciÃ³n;Av. 28 de Julio;Av. 28 de Julio - LIMA;2/03/2024 06:52;2/03/2024 06:52;NULL
+400;150112;PeÃ±a Los Andes;Av. Industrial 355;Av. Industrial 355 - INDEPENDENCIA - LIMA;4/03/2024 14:15;4/03/2024 14:15;NULL
+401;150101;Centro de Convenciones Kantaro;Av. Tacna 225;Av. Tacna 225 - LIMA;5/03/2024 04:53;5/03/2024 04:53;NULL
+402;150125;La Matarina Club Campestre;NULL;PUENTE PIEDRA - LIMA;5/03/2024 05:28;5/03/2024 05:28;NULL
+403;150125;Club Campestre Sonia Morales;NULL;PUENTE PIEDRA - LIMA;9/03/2024 14:04;9/03/2024 14:04;NULL
+404;190301;Fundo Cemayu;NULL;OXAPAMPA - PASCO;11/03/2024 13:42;11/03/2024 13:42;NULL
+405;150132;Colegio Fe y AlegrÃ­a NÂ° 5;HipÃ³lito Unanue 2da. Cuadra Chacarilla de Otero;HipÃ³lito Unanue 2da. Cuadra Chacarilla de Otero - SAN JUAN DE LURIGANCHO - LIMA;16/03/2024 03:48;16/03/2024 03:48;NULL
+406;250402;Taj Mahal Club;NULL;TALARA - PIURA;16/03/2024 04:04;20/03/2024 07:48;NULL
+407;200601;Explanada del Gato;NULL;SULLANA - PIURA;16/03/2024 04:33;16/03/2024 04:33;NULL
+408;150142;Estadio IvÃ¡n ElÃ­as Moreno;Av. los Alamos;Av. los Alamos - VILLA EL SALVADOR - LIMA;19/03/2024 03:45;19/03/2024 03:45;NULL
+409;50101;Complejo Ingenieros;NULL;AYACUCHO;21/03/2024 04:00;21/03/2024 04:00;NULL
+410;220901;Pachanga;Jr. Sargento Lores 733;Jr. Sargento Lores 733 - TARAPOTO - SAN MARTÃN;25/03/2024 12:25;25/03/2024 12:25;NULL
+411;150101;Mi Tercer Lugar;Jr. Carabaya 618;Jr. Carabaya 618 - LIMA;27/03/2024 07:16;27/03/2024 07:16;NULL
+412;140101;Quinta Arellano;NULL;CHICLAYO - LAMBAYEQUE;27/03/2024 08:22;27/03/2024 08:22;NULL
+413;150117;La Choza NÃ¡utica;Av. Carlos Izaguirre 1430;Av. Carlos Izaguirre 1430 - LOS OLIVOS - LIMA;31/03/2024 07:19;31/03/2024 07:19;NULL
+414;150101;VÃ­a Facebook/Instagram;NULL;LIMA;1/04/2024 15:06;1/04/2024 15:06;NULL
+415;60101;Dakary;Avenida Moyo Cocha A18 La Molina;Avenida Moyo Cocha A18 La Molina - CAJAMARCA;1/04/2024 17:27;1/04/2024 17:27;NULL
+416;100101;Rinconcito HuanuqueÃ±o;JirÃ³n 2 de Mayo;JirÃ³n 2 de Mayo - HUANUCO - HUÃNUCO;1/04/2024 18:26;1/04/2024 18:26;NULL
+417;150110;Campus de Unicachi;Primera de Pro;Primera de Pro - COMAS - LIMA;3/04/2024 13:22;3/04/2024 14:05;NULL
+418;200101;Bongo (Ex Discoteca Stampa);NULL;PIURA;4/04/2024 09:14;4/04/2024 15:00;NULL
+419;200601;Flamingoh Club;Explanada el Gato (a 500 mt. Promart);Explanada el Gato (a 500 mt. Promart) - SULLANA - PIURA;5/04/2024 10:53;5/04/2024 10:53;NULL
+420;150142;Sede Legado;NULL;VILLA EL SALVADOR - LIMA;8/04/2024 14:29;8/04/2024 14:29;NULL
+421;150132;Mercado Sarita Colonia;Frente a la estaciÃ³n Santa Rosa;Frente a la estaciÃ³n Santa Rosa - SAN JUAN DE LURIGANCHO - LIMA;10/04/2024 07:50;10/04/2024 07:50;NULL
+422;150101;Brisas del Titicaca;Jr. HÃ©roes de TarapacÃ¡ 168;Jr. HÃ©roes de TarapacÃ¡ 168 - LIMA;10/04/2024 17:37;10/04/2024 17:37;NULL
+423;150140;Centro de Convenciones Surco;Jr. Franklin D. Roosevelt 121;Jr. Franklin D. Roosevelt 121 - SANTIAGO DE SURCO - LIMA;11/04/2024 11:45;11/04/2024 11:45;NULL
+424;150501;Santa Felipa;Av. Mariscal Benavides S/N;Av. Mariscal Benavides S/N - SAN VICENTE DE CAÃ‘ETE - LIMA;12/04/2024 08:47;12/04/2024 08:47;NULL
+425;120601;Grass SintÃ©tico La Bombonera;NULL;SATIPO - JUNÃN;13/04/2024 06:42;13/04/2024 06:42;NULL
+426;120301;Club Pereyra La Merced;NULL;CHANCHAMAYO - JUNÃN;16/04/2024 07:31;16/04/2024 07:31;NULL
+427;120701;Discoteca Mr. Juerga;NULL;TARMA - JUNÃN;16/04/2024 14:42;16/04/2024 14:42;NULL
+428;230101;POLIDEPORTIVO LOS EDILES;CRUCE DE LA AVENIDA LOS EDUCADORES Y AVENIDA LOS POETAS;CRUCE DE LA AVENIDA LOS EDUCADORES Y AVENIDA LOS POETAS - TACNA;18/04/2024 06:40;18/04/2024 06:40;NULL
+429;150123;La Parrandita de Manchay;NULL;PACHACAMAC - LIMA;19/04/2024 08:09;19/04/2024 08:09;NULL
+430;230101;BÃºhos Restobar;NULL;TACNA;25/04/2024 07:31;25/04/2024 07:31;NULL
+431;70106;Estadio Antonia Moreno De Caceres;NULL;VENTANILLA - CALLAO;25/04/2024 16:56;25/04/2024 16:56;NULL
+432;150142;Nueva Gamarra Unicachi Lima Sur;Av. Los Algarrobos 171;Av. Los Algarrobos 171 - VILLA EL SALVADOR - LIMA;26/04/2024 04:44;26/04/2024 04:44;NULL
+433;250101;Estadio Jorge Forest Forest de Yarinacocha;Pucallpa;Pucallpa - CALLERIA - UCAYALI;27/04/2024 21:56;27/04/2024 21:56;NULL
+434;80901;Coliseo Municipal de Quillabamba;NULL;SANTA ANA - CUSCO;29/04/2024 05:38;29/04/2024 05:38;NULL
+435;220901;Explanada del Complejo Santa Anita;NULL;TARAPOTO - SAN MARTÃN;29/04/2024 10:02;29/04/2024 10:02;NULL
+436;150605;Mister Swing - Huaral;Avenida Chancay sub lote 42F Frente a Mega Plaza Huaral - Al costado de Grifo Petroperu;Avenida Chancay sub lote 42F Frente a Mega Plaza Huaral - Al costado de Grifo Petroperu - CHANCAY - LIMA;29/04/2024 10:36;15/05/2024 07:13;15/05/2024 07:13
+437;150605;Mister Swing;Avenida Chancay sub lote 42F Frente a Mega Plaza Huaral;Avenida Chancay sub lote 42F Frente a Mega Plaza Huaral - CHANCAY - LIMA;29/04/2024 10:37;29/04/2024 10:37;NULL
+438;150605;Vasco de Gama de Chancay;Luis Felipe del solar 357 frente al INEI N -34;Luis Felipe del solar 357 frente al INEI N -34 - CHANCAY - LIMA;29/04/2024 11:58;29/04/2024 11:58;NULL
+439;200601;Estadio Campeones del 36;Trans. Ica 361, Sullana;Trans. Ica 361, Sullana - SULLANA - PIURA;29/04/2024 13:54;30/04/2024 05:18;30/04/2024 05:18
+440;200601;Estadio Campeones del 36;Trans. Ica 361, Sullana;Trans. Ica 361, Sullana - SULLANA - PIURA;30/04/2024 04:54;30/04/2024 05:18;30/04/2024 05:18
+441;200601;Estadio Campeones del 36;Trans. Ica 361, Sullana;Trans. Ica 361, Sullana - SULLANA - PIURA;30/04/2024 04:55;30/04/2024 05:18;30/04/2024 05:18
+442;120107;Mil Maravillas;NULL;CHILCA - JUNÃN;3/05/2024 04:42;11/07/2024 07:34;NULL
+443;230101;Explanada Aju Zotac;Av. Collpa 1250;Av. Collpa 1250 - TACNA;3/05/2024 04:52;3/05/2024 05:04;3/05/2024 05:04
+444;120606;La Huarochirana;Av. 26 de marzo con Av. Emilio Morales;Av. 26 de marzo con Av. Emilio Morales - PANGOA - JUNÃN;3/05/2024 08:07;3/05/2024 08:07;NULL
+445;190301;El Pacaicito;NULL;OXAPAMPA - PASCO;3/05/2024 10:48;3/05/2024 10:48;NULL
+446;21801;Centro de Convenciones Uladech;NULL;CHIMBOTE - ÃNCASH;4/05/2024 06:54;4/05/2024 06:54;NULL
+447;130101;El Estribo Internacional;Jr. San Martin 809 - Centro de Trujillo;Jr. San Martin 809 - Centro de Trujillo - TRUJILLO - LA LIBERTAD;4/05/2024 07:03;4/05/2024 07:03;NULL
+448;140301;La Vicharra;ProlongaciÃ³n Monsalve Baca;ProlongaciÃ³n Monsalve Baca - LAMBAYEQUE;6/05/2024 11:59;6/05/2024 11:59;NULL
+449;200101;Fundo Elio;"KM. 3 Carretera ""Los Ejidos";"KM. 3 Carretera ""Los Ejidos - PIURA";7/05/2024 07:06;7/05/2024 07:07;7/05/2024 07:07
+450;40701;Explanada del Castillo Forga;NULL;MOLLENDO - AREQUIPA;9/05/2024 10:41;1/03/2025 09:39;NULL
+451;40702;Explanada del Castillo Forja;NULL;COCACHACRA - AREQUIPA;9/05/2024 11:47;10/05/2024 10:30;NULL
+452;250101;RECREO MAKAMBO;NULL;CALLERIA - UCAYALI;10/05/2024 07:12;10/05/2024 07:12;NULL
+453;220601;Concha AcÃºstica Juanjui;NULL;JUANJUÃ - SAN MARTÃN;10/05/2024 08:13;10/05/2024 08:13;NULL
+454;100601;Playa Tingo;TINGO MARÃA;TINGO MARÃA - RUPA-RUPA - HUÃNUCO;10/05/2024 10:58;15/05/2025 13:29;NULL
+455;60101;Coliseo Qhapac Ã‘an;NULL;CAJAMARCA;13/05/2024 04:47;13/05/2024 04:47;NULL
+456;80101;Hacienda LLaullipata;NULL;CUSCO;13/05/2024 05:21;20/05/2024 13:44;NULL
+457;200101;Estadio Municipal de Curamori;NULL;PIURA;15/05/2024 05:47;15/05/2024 05:47;NULL
+458;200101;Fundo Stewart;NULL;PIURA;15/05/2024 07:14;15/05/2024 07:14;NULL
+459;20101;Real Hotel HuascarÃ¡n;Av. Centenario NÂ° 1160;Av. Centenario NÂ° 1160 - HUARAZ - ÃNCASH;16/05/2024 04:14;16/05/2024 04:14;NULL
+460;120601;EL ENCANTO DE LA SELVA TZANCUVATZIARI;ALEJANDRO ALIAGA S/N;ALEJANDRO ALIAGA S/N - SATIPO - JUNÃN;17/05/2024 05:03;17/05/2024 05:03;NULL
+461;150117;ESTADIO GUADALUPANO;Av. AngÃ©lica Gamarra cuadra 3;Av. AngÃ©lica Gamarra cuadra 3 - LOS OLIVOS - LIMA;20/05/2024 06:06;20/05/2024 06:06;NULL
+462;150119;Green Arena;Carretera Panamericana Sur Km 29.50;Carretera Panamericana Sur Km 29.50 - LURIN - LIMA;20/05/2024 09:22;22/05/2024 11:24;NULL
+463;150101;Cementerio PresbÃ­tero Maestro;Av. Ancash 1611;Av. Ancash 1611 - LIMA;21/05/2024 06:09;21/05/2024 06:09;NULL
+464;40520;Complejo Deportivo Los Palitos;NULL;MAJES - AREQUIPA;21/05/2024 12:20;21/05/2024 12:20;NULL
+465;150130;Disco Mandarin Club;Av. Javier Prado Este 1860;Av. Javier Prado Este 1860 - SAN BORJA - LIMA;22/05/2024 10:37;22/05/2024 10:37;NULL
+466;100101;Rinconcito HuanuqueÃ±o;JirÃ³n 2 de Mayo;JirÃ³n 2 de Mayo - HUANUCO - HUÃNUCO;23/05/2024 07:25;23/05/2024 07:25;NULL
+467;120107;Finca Madero;Calle Real 2315;Calle Real 2315 - CHILCA - JUNÃN;24/05/2024 05:24;24/05/2024 05:24;NULL
+468;150103;Centro Provincial Carhuaz;Los Canarios 429;Los Canarios 429 - ATE - LIMA;24/05/2024 12:21;24/05/2024 12:21;NULL
+469;70106;Estadio Municipal Facundo RamÃ­rez Aguilar;NULL;VENTANILLA - CALLAO;25/05/2024 04:32;12/08/2024 11:38;NULL
+470;230101;Casa Blanca;Av. Cristo Rey 220;Av. Cristo Rey 220 - TACNA;28/05/2024 07:55;28/05/2024 07:55;NULL
+471;160101;Los Bungalows de Pampachica;Guardia Civil 1910;Guardia Civil 1910 - IQUITOS - LORETO;28/05/2024 11:21;28/05/2024 11:21;NULL
+472;50104;Recreo Las Vegas;Av. Los Libertados 302;Av. Los Libertados 302 - CARMEN ALTO - AYACUCHO;29/05/2024 05:08;29/05/2024 05:08;NULL
+473;150132;Explanada del Mercado Sarita Colonia;NULL;SAN JUAN DE LURIGANCHO - LIMA;29/05/2024 05:29;29/05/2024 05:29;NULL
+474;20801;Explanada El Encanto de mi Tierra;NULL;CASMA - ÃNCASH;29/05/2024 15:34;29/05/2024 15:34;NULL
+475;240101;Hotel Sol y Palmeras;NULL;TUMBES;31/05/2024 04:53;31/05/2024 04:53;NULL
+476;240101;Sol y Palmeras;NULL;TUMBES;31/05/2024 04:54;31/05/2024 04:54;NULL
+477;200107;Estadio 27 de Julio;NULL;CURA MORI - PIURA;3/06/2024 08:16;3/06/2024 08:16;NULL
+478;100101;Centro de Esparcimiento del Arena BambÃº - Tingo MarÃ­a;NULL;HUANUCO - HUÃNUCO;3/06/2024 08:32;3/06/2024 08:32;NULL
+479;60101;Puntal Sal;NULL;CAJAMARCA;4/06/2024 04:52;4/06/2024 04:52;NULL
+480;130101;Club Dema;Av. Mansiche 1760;Av. Mansiche 1760 - TRUJILLO - LA LIBERTAD;5/06/2024 04:46;5/06/2024 04:46;NULL
+481;150103;Central FlorklÃ³rica Puno;Av. Las torres #349;Av. Las torres #349 - ATE - LIMA;6/06/2024 10:52;6/06/2024 10:52;NULL
+482;80903;Estadio Municipal de Huyro;NULL;HUAYOPATA - CUSCO;7/06/2024 10:21;7/06/2024 10:21;NULL
+483;140101;La Explanada PerÃº;NULL;CHICLAYO - LAMBAYEQUE;8/06/2024 05:20;8/06/2024 05:20;NULL
+484;140108;Villa Deportiva MonsefÃº;NULL;MONSEFU - LAMBAYEQUE;8/06/2024 11:00;8/06/2024 11:00;NULL
+485;150132;Parque Zonal Wiracocha;AV PROCERES DE LA INDEPENDENCIA 15431;AV PROCERES DE LA INDEPENDENCIA 15431 - SAN JUAN DE LURIGANCHO - LIMA;10/06/2024 05:22;12/06/2024 08:06;NULL
+486;120114;Fontana Lounge Bar;Jr. Circuito Los Heroes 526 Urb. Piopata;Jr. Circuito Los Heroes 526 Urb. Piopata - EL TAMBO - JUNÃN;11/06/2024 10:10;11/06/2024 10:10;NULL
+487;21801;Restaurant DoÃ±a Esperanza;NULL;CHIMBOTE - ÃNCASH;13/06/2024 12:17;13/06/2024 12:17;NULL
+488;150122;McCarthy's Irish Pub Lima;C. 2 de Mayo 220;C. 2 de Mayo 220 - MIRAFLORES - LIMA;14/06/2024 11:27;14/06/2024 11:27;NULL
+489;150142;Complejo Deportivo Quinches;Av. 1 de Mayo;Av. 1 de Mayo - VILLA EL SALVADOR - LIMA;14/06/2024 15:52;14/06/2024 15:52;NULL
+490;150501;Auditorio de la Casa de Cultura;Mariscal Benavides 1370;Mariscal Benavides 1370 - SAN VICENTE DE CAÃ‘ETE - LIMA;17/06/2024 10:42;17/06/2024 10:52;NULL
+491;40101;Av. de las convenciones / Cerro Juli;NULL;AREQUIPA;17/06/2024 12:48;17/06/2024 12:48;NULL
+492;120114;La Caleza Real;Av. Mariscal Castilla 1860;Av. Mariscal Castilla 1860 - EL TAMBO - JUNÃN;18/06/2024 04:59;18/06/2024 04:59;NULL
+493;40101;El mejor local;NULL;AREQUIPA;18/06/2024 07:39;18/06/2024 07:39;NULL
+494;200101;Auditorio de la Universidad Nacional de Piura;Urb. Miraflores S/N, Castilla, 20002;Urb. Miraflores S/N, Castilla, 20002 - PIURA;19/06/2024 07:54;19/06/2024 07:54;NULL
+495;150117;Campus Unicachi;Av. Proceres 8087;Av. Proceres 8087 - SAN MARTÃN DE PORRES - LIMA;22/06/2024 08:52;22/06/2024 08:52;NULL
+496;150103;Club Internacional Santa Clara;km12 Carretera central, ref paradero pista nueva;km12 Carretera central, ref paradero pista nueva - ATE - LIMA;24/06/2024 10:15;24/06/2024 10:15;NULL
+497;150137;CENTRO SOCIAL COCHAS;Av. NICOLAS AYLLON NÂ° 3232;Av. NICOLAS AYLLON NÂ° 3232 - SANTA ANITA - LIMA;25/06/2024 10:57;25/06/2024 10:57;NULL
+498;200101;Colegio Salesiano Don Bosco;Parque San Juan Bosco;Parque San Juan Bosco - PIURA;26/06/2024 07:47;26/06/2024 07:47;NULL
+499;150112;AV TUPAC AMARU ALAMAEDA CONTINSUYO SKATE PARK;INDEPENDENCIA;INDEPENDENCIA - INDEPENDENCIA - LIMA;27/06/2024 07:37;27/06/2024 07:37;NULL
+500;210101;Club Aroma Discoteca;Juliaca;Juliaca - PUNO;27/06/2024 11:46;27/06/2024 11:46;NULL
+501;120301;Estadio Pescheira;La Merced Chanchamayo;La Merced Chanchamayo - CHANCHAMAYO - JUNÃN;28/06/2024 07:08;28/06/2024 07:08;NULL
+502;211101;Club Roma Discoteca;NULL;JULIACA - PUNO;29/06/2024 04:29;29/06/2024 04:29;NULL
+503;150101;Pulso Club;Av. Petit Thouars 212;Av. Petit Thouars 212 - LIMA;1/07/2024 08:01;1/07/2024 08:01;NULL
+504;100101;Local Recreo de Chacra;NULL;HUANUCO - HUÃNUCO;3/07/2024 05:11;3/07/2024 05:11;NULL
+505;200706;Club Deportivo El Diez;NULL;MANCORA - PIURA;3/07/2024 06:06;3/07/2024 06:06;NULL
+506;240101;Sea Land Lounge Bar;Panamericana Norte MZ A - LT19;Panamericana Norte MZ A - LT19 - TUMBES;4/07/2024 12:40;4/07/2024 12:40;NULL
+507;60101;Coliseo de la Universidad Nacional de Cajamarca;NULL;CAJAMARCA;6/07/2024 08:36;6/07/2024 08:36;NULL
+508;50101;Milwa Country Club;Av. Javier Heraud 560;Av. Javier Heraud 560 - AYACUCHO;8/07/2024 05:06;8/07/2024 05:06;NULL
+509;150133;Bla Restaurante TurÃ­stico - SalÃ³n de baile;Av. las Vegas 809;Av. las Vegas 809 - SAN JUAN DE MIRAFLORES - LIMA;8/07/2024 06:27;8/07/2024 06:27;NULL
+510;211101;El Padrino Eventos;Costado de Club Roma;Costado de Club Roma - JULIACA - PUNO;8/07/2024 07:21;8/07/2024 07:21;NULL
+511;150143;Yawar Plaza;NULL;VILLA MARÃA DEL TRIUNFO - LIMA;8/07/2024 10:09;8/07/2024 10:09;NULL
+512;220401;Estadio Municipal;NULL;SAPOSOA - SAN MARTÃN;9/07/2024 04:36;9/07/2024 04:36;NULL
+513;220101;Campo Ferial Ayaymama;NULL;MOYOBAMBA - SAN MARTÃN;9/07/2024 04:42;9/07/2024 04:42;NULL
+514;150122;Mercado San RamÃ³n;CALLE SAN RAMON NÂ° 290;CALLE SAN RAMON NÂ° 290 - MIRAFLORES - LIMA;9/07/2024 06:13;9/07/2024 06:13;NULL
+515;150122;Teatro Juana Alarco de Dammert;AV. ALFREDO BENAVIDES 2315;AV. ALFREDO BENAVIDES 2315 - MIRAFLORES - LIMA;9/07/2024 10:44;9/07/2024 10:44;NULL
+516;150122;El Miraflorino;Espacio San RamÃ³n, Calle San RamÃ³n 290 (2do Nivel);Espacio San RamÃ³n, Calle San RamÃ³n 290 (2do Nivel) - MIRAFLORES - LIMA;9/07/2024 12:30;9/07/2024 12:30;NULL
+517;150143;Yawar Plaza Mamara - San Gabriel;NULL;VILLA MARÃA DEL TRIUNFO - LIMA;10/07/2024 04:04;10/07/2024 04:04;NULL
+518;140108;Estadio Municipal de MonsefÃº;NULL;MONSEFU - LAMBAYEQUE;10/07/2024 11:13;10/07/2024 11:13;NULL
+519;210101;PÃ©rgola JardÃ­n;NULL;PUNO;11/07/2024 10:20;11/07/2024 10:20;NULL
+520;230101;Bacana;Calle General Suarez S/N;Calle General Suarez S/N - TACNA;11/07/2024 12:23;11/07/2024 12:23;NULL
+521;250105;Bellaqueo Club;NULL;YARINACOCHA - UCAYALI;12/07/2024 06:10;12/07/2024 06:10;NULL
+522;250105;Bellaqueo Club;NULL;YARINACOCHA - UCAYALI;13/07/2024 07:08;13/07/2024 07:08;NULL
+523;210101;Cuper Palace;NULL;PUNO;15/07/2024 04:48;15/07/2024 04:48;NULL
+524;180101;Fundo El Platanal;NULL;MOQUEGUA;15/07/2024 05:42;15/07/2024 05:42;NULL
+525;21001;Colegio Manuel Gonzales Prada;NULL;HUARI - ÃNCASH;15/07/2024 06:56;15/07/2024 06:56;NULL
+526;150119;Explanada Super Leo;NULL;LURIN - LIMA;15/07/2024 07:11;15/07/2024 07:11;NULL
+527;150125;El Oasis;Paradero NorteÃ±o;Paradero NorteÃ±o - PUENTE PIEDRA - LIMA;15/07/2024 11:13;15/07/2024 11:13;NULL
+528;60101;Feria Fongal;NULL;CAJAMARCA;15/07/2024 11:15;15/07/2024 11:15;NULL
+529;40101;Complejo Magnopata;NULL;AREQUIPA;15/07/2024 12:07;15/07/2024 12:07;NULL
+530;150110;Parque Zonal Sinchi Roca;Av Universitaria con Av Los Incas puerta 5;Av Universitaria con Av Los Incas puerta 5 - COMAS - LIMA;18/07/2024 04:11;18/07/2024 04:11;NULL
+531;150133;Local PerÃº Fest;Al costado del parque Huayna Capac;Al costado del parque Huayna Capac - SAN JUAN DE MIRAFLORES - LIMA;19/07/2024 04:12;19/07/2024 04:12;NULL
+532;150133;Mercado Familias Unidas;NULL;SAN JUAN DE MIRAFLORES - LIMA;19/07/2024 12:29;19/07/2024 12:29;NULL
+533;150108;Explanada Agua Dulce;NULL;CHORRILLOS - LIMA;22/07/2024 12:01;22/07/2024 12:01;NULL
+534;220901;Explanada del Hipermercado Santa Anita;NULL;TARAPOTO - SAN MARTÃN;24/07/2024 04:56;24/07/2024 04:56;NULL
+535;80901;Feria Sambaray;NULL;SANTA ANA - CUSCO;25/07/2024 10:29;25/07/2024 10:29;NULL
+536;80101;Feria Sambaray Quillabamba;NULL;CUSCO;25/07/2024 10:43;25/07/2024 10:43;NULL
+537;70101;Plaza Independencia (Inicio de la Av. SÃ¡enz PeÃ±a);NULL;CALLAO;25/07/2024 11:57;25/07/2024 11:57;NULL
+538;150131;Teatro Auditorio Colegio Alfonso Ugarte;Av.Paseo de la Republica cdra.35;Av.Paseo de la Republica cdra.35 - SAN ISIDRO - LIMA;26/07/2024 05:02;26/07/2024 05:02;NULL
+539;110101;Boulevard Club;Camino a huacachina S/N, Ica, Peru;Camino a huacachina S/N, Ica, Peru - ICA;26/07/2024 06:55;26/07/2024 06:55;NULL
+540;110301;Balneario de Paracas;NULL;NASCA - ICA;26/07/2024 09:57;26/07/2024 09:57;NULL
+541;150102;Plaza de Armas Los Rosales;Km 39 Panamericana Norte;Km 39 Panamericana Norte - ANCÃ“N - LIMA;27/07/2024 05:38;27/07/2024 05:38;NULL
+542;150132;Club Huancarama;Av. PirÃ¡mide del Sol 950 Zarate;Av. PirÃ¡mide del Sol 950 Zarate - SAN JUAN DE LURIGANCHO - LIMA;30/07/2024 06:56;30/07/2024 06:57;NULL
+543;150113;Centro de Convenciones MaracanÃ¡;Jr. HuÃ¡scar 1652;Jr. HuÃ¡scar 1652 - JESÃšS MARÃA - LIMA;31/07/2024 08:08;31/07/2024 08:08;NULL
+544;150501;Concha AcÃºstica del Coliseo Lolo Fernandez;NULL;SAN VICENTE DE CAÃ‘ETE - LIMA;31/07/2024 10:46;31/07/2024 10:46;NULL
+545;150122;Espacio San RamÃ³n (ex calle las pizzas);CALLE SAN RAMON NÂ° 290 - MIRAFLORES - LIMA;CALLE SAN RAMON NÂ° 290 - MIRAFLORES - LIMA - MIRAFLORES - LIMA;31/07/2024 14:43;31/07/2024 14:43;NULL
+546;140307;Complejo Deportivo San Vicente De Paul Motupe;NULL;MOTUPE - LAMBAYEQUE;1/08/2024 05:35;1/08/2024 05:35;NULL
+547;40101;Teatro del Palacio de Bellas Artes;Av Parra 204;Av Parra 204 - AREQUIPA;1/08/2024 05:58;1/08/2024 05:58;NULL
+548;230101;Complejo Humboldt;NULL;TACNA;1/08/2024 06:02;1/08/2024 06:02;NULL
+549;150118;Estadio de Nieveria Huachipa;NULL;LURIGANCHO - LIMA;1/08/2024 13:48;1/08/2024 13:48;NULL
+550;200801;Centro Recreacional Los Rosales;NULL;SECHURA - PIURA;2/08/2024 06:41;2/08/2024 06:41;NULL
+551;150118;Mercado La Parada Nieveria;NULL;LURIGANCHO - LIMA;2/08/2024 10:37;2/08/2024 11:55;NULL
+552;80101;Coliseo Casa de la Juventud;NULL;CUSCO;2/08/2024 12:24;2/08/2024 12:24;NULL
+553;140101;Casa Andina;Federico Villarreal 115;Federico Villarreal 115 - CHICLAYO - LAMBAYEQUE;5/08/2024 12:00;5/08/2024 12:00;NULL
+554;30101;Explanada de Tamburco;NULL;ABANCAY - APURÃMAC;5/08/2024 12:42;5/08/2024 12:42;NULL
+555;240301;Estadio 24 de Julio;NULL;ZARUMILLA - TUMBES;6/08/2024 06:14;6/08/2024 06:14;NULL
+556;150103;Coliseo Internacional Puno;Av. Las Torres 349;Av. Las Torres 349 - ATE - LIMA;7/08/2024 11:23;7/08/2024 11:23;NULL
+557;150103;Complejo Dionys;km 9.7, Ctra. Central;km 9.7, Ctra. Central - ATE - LIMA;9/08/2024 12:03;9/08/2024 12:03;NULL
+558;61101;Estadio San Pedro;NULL;SAN MIGUEL - CAJAMARCA;10/08/2024 07:43;10/08/2024 07:43;NULL
+559;230108;Costado del Polideportivo Pocollay;NULL;POCOLLAY - TACNA;12/08/2024 06:24;12/08/2024 06:24;NULL
+560;230101;El mejor local;NULL;TACNA;13/08/2024 09:59;13/08/2024 09:59;NULL
+561;100111;Explanada La Cochera;(Costado de Atachagua);(Costado de Atachagua) - PILLCO MARCA - HUÃNUCO;13/08/2024 11:41;13/08/2024 11:41;NULL
+562;190104;Explanada del Campo Ferial de Canchacucho;NULL;HUAYLLAY - PASCO;13/08/2024 16:25;13/08/2024 16:25;NULL
+563;150132;PeÃ±a Viejo Verde;Paradero 4 Av. Wiese Boulevard de Mariscal CÃ¡ceres;Paradero 4 Av. Wiese Boulevard de Mariscal CÃ¡ceres - SAN JUAN DE LURIGANCHO - LIMA;15/08/2024 11:30;15/08/2024 11:30;NULL
+564;110301;Villa Eucalyptus;NULL;NASCA - ICA;16/08/2024 12:51;16/08/2024 12:51;NULL
+565;150104;Arena Bar;Catalino Miranda 154;Catalino Miranda 154 - BARRANCO - LIMA;17/08/2024 12:18;17/08/2024 12:18;NULL
+566;200801;Fundo Kavipor;NULL;SECHURA - PIURA;17/08/2024 14:24;17/08/2024 14:24;NULL
+567;50101;Teatro Municipal de Huamanga;NULL;AYACUCHO;19/08/2024 15:02;19/08/2024 15:02;NULL
+568;140101;El Shuro;NULL;CHICLAYO - LAMBAYEQUE;21/08/2024 08:52;21/08/2024 08:52;NULL
+569;140118;El Shuro;NULL;CHICLAYO - LAMBAYEQUE;21/08/2024 09:20;21/08/2024 09:20;NULL
+570;160201;Recreo TurÃ­stico Oasis Yurimaguas;Jiron Libertad 1051;Jiron Libertad 1051 - YURIMAGUAS - LORETO;21/08/2024 13:01;21/08/2024 13:01;NULL
+571;60101;PUNTA HERMOSA;JR. Mosqueta con Av. Industrial al costado del terminal terrestre;JR. Mosqueta con Av. Industrial al costado del terminal terrestre - CAJAMARCA;23/08/2024 10:56;23/08/2024 10:56;NULL
+572;150101;EL MEJOR LOCAL;NULL;LIMA;29/08/2024 10:54;29/08/2024 10:54;NULL
+573;150104;Centro de ConvencionesÂ Arena;Calle Catalino Miranda 154;Calle Catalino Miranda 154 - BARRANCO - LIMA;29/08/2024 11:59;29/08/2024 11:59;NULL
+574;150116;Discoteca Lift;Discoteca Lift mariano carranza 1271, Urb. Santa Beatriz Cercado de lima;Discoteca Lift mariano carranza 1271, Urb. Santa Beatriz Cercado de lima - LIMA;29/08/2024 16:01;29/08/2024 16:01;NULL
+575;240101;Complejo Alberto Terranova;NULL;TUMBES;30/08/2024 12:30;30/08/2024 12:30;NULL
+576;150101;Discoteca Lift;Discoteca Lift mariano carranza 1271, Urb. Santa Beatriz Cercado de lima;Discoteca Lift mariano carranza 1271, Urb. Santa Beatriz Cercado de lima - LIMA;2/09/2024 15:57;2/09/2024 15:57;NULL
+577;150101;Discoteca Lift;Discoteca Lift mariano carranza 1271, Urb. Santa Beatriz Cercado de lima;Discoteca Lift mariano carranza 1271, Urb. Santa Beatriz Cercado de lima - LIMA;2/09/2024 17:31;2/09/2024 17:31;NULL
+578;150401;Plaza de toros Â¨ El ToreoÂ¨;NULL;CANTA - LIMA;2/09/2024 17:50;2/09/2024 17:50;NULL
+579;20101;Monterrey Park;Av. Centenario S/N - Monterrey - Huaraz;Av. Centenario S/N - Monterrey - Huaraz - HUARAZ - ÃNCASH;3/09/2024 15:46;3/09/2024 15:46;NULL
+580;20101;Monterrey Park;Av. Centenario S/N - Monterrey - Huaraz;Av. Centenario S/N - Monterrey - Huaraz - HUARAZ - ÃNCASH;3/09/2024 15:46;3/09/2024 15:46;NULL
+581;150135;Cardano Discoteca;Av. Antunez de Mayolo 2588;Av. Antunez de Mayolo 2588 - SAN MARTÃN DE PORRES - LIMA;3/09/2024 17:23;3/09/2024 17:23;NULL
+582;140108;Mi Bertitha;NULL;MONSEFU - LAMBAYEQUE;4/09/2024 13:07;4/09/2024 13:07;NULL
+583;190301;Centro de Convenciones Cemayu;NULL;OXAPAMPA - PASCO;5/09/2024 17:11;5/09/2024 17:11;NULL
+584;120101;IBIZA DISCO CLUB;JR. JULIO C. TELLO 425 â€“ EL TAMBO;JR. JULIO C. TELLO 425 â€“ EL TAMBO - HUANCAYO - JUNÃN;5/09/2024 17:50;5/09/2024 17:50;NULL
+585;150131;Teatro Nos PUCP;Av. Camino Real 1037;Av. Camino Real 1037 - SAN ISIDRO - LIMA;6/09/2024 09:48;6/09/2024 09:48;NULL
+586;150115;El BernabÃ©u;Av. San Luis NÂ° 826;Av. San Luis NÂ° 826 - LA VICTORIA - LIMA;6/09/2024 11:54;6/09/2024 11:54;NULL
+587;110101;EL JARDIN DE LA CUMBIA;NULL;ICA;6/09/2024 12:52;6/09/2024 12:52;NULL
+588;150101;Teatro Manuel A. Segura;Jr. Huancavelica 261, Lima;Jr. Huancavelica 261, Lima - LIMA;6/09/2024 15:22;6/09/2024 15:22;NULL
+589;80105;Estadio Diego Quispe Ttito;Avenida La Cultura S/N;Avenida La Cultura S/N - SAN SEBASTIAN - CUSCO;6/09/2024 15:44;6/09/2024 15:44;NULL
+590;150134;El BernabÃ©u;Av. San Luis NÂ° 826;Av. San Luis NÂ° 826 - LA VICTORIA - LIMA;7/09/2024 14:08;7/09/2024 14:08;NULL
+591;150512;Plaza de Armas;NULL;QUILMANA - LIMA;9/09/2024 12:40;9/09/2024 12:40;NULL
+592;250403;Club Tacabamba;Panamericana Sur KM 746 Chosica del Norte frente a la fÃ¡brica de hielo San Jorge - LA VICTORIA;Panamericana Sur KM 746 Chosica del Norte frente a la fÃ¡brica de hielo San Jorge - LA VICTORIA - CHICLAYO;10/09/2024 10:30;10/09/2024 12:52;NULL
+593;130104;Explanada de Huanchaco;NULL;HUANCHACO - LA LIBERTAD;10/09/2024 16:08;10/09/2024 16:08;NULL
+594;200110;CENTRO CAMPESTRE JOSEFINA CASA CLUB;CARRETERA LA UNION PIURA S/N ALTURA DEL KM 117;CARRETERA LA UNION PIURA S/N ALTURA DEL KM 117 - LA UNIÃ“N - PIURA;11/09/2024 17:07;11/09/2024 17:07;NULL
+595;150135;Campus Unicachi;Av. Proceres 8087;Av. Proceres 8087 - SAN MARTÃN DE PORRES - LIMA;13/09/2024 16:19;13/09/2024 16:19;NULL
+596;110101;Estadio JosÃ© Picasso Peratta Campo NÂ°2;NULL;ICA;16/09/2024 09:57;16/09/2024 09:57;NULL
+597;150201;Khiusan Club;Av. Lima 791;Av. Lima 791 - BARRANCA - LIMA;18/09/2024 15:16;18/09/2024 15:16;NULL
+598;170101;Explanada del IPD;Av. Ernesto Rivera cdra 13;Av. Ernesto Rivera cdra 13 - TAMBOPATA - MADRE DE DIOS;21/09/2024 09:45;21/09/2024 09:45;NULL
+599;150509;"Centro Comercial ""Sur Plaza""";Antigua Panamericana Sur KM 8.5;Antigua Panamericana Sur KM 8.5 - MALA - LIMA;21/09/2024 12:57;21/09/2024 12:57;NULL
+600;150501;Santa Felipa;Av. Mariscal Benavides S/N;Av. Mariscal Benavides S/N - SAN VICENTE DE CAÃ‘ETE - LIMA;21/09/2024 14:03;21/09/2024 14:03;NULL
+601;150122;Casa PerÃº clown;Av. Arequipa 4620;Av. Arequipa 4620 - MIRAFLORES - LIMA;23/09/2024 16:16;15/04/2025 17:23;NULL
+602;150104;Teatro Barranco;Av. Almte. Miguel Grau 701;Av. Almte. Miguel Grau 701 - BARRANCO - LIMA;24/09/2024 12:33;24/09/2024 12:33;NULL
+603;110301;El Gigante de la Cumbia;NULL;NASCA - ICA;25/09/2024 09:33;25/09/2024 09:33;NULL
+604;110304;Club de Empleados;NULL;MARCONA - ICA;25/09/2024 10:23;25/09/2024 10:24;NULL
+605;200101;El mejor local;NULL;PIURA;25/09/2024 17:11;25/09/2024 17:12;NULL
+606;110301;Piscina Campestre Los Ficus;Panamericana Sur. Curve Bajo S/N;Panamericana Sur. Curve Bajo S/N - NASCA - ICA;26/09/2024 09:09;26/09/2024 09:09;NULL
+607;150122;Explanada de la playa Los Delfines;NULL;MIRAFLORES - LIMA;28/09/2024 13:02;28/09/2024 13:02;NULL
+608;110501;El Golazo;NULL;PISCO - ICA;30/09/2024 09:35;30/09/2024 09:35;NULL
+609;150123;Estadio Municipal de Pachacamac;NULL;PACHACAMAC - LIMA;30/09/2024 10:32;30/09/2024 10:32;NULL
+610;150132;Cusipampa;Av. Los Duraznos 388;Av. Los Duraznos 388 - SAN JUAN DE LURIGANCHO - LIMA;30/09/2024 12:14;30/09/2024 12:14;NULL
+611;230101;Luau Frontera;NULL;TACNA;2/10/2024 15:21;2/10/2024 15:21;NULL
+612;200114;Terminal Terrestre;NULL;TAMBO GRANDE - PIURA;2/10/2024 16:49;2/10/2024 16:49;NULL
+613;150113;CLUB APURIMAC;Av. Brasil 259;Av. Brasil 259 - JESÃšS MARÃA - LIMA;3/10/2024 11:20;3/10/2024 11:20;NULL
+614;180301;Explanada Nuevo Ilo;NULL;ILO - MOQUEGUA;3/10/2024 15:48;3/10/2024 15:48;NULL
+615;230101;Solari Plaza;NULL;TACNA;3/10/2024 16:23;3/10/2024 16:23;NULL
+616;230101;Restaurant La Frontera;General Suarez 310;General Suarez 310 - TACNA;4/10/2024 09:19;4/10/2024 09:40;NULL
+617;130107;Ex Mochica de Moche;NULL;MOCHE - LA LIBERTAD;7/10/2024 15:10;7/10/2024 15:10;NULL
+618;120101;Palacio Blanco;Jr Loreto 1034;Jr Loreto 1034 - HUANCAYO - JUNÃN;9/10/2024 14:36;9/10/2024 14:36;NULL
+619;180301;Monkey Beach Club ILO;NULL;ILO - MOQUEGUA;11/10/2024 15:02;11/10/2024 15:02;NULL
+620;200706;HOTEL SOL Y MAR MANCORA;NULL;MANCORA - PIURA;12/10/2024 17:29;12/10/2024 17:29;NULL
+621;150509;Dignidad Nacional de Mala;NULL;MALA - LIMA;16/10/2024 14:00;16/10/2024 14:00;NULL
+622;230101;CENTRO COMERCIAL BOLIVIA;Avenida Industrial 1636;Avenida Industrial 1636 - TACNA;17/10/2024 10:20;17/10/2024 10:20;NULL
+623;130104;Club Trujillo;Av Mansiche 846 Carretera a Huanchaco;Av Mansiche 846 Carretera a Huanchaco - TRUJILLO - LA LIBERTAD;19/10/2024 12:26;21/10/2024 18:50;NULL
+624;150135;Parque Central Los Libertadores;NULL;SAN MARTÃN DE PORRES - LIMA;22/10/2024 09:33;22/10/2024 09:33;NULL
+625;200114;Villa Boulevard;NULL;TAMBO GRANDE - PIURA;23/10/2024 10:43;23/10/2024 10:43;NULL
+626;150104;La PeÃ±a del Carajo;Ca. Catalino Miranda 158;Ca. Catalino Miranda 158 - BARRANCO - LIMA;25/10/2024 10:38;25/10/2024 10:38;NULL
+627;150113;Teatro Peruano JaponÃ©s;Av. Gregorio Escobedo 803;Av. Gregorio Escobedo 803 - JESÃšS MARÃA - LIMA;25/10/2024 10:41;25/10/2024 10:41;NULL
+628;150103;Explanada C.C Plaza Vitarte;NULL;ATE - LIMA;28/10/2024 10:16;28/10/2024 10:16;NULL
+629;80901;Garden Fest;Francisca Zubiaga Cuadra 01;Francisca Zubiaga Cuadra 01 - SANTA ANA - CUSCO;30/10/2024 10:21;30/10/2024 10:21;NULL
+630;230101;ExÃ³tica Club;Av. Educadores;Av. Educadores - TACNA;5/11/2024 17:37;5/11/2024 17:37;NULL
+631;120114;Domos Los Pinos;Calle San CristÃ³bal 555 - 595;Calle San CristÃ³bal 555 - 595 - EL TAMBO - JUNÃN;6/11/2024 12:49;6/11/2024 12:49;NULL
+632;70104;Auditorio Leoncio Prado;AV. Costanera 1541;AV. Costanera 1541 - LA PERLA - CALLAO;6/11/2024 14:05;6/11/2024 14:05;NULL
+633;250402;Los Troncos Latin Disco;NULL;TALARA - PIURA;7/11/2024 09:32;28/12/2024 17:48;NULL
+634;50101;Pitahaya Lounge;Jr. 9 de diciembre 350;Jr. 9 de diciembre 350 - AYACUCHO;7/11/2024 14:34;7/11/2024 14:34;NULL
+635;150125;La Choza NÃ¡utica;Av Puente Piedra 2981 Km 27.5 Panamericana Norte;Av Puente Piedra 2981 Km 27.5 Panamericana Norte - PUENTE PIEDRA - LIMA;7/11/2024 17:15;7/11/2024 17:15;NULL
+636;150108;Cine Olaya;Av. JosÃ© Olaya 645;Av. JosÃ© Olaya 645 - CHORRILLOS - LIMA;8/11/2024 16:33;8/11/2024 16:33;NULL
+637;200111;Estadio Joel Merino;Ref. AtrÃ¡s del Cementerio General;Ref. AtrÃ¡s del Cementerio General - LAS LOMAS - PIURA;9/11/2024 15:27;9/11/2024 15:27;NULL
+638;100608;Complejo Deportivo Aliaga;NULL;CASTILLO GRANDE - HUÃNUCO;11/11/2024 10:25;11/11/2024 10:25;NULL
+639;80901;Centro Recreacional La Pichanga - Quillabamba;NULL;SANTA ANA - CUSCO;12/11/2024 15:22;12/11/2024 15:22;NULL
+640;200104;Atlantis Club;NULL;CASTILLA - PIURA;15/11/2024 16:17;15/11/2024 16:17;NULL
+641;150135;Explanada de Unicachi Pro;NULL;SAN MARTÃN DE PORRES - LIMA;15/11/2024 17:09;15/11/2024 17:09;NULL
+642;150110;Katedral de la Cumbia;Explanada de Unicachi Pro;Explanada de Unicachi Pro - COMAS - LIMA;16/11/2024 13:51;16/11/2024 13:51;NULL
+643;130901;Local de Eventos Andes;NULL;HUAMACHUCO - LA LIBERTAD;18/11/2024 12:12;18/11/2024 12:12;NULL
+644;150132;El Padrino Club;Final de Av Wiesse de SJL a 3 cuadras del portÃ³n de Jicamarca Anexo 22;Final de Av Wiesse de SJL a 3 cuadras del portÃ³n de Jicamarca Anexo 22 - SAN JUAN DE LURIGANCHO - LIMA;18/11/2024 13:45;18/11/2024 13:45;NULL
+645;150125;Villa Chepita Royal;Av. Panamericana Norte KM 24.5 Shangri La;Av. Panamericana Norte KM 24.5 Shangri La - PUENTE PIEDRA - LIMA;18/11/2024 15:15;18/11/2024 15:15;NULL
+646;150118;Discoteca Mia;Av Lima Sur 945 - Chosica;Av Lima Sur 945 - Chosica - LURIGANCHO - LIMA;19/11/2024 11:20;19/11/2024 11:20;NULL
+647;150135;Katedral de la Cumbia;Av PrÃ³ceres de Huandoy 8120;Av PrÃ³ceres de Huandoy 8120 - SAN MARTÃN DE PORRES - LIMA;20/11/2024 11:50;20/11/2024 11:50;NULL
+648;150129;Luciana South Beach;Km 52 Antigua Panamericana Sur;Km 52 Antigua Panamericana Sur - SAN BARTOLO - LIMA;20/11/2024 15:30;20/11/2024 15:30;NULL
+649;200104;Fundo Lazo;NULL;CASTILLA - PIURA;21/11/2024 11:26;21/11/2024 11:26;NULL
+650;150103;Estadio Municipal Ate;NULL;ATE - LIMA;21/11/2024 12:58;21/11/2024 12:58;NULL
+651;110101;Aqulandia Ica;Calle Fray Ramon Rojas Nro 450, Cerro Prieto, Salas, Ica;Calle Fray Ramon Rojas Nro 450, Cerro Prieto, Salas, Ica - ICA;25/11/2024 15:42;25/11/2024 15:42;NULL
+652;110101;Aqulandia Ica;Calle Fray Ramon Rojas Nro 450, Cerro Prieto, Salas, Ica;Calle Fray Ramon Rojas Nro 450, Cerro Prieto, Salas, Ica - ICA;25/11/2024 15:42;25/11/2024 15:42;NULL
+653;110101;Aqualandia Ica;Calle Fray Ramon Rojas Nro 450, Cerro Prieto, Salas, Ica;Calle Fray Ramon Rojas Nro 450, Cerro Prieto, Salas, Ica - ICA;25/11/2024 15:43;25/11/2024 15:43;NULL
+654;150103;Estadio Andres Bedoya Diaz;Av. Alfonso Ugarte;Av. Alfonso Ugarte - ATE - LIMA;25/11/2024 17:15;25/11/2024 17:15;NULL
+655;110101;Fundo Las Palmeras;NULL;ICA;26/11/2024 11:03;26/11/2024 11:03;NULL
+656;150132;El Rancho de Pol;Av. Proceres De La Independencia 3074;Av. Proceres De La Independencia 3074 - SAN JUAN DE LURIGANCHO - LIMA;27/11/2024 12:33;27/11/2024 12:33;NULL
+657;30101;Complejo Recreacional Extremo;Av Inca Garcilaso - Costado Unamba;Av Inca Garcilaso - Costado Unamba - ABANCAY - APURÃMAC;28/11/2024 11:43;28/11/2024 11:43;NULL
+658;200101;Club Casino Militar;NULL;PIURA;28/11/2024 18:35;28/11/2024 18:35;NULL
+659;150121;TQL;Av La Marina 1604;Av La Marina 1604 - PUEBLO LIBRE - LIMA;2/12/2024 15:55;2/12/2024 15:55;NULL
+660;150128;Plaza de Acho;NULL;RÃMAC - LIMA;3/12/2024 18:34;3/12/2024 18:34;NULL
+661;60801;Plaza HÃ©roes de Cenepa;NULL;JAÃ‰N - CAJAMARCA;5/12/2024 16:02;5/12/2024 16:02;NULL
+662;250101;Club Piscinas El Bosque Resort Pucallpa;NULL;CALLERIA - UCAYALI;6/12/2024 16:13;6/12/2024 16:13;NULL
+663;200101;Colegio de Ingenieros;NULL;PIURA;9/12/2024 09:14;9/12/2024 09:14;NULL
+664;50101;La Higuera;Calle Corcobado 157;Calle Corcobado 157 - AYACUCHO;10/12/2024 17:10;10/12/2024 17:10;NULL
+665;150125;Villarica Club Recreacional;URB. LOS CEDROS B1;URB. LOS CEDROS B1 - PUENTE PIEDRA - LIMA;10/12/2024 17:43;10/12/2024 17:43;NULL
+666;230101;POLIDEPORTIVO LOS EDILES;CRUCE DE LA AVENIDA LOS EDUCADORES Y AVENIDA LOS POETAS;CRUCE DE LA AVENIDA LOS EDUCADORES Y AVENIDA LOS POETAS - TACNA;11/12/2024 10:45;11/12/2024 10:45;NULL
+667;150109;Rustica Cieneguilla;Lote 2 - 3 Urb. Sauce Alto (Alt. Nueva Toledo KM 25.5 Molle);Lote 2 - 3 Urb. Sauce Alto (Alt. Nueva Toledo KM 25.5 Molle) - CIENEGUILLA - LIMA;11/12/2024 12:48;11/12/2024 12:48;NULL
+668;60101;Explanada Los Patos;NULL;CAJAMARCA;11/12/2024 16:21;11/12/2024 16:21;NULL
+669;200705;Rustica Vichayito;Antigua Panamericana Norte 1211;Antigua Panamericana Norte 1211 - LOS ORGANOS - PIURA;11/12/2024 16:58;11/12/2024 16:58;NULL
+670;21801;Explanada Vivero Forestal;NULL;CHIMBOTE - ÃNCASH;13/12/2024 15:10;13/12/2024 15:10;NULL
+671;250101;Ibiza Club Pucallpa;NULL;CALLERIA - UCAYALI;13/12/2024 16:25;13/12/2024 16:25;NULL
+672;70101;Centro de Convenciones La Ley;Ex Colonial 6131 - Callao;Ex Colonial 6131 - Callao - CALLAO;16/12/2024 12:19;16/12/2024 12:19;NULL
+673;70101;Centro de Convenciones La Ley;Ex Colonial 6131 - Callao;Ex Colonial 6131 - Callao - CALLAO;16/12/2024 12:20;16/12/2024 12:20;NULL
+674;70101;Centro de Convenciones La Ley;Ex Colonial 6131 - Callao;Ex Colonial 6131 - Callao - CALLAO;16/12/2024 12:20;16/12/2024 12:20;NULL
+675;70101;Centro de Convenciones La Ley;Ex Colonial 6131 - Callao;Ex Colonial 6131 - Callao - CALLAO;16/12/2024 12:21;16/12/2024 12:21;NULL
+676;61311;I.E. Primaria 10706 SalÃ³n de Usos Multiples;Yauyucan Santa Cruz;Yauyucan Santa Cruz - YAUYUCAN - CAJAMARCA;19/12/2024 14:09;19/12/2024 14:09;NULL
+677;150113;Barley Bar;NULL;JESÃšS MARÃA - LIMA;20/12/2024 16:22;20/12/2024 16:22;NULL
+678;140101;Villa Principe;ProlongaciÃ³n Bolognesi;ProlongaciÃ³n Bolognesi - CHICLAYO - LAMBAYEQUE;21/12/2024 09:37;21/12/2024 09:37;NULL
+679;40104;Estadio Pachacutec;NULL;CERRO COLORADO - AREQUIPA;21/12/2024 13:11;21/12/2024 13:11;NULL
+680;130613;Explanada Huanchaco;NULL;SINSICAP - LA LIBERTAD;24/12/2024 09:28;24/12/2024 09:28;NULL
+681;150135;Ex Latinos;Cuadra 3277 Av. PerÃº. San MartÃ­n de Porres;Cuadra 3277 Av. PerÃº. San MartÃ­n de Porres - SAN MARTÃN DE PORRES - LIMA;2/01/2025 15:04;2/01/2025 15:04;NULL
+682;120101;Centro de Convenciones Paraiso;NULL;HUANCAYO - JUNÃN;3/01/2025 09:54;3/01/2025 09:54;NULL
+683;150108;Circulo Militar Sede Tarapaca;Av. Defensores del Morro 1170;Av. Defensores del Morro 1170 - CHORRILLOS - LIMA;3/01/2025 12:42;3/01/2025 12:42;NULL
+684;230101;Quinta Diaz;Frente a la Casa Blanca - Ovalo Cristo Rey;Frente a la Casa Blanca - Ovalo Cristo Rey - TACNA;6/01/2025 11:10;6/01/2025 11:10;NULL
+685;180301;Concha AcÃºstica;Av. AndrÃ©s Avelino CÃ¡ceres;Av. AndrÃ©s Avelino CÃ¡ceres - ILO - MOQUEGUA;6/01/2025 11:32;6/01/2025 11:32;NULL
+686;120401;Villa Victoria;Plaza Antigua de Yauyos - Jr Primero de Mayo 481;Plaza Antigua de Yauyos - Jr Primero de Mayo 481 - JAUJA - JUNÃN;6/01/2025 17:10;6/01/2025 17:10;NULL
+687;40201;Playa La Punta;NULL;CAMANÃ - AREQUIPA;6/01/2025 17:35;6/01/2025 17:35;NULL
+688;40705;Estadio Municipal de MejÃ­a;NULL;MEJIA - AREQUIPA;6/01/2025 18:08;6/01/2025 18:08;NULL
+689;140116;Centro de Esparcimiento;Centro de Esparcimiento;Centro de Esparcimiento - CAYALTI - LAMBAYEQUE;7/01/2025 12:45;7/01/2025 12:45;NULL
+690;20801;Luau Club;Av. Huaraz S/N;Av. Huaraz S/N - CASMA - ÃNCASH;7/01/2025 12:50;7/01/2025 12:50;NULL
+691;150135;Av. Yurumayo;Frente al Colegio Innova School cruce con Av. A con Av. Canta Callao;Frente al Colegio Innova School cruce con Av. A con Av. Canta Callao - SAN MARTÃN DE PORRES - LIMA;7/01/2025 15:52;7/01/2025 15:52;NULL
+692;150135;Villa Carmencita;Av. Yurumayo Frente al Colegio Innova School cruce con Av. A con Av. Canta Callao;Av. Yurumayo Frente al Colegio Innova School cruce con Av. A con Av. Canta Callao - SAN MARTÃN DE PORRES - LIMA;7/01/2025 15:52;7/01/2025 15:52;NULL
+693;140116;Local de Esparcimiento;Local de Esparcimiento;Local de Esparcimiento - CAYALTI - LAMBAYEQUE;8/01/2025 08:49;8/01/2025 08:49;NULL
+694;140116;Centro de Esparcimiento;Centro de Esparcimiento;Centro de Esparcimiento - CAYALTI - LAMBAYEQUE;8/01/2025 08:53;8/01/2025 08:53;NULL
+695;230101;Playa Barredera;Al Costado de Tomoyo Beach;Al Costado de Tomoyo Beach - TACNA;8/01/2025 11:41;8/01/2025 11:41;NULL
+696;110101;Hacienda Hotel Macacona;Parcela NÂ°129 Sector Macacona Subtanjalla â€“ Ica;Parcela NÂ°129 Sector Macacona Subtanjalla â€“ Ica - ICA;11/01/2025 10:42;11/01/2025 10:42;NULL
+697;170101;Centro de Convenciones La Balsa;Centro de Convenciones la Balsa - Puerto Maldonado;Centro de Convenciones la Balsa - Puerto Maldonado - TAMBOPATA - MADRE DE DIOS;13/01/2025 15:28;13/01/2025 15:28;NULL
+698;150133;Social Club Tropicana;Av. Belisario SuarÃ©z cruce Av. Las Vegas - SJM;Av. Belisario SuarÃ©z cruce Av. Las Vegas - SJM - SAN JUAN DE MIRAFLORES - LIMA;14/01/2025 11:17;14/01/2025 11:17;NULL
+699;230101;Playa Vila Vila;Playa Vila;Playa Vila - TACNA;14/01/2025 18:16;14/01/2025 18:16;NULL
+700;110101;Explanada Reset;Av. Camino a Huacachina Lote B Mz 01 , Ica, Peru;Av. Camino a Huacachina Lote B Mz 01 , Ica, Peru - ICA;15/01/2025 11:22;15/01/2025 11:22;NULL
+701;130101;Playa Salaverry;Playa Salaverry - Trujillo;Playa Salaverry - Trujillo - TRUJILLO - LA LIBERTAD;15/01/2025 16:16;15/01/2025 16:16;NULL
+702;120501;Local Doria;JirÃ³n Grau 401 - Jauja;JirÃ³n Grau 401 - Jauja - JUNIN - JUNÃN;16/01/2025 09:52;16/01/2025 09:52;NULL
+703;150116;Auditorio Colegio Meliton Carbajal;Av. prol. Iquitos 2001, Lince 15046;Av. prol. Iquitos 2001, Lince 15046 - LINCE - LIMA;16/01/2025 10:55;16/01/2025 10:55;NULL
+704;150801;Juventud Cruz de Chonta;AV 28 DE JULIO S/N  CHONTA  SANTA MARIA HAURA;AV 28 DE JULIO S/N  CHONTA  SANTA MARIA HAURA - HUACHO - LIMA;16/01/2025 17:00;16/01/2025 17:00;NULL
+705;150801;Playa Chorrillos Huacho;NULL;HUACHO - LIMA;16/01/2025 17:34;16/01/2025 17:34;NULL
+706;200101;ManÃ¡ Lounge Bar;Zona Industrial Mz 243 lote 11, Espaldas de Transporte Eppo;Zona Industrial Mz 243 lote 11, Espaldas de Transporte Eppo - PIURA;17/01/2025 12:28;17/01/2025 12:28;NULL
+707;60101;Explanada Fongal;NULL;LOS BAÃ‘OS DEL INCA - CAJAMARCA;17/01/2025 16:01;17/01/2025 16:01;NULL
+708;140120;Estadio TumÃ¡n;Estadio TumÃ¡n;Estadio TumÃ¡n - TUMAN - LAMBAYEQUE;18/01/2025 10:28;18/01/2025 10:28;NULL
+709;150110;Restaurante Pikalo;Avenida Micaela Batidas 910;Avenida Micaela Batidas 910 - COMAS - LIMA;20/01/2025 13:19;20/01/2025 13:19;NULL
+710;150106;El Bosque;Mz C Lt 3 Asoc. de Pobladores - El Bosque de Carabayllo;Mz C Lt 3 Asoc. de Pobladores - El Bosque de Carabayllo - CARABAYLLO - LIMA;20/01/2025 16:57;20/01/2025 16:57;NULL
+711;150103;Discoteca ParaÃ­so;Carretera Central Km. 6.3 Ate Vitarte;Carretera Central Km. 6.3 Ate Vitarte - ATE - LIMA;21/01/2025 10:30;21/01/2025 10:30;NULL
+712;70106;Centro Recreacional Parasol;Playa Los Delfines;Playa Los Delfines - VENTANILLA - CALLAO;21/01/2025 12:45;21/01/2025 12:45;NULL
+713;150122;El Miraflorino;Espacio San RamÃ³n, Calle San RamÃ³n 290 (2do Nivel);Espacio San RamÃ³n, Calle San RamÃ³n 290 (2do Nivel) - MIRAFLORES - LIMA;22/01/2025 15:54;22/01/2025 15:54;NULL
+714;150110;Restaurante Pikalo;Avenida Micaela Batidas 910;Avenida Micaela Batidas 910 - COMAS - LIMA;23/01/2025 09:41;23/01/2025 09:41;NULL
+715;150110;Restaurante Pikalo;Avenida Micaela Batidas 910;Avenida Micaela Batidas 910 - COMAS - LIMA;23/01/2025 09:41;23/01/2025 09:41;NULL
+716;150142;Club Touricamp;Km 21.5 de la Panamericana Sur;Km 21.5 de la Panamericana Sur - VILLA EL SALVADOR - LIMA;23/01/2025 15:19;23/01/2025 15:19;NULL
+717;150112;Explanada Plaza Norte;NULL;INDEPENDENCIA - LIMA;24/01/2025 09:31;24/01/2025 09:31;NULL
+718;250105;Casa Verde;Av. Belisario Panduro.;Av. Belisario Panduro. - YARINACOCHA - UCAYALI;24/01/2025 13:33;24/01/2025 13:33;NULL
+719;150118;ParaÃ­so de Huachipa;Calle Las Gaviotas Mz J2 Lote 8 y 9 - Ref Costado del Puente Huaycoloro;Calle Las Gaviotas Mz J2 Lote 8 y 9 - Ref Costado del Puente Huaycoloro - LURIGANCHO - LIMA;24/01/2025 15:37;24/01/2025 16:31;NULL
+720;150122;Jazz Zone;Av. La Paz 656;Av. La Paz 656 - MIRAFLORES - LIMA;24/01/2025 18:04;24/01/2025 18:04;NULL
+721;150122;Jazz Zone;Av. La Paz 656;Av. La Paz 656 - MIRAFLORES - LIMA;24/01/2025 18:05;24/01/2025 18:05;NULL
+722;200504;Playa ColÃ¡n Sector Sur;NULL;COLAN - PIURA;25/01/2025 09:12;25/01/2025 09:12;NULL
+723;70101;Centro de Convenciones La Ley;Ex Colonial 6131 - Callao;Ex Colonial 6131 - Callao - CALLAO;25/01/2025 10:56;25/01/2025 10:56;NULL
+724;140101;Jockey Club Chiclayo;NULL;CHICLAYO - LAMBAYEQUE;25/01/2025 12:06;25/01/2025 12:06;NULL
+725;100608;Recavarren House;Av. 7 de Mayo pasaje 2;Av. 7 de Mayo pasaje 2 - CASTILLO GRANDE - HUÃNUCO;29/01/2025 15:33;29/01/2025 15:33;NULL
+726;60502;Terminal Terrestre;NULL;CHILETE - CAJAMARCA;29/01/2025 16:17;29/01/2025 16:17;NULL
+727;150104;La Posada del Mirador-Ermita 104;NULL;BARRANCO - LIMA;29/01/2025 17:26;29/01/2025 17:26;NULL
+728;200101;SeÃ±or PerÃº;NULL;PIURA;31/01/2025 10:15;31/01/2025 10:15;NULL
+729;250403;Palosanto Ecolounge;Carretera Pimentel Km. 05;Carretera Pimentel Km. 05 - CHICLAYO;1/02/2025 09:30;1/02/2025 10:51;NULL
+730;150137;Discoteca Cucalambe;Frente a Plaza Vea del Ovalo Santa Anita;Frente a Plaza Vea del Ovalo Santa Anita - SANTA ANITA - LIMA;1/02/2025 19:05;1/02/2025 19:05;NULL
+731;70101;El Muelle Internacional;Mz E Lote 04. Urb: El Condor Callao;Mz E Lote 04. Urb: El Condor Callao - CALLAO;1/02/2025 19:48;1/02/2025 19:48;NULL
+732;150137;Discoteca CucalambÃ©;NULL;SANTA ANITA - LIMA;5/02/2025 15:21;5/02/2025 15:21;NULL
+733;200501;Ciudad Blanca;NULL;PAITA - PIURA;7/02/2025 09:23;7/02/2025 09:23;NULL
+734;150806;Frontis del Estadio de Huara;NULL;HUAURA - LIMA;7/02/2025 09:37;7/02/2025 09:37;NULL
+735;130101;Estadio Mansiche de Trujillo;NULL;TRUJILLO - LA LIBERTAD;7/02/2025 10:23;7/02/2025 10:23;NULL
+736;150127;Playa La Pocita;NULL;PUNTA NEGRA - LIMA;8/02/2025 10:05;8/02/2025 10:05;NULL
+737;40101;Boulevard 54;Calle Santa Catalina 107, Cercado;Calle Santa Catalina 107, Cercado - AREQUIPA;13/02/2025 09:45;13/02/2025 09:45;NULL
+738;150101;Estadio San Marcos;NULL;LIMA;13/02/2025 10:26;13/02/2025 10:26;NULL
+739;150125;La Choza Discoteca;NULL;PUENTE PIEDRA - LIMA;14/02/2025 09:09;14/02/2025 09:09;NULL
+740;150102;PLAYA MIRAMAR;NULL;ANCÃ“N - LIMA;14/02/2025 14:57;14/02/2025 14:57;NULL
+741;120130;SALON DE RECEPCIONES REGIONAL ROOM;NULL;SAN JERÃ“NIMO DE TUNAN - JUNÃN;17/02/2025 09:28;17/02/2025 09:28;NULL
+742;60801;Estadio Victor Montoya Segura;NULL;JAÃ‰N - CAJAMARCA;17/02/2025 10:07;17/02/2025 10:07;NULL
+743;40413;Estadio Municipal de Corire;NULL;URACA - AREQUIPA;18/02/2025 15:10;18/02/2025 15:10;NULL
+744;130901;Apolo Karaoke Discotek;Jr. Atahualpa NÂ° 440;Jr. Atahualpa NÂ° 440 - HUAMACHUCO - LA LIBERTAD;21/02/2025 11:05;21/02/2025 11:05;NULL
+745;150801;COLISEO CERRADO SAN BARTOLOME;NULL;HUACHO - LIMA;22/02/2025 11:22;22/02/2025 11:22;NULL
+746;180301;Playa Pozo de Lisas;NULL;ILO - MOQUEGUA;24/02/2025 16:25;24/02/2025 16:25;NULL
+747;120114;Antonella's CafÃ© Show;Jr. 2 de Mayo 1198;Jr. 2 de Mayo 1198 - HUANCAYO - JUNÍN;25/02/2025 10:09;25/02/2025 10:09;NULL
+748;130104;Bar & Mar;KM NÂ° 10 â€“ Carretera a Huanchaco;KM NÂ° 10 â€“ Carretera a Huanchaco - HUANCHACO - LA LIBERTAD;25/02/2025 10:19;25/02/2025 10:19;NULL
+749;150103;Complejo deportivo Ollantaytambo;Av. Alfonso Ugarte, Ate.;Av. Alfonso Ugarte, Ate. - ATE - LIMA;25/02/2025 17:12;25/02/2025 17:12;NULL
+750;150103;El CucalambÃ©;Av. La Mar NÂ°105, Ate, Lima, Peru;Av. La Mar NÂ°105, Ate, Lima, Peru - ATE - LIMA;3/03/2025 10:01;3/03/2025 10:01;NULL
+751;180101;EXPLANADA TERMINAL;NULL;MOQUEGUA;3/03/2025 15:48;3/03/2025 15:48;NULL
+752;130109;Estadio Municipal;NULL;SALAVERRY - LA LIBERTAD;4/03/2025 09:27;4/03/2025 09:27;NULL
+753;160101;MR PARDO;Mariscal CÃ¡ceres 1042-1088 Con Calle Alzamora;Mariscal CÃ¡ceres 1042-1088 Con Calle Alzamora - IQUITOS - LORETO;4/03/2025 09:37;4/03/2025 09:37;NULL
+754;150101;Centro de Convenciones Festiva;AV. ALFONSO UGARTE 1439;AV. ALFONSO UGARTE 1439 - LIMA;4/03/2025 14:55;4/03/2025 14:55;NULL
+755;20801;Explanada Complejo Mariscal Luzuriaga;NULL;CASMA - ÃNCASH;5/03/2025 10:55;5/03/2025 10:55;NULL
+756;110101;Boulevard Club;Camino a huacachina S/N, Ica, Peru;Camino a huacachina S/N, Ica, Peru - ICA;5/03/2025 12:15;5/03/2025 12:15;NULL
+757;110113;Estadio Municipal;NULL;TATE - ICA;5/03/2025 12:46;5/03/2025 12:46;NULL
+758;250402;Complejo Deportivo Fernando Muchachito Guerrero;NULL;TALARA - PIURA;5/03/2025 15:33;5/03/2025 15:33;NULL
+759;20101;Centro de Convenciones Villa Zevallos;AV. MARIO ZEVALLOS NÂ° 006 - ESPALDAS PNP TACLLAN;AV. MARIO ZEVALLOS NÂ° 006 - ESPALDAS PNP TACLLAN - HUARAZ - ÃNCASH;5/03/2025 17:25;7/03/2025 16:48;NULL
+760;21101;LOCAL MINI COLISEO I.G.V;NULL;HUARMEY - ÃNCASH;7/03/2025 12:42;7/03/2025 12:42;NULL
+761;250105;Campo Ferial de Yarinacocha;NULL;YARINACOCHA - UCAYALI;7/03/2025 17:29;7/03/2025 17:29;NULL
+762;150117;PARQUE ZONAL LLOQUE YUPANQUI;NULL;LOS OLIVOS - LIMA;10/03/2025 11:47;10/03/2025 11:47;NULL
+763;150122;CALLE GUSTAVO BEGAZO 177;NULL;MIRAFLORES - LIMA;10/03/2025 16:37;10/03/2025 16:37;NULL
+764;110101;Aquatica Pool Park;Ayabaca 1270;Ayabaca 1270 - ICA;10/03/2025 17:22;10/03/2025 17:22;NULL
+765;150101;TEATRO SEGURA;Jr. Huancavelica NÂº 251;Jr. Huancavelica NÂº 251 - LIMA;11/03/2025 11:10;11/03/2025 11:10;NULL
+766;200101;LAS DOS JARRAS;Av. Sanchez Cerro #2970, DISTRITO 26 de Octubre;Av. Sanchez Cerro #2970, DISTRITO 26 de Octubre - PIURA;12/03/2025 09:31;12/03/2025 09:31;NULL
+767;150101;TEATRO SEGURA - SALA ALZEDO;Jr. Huancavelica NÂ° 251;Jr. Huancavelica NÂ° 251 - LIMA;12/03/2025 12:03;12/03/2025 12:03;NULL
+768;40101;EL WECCO COMUNIDAD;Av. Parra 207;Av. Parra 207 - AREQUIPA;12/03/2025 13:10;12/03/2025 13:10;NULL
+769;200101;CASINO MILITAR;NULL;PIURA;13/03/2025 14:40;13/03/2025 14:40;NULL
+770;150112;BLUE FIESTA TOTAL;CALLE 1 MZ A LT 37;CALLE 1 MZ A LT 37 - INDEPENDENCIA - LIMA;18/03/2025 09:40;18/03/2025 09:40;NULL
+771;150112;SEXTO BAR;AV ALFREDO MENDIOLA S/N;AV ALFREDO MENDIOLA S/N - INDEPENDENCIA - LIMA;18/03/2025 11:20;18/03/2025 11:20;NULL
+772;150801;Explanada del Estadio Municipal Segundo Aranda Torres;NULL;HUACHO - LIMA;18/03/2025 14:22;18/03/2025 14:22;NULL
+773;230108;Quinta San Fernando;Ã“valo Pocollay;Ã“valo Pocollay - POCOLLAY - TACNA;18/03/2025 16:31;18/03/2025 16:31;NULL
+774;30101;LAS ARENAS DE AZURIN;AV. ARENAS;AV. ARENAS - ABANCAY - APURÃMAC;19/03/2025 16:01;19/03/2025 16:01;NULL
+775;150801;MAMBOO;Av. La Paz 411;Av. La Paz 411 - HUACHO - LIMA;20/03/2025 10:56;20/03/2025 10:56;NULL
+776;150125;LA PICHANGUITA DE SILVERIO URBINA;Av. Jose Saco Rojas - KM. 2.5 Santa Ines Carabayllo;Av. Jose Saco Rojas - KM. 2.5 Santa Ines Carabayllo - PUENTE PIEDRA - LIMA;20/03/2025 11:16;20/03/2025 11:16;NULL
+777;120114;CALEZA REAL;Av. Mariscal Castilla 1860;Av. Mariscal Castilla 1860 - EL TAMBO - JUNÃN;20/03/2025 13:16;20/03/2025 13:16;NULL
+778;40101;EL QUINQUÃ‰;Urb. Adepa Mz. L LT. 25;Urb. Adepa Mz. L LT. 25 - AREQUIPA;20/03/2025 15:01;20/03/2025 15:01;NULL
+779;211101;LA OVEJA NEGRA;Jr. Loreto 115B, Piso 2;Jr. Loreto 115B, Piso 2 - JULIACA - PUNO;20/03/2025 15:06;20/03/2025 15:06;NULL
+780;210101;ECCOS RESTOBAR;Jr. Grau 137 Cercado;Jr. Grau 137 Cercado - PUNO;20/03/2025 15:11;20/03/2025 15:11;NULL
+781;150115;Estadio Alejandro Villanueva;Av. Isabel la CatÃ³lica 821, La Victoria 15033;Av. Isabel la CatÃ³lica 821, La Victoria 15033 - LA VICTORIA - LIMA;21/03/2025 16:51;21/03/2025 16:51;NULL
+782;100601;CAMPO DEPORTIVO ALIAGA TINGO MARIA;NULL;RUPA-RUPA - HUÃNUCO;22/03/2025 11:34;22/03/2025 11:34;NULL
+783;110401;EXPLANADA FOURSHI;Av. Grau S/N Palpa;Av. Grau S/N Palpa - PALPA - ICA;25/03/2025 11:33;25/03/2025 11:33;NULL
+784;20101;HAKUNA MATATA;Psj JesÃºs Morales 977;Psj JesÃºs Morales 977 - HUARAZ - ÃNCASH;26/03/2025 14:32;26/03/2025 14:32;NULL
+785;150103;GIGANTE COMPLEJO ANGARES;KM 15 1/2 Carretera Central;KM 15 1/2 Carretera Central - ATE - LIMA;27/03/2025 12:49;27/03/2025 12:49;NULL
+786;40307;FRONTIS DEL ESTADIO MUNICIPAL;NULL;CHALA - AREQUIPA;29/03/2025 09:45;29/03/2025 09:45;NULL
+787;150132;CENTRO SOCIAL MOLLEPATA;Av. Las Lomas, 610;Av. Las Lomas, 610 - SAN JUAN DE LURIGANCHO - LIMA;29/03/2025 10:12;29/03/2025 10:12;NULL
+788;90101;CAMPO FERIAL;Callqui Chico;Callqui Chico - HUANCAVELICA;31/03/2025 12:22;31/03/2025 12:22;NULL
+789;130201;ANEXO ROMA;Loza Chicago;Loza Chicago - ASCOPE - LA LIBERTAD;1/04/2025 15:33;1/04/2025 15:33;NULL
+790;110201;Estadio Balconcito;NULL;CHINCHA ALTA - ICA;2/04/2025 10:36;2/04/2025 10:36;NULL
+791;120101;Centro de Convenciones VIRGO;Av. Giraldez 1081;Av. Giraldez 1081 - HUANCAYO - JUNÃN;2/04/2025 11:32;2/04/2025 11:32;NULL
+792;130701;CAMPO FERIAL MANSICHE;NULL;SAN PEDRO DE LLOC - LA LIBERTAD;3/04/2025 09:36;3/04/2025 09:36;NULL
+793;150112;Teatro Plaza Norte;Cruce Panamericana Norte, Av. TomÃ¡s Valle;Cruce Panamericana Norte, Av. TomÃ¡s Valle - INDEPENDENCIA - LIMA;3/04/2025 09:46;3/04/2025 09:46;NULL
+794;130702;EX MOLINO LA CALERA;NULL;GUADALUPE - LA LIBERTAD;3/04/2025 09:47;3/04/2025 09:47;NULL
+795;170101;EXPLANADA ESTADIO IPD - Puerto Maldonado;Av. Ernesto Rivero Cdra 13;Av. Ernesto Rivero Cdra 13 - TAMBOPATA - MADRE DE DIOS;3/04/2025 10:06;3/04/2025 10:06;NULL
+796;150133;Explanada Mall del Sur;NULL;SAN JUAN DE MIRAFLORES - LIMA;8/04/2025 10:12;8/04/2025 10:12;NULL
+797;150115;La Flor de la Canela;Av. NicolÃ¡s Arriola 155 (Cruce con Javier Prado);Av. NicolÃ¡s Arriola 155 (Cruce con Javier Prado) - LA VICTORIA - LIMA;8/04/2025 10:50;8/04/2025 10:50;NULL
+798;140304;Restaurante campestre 3y;Tomas Arellano NÂ°500;Tomas Arellano NÂ°500 - JAYANCA - LAMBAYEQUE;8/04/2025 15:37;8/04/2025 15:37;NULL
+799;60101;PARADA 90'S;VÃ­a de evitamiento Norte 2252;VÃ­a de evitamiento Norte 2252 - CAJAMARCA;8/04/2025 15:50;8/04/2025 15:50;NULL
+800;50101;Complejo San Luis;Av. Cusco 528;Av. Cusco 528 - AYACUCHO;9/04/2025 11:36;9/04/2025 11:36;NULL
+801;150104;EL ROBLE DE BARRANCO;Psje. Sanchez CarriÃ³n;Psje. Sanchez CarriÃ³n - BARRANCO - LIMA;9/04/2025 13:32;9/04/2025 13:32;NULL
+802;150104;Playa Barranquito S/N Circuito de Playas;NULL;BARRANCO - LIMA;9/04/2025 15:44;9/04/2025 15:44;NULL
+803;150104;Rustica Barranco;Playa Barranquito S/N Circuito de Playas;Playa Barranquito S/N Circuito de Playas - BARRANCO - LIMA;9/04/2025 15:44;9/04/2025 15:44;NULL
+804;150104;Rustica Costa Verde;Playa Barranquito S/N Circuito de Playas;Playa Barranquito S/N Circuito de Playas - BARRANCO - LIMA;9/04/2025 17:08;9/04/2025 17:08;NULL
+805;150103;LOZA DEPORTIVA LAS AMÃ‰RICAS;NULL;ATE - LIMA;10/04/2025 11:36;10/04/2025 11:36;NULL
+806;140101;DON JOSÃ‰;ZAÃ‘A;ZAÃ‘A - CHICLAYO - LAMBAYEQUE;10/04/2025 14:18;10/04/2025 14:18;NULL
+807;160101;COMPLEJO CNI;NULL;IQUITOS - LORETO;10/04/2025 14:43;10/04/2025 14:43;NULL
+808;160101;ZWIE NAUTA TOURS;NULL;IQUITOS - LORETO;10/04/2025 14:58;10/04/2025 14:58;NULL
+809;250403;ESTACIÃ“N ROCK;Av. Santa Victoria 688;Av. Santa Victoria 688 - CHICLAYO;11/04/2025 09:15;11/04/2025 09:15;NULL
+810;150108;Mercado San Pedro;Tupac de Villa;Tupac de Villa - CHORRILLOS - LIMA;12/04/2025 09:14;12/04/2025 09:14;NULL
+811;130101;El mejor local;NULL;TRUJILLO - LA LIBERTAD;12/04/2025 10:18;12/04/2025 10:18;NULL
+812;80101;El mejor local;NULL;CUSCO;12/04/2025 10:19;12/04/2025 10:19;NULL
+813;150132;CENTRO RECREACIONAL VILCANOTA;Av. Los Ciruelos 443;Av. Los Ciruelos 443 - SAN JUAN DE LURIGANCHO - LIMA;12/04/2025 11:30;12/04/2025 11:30;NULL
+814;150106;Mercado Mayorista Valle Chillon;NULL;CARABAYLLO - LIMA;12/04/2025 12:46;12/04/2025 12:46;NULL
+815;90101;Estadio Calqui Chico;NULL;HUANCAVELICA;12/04/2025 12:57;12/04/2025 12:57;NULL
+816;150103;Estadio Monumental U Marathon;NULL;ATE - LIMA;15/04/2025 10:08;15/04/2025 14:18;NULL
+817;40102;Complejo Arequipa;NULL;ALTO SELVA ALEGRE - AREQUIPA;15/04/2025 14:58;15/04/2025 14:58;NULL
+818;150114;DISCOTECA ESPECTACULOS GUSTAVO;Cruce de Av. Separadora Industrial con los Frutales;Cruce de Av. Separadora Industrial con los Frutales - LA MOLINA - LIMA;15/04/2025 15:16;15/04/2025 15:16;NULL
+819;110305;Los Ayacuchanos;Subida Nueva Villa;Subida Nueva Villa - VISTA ALEGRE - ICA;16/04/2025 16:27;16/04/2025 16:27;NULL
+820;150118;MIA CHOSICA;Av. Lima Sur #945;Av. Lima Sur #945 - LURIGANCHO - LIMA;21/04/2025 14:50;21/04/2025 14:50;NULL
+821;21801;La Cochera;Recreo Campestre;Recreo Campestre - CHIMBOTE - ÃNCASH;21/04/2025 15:57;21/04/2025 15:57;NULL
+822;150112;11:11 CLUB;Av. Gerardo Unger 3415;Av. Gerardo Unger 3415 - INDEPENDENCIA - LIMA;21/04/2025 16:33;21/04/2025 16:33;NULL
+823;190101;EYFFER DISCOTEC;Av. El Minero NÂ°546 - Cerro de Pasco;Av. El Minero NÂ°546 - Cerro de Pasco - CHAUPIMARCA - PASCO;22/04/2025 13:32;22/04/2025 13:32;NULL
+824;130101;OceanÃ­a Restobar;Cruce Av. El Cortijo con Av. Metropolitana;Cruce Av. El Cortijo con Av. Metropolitana - TRUJILLO - LA LIBERTAD;22/04/2025 17:02;22/04/2025 17:02;NULL
+825;200801;ESTADIO DE CHEPITO BERNAL;NULL;SECHURA - PIURA;24/04/2025 16:11;25/04/2025 09:37;NULL
+826;150141;TRUCK PARK;Portocarrero 344;Portocarrero 344 - SURQUILLO - LIMA;24/04/2025 16:26;24/04/2025 16:26;NULL
+827;80101;Centro de Eventos PATA PATA;Costado de los Bomberos San Jeronimo;Costado de los Bomberos San Jeronimo - CUSCO;24/04/2025 17:48;24/04/2025 17:48;NULL
+828;150123;ESTADIO MUNICIPAL MANCHAY;NULL;PACHACAMAC - LIMA;29/04/2025 11:31;29/04/2025 11:31;NULL
+829;150104;TEATRO BOULEVARD;Pasaje SÃ¡nchez CarriÃ³n 116;Pasaje SÃ¡nchez CarriÃ³n 116 - BARRANCO - LIMA;29/04/2025 12:54;29/04/2025 12:54;NULL
+830;40101;Fundo El Rosal;Av. Talara S/N;Av. Talara S/N - AREQUIPA;30/04/2025 12:43;30/04/2025 12:43;NULL
+831;120101;VIRGO SalÃ³n de recepciones;Av. GirÃ¡ldez 1081;Av. GirÃ¡ldez 1081 - HUANCAYO - JUNÃN;30/04/2025 12:52;30/04/2025 12:52;NULL
+832;150101;Estadio Nacional;C. JosÃ© DÃ­az s/n;C. JosÃ© DÃ­az s/n - LIMA;2/05/2025 12:10;2/05/2025 12:10;NULL
+833;60508;TEMBLADERA;NULL;YONAN - CAJAMARCA;2/05/2025 16:46;2/05/2025 16:46;NULL
+834;230101;CANDELA Restaurante;Calle San JosÃ© 110;Calle San JosÃ© 110 - TACNA;5/05/2025 11:55;5/05/2025 11:55;NULL
+835;130104;Casa Forti;Carretera a Huanchado Pasando el Club Trujillo;Carretera a Huanchado Pasando el Club Trujillo - HUANCHACO - LA LIBERTAD;6/05/2025 16:42;6/05/2025 16:42;NULL
+836;150132;Parque N.Âº 7 Naciones Unidas;Paradero 13 de PrÃ³ceres;Paradero 13 de PrÃ³ceres - SAN JUAN DE LURIGANCHO - LIMA;7/05/2025 09:24;7/05/2025 10:21;NULL
+837;21801;EXPLANADA REAL PLAZA;Nuevo Chimbote;Nuevo Chimbote - CHIMBOTE - ÃNCASH;7/05/2025 11:40;7/05/2025 11:40;NULL
+838;150121;Centro de Convenciones Bolivar;Calle Antonio Polo 756;Calle Antonio Polo 756 - PUEBLO LIBRE - LIMA;7/05/2025 15:02;7/05/2025 15:02;NULL
+839;180101;Explanada San Antonio;Costado Coer;Costado Coer - MOQUEGUA;8/05/2025 14:20;8/05/2025 14:20;NULL
+840;120303;Complejo Deportivo El MaracanÃ¡;NULL;PICHANAQUI - JUNÃN;9/05/2025 08:20;9/05/2025 08:20;NULL
+841;120702;ESTADIO MUNICIPAL DE ACOBAMBA;SIMON PEÃ‘A RIVAS;SIMON PEÃ‘A RIVAS - ACOBAMBA - JUNÃN;9/05/2025 10:18;9/05/2025 10:18;NULL
+842;150103;Explanada Plaza Josfel;Av. NicolÃ¡s Ayllon 4233;Av. NicolÃ¡s Ayllon 4233 - ATE - LIMA;9/05/2025 10:42;24/05/2025 17:23;NULL
+843;150112;CEVICHERIA HUAIRA;Calle A #350-Urb. Industrial;Calle A #350-Urb. Industrial - INDEPENDENCIA - LIMA;12/05/2025 09:27;12/05/2025 09:27;NULL
+844;40101;Boulevard 54;Calle Santa Catalina 107, Cercado;Calle Santa Catalina 107, Cercado - AREQUIPA;12/05/2025 10:55;12/05/2025 10:55;NULL
+845;150112;Calle 1 MZ a Lt. 36;(Al costado de discoteca Blue);(Al costado de discoteca Blue) - INDEPENDENCIA - LIMA;13/05/2025 14:50;13/05/2025 15:41;NULL
+846;80104;ESTADIO CALI B;VÃ­a Evitamiento;VÃ­a Evitamiento - SAN JERÃ“NIMO - CUSCO;13/05/2025 16:06;13/05/2025 16:06;NULL
+847;150101;Yield Rock;Plaza San Martin, JirÃ³n Carabaya 815;Plaza San Martin, JirÃ³n Carabaya 815 - LIMA;13/05/2025 17:25;13/05/2025 17:25;NULL
+848;140205;La Zaranda 2025;FERREÃ‘AFE;FERREÃ‘AFE - PITIPO - LAMBAYEQUE;14/05/2025 11:04;14/05/2025 12:47;NULL
+849;140304;EX ALUMNOS DEL COLEGIO BURGA;NULL;JAYANCA - LAMBAYEQUE;14/05/2025 11:19;14/05/2025 11:29;NULL
+850;140205;La Zaranda 2025;FERREÃ‘AFE;FERREÃ‘AFE - PITIPO - LAMBAYEQUE;14/05/2025 12:39;14/05/2025 12:47;NULL
+851;230101;EXPLANADA PETROPERÃš;AsociaciÃ³n las Buganvillas Mz O Lt2;AsociaciÃ³n las Buganvillas Mz O Lt2 - TACNA;15/05/2025 11:40;15/05/2025 11:40;NULL
+852;200101;El Point Salsa y Cumbia;Zona industrial, ref. frente a Samanga espalda de Eppo;Zona industrial, ref. frente a Samanga espalda de Eppo - PIURA;15/05/2025 11:50;15/05/2025 11:50;NULL
+853;180301;ILO PUERTO;Av Mariano lino urquieta. S/N.;Av Mariano lino urquieta. S/N. - ILO - MOQUEGUA;15/05/2025 12:05;15/05/2025 12:05;NULL
+854;200114;Explanada la CabaÃ±a;NULL;TAMBO GRANDE - PIURA;15/05/2025 15:00;15/05/2025 15:00;NULL
+855;21201;Recreo Don Patricio;NULL;CARAZ - ÃNCASH;20/05/2025 09:46;20/05/2025 09:46;NULL
+856;221001;PUCACURO;NULL;TOCACHE - SAN MARTÃN;21/05/2025 10:18;21/05/2025 10:18;NULL
+857;250301;El Mono;Aguaytia;Aguaytia - PADRE ABAD - UCAYALI;21/05/2025 10:25;21/05/2025 10:25;NULL
+858;150136;Casa de la Cultura;Jr. Federico Gallese 420;Jr. Federico Gallese 420 - SAN MIGUEL - LIMA;21/05/2025 11:10;21/05/2025 11:10;NULL
+859;150135;Yacumama;Cruce de la Av. Tomas Valle con Av. AngÃ©lica Gamarra;Cruce de la Av. Tomas Valle con Av. AngÃ©lica Gamarra - SAN MARTÃN DE PORRES - LIMA;21/05/2025 11:58;21/05/2025 11:58;NULL
+860;230101;Hotel Dorado;Calle Arias y Aragues NÂ° 151;Calle Arias y Aragues NÂ° 151 - TACNA;24/05/2025 15:48;24/05/2025 15:48;NULL
+861;150103;Coliseo Central FolklÃ³rica Puno;Av. Las Torres 349;Av. Las Torres 349 - ATE - LIMA;26/05/2025 11:12;26/05/2025 11:12;NULL
+862;220901;Explanada Mercado Santa Anita;Morales;Morales - TARAPOTO - SAN MARTÃN;26/05/2025 15:25;26/05/2025 15:25;NULL
+863;220901;Campo de InnovaciÃ³n TecnolÃ³gica Banda de Shilcayo;NULL;TARAPOTO - SAN MARTÃN;26/05/2025 16:31;26/05/2025 16:31;NULL
+864;140120;BENJAMÃN ZAPATA;NULL;TUMAN - LAMBAYEQUE;27/05/2025 10:35;27/05/2025 10:35;NULL
+865;140116;LOCAL 5 QUEENS;NULL;CAYALTI - LAMBAYEQUE;27/05/2025 12:12;27/05/2025 12:12;NULL
+866;250403;Thabata Restobar;Av. Libertad 130 Santa Victoria;Av. Libertad 130 Santa Victoria - CHICLAYO;30/05/2025 10:36;30/05/2025 10:36;NULL
+867;150122;TERRAZA;Calle JunÃ­n 430;Calle JunÃ­n 430 - MIRAFLORES - LIMA;30/05/2025 16:57;30/05/2025 16:57;NULL
+868;250301;Grass SÃ­ntetico El Mono;Aguaytia;Aguaytia - PADRE ABAD - UCAYALI;31/05/2025 09:48;31/05/2025 09:48;NULL
+869;220601;Playa 27 de Mayo;NULL;JUANJUÃ - SAN MARTÃN;31/05/2025 09:55;31/05/2025 11:12;NULL
+870;220601;Alameda TurÃ­stica de Juanjui;NULL;JUANJUÃ - SAN MARTÃN;31/05/2025 09:59;31/05/2025 09:59;NULL
+871;221001;Estadio Municipal;NULL;TOCACHE - SAN MARTÃN;31/05/2025 10:01;31/05/2025 10:01;NULL
+872;200702;Coliseo Miguel Custodio de Cabo Blanco de El Alto;NULL;EL ALTO - PIURA;31/05/2025 10:13;31/05/2025 10:13;NULL
+873;100604;Playa 27 de Mayo;Aucayacu;Aucayacu - JOSÃ‰ CRESPO Y CASTILLO - HUÃNUCO;31/05/2025 12:30;31/05/2025 12:30;NULL
+874;130101;Explanada el Palmar;Av. Panamericana Norte #1320.;Av. Panamericana Norte #1320. - TRUJILLO - LA LIBERTAD;2/06/2025 11:21;2/06/2025 11:21;NULL
+875;80901;Estadio Provincial Quillabamba;NULL;SANTA ANA - CUSCO;3/06/2025 09:39;3/06/2025 09:39;NULL
+876;150112;Karamba;Av. Industrial 3677;Av. Industrial 3677 - INDEPENDENCIA - LIMA;4/06/2025 14:53;4/06/2025 14:53;NULL
+877;211101;Campo Ferial;NULL;JULIACA - PUNO;5/06/2025 09:15;5/06/2025 09:15;NULL
+878;150108;Estadio Municipal de Chorrillos;NULL;CHORRILLOS - LIMA;5/06/2025 09:26;5/06/2025 09:26;NULL
+879;150142;EX ENIGMA DISCO - SÃ“TANO;NULL;VILLA EL SALVADOR - LIMA;5/06/2025 09:36;5/06/2025 09:36;NULL
+880;200603;Casa Campo Cerro Mocho;NULL;IGNACIO ESCUDERO - PIURA;5/06/2025 09:42;5/06/2025 09:42;NULL
+881;200601;Costado del Estadio Somate Bajo;NULL;SULLANA - PIURA;5/06/2025 10:19;5/06/2025 10:19;NULL
+882;200111;Terminal Terrestre;NULL;LAS LOMAS - PIURA;5/06/2025 10:33;5/06/2025 10:33;NULL
+883;21801;Recreo DoÃ±a Esperanza;Av. Buenos Aires Km. 3.5 La CampiÃ±a;Av. Buenos Aires Km. 3.5 La CampiÃ±a - CHIMBOTE - ÃNCASH;6/06/2025 12:37;6/06/2025 12:37;NULL
+884;100601;Recavarren House;Av. 7 de Mayo pasaje 2;Av. 7 de Mayo pasaje 2 - CASTILLO GRANDE - HUÃNUCO;9/06/2025 10:13;9/06/2025 10:13;NULL
+885;120201;"Campo Ferial ""Molino San JosÃ©""";NULL;CONCEPCIÃ“N - JUNÃN;9/06/2025 11:33;9/06/2025 11:33;NULL
+886;150105;CLUB APURIMAC;Av. Brasil 259;Av. Brasil 259 - JESÃšS MARÃA - LIMA;9/06/2025 13:00;9/06/2025 13:00;NULL
+887;60401;Local La Caballita Recreo Campestre;NULL;CHOTA - CAJAMARCA;12/06/2025 10:33;12/06/2025 10:34;NULL
+888;130203;Coliseo Municipal Chocope;NULL;CHOCOPE - LA LIBERTAD;12/06/2025 10:39;12/06/2025 10:39;NULL
+889;81301;Estadio Municipal;NULL;URUBAMBA - CUSCO;13/06/2025 12:08;13/06/2025 12:08;NULL
+890;130104;Explanada El Milagro Sector 2;Al costado del Colegio SeÃ±or de los Milagros;Al costado del Colegio SeÃ±or de los Milagros - HUANCHACO - LA LIBERTAD;13/06/2025 17:05;13/06/2025 17:05;NULL
+891;150108;Circulo Militar - Sede Certes;Av. Escuela Militar 990;Av. Escuela Militar 990 - CHORRILLOS - LIMA;13/06/2025 18:25;13/06/2025 18:25;NULL
+892;150510;PLAZA DE ARMAS;NULL;NUEVO IMPERIAL - LIMA;16/06/2025 14:16;16/06/2025 14:16;NULL
+893;150108;Manhattan Disco;Cordillera Central Las Delicias de Villa;Cordillera Central Las Delicias de Villa - CHORRILLOS - LIMA;16/06/2025 15:55;16/06/2025 15:55;NULL
+894;50101;Avenida Independencia NÂ° 502;NULL;AYACUCHO;17/06/2025 09:28;17/06/2025 09:28;NULL
+895;140105;El Pibe Super Complejo;Av. Chiclayo 885;Av. Chiclayo 885 - JOSÃ‰ LEONARDO ORTIZ - LAMBAYEQUE;18/06/2025 09:20;18/06/2025 09:20;NULL
+896;150122;Tierra BaldÃ­a;Av. EjÃ©rcito 847;Av. EjÃ©rcito 847 - MIRAFLORES - LIMA;18/06/2025 10:11;18/06/2025 10:11;NULL
+897;60401;La Caballita;NULL;CHOTA - CAJAMARCA;18/06/2025 15:13;18/06/2025 15:13;NULL
+898;80101;Pje. Santiago;NULL;CUSCO;23/06/2025 09:05;23/06/2025 09:05;NULL
+899;150101;Teatro Municipal de Lima;JirÃ³n Ica 377;JirÃ³n Ica 377 - LIMA;23/06/2025 11:45;23/06/2025 11:45;NULL
+900;80101;Estadio Universitario Cusco;Av. De La Cultura S/N;Av. De La Cultura S/N - CUSCO;23/06/2025 12:28;23/06/2025 12:28;NULL
+901;60701;IE 83010 de Bambamarca;NULL;BAMBAMARCA - CAJAMARCA;24/06/2025 16:57;25/06/2025 09:36;NULL
+902;200806;Estadio Municipal;NULL;RINCONADA LLICUAR - PIURA;24/06/2025 17:23;24/06/2025 17:23;NULL
+903;200110;Estadio Municipal de La UniÃ³n;NULL;LA UNIÃ“N - PIURA;26/06/2025 10:54;26/06/2025 10:54;NULL
+904;80101;Ukukus - Av. El Sol;NULL;CUSCO;26/06/2025 15:06;26/06/2025 15:06;NULL
+905;140108;COMPLEJO SANTA MARGARITA;Callanca;Callanca - MONSEFU - LAMBAYEQUE;3/07/2025 16:21;3/07/2025 16:21;NULL
+906;120107;ESTADIO COTO COTO;NULL;CHILCA - JUNÃN;4/07/2025 12:03;4/07/2025 12:03;NULL
+907;60801;Stacion;Prol. Mariano Melgar;Prol. Mariano Melgar - JAÃ‰N - CAJAMARCA;4/07/2025 15:08;4/07/2025 15:08;NULL
+908;110301;Desert Club;Av. Los Incas #4488-Frente a Sabor;Av. Los Incas #4488-Frente a Sabor - NASCA - ICA;4/07/2025 15:17;4/07/2025 15:17;NULL
+909;150112;BLUE FIESTA TOTAL;CALLE 1 MZ A LT 37;CALLE 1 MZ A LT 37 - INDEPENDENCIA - LIMA;7/07/2025 15:28;7/07/2025 15:28;NULL
+910;150137;Rustica;CC. Mall Aventura Plaza Santa Anita - 3er Piso;CC. Mall Aventura Plaza Santa Anita - 3er Piso - SANTA ANITA - LIMA;8/07/2025 09:24;8/07/2025 09:24;NULL
+911;150112;El Nuevo Super Complejo;Cruce Pan. Norte con Ovalo Naranjal;Cruce Pan. Norte con Ovalo Naranjal - INDEPENDENCIA - LIMA;8/07/2025 16:47;8/07/2025 16:47;NULL
+912;40107;Estadio Juan Velazco Alvarado;NULL;JACOBO HUNTER - AREQUIPA;9/07/2025 15:40;9/07/2025 15:40;NULL
+913;150507;Costa Green;Parcela2, Fundo Santa Adela, Nuevo Imperial;Parcela2, Fundo Santa Adela, Nuevo Imperial - IMPERIAL - LIMA;10/07/2025 09:10;10/07/2025 09:10;NULL
+914;80101;Rockhouse;Calle Saphy 549;Calle Saphy 549 - CUSCO;10/07/2025 09:53;10/07/2025 09:53;NULL
+915;150122;El Mejor Local;NULL;MIRAFLORES - LIMA;10/07/2025 10:08;10/07/2025 10:08;NULL
+916;150122;Faena Show Bar;Calle Bellavista 231;Calle Bellavista 231 - MIRAFLORES - LIMA;10/07/2025 12:20;12/07/2025 15:04;NULL
+917;130402;Parque Infantil;NULL;PACANGA - LA LIBERTAD;10/07/2025 16:48;10/07/2025 16:48;NULL
+918;60301;Centro Base;NULL;CELENDÃN - CAJAMARCA;10/07/2025 17:11;10/07/2025 17:11;NULL
+919;150112;Mega Plaza;NULL;INDEPENDENCIA - LIMA;10/07/2025 19:28;10/07/2025 19:28;NULL
+920;200114;Estadio Deportivo;NULL;TAMBO GRANDE - PIURA;11/07/2025 08:27;11/07/2025 08:27;NULL
+921;220910;Colegio de MÃ©dicos RegiÃ³n San MartÃ­n;Campo Recreacional;Campo Recreacional - MORALES - SAN MARTÃN;11/07/2025 10:21;11/07/2025 10:22;NULL
+922;150112;Explanada MegaPlaza;NULL;INDEPENDENCIA - LIMA;11/07/2025 14:32;11/07/2025 14:32;NULL
+923;80104;Explanada Kayra;Av. La Cultura S/N;Av. La Cultura S/N - SAN JERÃ“NIMO - CUSCO;12/07/2025 09:35;12/07/2025 09:35;NULL
+924;150101;Parque La Muralla Centro de Lima;Cruce Jr. Amazonas y Av. Abancay;Cruce Jr. Amazonas y Av. Abancay - LIMA;12/07/2025 15:23;12/07/2025 15:23;NULL
+925;110201;One Night;C. Miguel Grau Grocio Prado;C. Miguel Grau Grocio Prado - CHINCHA ALTA - ICA;15/07/2025 10:32;15/07/2025 10:32;NULL
+926;250403;La Fama Restobar;Av. ProlongaciÃ³n Bolognesi Cdra 11 Ex Vikingos;Av. ProlongaciÃ³n Bolognesi Cdra 11 Ex Vikingos - CHICLAYO;15/07/2025 11:08;15/07/2025 11:08;NULL
+927;80910;Campo Ferial;NULL;PICHARI - CUSCO;15/07/2025 15:45;15/07/2025 15:45;NULL
+928;40101;Waya Lookout;Plaza De Armas Arequipa - Portal De San Agustin 115a, Terraza;Plaza De Armas Arequipa - Portal De San Agustin 115a, Terraza - AREQUIPA;16/07/2025 13:37;16/07/2025 13:37;NULL
+929;120101;Local Ovalo Julio Sumar;NULL;HUANCAYO - JUNÃN;17/07/2025 09:15;17/07/2025 09:15;NULL
+930;170101;Centro Cultural AmazÃ³nico Tukuy Yawar, Puerto Maldonado;Jr. Daniel Alcides CarriÃ³n 387;Jr. Daniel Alcides CarriÃ³n 387 - TAMBOPATA - MADRE DE DIOS;17/07/2025 09:59;17/07/2025 12:54;NULL
+931;120107;Parque Zonal Coto Coto;NULL;CHILCA - JUNÃN;17/07/2025 13:10;17/07/2025 13:10;NULL
+932;150135;Arena Lima Norte;Tomas Valle 1933;Tomas Valle 1933 - SAN MARTÃN DE PORRES - LIMA;18/07/2025 09:51;18/07/2025 09:51;NULL
+933;100101;Estadio Heraclio Tapia;NULL;HUANUCO - HUÃNUCO;19/07/2025 09:25;19/07/2025 09:25;NULL
+934;200801;Explanada del Estadio Municipal de Bellavista;Bajo Piura;Bajo Piura - SECHURA - PIURA;22/07/2025 10:18;22/07/2025 10:21;NULL
+935;60901;Estadio Municipal;NULL;SAN IGNACIO - CAJAMARCA;23/07/2025 17:51;23/07/2025 17:51;NULL
+936;150508;Estadio Municipal de Lunahuana;NULL;LUNAHUANA - LIMA;25/07/2025 13:12;25/07/2025 13:12;NULL
+937;200101;Av. Las Gardenias;NULL;PIURA;30/07/2025 09:46;30/07/2025 09:46;NULL
+938;80104;Lufa Salon Eventos;NULL;SAN JERÃ“NIMO - CUSCO;31/07/2025 12:06;31/07/2025 12:06;NULL
+939;100102;Complejo Deportivo Paucarbamba;NULL;AMARILIS - HUÃNUCO;1/08/2025 10:20;1/08/2025 11:57;NULL
+940;150112;3 REGIONES;Calle 1 Mz. A-Lt. 26-27 (Al Costado de Megaplaza);Calle 1 Mz. A-Lt. 26-27 (Al Costado de Megaplaza) - INDEPENDENCIA - LIMA;4/08/2025 10:58;4/08/2025 10:58;NULL
+941;180101;El Naranjal;NULL;MOQUEGUA;4/08/2025 11:44;4/08/2025 11:44;NULL
+942;150135;San MartÃ­n en un Salsa;Av. Peru 3277;Av. Peru 3277 - SAN MARTÃN DE PORRES - LIMA;5/08/2025 16:47;5/08/2025 16:47;NULL
+943;150112;PeÃ±a Los Andes;Av. Industrial 355;Av. Industrial 355 - INDEPENDENCIA - LIMA;7/08/2025 15:48;7/08/2025 15:48;NULL
+944;200104;La Casita de Don Juan;NULL;CASTILLA - PIURA;7/08/2025 16:54;7/08/2025 16:54;NULL
+945;150137;La Choza NaÃºtica Santa Anita;Av. Manuel Celendonio de la Torre 100;Av. Manuel Celendonio de la Torre 100 - SANTA ANITA - LIMA;8/08/2025 09:38;8/08/2025 09:38;NULL
+946;230101;Andes PeÃ±a Folk;Av. Jorge Basadre #621;Av. Jorge Basadre #621 - TACNA;8/08/2025 09:54;8/08/2025 09:54;NULL
+947;80101;LOCAL CENTRICO DE LA CIUDAD;NULL;CUSCO;8/08/2025 14:59;8/08/2025 14:59;NULL
+948;150122;FANIA;Av. Larco 680;Av. Larco 680 - MIRAFLORES - LIMA;8/08/2025 15:24;8/08/2025 15:24;NULL
+949;80101;Estadio Universitario;Av. La Cultura 220;Av. La Cultura 220 - CUSCO;8/08/2025 15:55;8/08/2025 15:55;NULL
+950;150128;El Potao;Jr Cajamarca 715;Jr Cajamarca 715 - RÃMAC - LIMA;8/08/2025 16:01;8/08/2025 16:01;NULL
+951;40101;Estadio La Rinconada;NULL;AREQUIPA;9/08/2025 11:17;9/08/2025 11:17;NULL
+952;150133;Canchita del Churre;Av. Pedro Miotta 940;Av. Pedro Miotta 940 - SAN JUAN DE MIRAFLORES - LIMA;9/08/2025 11:52;9/08/2025 11:52;NULL
+953;150132;Boulevard La Hacienda;Av. Jardines del Oeste 167 - Las Flores;Av. Jardines del Oeste 167 - Las Flores - SAN JUAN DE LURIGANCHO - LIMA;9/08/2025 12:25;9/08/2025 12:25;NULL
+954;140101;Imperium Club;Av. Elvira Garcia y Garcia cuadra 8;Av. Elvira Garcia y Garcia cuadra 8 - CHICLAYO - LAMBAYEQUE;9/08/2025 15:42;9/08/2025 15:42;NULL
+955;100102;Complejo Deportivo de Amarilis;NULL;AMARILIS - HUÃNUCO;10/08/2025 18:24;10/08/2025 18:24;NULL
+956;150122;Discoteca Lumma;Pasaje Juan Figari 155;Pasaje Juan Figari 155 - MIRAFLORES - LIMA;11/08/2025 09:05;11/08/2025 09:05;NULL
+957;150121;The Club Lima;Av. La Marina 1518;Av. La Marina 1518 - PUEBLO LIBRE - LIMA;11/08/2025 16:26;11/08/2025 16:26;NULL
+958;150125;Estadio Cabanista;Espalda Tottus;Espalda Tottus - PUENTE PIEDRA - LIMA;13/08/2025 17:04;13/08/2025 17:04;NULL
+959;230101;Fundo El Chololo;NULL;TACNA;14/08/2025 12:57;14/08/2025 12:57;NULL
+960;130901;Club Terrazas;Jr. Bolognesi;Jr. Bolognesi - HUAMACHUCO - LA LIBERTAD;15/08/2025 11:16;15/08/2025 11:16;NULL
+961;150108;Mercado Cooperativa Santa Rosa;Av. Guardia Civil 433-La CampiÃ±a;Av. Guardia Civil 433-La CampiÃ±a - CHORRILLOS - LIMA;15/08/2025 12:11;15/08/2025 12:11;NULL
+962;20101;Complejo Deportivo FullBaso;1era Cuadra Horacio Zevallos S/N Nicrupampa;1era Cuadra Horacio Zevallos S/N Nicrupampa - HUARAZ - ÃNCASH;18/08/2025 16:07;18/08/2025 16:28;NULL
+963;130101;Explanada Las Hortencias;Av. ProlongaciÃ³n FÃ¡tima, frente a Real Plaza;Av. ProlongaciÃ³n FÃ¡tima, frente a Real Plaza - TRUJILLO - LA LIBERTAD;19/08/2025 16:58;19/08/2025 16:58;NULL
+964;230101;Ex Ladrillera Martorell;NULL;TACNA;19/08/2025 20:12;19/08/2025 20:12;NULL
+965;110501;PARQUE ZONAL;NULL;PISCO - ICA;20/08/2025 15:05;20/08/2025 15:05;NULL
+966;150101;"Centro de Convenciones ""Zentro""";NULL;LIMA;21/08/2025 16:10;21/08/2025 16:10;NULL
+967;200405;Campo Deportivo del HH Santa Rosa Sector Oeste;NULL;MORROPON - PIURA;25/08/2025 09:14;25/08/2025 09:14;NULL
+968;150139;Centro de Convenciones Majesty;MZ E LT 11;MZ E LT 11 - SANTA ROSA - LIMA;25/08/2025 13:05;25/08/2025 13:05;NULL

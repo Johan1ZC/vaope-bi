@@ -1,0 +1,9 @@
+selenium>=4.23
+webdriver-manager>=4.0
+python-dotenv
+pymysql
+SQLAlchemy>=2.0
+tenacity
+pytz
+dateparser
+PyYAML>=6.0
