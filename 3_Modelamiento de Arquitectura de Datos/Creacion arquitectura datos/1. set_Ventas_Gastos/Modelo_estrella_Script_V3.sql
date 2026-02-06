@@ -249,7 +249,7 @@ CREATE INDEX ix_fe_distanalit  ON FactEgresosDetalle (DistribucionID);
 CREATE INDEX ix_fe_cuenta      ON FactEgresosDetalle (CuentaID);
 #CREATE INDEX ix_fe_ubi       ON FactEgresosDetalle (UbicacionID); #add
 
-ALTER TABLE FactEgresosDetalle ADD COLUMN Fuente VARCHAR(50) NULL, ADD COLUMN FechaCarga DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP; #add
+-- ALTER TABLE FactEgresosDetalle ADD COLUMN Fuente VARCHAR(50) NULL, ADD COLUMN FechaCarga DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP; #add
 
 
 CREATE TABLE FactVentasDetalle
@@ -295,7 +295,7 @@ CREATE INDEX ix_fv_distanalit  ON FactVentasDetalle (DistribucionID);
 CREATE INDEX ix_fv_cuenta      ON FactVentasDetalle (CuentaID);
 #CREATE INDEX ix_fv_ubi       ON FactVentasDetalle (UbicacionID); #add
 
-ALTER TABLE FactVentasDetalle  ADD COLUMN Fuente VARCHAR(50) NULL, ADD COLUMN FechaCarga DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP; #add
+-- ALTER TABLE FactVentasDetalle  ADD COLUMN Fuente VARCHAR(50) NULL, ADD COLUMN FechaCarga DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP; #add
 
 CREATE TABLE DimLocalEvento
 (

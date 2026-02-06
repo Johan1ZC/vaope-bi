@@ -1,0 +1,16 @@
+curl 'https://oapi.joinnus.com/activity/v1/home/search' \
+  -H 'accept: application/json' \
+  -H 'accept-language: es-ES,es;q=0.9' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhcHBzQGpvaW5udXMuY29tIiwidXNlcklkIjoxMiwicm9sZSI6ImFwcCIsInN0YWdlIjoicHJvZHVjdGlvbiIsImlhdCI6MTc2NDI4MDU0NywiZXhwIjoxNzY0Mjg3NzQ3fQ.YLP_JnXxwHcD_g-GtXe2BTIr4HrUdTyOav7WIahvyAQ' \
+  -H 'content-type: application/json' \
+  -H 'origin: https://www.joinnus.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.joinnus.com/' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  --data-raw '{"categories":["art-culture","community-service","cine","food-drinks","concerts","cursos-talleres","sports","donation","entertainment","festivales","party","futbol"],"order":"latest","page":1,"size":9}'

@@ -1,0 +1,23 @@
+source:
+  name: "Ticketmaster"
+  base_url: "https://www.ticketmaster.pe/"
+
+api:
+  eventos_busqueda:
+    # ⚠️ Pega aquí el endpoint real (puede ser REST o GraphQL)
+    url: "https://www.ticketmaster.pe/api/events"   # reemplazar por el XHR real
+    method: "GET"                                    # o "POST"
+    params: { page: 1, size: 50 }                    # ajusta nombres/valores
+    headers:
+      x-requested-with: "XMLHttpRequest"
+      referer: "https://www.ticketmaster.pe/"
+      accept: "application/json, */*;q=0.1"
+    page_param: "page"
+    start_page: 1
+    max_pages: 3
+
+compliance:
+  user_agent: "HABLAVAO/1.0 (+contacto@tu-dominio.pe)"
+  rate_limit_seconds: 1.0
+  jitter_seconds_min: 0.2
+  jitter_seconds_max: 0.8

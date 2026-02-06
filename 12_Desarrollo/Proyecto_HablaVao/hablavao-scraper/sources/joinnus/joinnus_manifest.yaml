@@ -1,0 +1,31 @@
+source:
+  name: "Joinnus"
+  base_url: "https://www.joinnus.com/"
+
+api:
+  eventos_busqueda:
+    url: "https://oapi.joinnus.com/activity/v1/home/search"
+    method: "POST"
+    # ← El cuerpo viene del --data-raw del cURL
+    json:
+      categories: ["art-culture","community-service","cine","food-drinks","concerts","cursos-talleres","sports","donation","entertainment","festivales","party","futbol"]
+      order: "latest"
+      page: 1
+      size: 9
+    headers:
+      accept: "application/json"
+      content-type: "application/json"
+      origin: "https://www.joinnus.com"
+      referer: "https://www.joinnus.com/"
+      # ⚠️ El Bearer NO lo pondremos aquí para no versionarlo
+
+    # Paginación: el campo que debemos ir cambiando es "page" dentro del JSON
+    page_param: "page"
+    start_page: 1
+    max_pages: 999
+
+compliance:
+  user_agent: "HABLA/1.0 (jzc@gmail.com)"
+  rate_limit_seconds: 1.0
+  jitter_seconds_min: 0.2
+  jitter_seconds_max: 0.8

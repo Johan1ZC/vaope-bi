@@ -73,7 +73,6 @@ case
 from shops;
 -- select * from dimOrganizadores
 
-
 /*
 select * from districts -- distritos
 select * from provinces -- provincias

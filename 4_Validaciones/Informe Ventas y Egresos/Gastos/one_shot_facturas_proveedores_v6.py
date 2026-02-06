@@ -10,6 +10,8 @@ Propósito: one_shot_facturas_clientes_all.py
 Licencia: MIT — sin garantías (“AS IS”)
 """
 
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 import json
 from datetime import datetime
 from pathlib import Path
@@ -31,7 +33,7 @@ STATE_LIST = ["posted"]     # el endpoint espera lista
 METHOD = "GET"              # así lo usas en Postman (GET con body JSON)
 MAX_PAGES = 1000
 
-OUTDIR = r"C:/Users/SOPORTE/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Gastos/salida_facturas_proveedores"
+OUTDIR = r"C:/Users/JOHAN/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Gastos/salida_facturas_proveedores"
 # ======================================
 
 # ------------------------ HTTP helpers ------------------------

@@ -15,8 +15,8 @@ group by fechaid order by 1 desc;
 select facturaID,sinImpuesto,impuesto,total  
 -- select *
 FROM colaborativa_etl_vaope.FactEgresosDetalle
-where year(fechaid) = 2025 
-AND facturaid = 'E001-00000059'
+where -- year(fechaid) = 2025 AND 
+facturaid = 'E001-00000026'
 
 
 select facturaID,sinImpuesto,impuesto,total  
@@ -100,6 +100,53 @@ left join colaborativa_etl.DimTiposGasto i on a.tipogastoID = i.tipogastoid
 where year(a.fechaid) = 2025 -- AND facturaid in ('(03) Boleta BOB1-00000030','(03) Boleta BOB1-00000029')
 group by a.FacturaID,b.nombre,c.nomproducto,d.NombreCuenta,e.EstadoFactura,f.NombreEvento,g.mes,h.NomProveedor,i.nombregasto
 order by 1 desc;
+
+
+-- VALIDACION DATOS ULTIMO PROCESO ETL
+
+SELECT 
+ *,right(facturaID,8) 
+-- right(facturaID,26), sum(SinImpuesto),count(1) Q
+FROM colaborativa_etl_vaope.factegresosdetalle
+-- where facturaID like '%1172%'
+where right(facturaID,26) in ('E001-00000001')
+ -- group by right(facturaID,26)
+order by 1	 desc;
+
+SELECT 
+ *,right(facturaID,8) 
+-- right(facturaID,26), sum(SinImpuesto),count(1) Q
+FROM colaborativa_etl_vaope.factegresosdetalle
+-- where facturaID like '%1172%'
+where right(facturaID,26) in ('E001-00000003')
+ -- group by right(facturaID,26)
+order by 1	 desc;
+
+SELECT 
+ *,right(facturaID,8) 
+-- right(facturaID,26), sum(SinImpuesto),count(1) Q
+FROM colaborativa_etl_vaope.factegresosdetalle
+-- where facturaID like '%1172%'
+where right(facturaID,26) in ('E001-00000038')
+ -- group by right(facturaID,26)
+order by 1	 desc;
+
+
+SELECT 
+-- *,right(facturaID,8) 
+right(facturaID,7), sum(SinImpuesto),count(1) Q
+-- select *
+FROM colaborativa_etl_vaope.factegresosdetalle
+-- where facturaID like '%1172%'
+where right(facturaID,7) in ('00000038')
+group by right(facturaID,7)
+order by 1	 desc;
+
+
+use colaborativa_etl_vaope;
+select * from factegresosdetalle
+-- truncate table factegresosdetalle
+
   
   
   

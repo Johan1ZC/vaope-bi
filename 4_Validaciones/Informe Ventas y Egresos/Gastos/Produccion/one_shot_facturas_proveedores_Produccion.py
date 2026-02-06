@@ -9,6 +9,7 @@ Propósito: one_shot_facturas_clientes_all.py
 - Exporta: facturas.csv, items.csv, facturas_con_items.csv, y RAW json/jsonl.
 Licencia: MIT — sin garantías (“AS IS”)
 """
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 import json
 from datetime import datetime
@@ -21,7 +22,7 @@ URL = "https://odoo.colaborativa.pe/api/vendor_bills"
 TOKEN = "pR4Gci8KCzLGwJ_2Mha-JFhS_95byMysqkPJ0u80t16SteQ="
 
 DATE_FROM  = "2025-01-01"
-DATE_TO    = "2025-12-31"
+DATE_TO    = "2026-01-31"
 LIMIT      = 200            # tamaño de página deseado (el backend puede capear)
 OFFSET     = 0
 
@@ -31,7 +32,7 @@ STATE_LIST = ["posted"]     # el endpoint espera lista
 METHOD = "GET"              # así lo usas en Postman (GET con body JSON)
 MAX_PAGES = 1000
 
-OUTDIR = r"C:/Users/SOPORTE/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Gastos/salida_facturas_proveedores"
+OUTDIR = r"C:/Users/JOHAN/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Gastos/salida_facturas_proveedores"
 # ======================================
 
 # ------------------------ HTTP helpers ------------------------
@@ -106,41 +107,62 @@ def make_key(row: dict) -> str:
 
 # ------------------------ Paging ------------------------
 def fetch_all_pages():
-    def first_key(rows):
+    def page_signature(rows):
+        # firma estable: 1er key + último key + cantidad
         if not rows:
             return None
-        return make_key(rows[0])
+        return (make_key(rows[0]), make_key(rows[-1]), len(rows))
 
-    all_rows, seen_keys = [], set()
-    mode, page, offset = "offset", 1, OFFSET
+    all_rows = []
+    seen_keys = set()
+
+    mode = "offset"
+    page = 1
+    offset = OFFSET
+
+    last_sig = None
+    same_sig_count = 0
+
+    pages_done = 0
 
     while True:
-        params, body = (None, build_body(offset)) if mode == "offset" else (None, build_body_page(page))
-        payload = call_api(URL, METHOD, TOKEN, params, body)
+        body = build_body(offset) if mode == "offset" else build_body_page(page)
+        payload = call_api(URL, METHOD, TOKEN, None, body)
         chunk = extract_list(payload)
         n = len(chunk)
+
         print(f"[{mode}] page/off={page if mode=='page' else offset} -> recibidos {n}")
 
         if n == 0:
             break
 
-        # Si el backend ignora offset (misma primera página), cambiamos a page
-        fk = first_key(chunk)
-        if fk is not None and fk in seen_keys and mode == "offset":
-            print("[WARN] La API ignora 'offset'. Cambiando a paginación por 'page'…")
-            mode, page = "page", 1
+        # Detecta repetición de página (misma data) y corta
+        sig = page_signature(chunk)
+        if sig == last_sig:
+            same_sig_count += 1
+        else:
+            same_sig_count = 0
+            last_sig = sig
+
+        if same_sig_count >= 2:
+            print("[STOP] La API está devolviendo la misma página repetidamente. Deteniendo para evitar bucle.")
+            break
+
+        # Si offset es ignorado, cambia a modo page
+        if mode == "offset" and make_key(chunk[0]) in seen_keys:
+            print("[WARN] La API parece ignorar 'offset'. Cambiando a paginación por 'page'…")
+            mode = "page"
+            page = 1
             continue
 
-        # Añadir solo nuevas claves (para evitar loop de paging)
+        # Dedupe real (no volver a agregar repetidos)
         nuevos = []
         for r in chunk:
             k = make_key(r)
-            if k not in seen_keys:
-                seen_keys.add(k)
-                nuevos.append(r)
-            else:
-                # si llega otra ocurrencia con misma clave dentro de la MISMA página, la dejamos pasar
-                nuevos.append(r)
+            if k in seen_keys:
+                continue
+            seen_keys.add(k)
+            nuevos.append(r)
 
         if not nuevos:
             print("[INFO] Página sin avance (todo repetido). Deteniendo.")
@@ -148,17 +170,19 @@ def fetch_all_pages():
 
         all_rows.extend(nuevos)
 
-        # Avanzar cursor
+        # avanzar cursor
         if mode == "offset":
             offset += n
         else:
             page += 1
 
-        if (page if mode == "page" else (offset // max(n, 1))) > MAX_PAGES:
+        pages_done += 1
+        if pages_done >= MAX_PAGES:
             print(f"[STOP] MAX_PAGES={MAX_PAGES}.")
             break
 
     return all_rows
+
 
 # ------------------------ Normalización ------------------------
 def normalize_facturas_items(facturas_list):

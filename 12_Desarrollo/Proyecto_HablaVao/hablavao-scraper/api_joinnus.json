@@ -1,0 +1,572 @@
+{
+    "message": "OK",
+    "data": {
+        "perPage": 9,
+        "currentPage": 1,
+        "lastPage": 15,
+        "firstPage": 1,
+        "nextPage": 2,
+        "prevPage": null,
+        "hits": [
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "71115",
+                "_score": null,
+                "_source": {
+                    "activityId": "71115",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-27 19:30:00",
+                    "dateEnd": "2025-11-27 23:30:00",
+                    "date": "2025-11-27 19:30:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/5060753/bm69cKr4uRwEPJp-150x95.webp",
+                        "medium": "https://cdn.joinnus.com/user/5060753/bm69cKr4uRwEPJp-300x185.webp",
+                        "original": "https://cdn.joinnus.com/user/5060753/bm69cKr4uRwEPJp.webp"
+                    },
+                    "location": "piura",
+                    "locationSlug": "",
+                    "metadatas": {},
+                    "price": 110,
+                    "title": "UNA NOCHE PARA EL RECUERDO - PIURA",
+                    "activityCategory": "concerts",
+                    "activityUrl": "piura-una-noche-para-el-recuerdo-piura",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764271800000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "71115",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 110,
+                                        "start": "2025-11-27 19:30:00",
+                                        "end": "2025-11-27 19:30:00"
+                                    },
+                                    "sort": [
+                                        110
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "72815",
+                "_score": null,
+                "_source": {
+                    "activityId": "72815",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-27 21:00:00",
+                    "dateEnd": "2025-11-27 23:59:00",
+                    "date": "2025-11-27 21:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/81205/act69093c9fecdb2-150x95.jpg",
+                        "medium": "https://cdn.joinnus.com/user/81205/act69093c9fecdb2-300x185.jpg",
+                        "original": "https://cdn.joinnus.com/user/81205/act69093c9fecdb2.jpg"
+                    },
+                    "location": "",
+                    "locationSlug": "",
+                    "metadatas": {},
+                    "price": 0,
+                    "title": "TRIBUTO A PINK FLOYD – ESPECIAL “THE WALL”",
+                    "activityCategory": "concerts",
+                    "activityUrl": "-tributo-a-pink-floyd-especial-the-wall",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764277200000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "72815",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 0,
+                                        "start": "2025-11-27 21:00:00",
+                                        "end": "2025-11-27 21:00:00"
+                                    },
+                                    "sort": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "71893",
+                "_score": null,
+                "_source": {
+                    "activityId": "71893",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-27 22:00:00",
+                    "dateEnd": "2025-11-28 23:00:00",
+                    "date": "2025-11-27 22:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/1322235/qOvNw0dJB7ABXyU-150x95.webp",
+                        "medium": "https://cdn.joinnus.com/user/1322235/qOvNw0dJB7ABXyU-300x185.webp",
+                        "original": "https://cdn.joinnus.com/user/1322235/qOvNw0dJB7ABXyU.webp"
+                    },
+                    "location": "lima",
+                    "locationSlug": "noche-barranco",
+                    "metadatas": {},
+                    "price": 109,
+                    "title": "Alejandro y Maria Laura en La Noche",
+                    "activityCategory": "concerts",
+                    "activityUrl": "lima-alejandro-y-maria-laura-en-la-noche",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764280800000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "71893",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 109,
+                                        "start": "2025-11-27 22:00:00",
+                                        "end": "2025-11-27 23:00:00"
+                                    },
+                                    "sort": [
+                                        109
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "71118",
+                "_score": null,
+                "_source": {
+                    "activityId": "71118",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-28 19:30:00",
+                    "dateEnd": "2025-11-28 22:30:00",
+                    "date": "2025-11-28 19:30:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/5060753/zQurvTJBdQJvGEF-150x95.webp",
+                        "medium": "https://cdn.joinnus.com/user/5060753/zQurvTJBdQJvGEF-300x185.webp",
+                        "original": "https://cdn.joinnus.com/user/5060753/zQurvTJBdQJvGEF.webp"
+                    },
+                    "location": "chimbote",
+                    "locationSlug": "",
+                    "metadatas": {},
+                    "price": 49.5,
+                    "title": "UNA NOCHE PARA EL RECUERDO - CHIMBOTE",
+                    "activityCategory": "concerts",
+                    "activityUrl": "chimbote-una-noche-para-el-recuerdo-chimbote",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764358200000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "71118",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 49.5,
+                                        "start": "2025-11-28 19:30:00",
+                                        "end": "2025-11-28 19:30:00"
+                                    },
+                                    "sort": [
+                                        49
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "72821",
+                "_score": null,
+                "_source": {
+                    "activityId": "72821",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-28 20:00:00",
+                    "dateEnd": "2025-11-28 23:55:00",
+                    "date": "2025-11-28 20:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/788012/act690a05d3b3a5a-150x95.jpg",
+                        "medium": "https://cdn.joinnus.com/user/788012/act690a05d3b3a5a-300x185.jpg",
+                        "original": "https://cdn.joinnus.com/user/788012/act690a05d3b3a5a.jpg"
+                    },
+                    "location": "lima",
+                    "locationSlug": "rock-and-pez",
+                    "metadatas": {},
+                    "price": 50,
+                    "title": "TOÑO JAUREGUI y lo mejor del Rock Peruano",
+                    "activityCategory": "concerts",
+                    "activityUrl": "lima-tono-jauregui-y-lo-mejor-del-rock-peruano",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764360000000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "72821",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 50,
+                                        "start": "2025-11-28 20:00:00",
+                                        "end": "2025-11-28 20:00:00"
+                                    },
+                                    "sort": [
+                                        50
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "73119",
+                "_score": null,
+                "_source": {
+                    "activityId": "73119",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-28 20:00:00",
+                    "dateEnd": "2025-11-29 02:00:00",
+                    "date": "2025-11-28 20:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/5087122/act691d0fc6e21d4-150x95.jpg",
+                        "medium": "https://cdn.joinnus.com/user/5087122/act691d0fc6e21d4-300x185.jpg",
+                        "original": "https://cdn.joinnus.com/user/5087122/act691d0fc6e21d4.jpg"
+                    },
+                    "location": "lima",
+                    "locationSlug": "patio-jarana",
+                    "metadatas": {},
+                    "price": 15,
+                    "title": "La Ntidat Band Fest",
+                    "activityCategory": "concerts",
+                    "activityUrl": "lima-la-ntidat-band-fest",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764360000000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "73119",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 15,
+                                        "start": "2025-11-28 20:00:00",
+                                        "end": "2025-11-28 20:00:00"
+                                    },
+                                    "sort": [
+                                        15
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "72295",
+                "_score": null,
+                "_source": {
+                    "activityId": "72295",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-28 20:00:00",
+                    "dateEnd": "2025-11-29 02:00:00",
+                    "date": "2025-11-28 20:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/145113/587XX6frdPFTE5d-150x95.webp",
+                        "medium": "https://cdn.joinnus.com/user/145113/587XX6frdPFTE5d-300x185.webp",
+                        "original": "https://cdn.joinnus.com/user/145113/587XX6frdPFTE5d.webp"
+                    },
+                    "location": "lima",
+                    "locationSlug": "centro-de-convenciones-scencia-de-la-molina",
+                    "metadatas": {},
+                    "price": 63,
+                    "title": "EL LOBO, LOS CHAPIS Y LOS ECOS,  EN EL FIESTÓN DE FIN DE AÑO",
+                    "activityCategory": "concerts",
+                    "activityUrl": "lima-el-lobo-los-chapis-y-los-ecos-en-el-fieston-de-fin-de-ano",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764360000000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "72295",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 63,
+                                        "start": "2025-11-28 20:00:00",
+                                        "end": "2025-11-28 20:00:00"
+                                    },
+                                    "sort": [
+                                        63
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "72816",
+                "_score": null,
+                "_source": {
+                    "activityId": "72816",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-28 21:00:00",
+                    "dateEnd": "2025-11-28 23:59:00",
+                    "date": "2025-11-28 21:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/81205/act69094dc251cc5-150x95.jpg",
+                        "medium": "https://cdn.joinnus.com/user/81205/act69094dc251cc5-300x185.jpg",
+                        "original": "https://cdn.joinnus.com/user/81205/act69094dc251cc5.jpg"
+                    },
+                    "location": "",
+                    "locationSlug": "",
+                    "metadatas": {},
+                    "price": 0,
+                    "title": "TRIBUTO A GUSTAVO CERATI & SODA STEREO",
+                    "activityCategory": "concerts",
+                    "activityUrl": "-tributo-a-gustavo-cerati-soda-stereo",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764363600000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "72816",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 0,
+                                        "start": "2025-11-28 21:00:00",
+                                        "end": "2025-11-28 21:00:00"
+                                    },
+                                    "sort": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "_index": "jnus_activity_3",
+                "_type": "_doc",
+                "_id": "70492",
+                "_score": null,
+                "_source": {
+                    "activityId": "70492",
+                    "category": "Conciertos",
+                    "dateStart": "2025-11-28 21:00:00",
+                    "dateEnd": "2025-11-29 03:00:00",
+                    "date": "2025-11-28 21:00:00",
+                    "images": {
+                        "small": "https://cdn.joinnus.com/user/1322235/a7vEHuoqsZfycuq-150x95.webp",
+                        "medium": "https://cdn.joinnus.com/user/1322235/a7vEHuoqsZfycuq-300x185.webp",
+                        "original": "https://cdn.joinnus.com/user/1322235/a7vEHuoqsZfycuq.webp"
+                    },
+                    "location": "lima",
+                    "locationSlug": "teatro-municipal-huaraz",
+                    "metadatas": {},
+                    "price": 110,
+                    "title": "DUCTAPE EN LIMA | 14° ANIVERSARIO",
+                    "activityCategory": "concerts",
+                    "activityUrl": "lima-ductape-en-lima-14-aniversario",
+                    "currency": "PEN",
+                    "newVersion": 2,
+                    "urlRedirection": ""
+                },
+                "sort": [
+                    1764363600000
+                ],
+                "inner_hits": {
+                    "minDatePrice": {
+                        "hits": {
+                            "total": {
+                                "value": 2,
+                                "relation": "eq"
+                            },
+                            "max_score": null,
+                            "hits": [
+                                {
+                                    "_index": "jnus_activity_3",
+                                    "_type": "_doc",
+                                    "_id": "70492",
+                                    "_nested": {
+                                        "field": "dates",
+                                        "offset": 0
+                                    },
+                                    "_score": null,
+                                    "_source": {
+                                        "minPrice": 110,
+                                        "start": "2025-11-28 21:00:00",
+                                        "end": "2025-11-28 21:00:00"
+                                    },
+                                    "sort": [
+                                        110
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "total": 131
+    }
+}

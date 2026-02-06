@@ -8,6 +8,7 @@ Propósito: one_shot_facturas_clientes_all.py
 - Exporta: facturas.csv, items.csv, facturas_con_items.csv, y RAW json/jsonl.
 Licencia: MIT — sin garantías (“AS IS”)
 """
+#Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 import json
 from datetime import datetime
@@ -33,7 +34,7 @@ METHOD = "GET"
 MAX_PAGES = 1000
 
 # Carpeta de salida
-OUTDIR = r"C:/Users/SOPORTE/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Ventas/salida_facturas"
+OUTDIR = r"C:/Users/JOHAN/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Ventas/salida_facturas"
 # ======================================
 
 

@@ -8,6 +8,8 @@ Propósito: one_shot_facturas_clientes_all.py
 - Exporta: facturas.csv, items.csv, facturas_con_items.csv, y RAW json/jsonl.
 Licencia: MIT — sin garantías (“AS IS”)
 """
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 
 import json
 from datetime import datetime
@@ -17,7 +19,7 @@ import pandas as pd
 
 # =========== CONFIGURA AQUÍ ===========
 URL = "https://odoo-stage.colaborativa.pe/api/customer_invoices"
-TOKEN = "pR4GDXFkdjERUZuUsp5NtaXXDkrfUWPApeYpL4aEF9pPyVc="
+TOKEN = "pR4GznTl6tcVHOfecaKFK-zDPCpJyOuFrX0J-ETkok6Yn30="
 
 DATE_FROM  = "2025-01-01"
 DATE_TO    = "2025-12-31"
@@ -33,7 +35,7 @@ METHOD = "GET"
 MAX_PAGES = 1000
 
 # Carpeta de salida
-OUTDIR = r"C:/Users/SOPORTE/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Ventas/salida_facturas"
+OUTDIR = r"C:/Users/JOHAN/Desktop/vaope-bi/4_Validaciones/Informe Ventas y Egresos/Ventas/salida_facturas"
 # ======================================
 
 
@@ -212,9 +214,10 @@ def coerce_types(df: pd.DataFrame) -> pd.DataFrame:
         lc = c.lower()
         if any(h in lc for h in date_hints):
             try:
-                res[c] = pd.to_datetime(res[c], errors="coerce", dayfirst=True)
+                res[c] = pd.to_datetime(res[c], format="%Y-%m-%d", errors="coerce", dayfirst=True)
             except Exception:
-                pass
+                res[c] = pd.to_datetime(res[c], errors="coerce", dayfirst=True)
+               # pass
     # Números
     num_hints = ("total", "subtotal", "igv", "iva", "impuesto", "descuento",
                  "delivery", "valor", "precio", "monto", "cantidad", "unitario")

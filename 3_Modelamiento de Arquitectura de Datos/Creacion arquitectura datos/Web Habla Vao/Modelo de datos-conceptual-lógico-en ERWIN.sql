@@ -3,10 +3,16 @@ use dw_dev_hablavao;
 -- Catálogo de fuentes
 CREATE TABLE source (
   source_id       BIGINT PRIMARY KEY AUTO_INCREMENT,
-  name            VARCHAR(120) NOT NULL,                 -- p.ej., "conciertos.com.pe"
+  name            VARCHAR(120) NOT NULL,                
   base_url        VARCHAR(255) NOT NULL,
   created_at      TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- select * from source
+
+ALTER TABLE source ADD UNIQUE KEY uq_name (name);
+
+-- DELETE FROM source WHERE name='Teleticket' AND source_id<>1;
+
 
 -- Catálogo de Departamento
 CREATE TABLE department (
@@ -16,6 +22,7 @@ CREATE TABLE department (
   code            VARCHAR(10) NULL,                      -- ubigeo dpto
   UNIQUE KEY uk_region_name (name)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- select * from department
 
 -- Lugares
 CREATE TABLE venue (
@@ -28,8 +35,9 @@ CREATE TABLE venue (
   latitude        DECIMAL(10,6) NULL,
   longitude       DECIMAL(10,6) NULL,
   created_at      TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT fk_venue_region FOREIGN KEY (region_id) REFERENCES region(region_id)
+  CONSTRAINT fk_venue_department FOREIGN KEY (department_id) REFERENCES department(department_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- select * from venue
 
 -- Eventos
 CREATE TABLE event (
@@ -47,7 +55,7 @@ CREATE TABLE event (
   -- estado calculable: proximo/en_curso/pasado/sin_fecha/cancelado
   status              ENUM('proximo','en_curso','pasado','sin_fecha','cancelado') DEFAULT 'proximo',
   venue_id            BIGINT NULL,
-  region_id           INT NULL,                          -- redundancia útil para filtros rápidos
+  department_id           INT NULL,                          -- redundancia útil para filtros rápidos
   -- metadatos de la fuente
   published_at_src    DATETIME NULL,                     -- "Fecha de publicación"
   updated_at_src      DATETIME NULL,                     -- "Fecha de última actualización"
@@ -59,13 +67,17 @@ CREATE TABLE event (
   updated_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   CONSTRAINT fk_event_source FOREIGN KEY (source_id) REFERENCES source(source_id),
   CONSTRAINT fk_event_venue  FOREIGN KEY (venue_id)  REFERENCES venue(venue_id),
-  CONSTRAINT fk_event_region FOREIGN KEY (region_id) REFERENCES region(region_id),
+  CONSTRAINT fk_event_region FOREIGN KEY (department_id) REFERENCES department(department_id),
   UNIQUE KEY uk_src_event (source_id, source_event_id),
   KEY ix_event_dates (starts_at_utc, ends_at_utc),
-  KEY ix_event_region (region_id),
+  KEY ix_event_region (department_id),
   KEY ix_event_status (status),
   KEY ix_event_hash (hash_dedupe)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE event MODIFY source_event_id VARCHAR(255) NOT NULL;
+
+-- select * from event
 
 -- Artistas
 CREATE TABLE artist (
@@ -139,3 +151,94 @@ CREATE TABLE ingest_audit (
   CONSTRAINT fk_ing_source FOREIGN KEY (source_id) REFERENCES source(source_id),
   KEY ix_ing_source_time (source_id, fetched_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+/*
+# activar venv
+.\.venv\Scripts\Activate.ps1
+
+# variables (si no están en .env)
+$env:DB_URL = "mysql+pymysql://user:pass@localhost:3306/dw_dev_hablavao?charset=utf8mb4"
+$env:PARSER_BATCH = "60"
+$env:UA = "HABLAVAO/1.0 (+contacto@tu-dominio.pe)"
+$env:TZ_NAME = "America/Lima"
+
+# correr
+python sources/teleticket/hu32_loader_teleticket_dw.py
+*/
+
+
+/*
+SELECT fetched_at, url, http_status, selector_ok, error_msg
+FROM ingest_audit
+WHERE source_id = 1
+ORDER BY fetched_at DESC
+LIMIT 50;
+*/
+
+
+select * from source;
+select * from department;
+select * from venue; -- select distinct name,count(1) Q from venue group by  name     
+select * from event; -- select source_id,count(1) Q from event group by  source_id
+select * from artist; -- select distinct name,count(1) Q from artist group by  name   Repetidos: ARMONIA 10 - ARMONIA10  Repetidos por otra letra: CAMILO CESTO - CAMILO SESTO
+select * from event_artist;
+select * from category;
+select * from event_category;
+select * from ticket_link
+where event_id = 742;
+select * from media;
+select * from ingest_audit;
+
+
+/*
+
+USE dw_dev_hablavao;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- hijos de EVENT
+TRUNCATE TABLE event_category;
+TRUNCATE TABLE event_artist;
+TRUNCATE TABLE ticket_link;
+TRUNCATE TABLE media;
+TRUNCATE TABLE ingest_audit;
+
+-- tablas con FK a SOURCE / VENUE / DEPARTMENT / CATEGORY / ARTIST
+TRUNCATE TABLE event;
+
+-- padres intermedios
+TRUNCATE TABLE venue;
+TRUNCATE TABLE department;
+TRUNCATE TABLE category;
+TRUNCATE TABLE artist;
+
+-- raíz
+TRUNCATE TABLE source;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+*/
+
+
+-- A) Permitir slugs/IDs largos
+ALTER TABLE event
+  MODIFY source_event_id VARCHAR(255) NOT NULL;
+
+-- (si tienes un índice único ya creado no hace falta tocarlo en MySQL 8; 255 con utf8mb4 cabe dentro de 3072 bytes)
+
+-- B) Permitir errores extensos (stack traces)
+ALTER TABLE url_queue
+  MODIFY last_error TEXT NULL;
+  
+  
+/*  
+  # correr
+python sources/joinnus/hu34_loader_joinnus_dw.py
+*/
+
+
+select a.event_id,a.source_id,c.artist_id
+from dw_dev_hablavao.event a
+inner join dw_dev_hablavao.event_artist b on a.event_id = b.eventid
+inner join dw_dev_hablavao.artist c on c.artist_id = b.artist_id
