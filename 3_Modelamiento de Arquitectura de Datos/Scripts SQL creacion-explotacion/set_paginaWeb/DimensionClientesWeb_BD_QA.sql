@@ -4,6 +4,8 @@
    Autora: Johan Zuñiga Cordova  |  v3.0  |  2025-10-14
    Propósito: Usuarios registrados en la pagina y sus caracteristicas (para export/BI)
    ======================================================================= */
+use vaope_qa5;
+SET SESSION time_zone = '-05:00';
 
 drop table if exists  vaope.dimUsuarioweb;
 create table vaope.dimUsuarioweb
@@ -26,9 +28,10 @@ when (id_google is not null and id_tiktok is not null) then "google+tiktok"
 when (id_google is not null and id_tiktok is not null and id_facebook is not null) then "google+tiktok+facebook"
 else "Otros" end Origen
 -- select *
-FROM vaope_qa4.clients;
+FROM vaope_qa5.clients;
 -- where id in (select distinct usuarioID from vaope.factventasweb);  -- DESACTIVAR EN PRODUCCION, AQUI SE SELEECCIONA SOLO LA MUESTRA OK DEL BACKUP DEL BACKEND
 -- 18551
+-- 713800
 -- select * from vaope.dimUsuarioweb where active = 0
 ALTER TABLE vaope.dimUsuarioweb ADD INDEX idx_dimusuarioweb_user (usuarioID);
 

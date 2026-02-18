@@ -6,7 +6,8 @@
    detalles de productos, ingresos y metodos de pago (para export/BI)
    ======================================================================= */
 
-use vaope_qa4;
+use vaope_qa5;
+SET SESSION time_zone = '-05:00';
 
 -- construccion de tabla FACVENTASWEB
 
@@ -30,7 +31,8 @@ ifnull(e.payment_commission,0) payment_commission,  -- Comision VISA
 ifnull(e.vaope_commission,0) vaope_commission, -- Comision Vaope
 ifnull(e.sale_commission,0) sale_commission, -- Cobros adicionales ejemplo s/2
 ifnull(e.total_deposit,0) total_deposit, -- Deposito organizador
-abs(((ifnull(e.payment_commission,0)+ifnull(e.vaope_commission,0)+ifnull(e.sale_commission,0))-a.total_price)) as total_deposit_new,
+-- abs(((ifnull(e.payment_commission,0)+ifnull(e.vaope_commission,0)+ifnull(e.sale_commission,0))-a.total_price)) as total_deposit_new,
+(ifnull(a.total_price,0)-(ifnull(e.payment_commission,0)+ifnull(e.vaope_commission,0)+ifnull(e.sale_commission,0))) as total_deposit_new,
 case when a.payment_method_id = 12 then 1 else 0 end esCortesia,
 a.utm_source,
 a.utm_campaign,
@@ -38,11 +40,11 @@ a.utm_medium,
 a.client_id as usuarioID,
 sum(a.persons) persons,
 a.payment_method_id
-from vaope_qa4.sales a
+from vaope_qa5.sales a
 -- inner join vaope.lead_paginaweb_muestra d on a.id = d.id  -- DESACTIVAR EN PRODUCCION
-left join vaope_qa4.products c on a.product_id = c.id
-left join (select a.* from vaope_qa4.product_liquidation_detail a
-inner join (select sale_id,max(id) max_id,count(1) Q from vaope_qa4.product_liquidation_detail group by sale_id) b on a.sale_id = b.sale_id and a.id = b.max_id) e on a.id = e.sale_id and a.payment_method_id = e.payment_method_id
+left join vaope_qa5.products c on a.product_id = c.id
+left join (select a.* from vaope_qa5.product_liquidation_detail a
+inner join (select sale_id,max(id) max_id,count(1) Q from vaope_qa5.product_liquidation_detail group by sale_id) b on a.sale_id = b.sale_id and a.id = b.max_id) e on a.id = e.sale_id and a.payment_method_id = e.payment_method_id
 group by 
 DATE_FORMAT(a.created_at,'%Y%m%d'),
 HOUR(a.created_at),
@@ -68,9 +70,11 @@ a.client_id,
 a.payment_method_id;
 -- 712633
 -- 748833
+-- 775080
 
 -- select web_ventaID,count(*) q from vaope.factventasweb group by web_ventaID order by 2 desc
 -- select * from vaope.factventasweb where web_ventaid = 518258
+SET SESSION time_zone = '-05:00';
 
 -- AGREGAR CAMPOS DE METODOS DE PAGO EN BLANCO
 alter table vaope.factventasweb add column mp_NomMetodo varchar(150);
@@ -82,10 +86,12 @@ alter table vaope.factventasweb add column pagos_count INT;
 alter table vaope.factventasweb add column metodos_distintos INT;
 alter table vaope.factventasweb add column mp_MetodoGrupo varchar(150);
 
+SET SESSION time_zone = '-05:00';
+
 -- ACTUALIZACION METODOS DE PAGO
 SET SQL_SAFE_UPDATES = 0;
-UPDATE vaope.factventasweb A 
-LEFT JOIN vaope_qa4.payment_methods b
+UPDATE vaope.factventasweb a
+LEFT JOIN vaope_qa5.payment_methods b
   ON a.payment_method_id = b.id
 SET
   a.mp_NomMetodo = NULLIF(b.name,'')
@@ -93,9 +99,9 @@ SET
   SET SQL_SAFE_UPDATES = 1;  -- vuelve a activarlo
 
 
-
+SET SESSION time_zone = '-05:00';
 -- TRANFORMACION DE CAMPOS DE METODOS DE PAGO PARA CLIENTES DE FACTVENTASWEB 
-USE vaope_qa4;
+USE vaope_qa5;
 
 DROP TABLE IF EXISTS vaope.tmp_payments_parse;
 
@@ -108,7 +114,7 @@ WITH b AS (
            '(visa|master[[:space:]]*card|american[[:space:]]*express|\\bamex\\b|diners[[:space:]]*club|dinersclub|\\bdiners\\b|discover|jcb|union[[:space:]]*pay|maestro)',
            1,1,0,'i'
          ) AS pos_brand
-  FROM vaope_qa4.sale_payments sp
+  FROM vaope_qa5.sale_payments sp
   -- select * from vaope2.sale_payments sp
   where sale_id in (select web_ventaid from vaope.factventasweb)
 ),
@@ -204,7 +210,7 @@ select * from vaope.tmp_payments_parse
 where sale_id = '518975';
 */
 
-
+SET SESSION time_zone = '-05:00';
 -- Por si los textos pueden ser largos
 SET SESSION group_concat_max_len = 1000000;
 
@@ -235,7 +241,7 @@ GROUP BY p.sale_id;
 ALTER TABLE vaope.tmp_payments_unificado ADD INDEX idx_spu_saleid (sale_id);
 
 SET SQL_SAFE_UPDATES = 0;
-UPDATE vaope.factventasweb A 
+UPDATE vaope.factventasweb a
 LEFT JOIN vaope.tmp_payments_unificado b
   ON a.web_VentaID = b.sale_id
 SET

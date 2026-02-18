@@ -1,0 +1,129 @@
+
+
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "CREATE DATABASE vaope_qa6 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p --default-character-set=utf8 --max_allowed_packet=256M vaope_qa6 < "C:\Users\JOHAN\Downloads\backup_vaope_20260211\backup_vaope_2026-02-11.sql"
+
+
+1) Crear un dump estable desde tu LOCAL (vaope_qa5)
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe" -h 127.0.0.1 -P 3306 -u root -p vaope_qa5 ^
+  --single-transaction --quick --skip-lock-tables ^
+  --default-character-set=utf8mb4 ^
+  --set-gtid-purged=OFF ^
+  --extended-insert=FALSE ^
+  --hex-blob ^
+  > "C:\Users\JOHAN\Downloads\backup_vaope_qa5_small.sql"
+
+
+2) En la NUBE: recrear la BD destino (recomendado)
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "DROP DATABASE IF EXISTS vaope_qa5; CREATE DATABASE vaope_qa5 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "DROP DATABASE IF EXISTS vaope; CREATE DATABASE vaope CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+
+3) Restaurar el dump “small” en la NUBE (vaope_qa6)
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p --default-character-set=utf8mb4 --max_allowed_packet=256M vaope_qa6 < "C:\Users\JOHAN\Downloads\backup_vaope_qa5_small.sql"
+
+Con logs:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p --default-character-set=utf8mb4 --max_allowed_packet=256M vaope_qa6 < "C:\Users\JOHAN\Downloads\backup_vaope_qa5_small.sql" 1> "C:\Users\JOHAN\Downloads\import_ok.log" 2> "C:\Users\JOHAN\Downloads\import_err.log"
+
+
+Ver logs:
+
+type "C:\Users\JOHAN\Downloads\import_err.log"
+
+
+
+4) Validación rápida
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p vaope_qa6 -e "SHOW TABLES;"
+
+
+Ver proceso en cola:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "SHOW PROCESSLIST;"
+
+Consulta simple desde CMD a servidor:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "SELECT 1;"
+
+Matar todas las conexiones que esten usando vaope_qa6:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -N -e "SELECT CONCAT('KILL ',id,';') FROM information_schema.processlist WHERE db='vaope_qa6' AND id <> CONNECTION_ID();"
+
+Te va a devolver líneas tipo:
+KILL 1811;
+KILL 1839;
+
+
+Ejecutar el comando del código que devolvió:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "KILL 1862;"
+
+Ver si están creciendo las tablas:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema='vaope_qa5' ORDER BY table_rows DESC LIMIT 10;"
+
+Ver cuantas tablas están creadas:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "SELECT COUNT(*) AS tablas FROM information_schema.tables WHERE table_schema='vaope_qa5';"
+
+
+[client]
+host=127.0.0.1
+user=root
+password=1234
+port=3306
+
+
+"%MYSQLBIN%\mysqldump.exe" -h %SRC_HOST% -P %SRC_PORT% -u %SRC_USER% -p ^ --single-transaction --routines --triggers --events ^
+vaope_qa5 > "C:\Backups\vaope_qa5_full.sql"
+
+
+
+Proceso con BAT:
+
+C:\Backups\restore_tablas.bat  -> Ejecutar desde esta ruta
+
+
+Deshabilitar relaciones foráneas y ejecutar la ingesta tabla por tabla
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p vaope_qa6 -e "SET FOREIGN_KEY_CHECKS=0;"
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p vaope_qa6 < "C:\Backups\vaope_qa5_tablas\nombre_tabla.sql"
+
+
+
+LOCAL:
+
+Ver si están creciendo las tablas:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 127.0.0.1 -P 3306 -u root -p -e "SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema='vaope_qa5' ORDER BY table_rows DESC LIMIT 160;"
+
+Ver cuantas tablas están creadas:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 127.0.0.1 -P 3306 -u root -p -e "SELECT COUNT(*) AS tablas FROM information_schema.tables WHERE table_schema='vaope_qa5';"
+
+
+FORGE - VAOPE_QA6
+
+Ver si están creciendo las tablas:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema='vaope_qa6' ORDER BY table_rows DESC LIMIT 160;"
+
+Ver cuantas tablas están creadas:
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -h 44.221.49.59 -P 3306 -u forge -p -e "SELECT COUNT(*) AS tablas FROM information_schema.tables WHERE table_schema='vaope_qa6';"
+
+
+
+
+
+
+	

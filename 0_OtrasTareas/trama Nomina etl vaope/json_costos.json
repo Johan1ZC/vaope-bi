@@ -1,0 +1,76 @@
+{
+  "serie_correlativo": "FXG", /*Nro de factura padre*/
+  "numero": "00008", /*Nro de factura padre*/
+  "nombreEmpresa": "COLABORATIVA S.A.C.", /*Nombre Empresa* -----AGREGAR*/
+  "fecha_de_emision": "23/06/2025", /*Fecha de factura detalle*/
+  "Hora_de_emision": "12:32:56", /*Hora de factura detalle*/
+  "nom_proveedor": "A & Q AYLLU S.A.C.", /*Nombre cliente/proveedor*/
+  "cat_proveedor": "", /*Categoria cliente/proveedor*/
+  "tipo_documento": "", /*identificador documento*/
+  "doc_proveedor": "", /*nro documento*/
+  "items": [
+    {
+      "codigo_producto": "", /*Nro_de_factura_detalle por producto*/
+      "cantidad": "1", /*Cantidad de productos*/
+      "valor_unitario": 30.0,
+      "precio_unitario": 30.0,
+      "descuento": null,
+      "subtotal": 30.0, /*Sin impuesto*/
+      "porcentaje_de_igv": "00.00",
+      "igv": 0, /*Impuesto*/
+      "total": 30.0, /*Total*/
+      "moneda": "1", /*Soles o dolares*/
+      "tipo_de_cambio": "", /*aplica para dolares*/
+      "id_tipo_gasto": "", /*Identificador del tipo de gasto*/
+      "nom_tipo_gasto": "", /*NombreTipoGasto*/
+      "id_proveedor": "", /*Identificador del proveedor*/
+      "id_producto": "", /*Identificador del producto*/
+      "nom_producto": "COMIDA", /* Nombre producto*/
+      "categoria_producto": "Servicio", /*Product Type*/
+      "Id_estado": "", /*Identificador estado factura detalle*/
+      "Nombre_estado": "", /*Estado de factura detalle pagado, en proceso, cancelado*/
+      "evento": {
+        "id_evento": "", /*Identificador del evento*/
+        "nom_evento": "", /* Nombre del evento*/
+        "categoria": "", /* categoria*  -----AGREGAR*/   
+        "Fecha_hora_ini_event": "", /*Fecha y hora de inicio*/
+        "Fecha_hora_fin_event": "", /*Fecha y hora de fin*/
+        "id_organizador": "", /*Identificador organizador*/
+        "nom_organizador": "", /*Nombre del organizador*/
+        "tipo_organizador": "" /*Tipo de organizador Persona o Empresa*/
+      },
+      "id_cuenta": "", /*Identificador Cuenta*/
+      "nom_cuenta": "6314100 alimentacion", /*Nombre de Cuenta*/
+      "distribucion_analitica": [
+        [
+          {
+            "código": 4654, /*Identificador Distribucion analitica*/
+            "nom_distribucion": "impresos", /*Nombre Distribucion Analitica*/
+            "sub_categoria": "operativos", /*Nombre Cuenta analitica*/
+            "porcentaje": "50.00" /* % Distribucion analitica*/
+          },
+          {
+            "código": 6555, /*Identificador Distribucion analitica*/
+            "nom_distribucion": "TI", /*Nombre Distribucion Analitica*/
+            "sub_categoria": "IME", /*Nombre Cuenta analitica*/
+            "porcentaje": "50.00" /* % Distribucion analitica*/
+          }
+        ],
+        [
+          {
+            "código": 4654, /*Identificador Distribucion analitica*/
+            "nom_distribucion": "impresos", /*Nombre Distribucion Analitica*/
+            "sub_categoria": "operativos", /*Nombre Cuenta analitica*/
+            "porcentaje": "50.00" /* % Distribucion analitica*/
+          },
+          {
+            "código": 6555, /*Identificador Distribucion analitica*/
+            "nom_distribucion": "TI", /*Nombre Distribucion Analitica*/
+            "sub_categoria": "IME", /*Nombre Cuenta analitica*/
+            "porcentaje": "50.00" /* % Distribucion analitica*/
+          }
+        ]
+      ]
+    }
+  ]
+}

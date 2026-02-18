@@ -1,0 +1,17 @@
+En CRM agregar vistas al card: 
+- Nombre de organizador - ok
+- Telefonos - OK Celular
+- Origen - OK Source
+- Producto Interesado - Pendiente por error reportado a Pragmatic
+
+En CRM configurar ordenamiento por: 
+1. fecha de registro - OK
+2. filtros por origen. - OK
+
+En CRM card interno: 
+- cambiar ingreso esperado -> Monto de cotización - OK
+- % probabilidad retirar - OK
+- Agregar producto - OK (En nueva cotización) - Error reportado a Pragmatic
+- Agregar cantidad de productos - OK (En nueva cotización) - Error reportado a Pragmatic
+- Agregar otros teléfonos - ok en campo Celular.
+- Agregar mensaje de whatsapp que respondió. - En realización.

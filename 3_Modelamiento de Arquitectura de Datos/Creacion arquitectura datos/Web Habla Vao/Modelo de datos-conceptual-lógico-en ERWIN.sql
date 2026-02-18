@@ -240,5 +240,7 @@ python sources/joinnus/hu34_loader_joinnus_dw.py
 
 select a.event_id,a.source_id,c.artist_id
 from dw_dev_hablavao.event a
-inner join dw_dev_hablavao.event_artist b on a.event_id = b.eventid
-inner join dw_dev_hablavao.artist c on c.artist_id = b.artist_id
+left join dw_dev_hablavao.event_artist b on a.event_id = b.event_id
+left join dw_dev_hablavao.artist c on c.artist_id = b.artist_id
+-- select * from dw_dev_hablavao.event_artist
+-- select * from dw_dev_hablavao.event
