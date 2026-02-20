@@ -38,9 +38,9 @@ select a.*,b.NomProducto
   
   
    select b.nombre,sum(sinImpuesto)  sinImpuesto, count(1) Q, sum(cantidadProd) cantidadProd
- FROM colaborativa_etl.FactVentasDetalle a
- inner join colaborativa_etl.DimDistribucionAnalitica b on a.DistribucionID = b.DistribucionID
-  where year(fechaid) = 2025 -- AND facturaid in ('(03) Boleta BOB1-00000030','(03) Boleta BOB1-00000029')
+ FROM etl_prd.factventasdetalle a
+ inner join etl_prd.dimdistribucionanalitica b on a.DistribucionID = b.DistribucionID
+  -- where year(fechaid) = 2025 -- AND facturaid in ('(03) Boleta BOB1-00000030','(03) Boleta BOB1-00000029')
   group by b.nombre
   order by 2 desc;
   
@@ -108,6 +108,34 @@ inner join DimProducto c on a.ProductoID = c.productoID
 inner join DimDistribucionAnalitica b on a.distribucionID = b.distribucionID
 WHERE nombre = 'Validadores' and NomProducto = 'COMISION VAOPE SEGUN CONTRATO'
 group by facturaid,c.ProductoID,c.nomproducto,b.Nombre,b.Subcategoria
+
+use etl_prd;
+
+-- Ver facturas con producto en blanco
+SELECT DISTINCT facturaid,c.ProductoID,c.nomproducto,b.Nombre,b.Subcategoria,count(1) cantidad,sum(SinImpuesto) venta
+FROM etl_prd.factventasdetalle a
+left join dimproducto c on a.ProductoID = c.productoID
+left join dimdistribucionanalitica b on a.distribucionID = b.distribucionID
+WHERE c.nomproducto = ''
+group by facturaid,c.ProductoID,c.nomproducto,b.Nombre,b.Subcategoria
+
+-- Ver facturas con producto en blanco
+SELECT DISTINCT facturaid,c.ProductoID,c.nomproducto,b.Nombre,b.Subcategoria,count(1) cantidad,sum(SinImpuesto) venta
+FROM etl_prd.factventasdetalle a
+left join dimproducto c on a.ProductoID = c.productoID
+left join dimdistribucionanalitica b on a.distribucionID = b.distribucionID
+WHERE b.Subcategoria = 'otros'
+group by facturaid,c.ProductoID,c.nomproducto,b.Nombre,b.Subcategoria
+
+-- Ver facturas sin Evento
+SELECT DISTINCT facturaid,a.eventoid,c.nombreEvento,count(1) cantidad,sum(SinImpuesto) venta
+-- select *
+FROM etl_prd.factventasdetalle a
+left join dimeventos c on a.eventoid = c.eventoid
+where c.nombreEvento is null
+group by facturaid,a.eventoid,c.nombreEvento
+
+-- select * from dimeventos
 
 select * from colaborativa_etl_vaope.FactEgresosDetalle
 where facturaID like '%F FE29%'
