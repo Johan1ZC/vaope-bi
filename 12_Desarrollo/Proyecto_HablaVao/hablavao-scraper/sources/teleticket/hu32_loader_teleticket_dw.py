@@ -79,6 +79,108 @@ def make_venue_key(name: str | None) -> str:
     return s
 
 # ------------------ Schema helpers ---NUEVO---------------
+# Nuevo
+def meta(soup: BeautifulSoup, prop: str) -> str|None:
+    """
+    Lee <meta property="og:title"> o <meta name="description"> etc.
+    """
+    m = soup.find("meta", attrs={"property": prop}) or soup.find("meta", attrs={"name": prop})
+    if m and m.get("content"):
+        return m["content"].strip()
+    return None
+
+CAT_RULES = [
+    ("Conciertos",      [r"\bconciert", r"\bgira\b", r"\bshow\b", r"\ben vivo\b"]),
+    ("Teatro",          [r"\bteatro\b", r"\bobra\b", r"\bmusical\b", r"\bdrama\b"]),
+    ("Comedia/StandUp", [r"\bstand\s*up\b", r"\bcomedi", r"\bhumor\b"]),
+    ("Deportes",        [r"\bdeport", r"\bvs\b", r"\bpartido\b", r"\btorneo\b", r"\bmarat", r"\b5k\b", r"\b10k\b"]),
+    ("Cultura",         [r"\bcultur", r"\barte\b", r"\bmuseo\b", r"\bexpos", r"\bexpo\b"]),
+    ("Familiar/Infantil",[r"\binfant", r"\bniñ", r"\bfamiliar\b", r"\bkids\b"]),
+    ("Fiestas",         [r"\bfiesta\b", r"\bdiscoteca\b", r"\bdj\b", r"\brave\b", r"\bparty\b", r"\bafter\b"]),
+    ("Festivales",      [r"\bfestival\b", r"\bfest\b"]),
+    # 👇 aquí debe vivir TOUR
+    ("Turismo",         [r"\btour\b", r"\bfull\s*day\b", r"\bexcurs", r"\bviaje\b", r"\brugby\b"]),
+]
+
+TYPE_TO_CATEGORY = {
+    "musicevent": "Conciertos",
+    "sportsevent": "Deportes",
+    "theaterevent": "Teatro",
+    "comedyevent": "Comedia/StandUp",
+    "danceevent": "Teatro",            # opcional
+    "festivalevent": "Festivales",     # opcional
+}
+
+def guess_categories(*texts: str) -> list[str]:
+    blob = " ".join([t for t in texts if t]).lower()
+    cats = []
+    for cat, pats in CAT_RULES:
+        if any(re.search(p, blob, flags=re.I) for p in pats):
+            cats.append(cat)
+    # fallback si no matchea nada
+    return cats
+
+def extract_categories(soup: BeautifulSoup, ld: dict, url: str, title: str|None, desc: str|None) -> list[str]:
+    """
+    Intenta obtener categorías desde:
+    - JSON-LD: keywords / genre / category (si existiera)
+    - HTML: breadcrumbs / tags (genérico)
+    - fallback: texto (title+desc+url)
+    """
+    cats: list[str] = []
+
+        # 0) @type del JSON-LD (muy útil cuando no hay keywords)
+    ty = ld.get("@type")
+    if isinstance(ty, list):
+        ty_list = [str(x).lower() for x in ty]
+    else:
+        ty_list = [str(ty).lower()] if ty else []
+
+    for t in ty_list:
+        if t in TYPE_TO_CATEGORY:
+            cats.append(TYPE_TO_CATEGORY[t])
+
+    # 1) JSON-LD
+    for k in ["category", "genre", "keywords"]:
+        v = ld.get(k)
+        if isinstance(v, str):
+            cats += [x.strip() for x in re.split(r"[|,/;]+", v) if x.strip()]
+        elif isinstance(v, list):
+            cats += [str(x).strip() for x in v if str(x).strip()]
+
+    # 2) Breadcrumbs / tags (heurística genérica)
+    # (no asumimos clases específicas; buscamos enlaces cortos que parezcan “Conciertos”, “Teatro”, etc.)
+    for a in soup.select("nav a, .breadcrumb a, .breadcrumbs a, .tags a"):
+        t = (a.get_text(" ", strip=True) or "").strip()
+        if 2 <= len(t) <= 30:
+            # evita cosas tipo "Inicio", "Comprar", etc.
+            if t.lower() in {"inicio","home","comprar","entradas","ver más","ver mas"}:
+                continue
+            # si coincide con alguna keyword de reglas, lo tomamos como candidato
+            if guess_categories(t):
+                cats.append(t)
+
+    # normaliza y mapea por reglas (para que no se te llene de basura)
+    txt_cats = guess_categories(title or "", desc or "", url or "", " ".join(cats))
+    cats = cats + txt_cats
+
+    # dedupe + “canoniza” a tus nombres finales
+    # (si quieres, aquí puedes forzar solo las categorías de CAT_RULES)
+    canon = []
+    seen = set()
+    for c in cats:
+        c2 = c.strip()
+        if not c2:
+            continue
+        # reduce a tu set estándar
+        std = guess_categories(c2)
+        if std:
+            for s in std:
+                if s not in seen:
+                    canon.append(s); seen.add(s)
+    return canon
+# fin nuevo
+
 def ensure_venue_key_schema():
     """
     Asegura que 'venue' tenga la columna venue_key y un índice UNIQUE.
@@ -206,10 +308,13 @@ def upsert_category(name: str|None) -> int|None:
         c.execute(text("INSERT IGNORE INTO category(name) VALUES(:n)"), {"n": name})
         return c.execute(text("SELECT category_id FROM category WHERE name=:n"), {"n": name}).scalar()
 
-def link_event_category(event_id: int, category_id: int):
+def set_event_category(event_id: int, category_id: int):
     with engine.begin() as c:
+        # deja solo 1 categoría por evento
+        c.execute(text("DELETE FROM event_category WHERE event_id=:e"), {"e": event_id})
         c.execute(text("""
-        INSERT IGNORE INTO event_category(event_id, category_id) VALUES(:e,:c)
+            INSERT INTO event_category(event_id, category_id)
+            VALUES(:e,:c)
         """), {"e": event_id, "c": category_id})
 
 def upsert_event(source_id: int, src_event_id: str, title: str, desc_html: str|None,
@@ -296,6 +401,11 @@ def parse_detail(url: str, meta_hint: dict|None) -> dict:
     html.raise_for_status()
     soup = BeautifulSoup(html.text, "html.parser")
     ld = parse_jsonld(soup)
+    print("[debug] url:", url)
+    print("[debug] @type:", ld.get("@type"))
+    print("[debug] keywords:", ld.get("keywords"))
+    print("[debug] genre:", ld.get("genre"))
+    print("[debug] category:", ld.get("category"))
 
     # ---- Campos base
     title = ld.get("name") or (soup.find("h1").get_text(strip=True) if soup.find("h1") else None)
@@ -389,6 +499,8 @@ def parse_detail(url: str, meta_hint: dict|None) -> dict:
             elif isinstance(v, str):
                 for piece in ART_SPLIT_RE.split(v): push(piece)
 
+    categories = extract_categories(soup, ld, url, title, desc)
+
     # ---- ÚNICO return al final
     return {
         "title": title,
@@ -403,8 +515,9 @@ def parse_detail(url: str, meta_hint: dict|None) -> dict:
         "end_local": end_local,
         "price_text": price_text,
         "artists": artists,
+        "categories": categories,   
         "raw_html": html.text,
-        "http_status": html.status_code
+        "http_status": html.status_code             
     }
 
 # ------------------ Batch driver ------------------
@@ -418,6 +531,43 @@ def pick_batch(source_id: int):
          LIMIT :lim
         """), {"sid":source_id, "lim":BATCH_LIMIT}).mappings().all()
         return [dict(r) for r in rows]
+        
+def choose_one_category(cats: list[str]) -> str | None:
+    # normaliza, quita vacíos y duplicados
+    clean = []
+    seen = set()
+    for c in (cats or []):
+        if not c:
+            continue
+        cc = c.strip()
+        if not cc:
+            continue
+        key = cc.lower()
+        if key not in seen:
+            seen.add(key)
+            clean.append(cc)
+
+    if not clean:
+        return None
+
+    # Prioridad (ajusta a tu criterio)
+    priority = [
+        "Turismo",
+        "Comedia/StandUp",
+        "Teatro",
+        "Deportes",
+        "Cultura",
+        "Festivales",
+        "Fiestas",
+        "Familiar/Infantil",
+        "Conciertos",
+        "Sin clasificar",
+    ]
+    pmap = {x.lower(): i for i, x in enumerate(priority)}
+
+    # elige la de mayor prioridad (menor índice); si no está en lista, cae al primero
+    clean.sort(key=lambda x: pmap.get(x.lower(), 999))
+    return clean[0]        
 
 def run():
     ensure_venue_key_schema() 
@@ -494,16 +644,33 @@ def run():
 
 
             # categoría simple por URL (ajústalo con tus criterios)
-            cat_hint = None
-            low = detail_url.lower()
-            if "/conciert" in low: cat_hint = "Conciertos"
-            elif "/teatro" in low: cat_hint = "Teatro"
-            elif "/deporte" in low: cat_hint = "Deportes"
-            elif "/entreten" in low: cat_hint = "Entretenimiento"
-            elif "/turismo" in low: cat_hint = "Turismo"
-            if cat_hint:
-                cat_id = upsert_category(cat_hint)
-                if cat_id: link_event_category(event_id, cat_id)
+            # --- CATEGORÍAS (mejoradas) ---
+            # --- CATEGORÍA ÚNICA ---
+            cats = parsed.get("categories") or []
+
+            tags_txt = " ".join([str(x) for x in ((meta_hint or {}).get("tags") or []) if x])
+
+            # Siempre reforzar con tags (aunque ya haya cats)
+            cats = cats + guess_categories(tags_txt)
+        
+            # Si sigue vacío, recién ahí haces el fallback completo
+            if not cats:
+                cats = guess_categories(
+                    title,
+                    parsed.get("description_html") or "",
+                    detail_url,
+                    tags_txt
+                )
+
+            # Debug SOLO cuando sigue sin señales
+            if not cats:
+                print("[nocat] ", title, "| tags:", tags_txt[:120], "| url:", detail_url)
+                print("[cats]", title[:60], "=>", cats)
+
+            cat_name = choose_one_category(cats) or "Sin clasificar"
+            cat_id = upsert_category(cat_name)
+            if cat_id:
+                set_event_category(event_id, cat_id)
 
             insert_ticket_link(event_id, detail_url)
             insert_media_cover(event_id, parsed["image_url"])

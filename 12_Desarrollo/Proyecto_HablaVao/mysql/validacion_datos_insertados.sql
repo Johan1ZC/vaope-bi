@@ -60,6 +60,8 @@ order by discovered_at desc;
 -- 10:04:50	select * FROM url_queue order by discovered_at desc	284 row(s) returned	0.000 sec / 0.000 sec
 -- 12:45:39	select * FROM url_queue where source_id = 1 order by discovered_at desc	333 row(s) returned	0.000 sec / 0.000 sec
 -- 11:54:57	select * FROM url_queue where source_id = 1 order by discovered_at desc	500 row(s) returned	0.031 sec / 0.000 sec
+-- 01:42:57	select * FROM url_queue where source_id = 1 order by discovered_at desc	582 row(s) returned	0.015 sec / 0.000 sec
+
 
 
 

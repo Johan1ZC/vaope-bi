@@ -114,6 +114,9 @@ CREATE TABLE event_category (
   CONSTRAINT fk_ec_category FOREIGN KEY (category_id) REFERENCES category(category_id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE event_category
+ADD UNIQUE KEY uk_event_category_event (event_id);
+
 -- Enlaces de ticketera (por si hay múltiples)
 CREATE TABLE ticket_link (
   ticket_id       BIGINT PRIMARY KEY AUTO_INCREMENT,
